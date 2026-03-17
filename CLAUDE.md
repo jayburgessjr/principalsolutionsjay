@@ -212,6 +212,7 @@ Nav → Hero → Method → CaseBand (ReggieAI) → Proof → Companies → Skil
 - Calendly: `https://calendly.com` ← placeholder, user will update
 - Canva Slides: `https://www.canva.com/design/DAHEKlOQl-o/...`
 - GitHub: `https://github.com/jayburgessjr/principalsolutionsjay.git`
+- Netlify (production): `https://jayburgess.netlify.app/`
 
 ### Design Tokens (Never Change Without Approval)
 ```
