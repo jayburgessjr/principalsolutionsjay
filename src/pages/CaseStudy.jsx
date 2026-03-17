@@ -240,7 +240,7 @@ function CTA() {
     <section className="cs-cta">
       <h3>See what I can<br /><span>build for you.</span></h3>
       <p>This case study is one example of one engagement. The motion is repeatable. The results are real.</p>
-      <a href="https://calendly.com" className="cs-cta-btn" target="_blank" rel="noreferrer">
+      <a href="https://calendly.com/jayburgessjr/long-meet" className="cs-cta-btn" target="_blank" rel="noreferrer">
         Schedule a Call →
       </a>
     </section>

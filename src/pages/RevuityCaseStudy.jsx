@@ -279,7 +279,7 @@ function CTA() {
       <div className="cs-cta-inner">
         <h3>The portfolio is<br /><span>waiting.</span></h3>
         <p>Revuity Systems is what I build when there's no mandate to build it. Imagine what I'd ship with 20 companies, a team, and a mission behind it.</p>
-        <a href="https://calendly.com" className="cs-cta-btn" target="_blank" rel="noreferrer">Schedule a Call →</a>
+        <a href="https://calendly.com/jayburgessjr/long-meet" className="cs-cta-btn" target="_blank" rel="noreferrer">Schedule a Call →</a>
         <Link to="/reggie-case-study" className="cs-cta-btn-ghost">Read the ReggieAI Case Study →</Link>
       </div>
     </section>

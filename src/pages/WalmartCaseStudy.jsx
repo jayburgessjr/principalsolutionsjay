@@ -263,7 +263,7 @@ function CTA() {
       <div className="cs-cta-inner">
         <h3>Enterprise scale.<br /><span>Builder speed.</span></h3>
         <p>Walmart proved I can operate at the largest scale. ReggieAI proved I can ship AI in regulated environments. Revuity proves I move fast as a founder. All three together — that's the VP role.</p>
-        <a href="https://calendly.com" className="btn-primary" target="_blank" rel="noreferrer">Schedule a Call →</a>
+        <a href="https://calendly.com/jayburgessjr/long-meet" className="btn-primary" target="_blank" rel="noreferrer">Schedule a Call →</a>
         <Link to="/reggie-case-study" className="btn-ghost">ReggieAI Case Study →</Link>
       </div>
     </section>
