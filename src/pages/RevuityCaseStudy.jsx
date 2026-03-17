@@ -289,8 +289,8 @@ function CTA() {
 function CaseStudyFooter() {
   return (
     <footer>
-      <div className="footer-id"><strong>Jay Burgess</strong> · Principal Solutions Architect · Founder, Revuity Systems</div>
-      <div className="footer-id">jayburgessjr@gmail.com · Los Angeles, CA</div>
+      <div className="footer-id"><strong>Jay Burgess</strong> · Principal Solutions Architect · Co-Founder & Chief Technology Officer, Revuity Systems</div>
+      <div className="footer-id">jay@revuitysys.com · Los Angeles, CA</div>
     </footer>
   )
 }

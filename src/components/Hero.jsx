@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="hero-cell">
           <div className="hc-label">Fortune 500</div>
           <div className="hc-val">Walmart<span>.</span></div>
-          <div className="hc-sub">Adobe · HEAG · Revuity Systems · Columbia · LMU</div>
+          <div className="hc-sub">Adobe · HEAG · Revuity Systems · Harvard · LMU</div>
         </div>
       </div>
     </section>

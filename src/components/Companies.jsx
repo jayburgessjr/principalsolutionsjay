@@ -1,4 +1,4 @@
-const companies = ['Walmart', 'Adobe', 'HEAG', 'Columbia College Hollywood', 'LMU', 'Revuity Systems']
+const companies = ['Walmart', 'Adobe', 'HEAG', 'Harvard', 'LMU', 'Revuity Systems']
 
 export default function Companies() {
   return (
