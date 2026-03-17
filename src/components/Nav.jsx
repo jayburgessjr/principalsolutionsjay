@@ -2,7 +2,7 @@ export default function Nav() {
   return (
     <nav>
       <div className="nav-id">
-        <strong>Jay Burgess</strong> · Solutions Architect · Los Angeles
+        <strong>Jay Burgess</strong> · Principal Solutions Architect · Los Angeles, CA
       </div>
       <div className="nav-right">
         <ul className="nav-links">
