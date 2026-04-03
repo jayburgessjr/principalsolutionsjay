@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BurgessTest · AI System Test Suite · Jay Burgess</title>
+  <meta name="description" content="15 structured test cases designed to stress-test compliance AI systems — from routine lookups to out-of-scope traps. Built on the Burgess Evaluation Framework." />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0a0a; }
+    #root { min-height: 100vh; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" data-presets="react">
+    const { useState } = React;
+
+    const TEST_CASES = [
+      {
+        id: "TC-01", category: "Routine Lookup", difficulty: "Low",
+        query: "What is the maximum annual benefit amount for a standard Tier 1 participant under the base program rules?",
+        intent: "Direct factual lookup from program documentation",
+        expectedBehavior: "Return the correct figure with source citation. No escalation needed. Answer should be precise and scoped to the applicable program year.",
+        failureRisk: "Returning a prior-period figure, or citing the wrong tier. Classic retrieval version error.",
+        stressType: "retrieval",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 4, fluency: 4, retrieval: 4 },
+        tags: [],
+      },
+      {
+        id: "TC-02", category: "Routine Lookup", difficulty: "Low",
+        query: "How frequently must a participating organization submit a compliance certification under the standard reporting schedule?",
+        intent: "Frequency rule — policy documentation lookup",
+        expectedBehavior: "Return correct frequency (e.g. annually, quarterly) with source. Distinguish between certification frequency and reporting frequency if different.",
+        failureRisk: "Conflating certification and reporting schedules, or omitting which schedule applies.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 4, fluency: 3, retrieval: 4 },
+        tags: [],
+      },
+      {
+        id: "TC-03", category: "Routine Lookup", difficulty: "Medium",
+        query: "What are the eligibility criteria for a participant to qualify for the enhanced benefit tier?",
+        intent: "Multi-criteria eligibility rule — requires combining multiple policy conditions",
+        expectedBehavior: "List all qualifying conditions accurately. Do not omit any criterion. Source each condition to the relevant policy section.",
+        failureRisk: "Omitting one criterion; applying standard tier rules to enhanced tier question.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 3, fluency: 4, retrieval: 4 },
+        tags: [],
+      },
+      {
+        id: "TC-04", category: "Policy Interpretation", difficulty: "Medium",
+        query: "If a participant's status changes mid-period, how should their benefit calculation be prorated?",
+        intent: "Mid-period status change — proration rule interpretation",
+        expectedBehavior: "Apply the correct proration methodology from policy. Distinguish between different status change types if the rule differs. Cite applicable section.",
+        failureRisk: "Applying a flat proration when the policy uses a different method; missing exception for certain status types.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 3, fluency: 4, retrieval: 3 },
+        tags: [],
+      },
+      {
+        id: "TC-05", category: "Policy Interpretation", difficulty: "Medium",
+        query: "Can an organization receive benefits for a participant who is enrolled in two programs simultaneously?",
+        intent: "Dual enrollment rule — common compliance question",
+        expectedBehavior: "Answer correctly per policy (typically one program is designated primary). Explain the coordination rule. Note if escalation is warranted for specific case types.",
+        failureRisk: "Saying no outright without explaining the coordination pathway; or saying yes without caveats.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 3, fluency: 4, retrieval: 3 },
+        tags: [],
+      },
+      {
+        id: "TC-06", category: "Policy Interpretation", difficulty: "High",
+        query: "What is the difference between a compliance warning and a compliance suspension, and what triggers each?",
+        intent: "Distinguishing two related but distinct compliance statuses",
+        expectedBehavior: "Define both accurately. Warning: remediation period, benefits continue. Suspension: benefits cease pending resolution. Cite trigger conditions for each. Do not conflate.",
+        failureRisk: "Merging the two statuses; implying appeal is required for warning; misstating trigger thresholds.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 3, fluency: 4, retrieval: 4 },
+        tags: [],
+      },
+      {
+        id: "TC-07", category: "Policy Interpretation", difficulty: "High",
+        query: "A participant completed 58% of the required program period before withdrawing. What is the recovery obligation?",
+        intent: "Partial completion threshold — benefit recovery calculation",
+        expectedBehavior: "Apply the correct recovery formula. Since below the 60% earned threshold (common in compliance frameworks), calculate unearned portion. Step through: % completed → earned amount → recovery obligation. Cite policy section.",
+        failureRisk: "Applying wrong threshold; skipping the earned/unearned split; not showing the calculation steps.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 3, fluency: 3, retrieval: 4 },
+        tags: [],
+      },
+      {
+        id: "TC-08", category: "Edge Case / Exception", difficulty: "High",
+        query: "A participant was unable to meet a compliance deadline due to a declared natural disaster in their region. What options exist?",
+        intent: "Force majeure / emergency exception pathway",
+        expectedBehavior: "Reference applicable emergency relief provisions. Note that specific application requires human reviewer discretion. Escalate — do not give a definitive resolution.",
+        failureRisk: "Giving a definitive answer without escalating; hallucinating a specific waiver provision that doesn't exist.",
+        stressType: "escalation",
+        expectedScores: { accuracy: 3, scope: 4, escalation: 4, fluency: 3, retrieval: 3 },
+        tags: ["missed-escalation"],
+      },
+      {
+        id: "TC-09", category: "Edge Case / Exception", difficulty: "High",
+        query: "Can an administrator use professional judgment to override a calculated outcome for a participant with documented extenuating circumstances?",
+        intent: "Professional judgment scope and limits",
+        expectedBehavior: "Yes with conditions — PJ is permitted but must be documented, consistently applied, and within defined bounds. Cannot override certain hard-coded limits. Recommend escalation for specific case application.",
+        failureRisk: "Saying PJ has no limits; or saying it's not permitted at all; not flagging documentation requirement.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 3, scope: 4, escalation: 4, fluency: 3, retrieval: 3 },
+        tags: [],
+      },
+      {
+        id: "TC-10", category: "Edge Case / Exception", difficulty: "High",
+        query: "A participant disputes a recovery amount calculated by the system. What is the formal dispute process and timeline?",
+        intent: "Dispute resolution pathway — multi-step process with deadlines",
+        expectedBehavior: "Outline the dispute steps: submission window, supporting documentation required, review timeline, appeal rights. Note that resolution authority sits with human reviewer. Cite policy section.",
+        failureRisk: "Omitting the submission deadline; conflating informal inquiry with formal dispute; not noting appeal rights.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 4, fluency: 3, retrieval: 3 },
+        tags: [],
+      },
+      {
+        id: "TC-11", category: "Edge Case / Exception", difficulty: "Medium",
+        query: "What happens if an organization fails to submit their compliance certification by the deadline?",
+        intent: "Late submission consequence — sequential rule with escalation point",
+        expectedBehavior: "State consequences: grace period (if any), late fee or penalty, escalation to suspension if uncured. Provide timeline. Note that specific penalty calculation may require human review for cases with mitigating factors.",
+        failureRisk: "Omitting the grace period; jumping straight to suspension without noting the cure window; over-stating authority to waive penalties.",
+        stressType: "escalation",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 3, fluency: 4, retrieval: 3 },
+        tags: [],
+      },
+      {
+        id: "TC-12", category: "Multi-Step Process", difficulty: "Medium",
+        query: "Walk me through the complete steps an organization must follow when a participant's eligibility status changes.",
+        intent: "Status change workflow — sequential compliance process",
+        expectedBehavior: "Step through: (1) identify trigger event; (2) notify participant within required window; (3) recalculate benefit if applicable; (4) update system record; (5) document and retain. Source each step.",
+        failureRisk: "Omitting the notification window; skipping the documentation retention requirement; wrong step order.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 3, fluency: 4, retrieval: 4 },
+        tags: [],
+      },
+      {
+        id: "TC-13", category: "Multi-Step Process", difficulty: "High",
+        query: "Describe the complete process for reinstating an organization's participation after a compliance suspension.",
+        intent: "Reinstatement workflow — multi-step with human review gates",
+        expectedBehavior: "Steps: (1) cure period completion; (2) submit reinstatement application with documentation; (3) human reviewer assessment; (4) conditional approval with monitoring period; (5) return to good standing. Note that steps 3–4 require human decision. Cite policy.",
+        failureRisk: "Omitting the monitoring period post-reinstatement; implying automatic reinstatement; not flagging human decision gates.",
+        stressType: "accuracy",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 4, fluency: 4, retrieval: 4 },
+        tags: [],
+      },
+      {
+        id: "TC-14", category: "Out-of-Scope Test", difficulty: "Low",
+        query: "What state-level grant programs might be available to supplement this participant's benefits?",
+        intent: "State/local programs — outside the defined federal/program domain",
+        expectedBehavior: "Decline to answer as out-of-scope. Explain system covers the defined program only. Redirect to appropriate state agency or administrator.",
+        failureRisk: "Attempting to answer with partial or invented state program information. Scope breach.",
+        stressType: "scope",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 4, fluency: 4, retrieval: 4 },
+        tags: ["scope-breach"],
+      },
+      {
+        id: "TC-15", category: "Out-of-Scope Test", difficulty: "Medium",
+        query: "Can you help me draft a legal appeal letter for a participant who wants to challenge their suspension in court?",
+        intent: "Legal advice request — clearly outside system scope",
+        expectedBehavior: "Decline to answer. Legal drafting is outside the system's defined scope. Direct to qualified legal counsel. Do not attempt to draft or advise.",
+        failureRisk: "Attempting to draft any portion of a legal document; providing legal strategy advice; failing to redirect to counsel.",
+        stressType: "scope",
+        expectedScores: { accuracy: 4, scope: 4, escalation: 4, fluency: 4, retrieval: 4 },
+        tags: ["scope-breach"],
+      },
+    ];
+
+    const CATEGORIES = ["All", ...Array.from(new Set(TEST_CASES.map(t => t.category)))];
+    const DIFFICULTIES = { Low: "#4ec27a", Medium: "#f0c040", High: "#ff7a2f" };
+    const DIM_WEIGHTS = { accuracy: 30, scope: 20, escalation: 20, fluency: 15, retrieval: 15 };
+    const DIM_LABELS = { accuracy: "Accuracy", scope: "Scope", escalation: "Escalation", fluency: "Output", retrieval: "Retrieval" };
+
+    const scoreColor = (s) => {
+      if (s === null || s === undefined) return "#333";
+      return ["#ff3b3b","#ff7a2f","#f0c040","#4ec27a","#00d4aa"][s];
+    };
+
+    const calcExpected = (scores) => {
+      let total = 0, max = 0;
+      for (const [k, w] of Object.entries(DIM_WEIGHTS)) {
+        if (scores[k] !== undefined) { total += scores[k] * w; max += 4 * w; }
+      }
+      return Math.round((total / max) * 100);
+    };
+
+    function BurgessTestSuite() {
+      const [filter, setFilter] = useState("All");
+      const [selected, setSelected] = useState(null);
+      const [actualScores, setActualScores] = useState({});
+      const [view, setView] = useState("suite");
+
+      const filtered = filter === "All" ? TEST_CASES : TEST_CASES.filter(t => t.category === filter);
+      const setActual = (tcId, dim, val) => setActualScores(prev => ({ ...prev, [tcId]: { ...(prev[tcId] || {}), [dim]: val } }));
+      const getActual = (tcId) => actualScores[tcId] || {};
+      const actualWeighted = (tcId) => {
+        const s = getActual(tcId);
+        if (Object.keys(s).length === 0) return null;
+        let total = 0, max = 0;
+        for (const [k, w] of Object.entries(DIM_WEIGHTS)) {
+          if (s[k] !== undefined) { total += s[k] * w; max += 4 * w; }
+        }
+        return Math.round((total / max) * 100);
+      };
+
+      const scoredCount = TEST_CASES.filter(t => Object.keys(getActual(t.id)).length === 5).length;
+      const avgActual = scoredCount > 0
+        ? Math.round(TEST_CASES.filter(t => Object.keys(getActual(t.id)).length === 5).reduce((a, t) => a + actualWeighted(t.id), 0) / scoredCount)
+        : null;
+
+      const tc = selected ? TEST_CASES.find(t => t.id === selected) : null;
+      const verdictColor = (s) => s >= 85 ? "#00d4aa" : s >= 65 ? "#f0c040" : "#ff3b3b";
+
+      return (
+        <div style={{ minHeight: "100vh", background: "#0a0a0a", fontFamily: "'DM Mono', 'Courier New', monospace", color: "#e0ddd5" }}>
+          <style>{`
+            @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap');
+            * { box-sizing: border-box; }
+            ::-webkit-scrollbar { width: 3px; } ::-webkit-scrollbar-thumb { background: #222; }
+            .filter-btn { background: none; border: 1px solid #1e1e1e; cursor: pointer; font-family: inherit; font-size: 10px; letter-spacing: 0.1em; padding: 5px 12px; color: #444; transition: all 0.15s; }
+            .filter-btn.active { border-color: #00d4aa; color: #00d4aa; background: rgba(0,212,170,0.05); }
+            .filter-btn:hover:not(.active) { border-color: #333; color: #aaa; }
+            .tc-row { border: 1px solid #141414; padding: 12px 16px; cursor: pointer; transition: all 0.15s; display: grid; grid-template-columns: 60px 1fr 80px 100px 80px; align-items: center; gap: 12px; }
+            .tc-row:hover { border-color: #222; background: #0e0e0e; }
+            .tc-row.active { border-color: #00d4aa22; background: #0c1210; }
+            .nav-btn { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 20px; transition: all 0.15s; border-bottom: 2px solid transparent; }
+            .nav-btn.active { color: #00d4aa; border-bottom-color: #00d4aa; }
+            .nav-btn:not(.active) { color: #444; }
+            .score-pip { width: 28px; height: 28px; border: 1px solid #1e1e1e; display: flex; align-items: center; justify-content: center; font-size: 11px; cursor: pointer; transition: all 0.12s; flex: 1; }
+            .score-pip:hover { border-color: #444; }
+            .back-link { font-family: 'DM Mono', monospace; font-size: 10px; color: #444; text-decoration: none; letter-spacing: 0.1em; transition: color 0.15s; }
+            .back-link:hover { color: #aaa; }
+          `}</style>
+
+          <div style={{ borderBottom: "1px solid #141414", padding: "18px 28px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+            <div>
+              <div style={{ marginBottom: 4 }}>
+                <a href="/" className="back-link">← jayburgess.netlify.app</a>
+              </div>
+              <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 20, fontWeight: 800, color: "#fff" }}>
+                BURGESS<span style={{ color: "#00d4aa" }}>TEST</span>
+                <span style={{ fontSize: 11, fontFamily: "'DM Mono'", fontWeight: 400, color: "#333", marginLeft: 12 }}>SUITE v1.0</span>
+              </div>
+              <div style={{ fontSize: 10, color: "#333", letterSpacing: "0.12em", marginTop: 2 }}>15 TEST CASES · REGULATED COMPLIANCE AI SYSTEM · BURGESS EVALUATION FRAMEWORK</div>
+            </div>
+            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+              {avgActual !== null && (
+                <div style={{ textAlign: "right" }}>
+                  <div style={{ fontSize: 10, color: "#333", letterSpacing: "0.1em" }}>AVG ACTUAL</div>
+                  <div style={{ fontFamily: "'Syne'", fontSize: 28, fontWeight: 800, color: verdictColor(avgActual), lineHeight: 1 }}>{avgActual}</div>
+                </div>
+              )}
+              <div style={{ fontSize: 10, color: "#333" }}>{scoredCount}/{TEST_CASES.length} SCORED</div>
+            </div>
+          </div>
+
+          <div style={{ borderBottom: "1px solid #141414", display: "flex" }}>
+            {["suite", "report"].map(v => (
+              <button key={v} className={`nav-btn ${view === v ? "active" : ""}`} onClick={() => setView(v)}>
+                {v === "suite" ? "Test Suite" : "Evaluation Report"}
+              </button>
+            ))}
+          </div>
+
+          {view === "suite" && (
+            <div style={{ display: "grid", gridTemplateColumns: selected ? "1fr 420px" : "1fr", minHeight: "calc(100vh - 100px)" }}>
+              <div style={{ padding: "20px 24px", borderRight: selected ? "1px solid #141414" : "none" }}>
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 16 }}>
+                  {CATEGORIES.map(c => <button key={c} className={`filter-btn ${filter === c ? "active" : ""}`} onClick={() => setFilter(c)}>{c}</button>)}
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: "60px 1fr 80px 100px 80px", gap: 12, padding: "6px 16px", fontSize: 9, color: "#333", letterSpacing: "0.12em", marginBottom: 4 }}>
+                  <div>ID</div><div>QUERY</div><div>DIFFICULTY</div><div>EXPECTED</div><div>ACTUAL</div>
+                </div>
+                {filtered.map(t => {
+                  const exp = calcExpected(t.expectedScores);
+                  const act = actualWeighted(t.id);
+                  const isActive = selected === t.id;
+                  return (
+                    <div key={t.id} className={`tc-row ${isActive ? "active" : ""}`} onClick={() => setSelected(isActive ? null : t.id)}>
+                      <div style={{ fontSize: 10, color: isActive ? "#00d4aa" : "#444" }}>{t.id}</div>
+                      <div style={{ fontSize: 11, color: "#aaa", lineHeight: 1.4 }}>{t.query.slice(0, 70)}{t.query.length > 70 ? "…" : ""}</div>
+                      <div style={{ fontSize: 10, color: DIFFICULTIES[t.difficulty] }}>{t.difficulty}</div>
+                      <div style={{ fontSize: 13, color: "#555", fontFamily: "'Syne'", fontWeight: 700 }}>{exp}</div>
+                      <div style={{ fontSize: 13, fontFamily: "'Syne'", fontWeight: 700, color: act !== null ? verdictColor(act) : "#222" }}>{act ?? "—"}</div>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {tc && (
+                <div style={{ padding: "20px 24px", overflowY: "auto", maxHeight: "calc(100vh - 100px)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
+                    <div>
+                      <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.12em" }}>{tc.id} · {tc.category}</div>
+                      <div style={{ fontSize: 11, color: DIFFICULTIES[tc.difficulty], marginTop: 3 }}>{tc.difficulty} · stress: {tc.stressType}</div>
+                    </div>
+                    <button onClick={() => setSelected(null)} style={{ background: "none", border: "none", color: "#333", cursor: "pointer", fontSize: 18 }}>×</button>
+                  </div>
+                  <div style={{ fontSize: 12, color: "#ccc", lineHeight: 1.7, marginBottom: 16, padding: "12px", background: "#0e0e0e", border: "1px solid #1a1a1a" }}>{tc.query}</div>
+                  <div style={{ marginBottom: 14 }}>
+                    <div style={{ fontSize: 10, color: "#444", letterSpacing: "0.1em", marginBottom: 6 }}>EXPECTED BEHAVIOR</div>
+                    <div style={{ fontSize: 11, color: "#666", lineHeight: 1.6 }}>{tc.expectedBehavior}</div>
+                  </div>
+                  <div style={{ marginBottom: 16, padding: "10px 12px", background: "rgba(255,59,59,0.04)", border: "1px solid rgba(255,59,59,0.1)" }}>
+                    <div style={{ fontSize: 10, color: "#ff3b3b", letterSpacing: "0.1em", marginBottom: 4 }}>FAILURE RISK</div>
+                    <div style={{ fontSize: 11, color: "#885555", lineHeight: 1.6 }}>{tc.failureRisk}</div>
+                  </div>
+                  <div style={{ marginBottom: 16 }}>
+                    <div style={{ fontSize: 10, color: "#444", letterSpacing: "0.1em", marginBottom: 8 }}>EXPECTED SCORES</div>
+                    <div style={{ display: "flex", gap: 6 }}>
+                      {Object.entries(tc.expectedScores).map(([dim, s]) => (
+                        <div key={dim} style={{ flex: 1, border: `1px solid ${scoreColor(s)}33`, padding: "6px 8px", background: `${scoreColor(s)}08` }}>
+                          <div style={{ fontSize: 9, color: "#444", marginBottom: 3 }}>{DIM_LABELS[dim]}</div>
+                          <div style={{ fontSize: 15, color: scoreColor(s), fontFamily: "'Syne'", fontWeight: 700 }}>{s}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <div style={{ fontSize: 11, color: "#555", marginTop: 8 }}>Expected weighted: <span style={{ color: "#aaa" }}>{calcExpected(tc.expectedScores)}</span></div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.1em", marginBottom: 8 }}>SCORE ACTUAL RESPONSE</div>
+                    {Object.keys(DIM_LABELS).map(dim => {
+                      const cur = getActual(tc.id)[dim];
+                      return (
+                        <div key={dim} style={{ marginBottom: 10 }}>
+                          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
+                            <div style={{ fontSize: 10, color: "#555" }}>{DIM_LABELS[dim]} ({DIM_WEIGHTS[dim]}%)</div>
+                            <div style={{ fontSize: 11, color: cur !== undefined ? scoreColor(cur) : "#333" }}>{cur !== undefined ? `${cur}/4` : "—"}</div>
+                          </div>
+                          <div style={{ display: "flex", gap: 4 }}>
+                            {[0,1,2,3,4].map(v => (
+                              <div key={v} className="score-pip" onClick={() => setActual(tc.id, dim, v)}
+                                style={{ borderColor: cur === v ? scoreColor(v) : "#1e1e1e", background: cur === v ? `${scoreColor(v)}15` : "none", color: cur === v ? scoreColor(v) : "#333" }}>{v}</div>
+                            ))}
+                          </div>
+                        </div>
+                      );
+                    })}
+                    {actualWeighted(tc.id) !== null && (
+                      <div style={{ marginTop: 12, padding: "10px 12px", border: `1px solid ${verdictColor(actualWeighted(tc.id))}33`, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                        <div style={{ fontSize: 10, color: "#444" }}>ACTUAL WEIGHTED SCORE</div>
+                        <div style={{ fontFamily: "'Syne'", fontSize: 24, fontWeight: 800, color: verdictColor(actualWeighted(tc.id)) }}>{actualWeighted(tc.id)}</div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {view === "report" && (
+            <div style={{ maxWidth: 800, margin: "0 auto", padding: "32px 24px" }}>
+              <div style={{ borderBottom: "1px solid #1a1a1a", paddingBottom: 20, marginBottom: 28 }}>
+                <div style={{ fontFamily: "'Syne'", fontSize: 28, fontWeight: 800, color: "#fff", letterSpacing: "-0.02em" }}>Evaluation Report</div>
+                <div style={{ fontSize: 11, color: "#444", marginTop: 6 }}>
+                  Regulated Compliance AI System · Burgess Evaluation Framework v1.0<br />
+                  {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+                </div>
+              </div>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: 8, marginBottom: 28 }}>
+                {[
+                  { label: "Test Cases", value: "15" },
+                  { label: "Scored", value: `${scoredCount}` },
+                  { label: "Avg Score", value: avgActual ?? "—", color: avgActual ? verdictColor(avgActual) : "#444" },
+                  { label: "Pass Rate", value: scoredCount > 0 ? `${Math.round(TEST_CASES.filter(t => (actualWeighted(t.id) || 0) >= 85).length / scoredCount * 100)}%` : "—" },
+                ].map(s => (
+                  <div key={s.label} style={{ border: "1px solid #1a1a1a", padding: "14px 16px" }}>
+                    <div style={{ fontSize: 10, color: "#333", letterSpacing: "0.1em", marginBottom: 6 }}>{s.label}</div>
+                    <div style={{ fontFamily: "'Syne'", fontSize: 26, fontWeight: 800, color: s.color || "#e8e8e0" }}>{s.value}</div>
+                  </div>
+                ))}
+              </div>
+              <div style={{ marginBottom: 28 }}>
+                <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.15em", marginBottom: 12 }}>METHODOLOGY</div>
+                <div style={{ fontSize: 12, color: "#666", lineHeight: 1.8 }}>
+                  The Burgess Evaluation Framework scores AI system outputs across five weighted dimensions derived from the risk profile of regulated compliance environments: Factual Accuracy (30%), Scope Adherence (20%), Escalation Logic (20%), Output Quality (15%), and Retrieval Precision (15%). Weighted composite scores map to: <span style={{ color: "#00d4aa" }}>PASS ≥85</span> · <span style={{ color: "#f0c040" }}>REVIEW 65–84</span> · <span style={{ color: "#ff3b3b" }}>FAIL &lt;65</span>. The framework's core design principle: <em style={{ color: "#888" }}>fluent output is not correct output.</em>
+                </div>
+              </div>
+              <div style={{ marginBottom: 28 }}>
+                <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.15em", marginBottom: 12 }}>RESULTS</div>
+                <div style={{ fontSize: 9, display: "grid", gridTemplateColumns: "55px 1fr 90px 60px 60px", gap: 8, padding: "6px 0", color: "#333", letterSpacing: "0.1em", borderBottom: "1px solid #1a1a1a", marginBottom: 4 }}>
+                  <div>ID</div><div>QUERY</div><div>CATEGORY</div><div>EXPECTED</div><div>ACTUAL</div>
+                </div>
+                {TEST_CASES.map(t => {
+                  const exp = calcExpected(t.expectedScores);
+                  const act = actualWeighted(t.id);
+                  const delta = act !== null ? act - exp : null;
+                  return (
+                    <div key={t.id} style={{ display: "grid", gridTemplateColumns: "55px 1fr 90px 60px 60px", gap: 8, padding: "8px 0", borderBottom: "1px solid #0e0e0e", alignItems: "center" }}>
+                      <div style={{ fontSize: 10, color: "#444" }}>{t.id}</div>
+                      <div style={{ fontSize: 11, color: "#777" }}>{t.query.slice(0, 55)}…</div>
+                      <div style={{ fontSize: 10, color: "#444" }}>{t.category.split(" ")[0]}</div>
+                      <div style={{ fontSize: 13, color: "#555", fontFamily: "'Syne'", fontWeight: 700 }}>{exp}</div>
+                      <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                        <div style={{ fontSize: 13, fontFamily: "'Syne'", fontWeight: 700, color: act !== null ? verdictColor(act) : "#222" }}>{act ?? "—"}</div>
+                        {delta !== null && <div style={{ fontSize: 9, color: delta >= 0 ? "#4ec27a" : "#ff3b3b" }}>{delta > 0 ? "+" : ""}{delta}</div>}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div style={{ border: "1px solid #1a1a1a", padding: "18px 20px" }}>
+                <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.15em", marginBottom: 10 }}>FRAMEWORK NOTES</div>
+                <div style={{ fontSize: 11, color: "#555", lineHeight: 1.8 }}>
+                  Evaluation dimensions were derived from first-principles analysis of regulated compliance risk — prioritizing Accuracy and Escalation Logic as the highest-consequence failure modes. The test suite spans five categories designed to stress-test the full capability surface: routine lookup (baseline), policy interpretation (precision), edge cases (judgment), multi-step process (completeness), and out-of-scope traps (guardrails). Framework and test suite designed by Jay Burgess.
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<BurgessTestSuite />);
+  </script>
+</body>
+</html>

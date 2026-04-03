@@ -6,6 +6,7 @@ import Proof from '../components/Proof'
 import Companies from '../components/Companies'
 import Skills from '../components/Skills'
 import RevuityBand from '../components/RevuityBand'
+import Methodology from '../components/Methodology'
 import WalmartBand from '../components/WalmartBand'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
@@ -19,9 +20,10 @@ export default function Home() {
       <CaseBand />
       <Proof />
       <Companies />
+      <WalmartBand />
       <Skills />
       <RevuityBand />
-      <WalmartBand />
+      <Methodology />
       <CTA />
       <Footer />
     </>
