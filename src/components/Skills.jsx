@@ -1,23 +1,23 @@
 import { useReveal } from '../hooks/useReveal'
 
 const certifications = [
-  'Microsoft Fabric Certified',
-  'Databricks Certified',
-  'Google BI Certified',
-  'Microsoft Agentic AI (in progress)',
-  'MBA — Data Science, Eastern University',
+  'MBA · Eastern University · 2024',
+  'M.S. Data Science · Eastern University · 2022',
+  'M.Ed. · Loyola Marymount University · 2013',
+  'B.A. Sociology · Loyola Marymount University · 2005',
 ]
 
 const skillBlocks = [
   {
-    head: 'AI & Agentic Systems',
+    head: 'AI Systems Architecture',
     items: [
-      'RAG Pipeline Design',
-      'LLM Orchestration · Botpress',
-      'System Prompt Engineering',
-      'Anti-hallucination Architecture',
-      'Vector Databases · Embeddings',
-      'OpenAI · Anthropic APIs',
+      'Specification Design & System Prompting',
+      'Evaluation Frameworks & QA Pipelines',
+      'Multi-Agent Orchestration',
+      'Failure Pattern Analysis (context drift, spec drift, silent failures)',
+      'Trust & Guardrail Design',
+      'Context Architecture (RAG)',
+      'AI Economics & Token Cost Modeling',
     ],
   },
   {

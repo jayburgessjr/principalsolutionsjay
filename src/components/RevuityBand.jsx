@@ -5,7 +5,7 @@ export default function RevuityBand() {
     <div className="case-band">
       <div className="case-band-text">
         <h3>Revuity Systems Case Study — Full Breakdown</h3>
-        <p>Four products. Four verticals. One builder. See how the studio was built.</p>
+        <p>AI advisory, agentic engineering, and SaaS product development for PE firms. See how the studio was built.</p>
       </div>
       <Link to="/revuity-case-study" className="case-band-link">
         Read the Case Study →

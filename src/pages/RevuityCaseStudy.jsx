@@ -16,30 +16,28 @@ function Hero() {
     <section className="cs-hero" style={{ background: 'radial-gradient(ellipse 60% 70% at 100% 50%, rgba(232,98,26,0.07), transparent 70%)' }}>
       <div className="hero-bg-text">RS</div>
       <div className="cs-inner">
-        <div className="cs-eyebrow">Case Study · Founder · Boutique Software Studio</div>
+        <div className="cs-eyebrow">Case Study · Founder & CTO · AI-First Software Studio</div>
         <h1 className="cs-title">Revuity<br /><span>Systems</span></h1>
-        <p className="cs-subtitle">Four Products. One Builder. Zero Excuses.</p>
+        <p className="cs-subtitle">AI Advisory. Agentic Engineering. SaaS Products. PE Focus.</p>
         <p className="cs-desc">
-          How I built a lean product studio from scratch — shipping four vertical data products across
-          different markets, industries, and tech stacks — as a solo founder operating in parallel
-          with a full-time role.
+          An LA-based AI-first software studio offering AI advisory &amp; agentic engineering, solution architecture for PE firms, SaaS product development, portfolio operations intelligence, and AI agentic engineering workshops — built and operated as Founder &amp; CTO.
         </p>
         <div className="cs-meta-bar">
           <div className="cs-meta-item">
             <div className="cmi-label">Entity</div>
-            <div className="cmi-val">Revuity Systems — Boutique Software Studio</div>
+            <div className="cmi-val">Revuity Systems — AI-First Software Studio</div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">My Role</div>
-            <div className="cmi-val">Founder, CTO, Designer, Architect, Builder</div>
+            <div className="cmi-val">Founder & CTO</div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">Products Shipped</div>
-            <div className="cmi-val">4 Active Products Across 4 Verticals</div>
+            <div className="cmi-val">VoltIQ · PricingCopilot · MenuIQ · ROAAS</div>
           </div>
           <div className="cs-meta-item">
-            <div className="cmi-label">Model</div>
-            <div className="cmi-val">Subscription SaaS · Vertical Data Tools</div>
+            <div className="cmi-label">Focus</div>
+            <div className="cmi-val">AI Advisory · PE Firms · Agentic Engineering</div>
           </div>
         </div>
       </div>
@@ -149,40 +147,40 @@ function ProductCard({ eyebrow, name, tagline, desc, stack, decisions, outcomeLa
 function Products() {
   const products = [
     {
-      eyebrow: 'Product 01 · B2B SaaS · Wedding Industry',
-      name: 'WedData',
-      tagline: 'Wedding vendor pricing intelligence for the B2B market',
-      desc: 'The wedding industry runs on opaque pricing. Vendors have no reliable way to benchmark their rates against the market. WedData aggregates real pricing data across vendor categories, markets, and tiers — giving wedding professionals the intelligence layer they\'ve never had. Targeting $79/month subscription.',
-      stack: ['Lovable', 'Supabase', 'PostgreSQL', 'Data Aggregation', 'Subscription SaaS'],
-      decisions: ['B2B focus over B2C — vendors pay for intelligence, couples don\'t', 'Subscription model at $79/month — recurring revenue, low churn', 'Market-first data architecture — built to expand geographically', 'Minimal feature set on launch — pricing intelligence only, nothing else'],
-      outcomeLabel: 'Target MRR', outcomeVal: '$79', outcomeDesc: 'Per subscriber per month. Designed for low CAC, high retention B2B model.', status: 'In Development',
+      eyebrow: 'Product 01 · B2B SaaS · Energy & Operations',
+      name: 'VoltIQ',
+      tagline: 'AI-powered operations intelligence for portfolio companies',
+      desc: 'Portfolio companies generate enormous operational data — but most of it sits in disconnected systems with no intelligence layer on top. VoltIQ aggregates operational and performance signals across portfolio companies, surfacing anomalies, benchmarks, and optimization opportunities through an AI-driven analytics layer built for PE operators.',
+      stack: ['Lovable', 'Supabase', 'PostgreSQL', 'AI Analytics', 'Subscription SaaS'],
+      decisions: ['PE operator focus — built for the GP layer, not individual companies', 'AI-first architecture — every data point flows through an intelligence layer', 'Multi-entity data model from day one — horizontal portfolio expansion built in', 'Minimal surface area on launch — operations intelligence only, no bloat'],
+      outcomeLabel: 'Target', outcomeVal: 'PE', outcomeDesc: 'Portfolio operations intelligence for private equity firms and their operating teams.', status: 'In Development',
     },
     {
-      eyebrow: 'Product 02 · EdTech · Certification Market',
-      name: 'CertPath',
-      tagline: 'Multi-track online certification platform, subscription-based',
-      desc: 'The professional certification market is dominated by expensive, rigid platforms. CertPath is a focused, subscription-based platform for multi-track certification delivery — built for organizations that need to certify their teams without the overhead of enterprise LMS pricing. Modular by design, scalable by architecture.',
-      stack: ['Lovable', 'Supabase', 'Multi-track Architecture', 'Subscription Model'],
-      decisions: ['Subscription over per-seat — predictable revenue, easier budgeting', 'Multi-track from day one — horizontal expansion built into the data model', 'No enterprise bloat — focused on the mid-market gap', 'Certification-first UX — not a general LMS trying to do certifications'],
-      outcomeLabel: 'Model', outcomeVal: 'Sub', outcomeDesc: 'Subscription SaaS targeting under-served mid-market certification buyers.', status: 'In Development',
+      eyebrow: 'Product 02 · AI SaaS · Pricing Intelligence',
+      name: 'PricingCopilot',
+      tagline: 'AI pricing optimization for SMB and mid-market operators',
+      desc: 'Most businesses set prices by gut, competitor observation, or inertia. PricingCopilot is an AI-powered pricing intelligence layer that analyzes cost structure, market signals, and competitive positioning to surface pricing opportunities and risk — giving operators the data-driven pricing advantage that was previously only available to enterprise teams with analytics departments.',
+      stack: ['Lovable', 'Supabase', 'LLM Integration', 'AI Analytics', 'Subscription Model'],
+      decisions: ['AI copilot model — augments operator judgment, doesn\'t replace it', 'SMB-first pricing — democratizes intelligence previously limited to enterprise', 'Subscription over per-seat — predictable revenue, low churn', 'Modular by vertical — one engine, configurable per industry'],
+      outcomeLabel: 'Model', outcomeVal: 'AI', outcomeDesc: 'AI-assisted pricing intelligence. Subscription SaaS targeting under-served mid-market operators.', status: 'In Development',
     },
     {
-      eyebrow: 'Product 03 · Consumer · Social Gaming',
-      name: 'GameNight',
-      tagline: 'Multiplayer party game web app — real-time, no download required',
-      desc: 'Party games exist. But most require a download, a device per player, or expensive hardware. GameNight is a browser-based multiplayer party game platform — one person hosts, everyone else joins on their phone. Built for the moment when a group wants to play something and nobody wants to install anything. Real-time multiplayer, zero friction.',
-      stack: ['Lovable', 'Supabase', 'Realtime WebSockets', 'Browser-native'],
-      decisions: ['Web-first — no download barrier kills party game adoption', 'Host + join model — one screen drives, everyone uses their phone', 'Supabase Realtime for multiplayer sync — zero backend overhead', 'Game-as-session architecture — each game is stateless and ephemeral'],
-      outcomeLabel: 'Differentiator', outcomeVal: '0', outcomeDesc: 'Zero downloads required. Browser-native multiplayer. Lowest friction party game on the market.', status: 'In Beta',
+      eyebrow: 'Product 03 · AI SaaS · Food & Hospitality',
+      name: 'MenuIQ',
+      tagline: 'AI menu engineering and pricing intelligence for restaurants',
+      desc: 'Restaurant operators change menus and prices based on intuition. MenuIQ brings AI-driven menu engineering to food service — analyzing item performance, margin contribution, and pricing elasticity to recommend what to keep, cut, reprice, or promote. Built for independent operators and small chains who can\'t afford a consulting firm but need the same intelligence.',
+      stack: ['Lovable', 'Supabase', 'AI Analytics', 'Realtime Data', 'SaaS'],
+      decisions: ['Operator-grade UX — built for the restaurant owner, not a data analyst', 'Menu engineering framework baked into the data model', 'Real-time cost and margin visibility — not just static reports', 'Independent restaurant focus — chain complexity handled later'],
+      outcomeLabel: 'Differentiator', outcomeVal: 'AI', outcomeDesc: 'AI menu engineering at a price point accessible to independent restaurant operators.', status: 'In Beta',
     },
     {
-      eyebrow: 'Product 04 · Entertainment · Film Industry Data',
-      name: 'Box Office Beacon',
-      tagline: 'Film industry performance intelligence and box office analytics',
-      desc: 'The entertainment industry generates enormous amounts of public performance data — but it\'s fragmented, inconsistently formatted, and hard to act on. Box Office Beacon aggregates and structures box office and film performance data into actionable intelligence for industry professionals: producers, distributors, and financiers who need market context to make smarter decisions.',
-      stack: ['Data Aggregation', 'Analytics Layer', 'Supabase', 'Lovable', 'Industry Data'],
-      decisions: ['Industry professional focus — not consumer entertainment data', 'Structured intelligence over raw data dumps', 'LA market positioning — built where the industry actually is', 'Data architecture built for historical trend analysis'],
-      outcomeLabel: 'Market', outcomeVal: 'LA', outcomeDesc: 'Built in the entertainment capital. Targeting film producers, distributors, and financiers.', status: 'Live',
+      eyebrow: 'Product 04 · Advisory SaaS · PE Firms',
+      name: 'ROAAS',
+      tagline: 'Return on AI as a Service — AI ROI measurement for PE portfolio companies',
+      desc: 'PE firms are deploying AI across portfolio companies but have no standardized way to measure what it\'s actually returning. ROAAS (Return on AI as a Service) is an AI economics platform that tracks deployment costs, output quality, and business impact across portfolio companies — giving GPs the ROI visibility they need to make intelligent AI investment decisions at scale.',
+      stack: ['AI Economics Framework', 'Supabase', 'Lovable', 'Portfolio Analytics', 'SaaS'],
+      decisions: ['GP-layer reporting — aggregates across portfolio, not just per company', 'AI economics model built from first principles — not vanity metrics', 'Token cost modeling and quality benchmarking as core data primitives', 'Built from my own evaluation framework methodology used in production AI'],
+      outcomeLabel: 'Market', outcomeVal: 'PE', outcomeDesc: 'Built for private equity firms that need standardized AI ROI measurement across their portfolios.', status: 'Live',
     },
   ]
 
@@ -246,33 +244,6 @@ function WhatThisProves() {
   )
 }
 
-function EVRelevance() {
-  const cardsRef = useReveal()
-  const cards = [
-    { jd: '"high autonomy, high accountability"', title: 'What Founding a Studio Proves', proof: 'When you\'re the sole founder, there is no autonomy — there is only accountability. Every product decision, every architecture choice, every ship date is mine. That\'s the mentality I\'d bring to every portfolio company.' },
-    { jd: '"prototype and ship yourself"', title: 'What 4 Products Proves', proof: 'I don\'t need to describe how I\'d build something. I\'ve built four of them. Different stacks, different users, different business models. The Lovable + Supabase stack I use at Revuity is precisely what enables rapid prototyping inside portfolio companies.' },
-    { jd: '"across a growing portfolio of 20+ companies"', title: 'What Context-Switching Proves', proof: 'Managing four products across four different industries while running a full-time role is direct training for portfolio operations. I\'m already operating at the cognitive and organizational complexity of a multi-company model — just without the VP title.' },
-  ]
-  return (
-    <section className="ev-relevance">
-      <div className="ev-inner">
-        <div className="section-label">Why This Matters for Enduring Ventures</div>
-        <h2>The Portfolio Company Problem<br />Is a <em>Founder Problem.</em></h2>
-        <p className="ev-intro">Walking into a broken business you've never seen and shipping a fix within weeks — that's not a consultant skill. It's a founder skill. Revuity Systems is 4 reps of that exact motion, across 4 different industries.</p>
-        <div className="ev-cards reveal" ref={cardsRef}>
-          {cards.map(c => (
-            <div className="ev-card" key={c.title}>
-              <div className="ev-card-jd">EV Needs: <span>{c.jd}</span></div>
-              <div className="ev-card-title">{c.title}</div>
-              <div className="ev-card-proof">{c.proof}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
 function CTA() {
   return (
     <section className="cs-cta">
@@ -289,8 +260,8 @@ function CTA() {
 function CaseStudyFooter() {
   return (
     <footer>
-      <div className="footer-id"><strong>Jay Burgess</strong> · Principal Solutions Architect · Co-Founder & Chief Technology Officer, Revuity Systems</div>
-      <div className="footer-id">jay@revuitysys.com · Los Angeles, CA</div>
+      <div className="footer-id"><strong>Jay Burgess</strong> · Principal Solutions Architect · Founder & CTO, Revuity Systems</div>
+      <div className="footer-id">jay@revuitysys.com</div>
     </footer>
   )
 }
@@ -305,7 +276,6 @@ export default function RevuityCaseStudy() {
       <Products />
       <KeyQuote />
       <WhatThisProves />
-      <EVRelevance />
       <CTA />
       <CaseStudyFooter />
     </>

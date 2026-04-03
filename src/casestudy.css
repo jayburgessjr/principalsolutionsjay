@@ -1049,3 +1049,46 @@
   max-width: 720px;
 }
 .cs-section-h2 em { font-style: italic; color: var(--orange); }
+
+/* EVAL FRAMEWORK CALLOUT */
+.eval-framework-callout {
+  margin-top: 2rem;
+  background: rgba(232,98,26,0.06);
+  border: 1px solid rgba(232,98,26,0.25);
+  border-left: 3px solid var(--orange);
+  padding: 1.5rem;
+}
+.ef-intro {
+  font-size: 0.85rem;
+  color: var(--mid);
+  line-height: 1.6;
+  margin: 0.75rem 0 1rem;
+}
+.ef-intro strong { color: var(--white); }
+.ef-dimensions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.ef-dim {
+  font-size: 0.8rem;
+  color: var(--mid);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ef-weight {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--orange);
+  min-width: 2.5rem;
+}
+.ef-cases {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.55;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+}

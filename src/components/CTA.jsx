@@ -4,11 +4,11 @@ export default function CTA() {
       <div className="cta-inner">
         <h2>
           Let's talk<br />
-          <span className="orange">Thursday.</span>
+          <span className="orange">about it.</span>
         </h2>
         <p className="cta-sub">
-          I've done the research. I understand the model. I know what this role requires — and
-          I've been doing it for 15 years without the title.
+          I architect production-grade AI systems and have been doing it for 15 years.
+          If you're building something that needs to be reliable at scale, let's connect.
         </p>
         <a href="https://calendly.com/jayburgessjr/long-meet" className="cta-btn" target="_blank" rel="noreferrer">
           Schedule a Call →

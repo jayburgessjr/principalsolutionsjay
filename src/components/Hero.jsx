@@ -6,13 +6,16 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-eyebrow">
-            Principal Solutions Architect · Builder · Operator
+            Principal Solutions Architect · AI Systems Architect · Builder · Operator
           </div>
           <h1 className="hero-headline">
             I Walk In.<br />
             <span className="orange">I Find It.</span><br />
             <span className="outline">I Ship It.</span>
           </h1>
+          <p className="hero-summary">
+            AI systems architect who designs, builds, and operates production-grade AI in regulated environments. Fourteen-plus years spanning Fortune 500, higher education, and venture-backed software. Built ReggieAI — a production agentic compliance platform for Title IV federal financial aid with $2.7M in documented business impact. Founder &amp; CTO of Revuity Systems, an LA-based AI-first software studio. I don't just use AI — I architect the systems that make it reliable at scale.
+          </p>
         </div>
 
         <div className="hero-photo-wrap">

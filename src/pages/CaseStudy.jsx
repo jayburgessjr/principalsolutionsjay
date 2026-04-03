@@ -118,6 +118,18 @@ function Build() {
                 <div className="arch-node">Follow-up Workflow<span className="sub">Automated</span></div>
               </div>
             </div>
+            <div className="eval-framework-callout">
+              <div className="fb-label">Evaluation Framework</div>
+              <p className="ef-intro">Built a weighted evaluation framework to distinguish <strong>fluent output from correct output</strong> — the central failure mode in regulated AI.</p>
+              <div className="ef-dimensions">
+                <div className="ef-dim"><span className="ef-weight">30%</span> Factual Accuracy</div>
+                <div className="ef-dim"><span className="ef-weight">20%</span> Scope Adherence</div>
+                <div className="ef-dim"><span className="ef-weight">20%</span> Escalation Logic</div>
+                <div className="ef-dim"><span className="ef-weight">15%</span> Output Quality</div>
+                <div className="ef-dim"><span className="ef-weight">15%</span> Retrieval Precision</div>
+              </div>
+              <p className="ef-cases">15 production test cases spanning routine calculation, policy interpretation, edge cases, multi-step process, and out-of-scope traps.</p>
+            </div>
           </div>
           <div className="cs-sidebar">
             <div style={{ background: 'var(--black)', border: '1px solid var(--rule)', padding: '1.5rem', marginBottom: '1rem' }}>
@@ -250,7 +262,7 @@ function CTA() {
 function CaseStudyFooter() {
   return (
     <footer>
-      <div className="footer-id"><strong>Jay Burgess</strong> · Principal Solutions Architect · Los Angeles, CA</div>
+      <div className="footer-id"><strong>Jay Burgess</strong> · Principal Solutions Architect · AI Systems Architect · Builder · Operator</div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
   )
