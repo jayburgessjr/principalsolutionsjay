@@ -18,29 +18,31 @@ const tools = [
 ]
 
 export default function Methodology() {
-  const cardsRef = useReveal()
+  const rowsRef = useReveal()
 
   return (
     <section className="methodology" id="methodology">
       <div className="methodology-inner">
-        <div className="section-label">Methodology</div>
-        <h2 className="methodology-h2">
-          Open-Source<br />
-          <em>Evaluation Tools</em>
+        <div className="section-label">Open-Source Methodology</div>
+        <h2 className="method-h2">
+          Built in production.<br />
+          <em>Open to use.</em>
         </h2>
-        <p className="methodology-intro">
-          The frameworks I built to QA production AI in regulated environments — now available as interactive tools.
+        <p className="method-intro">
+          The evaluation frameworks I built to QA production AI in regulated environments — now available as interactive tools.
         </p>
-        <div className="tool-cards reveal" ref={cardsRef}>
-          {tools.map(tool => (
-            <a href={tool.href} className="tool-card" key={tool.label} target="_blank" rel="noreferrer">
-              <div className="tc-tag">{tool.tag}</div>
-              <div className="tc-label">{tool.label}</div>
-              <p className="tc-desc">{tool.description}</p>
-              <div className="tc-cta">{tool.cta}</div>
-            </a>
-          ))}
-        </div>
+      </div>
+      <div className="tool-rows reveal" ref={rowsRef}>
+        {tools.map(tool => (
+          <a href={tool.href} className="tool-row" key={tool.label} target="_blank" rel="noreferrer">
+            <div className="tool-row-body">
+              <div className="tool-row-tag">{tool.tag}</div>
+              <div className="tool-row-title">{tool.label}</div>
+              <p className="tool-row-desc">{tool.description}</p>
+            </div>
+            <span className="tool-row-cta">{tool.cta}</span>
+          </a>
+        ))}
       </div>
     </section>
   )

@@ -801,81 +801,78 @@ footer {
 
 /* ─── METHODOLOGY ─── */
 .methodology {
-  padding: 7rem 2.5rem;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
-.methodology-inner { max-width: 1140px; margin: 0 auto; }
-.methodology-h2 {
-  font-family: 'Libre Baskerville', serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+.methodology-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 6rem 2.5rem 4rem;
 }
-.methodology-h2 em { font-style: italic; color: var(--orange); }
 .methodology-intro {
   font-size: 0.9rem;
   color: var(--mid);
-  max-width: 480px;
+  max-width: 520px;
   line-height: 1.7;
-  margin-bottom: 3rem;
+  margin-top: 0.75rem;
 }
-.tool-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: var(--rule);
-  border: 1px solid var(--rule);
-}
-.tool-card {
+.tool-rows {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  padding: 2.5rem;
-  background: var(--black);
+}
+.tool-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 3rem 2.5rem;
+  background: var(--panel);
+  border-top: 1px solid var(--rule);
+  border-left: 3px solid transparent;
   text-decoration: none;
-  transition: background 0.2s;
-  position: relative;
+  transition: border-color 0.2s, background 0.2s;
+  flex-wrap: wrap;
 }
-.tool-card::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 3px;
-  background: var(--orange);
-  opacity: 0;
-  transition: opacity 0.2s;
+.tool-row:hover {
+  border-left-color: var(--orange);
+  background: var(--ink);
 }
-.tool-card:hover { background: var(--panel); }
-.tool-card:hover::before { opacity: 1; }
-.tc-tag {
+.tool-row-body { flex: 1; min-width: 240px; }
+.tool-row-tag {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.62rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--orange);
+  margin-bottom: 0.5rem;
 }
-.tc-label {
+.tool-row-title {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.8rem;
-  letter-spacing: 0.03em;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  letter-spacing: 0.04em;
   color: var(--white);
   line-height: 1;
+  margin-bottom: 0.75rem;
 }
-.tc-desc {
+.tool-row-desc {
   font-size: 0.85rem;
   color: var(--mid);
-  line-height: 1.65;
-  flex: 1;
+  line-height: 1.7;
+  max-width: 560px;
 }
-.tc-cta {
+.tool-row-cta {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--orange);
-  letter-spacing: 0.06em;
-  margin-top: 0.5rem;
+  background: #fff;
+  padding: 0.75rem 2rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
 }
+.tool-row:hover .tool-row-cta { background: var(--orange); color: #fff; }
 
 /* ─── REVEAL ─── */
 .reveal {
