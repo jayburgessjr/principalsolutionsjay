@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-eyebrow">
-            Principal Solutions Architect · AI Systems Architect · Builder · Operator
+            AI Systems Architect · Builder · Operator
           </div>
           <h1 className="hero-headline">
             I Walk In.<br />
