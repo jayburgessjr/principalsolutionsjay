@@ -936,20 +936,63 @@ footer {
 }
 .product-row:hover .product-row-cta { background: var(--orange); color: #fff; }
 .products-band-footer {
-  padding: 2.5rem 2.5rem;
   border-top: 1px solid var(--rule);
   background: var(--black);
 }
-.products-see-all {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--dim);
-  text-decoration: none;
-  transition: color 0.2s;
+.products-footer-top {
+  padding: 2rem 2.5rem;
+  border-bottom: 1px solid var(--rule);
 }
-.products-see-all:hover { color: var(--orange); }
+.products-see-all {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--orange);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1.25rem;
+  transition: background 0.2s;
+}
+.products-see-all:hover { background: var(--orange2); }
+.products-case-promo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 3rem 2.5rem;
+}
+.products-case-copy { flex: 1; }
+.products-case-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin: 0.5rem 0 0.6rem;
+}
+.products-case-desc {
+  font-size: 0.85rem;
+  color: var(--mid);
+  line-height: 1.7;
+  max-width: 520px;
+}
+.products-case-cta {
+  display: inline-block;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--orange);
+  text-decoration: none;
+  border: 1px solid var(--orange);
+  padding: 0.65rem 1.5rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.products-case-cta:hover { background: var(--orange); color: #fff; }
 
 /* ─── ENGAGEMENT ─── */
 .engagement-section {

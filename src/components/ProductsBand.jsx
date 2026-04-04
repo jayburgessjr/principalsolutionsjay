@@ -74,18 +74,12 @@ export default function ProductsBand() {
         </div>
 
       </div>
-      <div className="products-band-footer">
-        <div className="products-footer-top">
-          <Link to="/revuity-products" className="products-see-all">See All 8 Products →</Link>
+      <div className="case-band">
+        <div className="case-band-text">
+          <h3>Eight Products. Five Verticals.</h3>
+          <p>Each built to run without ongoing maintenance. See the full studio.</p>
         </div>
-        <div className="products-case-promo">
-          <div className="products-case-copy">
-            <div className="section-label">Revuity Systems · Case Study</div>
-            <div className="products-case-title">Revuity Systems Case Study — Full Breakdown</div>
-            <p className="products-case-desc">AI advisory, agentic engineering, and SaaS product development for PE firms. See how the studio was built.</p>
-          </div>
-          <Link to="/revuity-case-study" className="products-case-cta">Read the Case Study →</Link>
-        </div>
+        <Link to="/revuity-products" className="case-band-link">See All 8 Products →</Link>
       </div>
     </section>
   )
