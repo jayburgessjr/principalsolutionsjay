@@ -5,10 +5,280 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BurgessEval · AI Evaluation Framework · Jay Burgess</title>
   <meta name="description" content="A weighted, rubric-driven scoring system for evaluating AI outputs in regulated environments. 5 dimensions. 7 failure pattern tags. Composite 0–100 score." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <script>(function(){var t=localStorage.getItem('theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
   <style>
+    :root {
+      --black: #080809;
+      --panel: #161618;
+      --ink: #111113;
+      --white: #f4f1ec;
+      --orange: #e8621a;
+      --orange2: #f5823e;
+      --dim: rgba(255,255,255,0.3);
+      --mid: rgba(255,255,255,0.55);
+      --rule: rgba(255,255,255,0.08);
+      --rule2: rgba(255,255,255,0.12);
+    }
+    [data-theme="light"] {
+      --black: #f5f2ed;
+      --panel: #e6e1da;
+      --ink: #dedad3;
+      --white: #141416;
+      --dim: rgba(0,0,0,0.4);
+      --mid: rgba(0,0,0,0.65);
+      --rule: rgba(0,0,0,0.1);
+      --rule2: rgba(0,0,0,0.15);
+    }
+    [data-theme="light"] nav { background: rgba(245,242,237,0.92); }
+    [data-theme="light"] .nav-cta { color: #fff; }
+    [data-theme="light"] textarea,
+    [data-theme="light"] input,
+    [data-theme="light"] select { background: var(--ink); color: var(--white); }
+    [data-theme="light"] .dim-row { border-color: var(--rule); }
+    [data-theme="light"] .dim-row:hover,
+    [data-theme="light"] .dim-row.expanded { background: var(--ink); }
+    [data-theme="light"] .eval-card { border-color: var(--rule); }
+    [data-theme="light"] .rubric-block { background: var(--ink); }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: #0d0d0d; }
-    #root { min-height: 100vh; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 2px; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV — exact match to portfolio ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 800;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.4rem 2.5rem;
+      border-bottom: 1px solid var(--rule);
+      background: rgba(8,8,9,0.92);
+      backdrop-filter: blur(16px);
+    }
+    .nav-id {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--dim);
+      text-transform: uppercase;
+    }
+    .nav-id strong { color: var(--white); font-weight: 500; }
+    .nav-right { display: flex; align-items: center; gap: 2rem; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--orange); }
+    .nav-slides {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--rule2);
+      color: var(--dim);
+      text-decoration: none;
+      padding: 0.55rem 1.4rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-slides:hover { border-color: var(--orange); color: var(--orange); }
+    .nav-cta {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--orange);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.55rem 1.4rem;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: var(--orange2); }
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--rule2);
+      color: var(--dim);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.45rem;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .theme-toggle:hover { border-color: var(--orange); color: var(--orange); }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      padding: 7rem 2.5rem 2.5rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .page-hero-eyebrow {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dim);
+      margin-bottom: 0.75rem;
+    }
+    .page-hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      letter-spacing: 0.04em;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+    .page-hero-title span { color: var(--orange); }
+    .page-hero-desc {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--dim);
+      letter-spacing: 0.05em;
+      max-width: 560px;
+    }
+
+    /* ─── TOOL TABS ─── */
+    .tool-tab-bar {
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      background: var(--black);
+      position: sticky;
+      top: 65px;
+      z-index: 500;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 1rem 1.5rem;
+      transition: all 0.15s;
+      color: var(--dim);
+    }
+    .tab-btn.active { color: var(--orange); border-bottom-color: var(--orange); background: rgba(232,98,26,0.04); }
+    .tab-btn:not(.active):hover { color: var(--mid); }
+
+    /* ─── TOOL CONTENT ─── */
+    .tool-content { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .section-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--orange);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    textarea, input, select {
+      background: var(--ink);
+      border: 1px solid var(--rule2);
+      color: var(--white);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      padding: 10px 12px;
+      width: 100%;
+      outline: none;
+      resize: vertical;
+      transition: border-color 0.15s;
+    }
+    textarea:focus, input:focus, select:focus { border-color: var(--orange); }
+    select option { background: var(--panel); }
+
+    .dim-row {
+      border: 1px solid var(--rule);
+      padding: 16px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .dim-row:hover, .dim-row.expanded { border-color: var(--rule2); background: var(--ink); }
+
+    .score-btn {
+      border: 1px solid var(--rule);
+      background: none;
+      cursor: pointer;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      padding: 8px 10px;
+      transition: all 0.15s;
+      text-align: left;
+      flex: 1 1 140px;
+      color: var(--dim);
+    }
+    .tag-btn {
+      border: 1px solid var(--rule);
+      background: none;
+      cursor: pointer;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.65rem;
+      padding: 4px 10px;
+      border-radius: 20px;
+      transition: all 0.15s;
+      color: var(--dim);
+      letter-spacing: 0.05em;
+    }
+    .tag-btn.active { border-color: #ff3b3b; color: #ff3b3b; background: rgba(255,59,59,0.06); }
+    .tag-btn:hover:not(.active) { border-color: var(--rule2); color: var(--mid); }
+
+    .submit-btn {
+      background: var(--orange);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.75rem 2rem;
+      transition: all 0.2s;
+    }
+    .submit-btn:hover { background: var(--orange2); transform: translateY(-1px); }
+    .submit-btn:disabled { background: var(--panel); color: var(--dim); cursor: not-allowed; transform: none; }
+
+    .eval-card { border: 1px solid var(--rule); padding: 14px 16px; margin-bottom: 8px; }
+    .rubric-block { border: 1px solid var(--rule); padding: 20px; margin-bottom: 10px; background: var(--ink); }
+
+    .stat-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-bottom: 2rem; background: var(--rule); }
+    .stat-block { background: var(--black); padding: 1rem 1.25rem; }
+    .stat-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: var(--dim); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.4rem; }
+    .stat-value { font-family: 'Bebas Neue', sans-serif; font-size: 1.75rem; letter-spacing: 0.04em; }
+
+    .score-display { display: flex; align-items: baseline; gap: 14px; }
+    .score-num { font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 0.02em; line-height: 1; }
+    .score-verdict { font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
+    .score-sub { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 2px; }
+
+    .framework-note {
+      border: 1px solid rgba(232,98,26,0.2);
+      background: rgba(232,98,26,0.04);
+      border-left: 3px solid var(--orange);
+      padding: 20px;
+      margin-top: 1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -17,7 +287,65 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel" data-presets="react">
-    const { useState } = React;
+    const { useState, useEffect } = React;
+
+    function useTheme() {
+      const [theme, setTheme] = useState(
+        () => document.documentElement.getAttribute('data-theme') || 'dark'
+      );
+      useEffect(() => {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+      }, [theme]);
+      const toggle = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
+      return { theme, toggle };
+    }
+
+    function SunIcon() {
+      return (
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+      );
+    }
+
+    function MoonIcon() {
+      return (
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      );
+    }
+
+    function SiteNav({ theme, toggle }) {
+      return (
+        <nav>
+          <div className="nav-id">
+            <strong>Jay Burgess</strong> · AI Systems Architect · Builder · Operator
+          </div>
+          <div className="nav-right">
+            <ul className="nav-links">
+              <li><a href="https://jayburgess.netlify.app/">← Portfolio</a></li>
+              <li><a href="https://jayburgess.netlify.app/#method">The Method</a></li>
+              <li><a href="https://jayburgess.netlify.app/#skills">Skills</a></li>
+            </ul>
+            <a href="https://www.canva.com/design/DAHEKlOQl-o/Ra60KaYOrYJeyqpgt6xWQA/view?utm_content=DAHEKlOQl-o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5c5a1db5ea" className="nav-slides" target="_blank" rel="noreferrer">
+              View My Slides
+            </a>
+            <a href="https://calendly.com/jayburgessjr/long-meet" className="nav-cta" target="_blank" rel="noreferrer">
+              Schedule a Call
+            </a>
+            <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
+        </nav>
+      );
+    }
 
     const DIMENSIONS = [
       {
@@ -91,7 +419,7 @@
     const FAILURE_TAGS = ["hallucination", "scope-breach", "missed-escalation", "retrieval-miss", "spec-drift", "silent-failure", "over-escalation"];
 
     const scoreColor = (s) => {
-      if (s === null || s === undefined) return "#2a2a2a";
+      if (s === null || s === undefined) return "rgba(255,255,255,0.1)";
       return ["#ff3b3b","#ff7a2f","#f0c040","#4ec27a","#00d4aa"][s];
     };
     const scoreBg = (s) => {
@@ -111,7 +439,7 @@
 
     const getVerdict = (pct) => {
       if (pct === null) return null;
-      if (pct >= 85) return { label: "PASS", color: "#00d4aa" };
+      if (pct >= 85) return { label: "PASS", color: "#4ec27a" };
       if (pct >= 65) return { label: "REVIEW", color: "#f0c040" };
       return { label: "FAIL", color: "#ff3b3b" };
     };
@@ -125,6 +453,7 @@
     const DIM_LABELS = { accuracy: "Accuracy", scope: "Scope", escalation: "Escalation", fluency: "Output", retrieval: "Retrieval" };
 
     function BurgessEvalFramework() {
+      const { theme, toggle } = useTheme();
       const [evals, setEvals] = useState([]);
       const [current, setCurrent] = useState(emptyEval());
       const [view, setView] = useState("eval");
@@ -144,74 +473,42 @@
 
       const weighted = calcWeighted(current.scores);
       const verdict = getVerdict(weighted);
-      const avgScore = evals.length ? Math.round(evals.filter(e => e.weightedScore !== null).reduce((a, b) => a + b.weightedScore, 0) / evals.filter(e => e.weightedScore !== null).length) : null;
+      const scoredEvals = evals.filter(e => e.weightedScore !== null);
+      const avgScore = scoredEvals.length ? Math.round(scoredEvals.reduce((a, b) => a + b.weightedScore, 0) / scoredEvals.length) : null;
       const failCounts = {};
       for (const e of evals) for (const t of e.failureTags) failCounts[t] = (failCounts[t] || 0) + 1;
       const topFailure = Object.entries(failCounts).sort((a, b) => b[1] - a[1])[0];
 
       return (
-        <div style={{ minHeight: "100vh", background: "#0d0d0d", fontFamily: "'DM Mono', 'Courier New', monospace", color: "#e8e8e0" }}>
-          <style>{`
-            @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap');
-            * { box-sizing: border-box; }
-            ::-webkit-scrollbar { width: 4px; } ::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
-            .nav-btn { background: none; border: none; cursor: pointer; font-family: inherit; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; padding: 8px 16px; transition: all 0.15s; border-bottom: 2px solid transparent; }
-            .nav-btn.active { background: #1a1a1a; color: #00d4aa; border-bottom-color: #00d4aa; }
-            .nav-btn:not(.active) { color: #555; }
-            .score-btn { border: 1px solid #2a2a2a; background: none; cursor: pointer; font-family: inherit; font-size: 10px; padding: 8px 10px; transition: all 0.15s; border-radius: 2px; text-align: left; flex: 1 1 140px; }
-            .tag-btn { border: 1px solid #2a2a2a; background: none; cursor: pointer; font-family: inherit; font-size: 10px; padding: 4px 10px; border-radius: 20px; transition: all 0.15s; color: #666; letter-spacing: 0.05em; }
-            .tag-btn.active { border-color: #ff3b3b; color: #ff3b3b; background: rgba(255,59,59,0.06); }
-            .tag-btn:hover:not(.active) { border-color: #444; color: #aaa; }
-            .submit-btn { background: #00d4aa; color: #000; border: none; cursor: pointer; font-family: inherit; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 28px; transition: all 0.2s; }
-            .submit-btn:hover { background: #00f0c0; transform: translateY(-1px); }
-            .submit-btn:disabled { background: #1a1a1a; color: #333; cursor: not-allowed; transform: none; }
-            .dim-row { border: 1px solid #1e1e1e; padding: 16px; margin-bottom: 8px; cursor: pointer; transition: all 0.15s; }
-            .dim-row:hover, .dim-row.expanded { border-color: #2a2a2a; background: #111; }
-            textarea, input, select { background: #111; border: 1px solid #222; color: #e8e8e0; font-family: 'DM Mono', monospace; font-size: 12px; padding: 10px 12px; width: 100%; outline: none; resize: vertical; }
-            textarea:focus, input:focus, select:focus { border-color: #00d4aa; }
-            select option { background: #111; }
-            .eval-card { border: 1px solid #1e1e1e; padding: 14px 16px; margin-bottom: 8px; }
-            .back-link { font-family: 'DM Mono', monospace; font-size: 10px; color: #444; text-decoration: none; letter-spacing: 0.1em; transition: color 0.15s; }
-            .back-link:hover { color: #aaa; }
-          `}</style>
+        <>
+          <SiteNav theme={theme} toggle={toggle} />
 
-          <div style={{ borderBottom: "1px solid #1a1a1a", padding: "20px 32px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <div>
-              <div style={{ display: "flex", alignItems: "center", gap: 16, marginBottom: 4 }}>
-                <a href="/" className="back-link">← jayburgess.netlify.app</a>
+          <div className="page-hero">
+            <div style={{ maxWidth: 860, margin: '0 auto' }}>
+              <div className="page-hero-eyebrow">Open-Source Methodology · Evaluation Framework</div>
+              <div className="page-hero-title">BURGESS<span>EVAL</span></div>
+              <div className="page-hero-desc">
+                A weighted, rubric-driven scoring system for evaluating AI outputs in regulated environments.
+                5 dimensions · 7 failure pattern tags · Composite 0–100 score.
               </div>
-              <div style={{ fontFamily: "'Syne', sans-serif", fontSize: 22, fontWeight: 800, letterSpacing: "-0.02em", color: "#fff" }}>
-                BURGESS<span style={{ color: "#00d4aa" }}>EVAL</span>
-              </div>
-              <div style={{ fontSize: 10, color: "#444", letterSpacing: "0.15em", marginTop: 2 }}>
-                AI SYSTEM EVALUATION FRAMEWORK · REGULATED COMPLIANCE DOMAIN
-              </div>
-            </div>
-            <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
-              {avgScore !== null && (
-                <div style={{ textAlign: "right" }}>
-                  <div style={{ fontSize: 10, color: "#444", letterSpacing: "0.1em" }}>AVG SCORE</div>
-                  <div style={{ fontFamily: "'Syne'", fontSize: 24, fontWeight: 800, color: getVerdict(avgScore)?.color }}>{avgScore}</div>
-                </div>
-              )}
-              <div style={{ fontSize: 10, color: "#333", letterSpacing: "0.1em" }}>{evals.length} EVAL{evals.length !== 1 ? "S" : ""} LOGGED</div>
             </div>
           </div>
 
-          <div style={{ borderBottom: "1px solid #1a1a1a", display: "flex" }}>
+          <div className="tool-tab-bar">
             {["eval", "log", "rubric"].map(v => (
-              <button key={v} className={`nav-btn ${view === v ? "active" : ""}`} onClick={() => setView(v)}>
+              <button key={v} className={`tab-btn ${view === v ? "active" : ""}`} onClick={() => setView(v)}>
                 {v === "eval" ? "Run Evaluation" : v === "log" ? `Score Log (${evals.length})` : "Rubric Reference"}
               </button>
             ))}
           </div>
 
-          <div style={{ maxWidth: 860, margin: "0 auto", padding: "28px 24px" }}>
+          <div className="tool-content">
 
+            {/* EVAL VIEW */}
             {view === "eval" && (
               <div>
-                <div style={{ marginBottom: 24 }}>
-                  <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.15em", marginBottom: 8 }}>01 · QUERY INPUT</div>
+                <div style={{ marginBottom: '1.75rem' }}>
+                  <div className="section-label">01 · Query Input</div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 220px", gap: 8, marginBottom: 8 }}>
                     <textarea rows={3} placeholder="Paste the query or test case prompt here..." value={current.queryText} onChange={e => setCurrent(c => ({ ...c, queryText: e.target.value }))} />
                     <select value={current.queryType} onChange={e => setCurrent(c => ({ ...c, queryType: e.target.value }))} style={{ height: "100%" }}>
@@ -222,35 +519,35 @@
                   <textarea rows={3} placeholder="Paste the AI system response to evaluate..." value={current.responseText} onChange={e => setCurrent(c => ({ ...c, responseText: e.target.value }))} />
                 </div>
 
-                <div style={{ marginBottom: 24 }}>
-                  <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.15em", marginBottom: 8 }}>02 · DIMENSION SCORING</div>
+                <div style={{ marginBottom: '1.75rem' }}>
+                  <div className="section-label">02 · Dimension Scoring</div>
                   {DIMENSIONS.map(dim => {
                     const s = current.scores[dim.id];
                     const isOpen = activeDim === dim.id;
                     return (
                       <div key={dim.id} className={`dim-row ${isOpen ? "expanded" : ""}`} onClick={() => setActiveDim(isOpen ? null : dim.id)} style={{ background: s !== null ? scoreBg(s) : undefined }}>
                         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                          <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                            <div style={{ fontSize: 10, color: "#444", width: 20 }}>{DIMENSIONS.indexOf(dim) + 1}</div>
+                          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+                            <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.6rem", color: "var(--dim)", width: 20 }}>{DIMENSIONS.indexOf(dim) + 1}</div>
                             <div>
-                              <div style={{ fontSize: 12, color: s !== null ? scoreColor(s) : "#e8e8e0" }}>{dim.label}</div>
-                              <div style={{ fontSize: 10, color: "#444", marginTop: 2 }}>weight: {dim.weight}%</div>
+                              <div style={{ fontSize: "0.85rem", color: s !== null ? scoreColor(s) : "var(--white)", fontWeight: 400 }}>{dim.label}</div>
+                              <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.6rem", color: "var(--dim)", marginTop: 2, letterSpacing: "0.08em" }}>weight: {dim.weight}%</div>
                             </div>
                           </div>
-                          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                            {s !== null && <div style={{ fontSize: 11, color: scoreColor(s), background: scoreBg(s), border: `1px solid ${scoreColor(s)}33`, padding: "2px 8px", borderRadius: 2 }}>{dim.rubric[s].label} · {s}/4</div>}
-                            <div style={{ fontSize: 10, color: "#333" }}>{isOpen ? "▲" : "▼"}</div>
+                          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                            {s !== null && <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.68rem", color: scoreColor(s), background: scoreBg(s), border: `1px solid ${scoreColor(s)}44`, padding: "3px 10px" }}>{dim.rubric[s].label} · {s}/4</div>}
+                            <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.62rem", color: "var(--dim)" }}>{isOpen ? "▲" : "▼"}</div>
                           </div>
                         </div>
                         {isOpen && (
-                          <div style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid #1e1e1e" }} onClick={e => e.stopPropagation()}>
-                            <div style={{ fontSize: 10, color: "#555", marginBottom: 10 }}>{dim.description}</div>
+                          <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid var(--rule)" }} onClick={e => e.stopPropagation()}>
+                            <div style={{ fontSize: "0.8rem", color: "var(--mid)", marginBottom: 12, lineHeight: 1.6 }}>{dim.description}</div>
                             <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                               {dim.rubric.map(r => (
                                 <button key={r.score} className="score-btn" onClick={() => setScore(dim.id, r.score)}
-                                  style={{ borderColor: s === r.score ? scoreColor(r.score) : "#2a2a2a", color: s === r.score ? scoreColor(r.score) : "#555", background: s === r.score ? scoreBg(r.score) : "none" }}>
-                                  <div style={{ fontSize: 11, marginBottom: 3 }}>{r.score} — {r.label}</div>
-                                  <div style={{ fontSize: 10, color: s === r.score ? scoreColor(r.score) : "#444", lineHeight: 1.4 }}>{r.desc}</div>
+                                  style={{ borderColor: s === r.score ? scoreColor(r.score) : "var(--rule)", color: s === r.score ? scoreColor(r.score) : "var(--dim)", background: s === r.score ? scoreBg(r.score) : "none" }}>
+                                  <div style={{ fontSize: "0.72rem", marginBottom: 3, fontWeight: 500 }}>{r.score} — {r.label}</div>
+                                  <div style={{ fontSize: "0.65rem", color: s === r.score ? scoreColor(r.score) : "var(--dim)", lineHeight: 1.5 }}>{r.desc}</div>
                                 </button>
                               ))}
                             </div>
@@ -261,8 +558,8 @@
                   })}
                 </div>
 
-                <div style={{ marginBottom: 24 }}>
-                  <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.15em", marginBottom: 8 }}>03 · FAILURE PATTERN TAGS</div>
+                <div style={{ marginBottom: '1.75rem' }}>
+                  <div className="section-label">03 · Failure Pattern Tags</div>
                   <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                     {FAILURE_TAGS.map(tag => (
                       <button key={tag} className={`tag-btn ${current.failureTags.includes(tag) ? "active" : ""}`} onClick={() => toggleTag(tag)}>{tag}</button>
@@ -270,43 +567,44 @@
                   </div>
                 </div>
 
-                <div style={{ marginBottom: 24 }}>
-                  <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.15em", marginBottom: 8 }}>04 · EVALUATOR NOTES</div>
+                <div style={{ marginBottom: '1.75rem' }}>
+                  <div className="section-label">04 · Evaluator Notes</div>
                   <textarea rows={2} placeholder="Optional: root cause, context, recommended fix..." value={current.notes} onChange={e => setCurrent(c => ({ ...c, notes: e.target.value }))} />
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid #1a1a1a", paddingTop: 20 }}>
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "1px solid var(--rule)", paddingTop: 24 }}>
                   <div>
                     {weighted !== null ? (
-                      <div style={{ display: "flex", alignItems: "baseline", gap: 12 }}>
-                        <div style={{ fontFamily: "'Syne'", fontSize: 40, fontWeight: 800, color: verdict?.color, lineHeight: 1 }}>{weighted}</div>
+                      <div className="score-display">
+                        <div className="score-num" style={{ color: verdict?.color }}>{weighted}</div>
                         <div>
-                          <div style={{ fontSize: 10, letterSpacing: "0.15em", color: verdict?.color }}>{verdict?.label}</div>
-                          <div style={{ fontSize: 10, color: "#444" }}>weighted score</div>
+                          <div className="score-verdict" style={{ color: verdict?.color }}>{verdict?.label}</div>
+                          <div className="score-sub">weighted score</div>
                         </div>
                       </div>
-                    ) : <div style={{ fontSize: 11, color: "#333" }}>Score dimensions to see weighted result</div>}
+                    ) : <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.72rem", color: "var(--dim)" }}>Score dimensions to see weighted result</div>}
                   </div>
                   <button className="submit-btn" onClick={submitEval} disabled={!current.queryText.trim()}>Log Evaluation →</button>
                 </div>
               </div>
             )}
 
+            {/* LOG VIEW */}
             {view === "log" && (
               <div>
                 {evals.length === 0 ? (
-                  <div style={{ color: "#333", fontSize: 12, textAlign: "center", padding: "60px 0" }}>No evaluations logged yet.</div>
+                  <div style={{ fontFamily: "'IBM Plex Mono', monospace", color: "var(--dim)", fontSize: "0.8rem", textAlign: "center", padding: "4rem 0" }}>No evaluations logged yet. Run an evaluation first.</div>
                 ) : (
                   <>
-                    <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 8, marginBottom: 24 }}>
+                    <div className="stat-grid">
                       {[
                         { label: "Total Evals", value: evals.length },
-                        { label: "Avg Score", value: avgScore ?? "—", color: avgScore ? getVerdict(avgScore)?.color : "#444" },
-                        { label: "Top Failure", value: topFailure ? `${topFailure[0]} (${topFailure[1]}x)` : "none", color: topFailure ? "#ff3b3b" : "#444" },
+                        { label: "Avg Score", value: avgScore ?? "—", color: avgScore ? getVerdict(avgScore)?.color : "var(--dim)" },
+                        { label: "Top Failure", value: topFailure ? `${topFailure[0]} (${topFailure[1]}x)` : "none", color: topFailure ? "#ff3b3b" : "var(--dim)" },
                       ].map(s => (
-                        <div key={s.label} style={{ border: "1px solid #1e1e1e", padding: "12px 16px" }}>
-                          <div style={{ fontSize: 10, color: "#444", letterSpacing: "0.1em", marginBottom: 4 }}>{s.label}</div>
-                          <div style={{ fontSize: 18, color: s.color || "#e8e8e0" }}>{s.value}</div>
+                        <div key={s.label} className="stat-block">
+                          <div className="stat-label">{s.label}</div>
+                          <div className="stat-value" style={{ color: s.color || "var(--white)" }}>{s.value}</div>
                         </div>
                       ))}
                     </div>
@@ -314,22 +612,22 @@
                       const v = getVerdict(e.weightedScore);
                       return (
                         <div key={e.id} className="eval-card">
-                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
-                            <div style={{ fontSize: 11, color: "#aaa", flex: 1, marginRight: 16, lineHeight: 1.5 }}>{e.queryText.slice(0, 120)}{e.queryText.length > 120 ? "…" : ""}</div>
+                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 10 }}>
+                            <div style={{ fontSize: "0.82rem", color: "var(--mid)", flex: 1, marginRight: 16, lineHeight: 1.6 }}>{e.queryText.slice(0, 120)}{e.queryText.length > 120 ? "…" : ""}</div>
                             <div style={{ display: "flex", alignItems: "center", gap: 10, flexShrink: 0 }}>
-                              {e.queryType && <div style={{ fontSize: 10, color: "#444" }}>{e.queryType}</div>}
-                              {e.weightedScore !== null && <div style={{ fontSize: 20, fontFamily: "'Syne'", fontWeight: 800, color: v?.color }}>{e.weightedScore}</div>}
-                              {v && <div style={{ fontSize: 10, border: `1px solid ${v.color}`, color: v.color, padding: "2px 6px" }}>{v.label}</div>}
+                              {e.queryType && <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.6rem", color: "var(--dim)", textTransform: "uppercase", letterSpacing: "0.08em" }}>{e.queryType}</div>}
+                              {e.weightedScore !== null && <div style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: "1.75rem", letterSpacing: "0.04em", color: v?.color }}>{e.weightedScore}</div>}
+                              {v && <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.6rem", border: `1px solid ${v.color}`, color: v.color, padding: "2px 8px", letterSpacing: "0.1em" }}>{v.label}</div>}
                             </div>
                           </div>
-                          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                          <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
                             {DIMENSIONS.map(d => {
                               const s = e.scores[d.id];
-                              return s !== null ? <div key={d.id} style={{ fontSize: 10, color: scoreColor(s), background: scoreBg(s), padding: "2px 7px", borderRadius: 2 }}>{DIM_LABELS[d.id]}: {s}/4</div> : null;
+                              return s !== null ? <div key={d.id} style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.62rem", color: scoreColor(s), background: scoreBg(s), padding: "2px 8px" }}>{DIM_LABELS[d.id]}: {s}/4</div> : null;
                             })}
-                            {e.failureTags.map(t => <div key={t} style={{ fontSize: 10, color: "#ff3b3b", border: "1px solid #ff3b3b33", padding: "2px 7px", borderRadius: 10 }}>{t}</div>)}
+                            {e.failureTags.map(t => <div key={t} style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.62rem", color: "#ff3b3b", border: "1px solid rgba(255,59,59,0.25)", padding: "2px 8px", borderRadius: 10 }}>{t}</div>)}
                           </div>
-                          {e.notes && <div style={{ fontSize: 10, color: "#555", marginTop: 8, fontStyle: "italic" }}>{e.notes}</div>}
+                          {e.notes && <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.65rem", color: "var(--dim)", marginTop: 8, fontStyle: "italic" }}>{e.notes}</div>}
                         </div>
                       );
                     })}
@@ -338,29 +636,30 @@
               </div>
             )}
 
+            {/* RUBRIC VIEW */}
             {view === "rubric" && (
               <div>
-                <div style={{ fontSize: 10, color: "#444", letterSpacing: "0.1em", marginBottom: 20, lineHeight: 1.6 }}>
-                  SCORING GUIDE · 0–4 per dimension · weighted composite → 0–100<br />
-                  PASS ≥85 · REVIEW 65–84 · FAIL &lt;65 · Escalation and Accuracy carry highest weight
+                <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.68rem", color: "var(--dim)", letterSpacing: "0.08em", marginBottom: '1.5rem', lineHeight: 1.7, borderLeft: "3px solid var(--orange)", paddingLeft: 14 }}>
+                  Scoring guide: 0–4 per dimension · weighted composite → 0–100<br />
+                  PASS ≥85 · REVIEW 65–84 · FAIL &lt;65 · Accuracy and Escalation carry highest weight
                 </div>
                 {DIMENSIONS.map(dim => (
-                  <div key={dim.id} style={{ border: "1px solid #1e1e1e", padding: "16px", marginBottom: 12 }}>
-                    <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6 }}>
-                      <div style={{ fontSize: 13, color: "#e8e8e0" }}>{dim.label}</div>
-                      <div style={{ fontSize: 10, color: "#00d4aa" }}>weight: {dim.weight}%</div>
+                  <div key={dim.id} className="rubric-block">
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: 8 }}>
+                      <div style={{ fontSize: "0.95rem", color: "var(--white)", fontWeight: 400 }}>{dim.label}</div>
+                      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.62rem", color: "var(--orange)", letterSpacing: "0.1em", textTransform: "uppercase" }}>weight: {dim.weight}%</div>
                     </div>
-                    <div style={{ fontSize: 11, color: "#555", marginBottom: 12 }}>{dim.description}</div>
+                    <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.72rem", color: "var(--dim)", marginBottom: 14, lineHeight: 1.6 }}>{dim.description}</div>
                     {dim.rubric.map(r => (
-                      <div key={r.score} style={{ display: "flex", gap: 10, marginBottom: 6, alignItems: "flex-start" }}>
-                        <div style={{ width: 18, height: 18, background: scoreBg(r.score), border: `1px solid ${scoreColor(r.score)}44`, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 10, color: scoreColor(r.score), flexShrink: 0 }}>{r.score}</div>
-                        <div style={{ fontSize: 11, color: "#666", lineHeight: 1.5 }}><span style={{ color: scoreColor(r.score) }}>{r.label}</span> — {r.desc}</div>
+                      <div key={r.score} style={{ display: "flex", gap: 12, marginBottom: 8, alignItems: "flex-start" }}>
+                        <div style={{ width: 20, height: 20, background: scoreBg(r.score), border: `1px solid ${scoreColor(r.score)}55`, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.65rem", color: scoreColor(r.score), flexShrink: 0 }}>{r.score}</div>
+                        <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.72rem", color: "var(--dim)", lineHeight: 1.6 }}><span style={{ color: scoreColor(r.score) }}>{r.label}</span> — {r.desc}</div>
                       </div>
                     ))}
                   </div>
                 ))}
-                <div style={{ border: "1px solid #1e1e1e", padding: "16px", marginTop: 20 }}>
-                  <div style={{ fontSize: 12, color: "#e8e8e0", marginBottom: 10 }}>Failure Pattern Taxonomy</div>
+                <div className="rubric-block" style={{ marginTop: 24 }}>
+                  <div style={{ fontSize: "0.85rem", color: "var(--white)", marginBottom: 14, fontWeight: 400 }}>Failure Pattern Taxonomy</div>
                   {[
                     ["hallucination", "Output contains invented facts, citations, or regulatory text"],
                     ["scope-breach", "System answered a question outside the defined domain"],
@@ -370,22 +669,22 @@
                     ["silent-failure", "Output appeared correct but contained a substantive error"],
                     ["over-escalation", "Escalated a routine query unnecessarily"],
                   ].map(([tag, desc]) => (
-                    <div key={tag} style={{ display: "flex", gap: 10, marginBottom: 6, alignItems: "flex-start" }}>
-                      <div style={{ fontSize: 10, color: "#ff3b3b", border: "1px solid #ff3b3b33", padding: "1px 7px", borderRadius: 10, flexShrink: 0 }}>{tag}</div>
-                      <div style={{ fontSize: 10, color: "#444" }}>{desc}</div>
+                    <div key={tag} style={{ display: "flex", gap: 12, marginBottom: 8, alignItems: "flex-start" }}>
+                      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.62rem", color: "#ff3b3b", border: "1px solid rgba(255,59,59,0.25)", padding: "2px 8px", borderRadius: 10, flexShrink: 0 }}>{tag}</div>
+                      <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.7rem", color: "var(--dim)", lineHeight: 1.55 }}>{desc}</div>
                     </div>
                   ))}
                 </div>
-                <div style={{ marginTop: 24, padding: "16px", border: "1px solid #00d4aa22", background: "rgba(0,212,170,0.03)" }}>
-                  <div style={{ fontSize: 10, color: "#00d4aa", letterSpacing: "0.12em", marginBottom: 8 }}>FRAMEWORK AUTHOR</div>
-                  <div style={{ fontSize: 11, color: "#555", lineHeight: 1.7 }}>
-                    The Burgess Evaluation Framework was designed by Jay Burgess as part of a production AI system quality assurance process for regulated compliance environments. Dimension weights reflect the risk profile of high-stakes AI deployments where the cost of an incorrect output exceeds the cost of over-escalation. Framework distinguishes <em style={{ color: "#888" }}>fluent output</em> from <em style={{ color: "#888" }}>correct output</em> — the central failure mode in AI systems operating in compliance-sensitive domains.
+                <div className="framework-note">
+                  <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.6rem", color: "var(--orange)", letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: 10 }}>Framework Author</div>
+                  <div style={{ fontFamily: "'IBM Plex Mono', monospace", fontSize: "0.72rem", color: "var(--dim)", lineHeight: 1.8 }}>
+                    The Burgess Evaluation Framework was designed by Jay Burgess as part of a production AI quality assurance process for regulated compliance environments. Dimension weights reflect the risk profile of high-stakes AI deployments where the cost of an incorrect output exceeds the cost of over-escalation. Framework distinguishes <em style={{ color: "var(--mid)" }}>fluent output</em> from <em style={{ color: "var(--mid)" }}>correct output</em> — the central failure mode in compliance AI.
                   </div>
                 </div>
               </div>
             )}
           </div>
-        </div>
+        </>
       );
     }
 
