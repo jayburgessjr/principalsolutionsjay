@@ -7,12 +7,21 @@ import Companies from '../components/Companies'
 import Skills from '../components/Skills'
 import RevuityBand from '../components/RevuityBand'
 import ProductsBand from '../components/ProductsBand'
+import EngagementSection from '../components/EngagementSection'
+import EngagementBand from '../components/EngagementBand'
 import Methodology from '../components/Methodology'
 import WalmartBand from '../components/WalmartBand'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 export default function Home() {
+  usePageMeta({
+    title: 'Jay Burgess — I Walk In. I Find It. I Ship It.',
+    description:
+      'Principal Solutions Architect with 15+ years and $2.7M in verified ROI. I diagnose, build, and scale AI systems, data infrastructure, and internal tools.',
+  })
+
   return (
     <>
       <Nav />
@@ -25,6 +34,8 @@ export default function Home() {
       <Skills />
       <RevuityBand />
       <ProductsBand />
+      <EngagementSection />
+      <EngagementBand />
       <Methodology />
       <CTA />
       <Footer />

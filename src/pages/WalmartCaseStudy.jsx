@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { usePageMeta } from '../hooks/usePageMeta'
 import '../casestudy.css'
 
 function CaseStudyNav() {
@@ -280,6 +281,12 @@ function CaseStudyFooter() {
 }
 
 export default function WalmartCaseStudy() {
+  usePageMeta({
+    title: 'Walmart Creative Operations Case Study — Jay Burgess',
+    description:
+      'How Jay Burgess built a data organization from scratch inside Walmart Creative Operations and recovered $750,000 in three quarters.',
+  })
+
   return (
     <>
       <CaseStudyNav />

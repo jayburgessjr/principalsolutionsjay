@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { usePageMeta } from '../hooks/usePageMeta'
 import '../casestudy.css'
 
 const FEATURED = [
@@ -16,7 +17,7 @@ const FEATURED = [
       { label: '$/W Benchmark Tracker', desc: 'Know where your pricing sits relative to the market in real time. Stop leaving margin on the table.' },
       { label: 'Market Heat Index', desc: 'Composite signal combining permit velocity, competitive density, and pricing movement into a single weekly read.' },
     ],
-    href: '#',
+    href: null,
     accentColor: 'var(--orange)',
   },
   {
@@ -32,7 +33,7 @@ const FEATURED = [
       { label: 'Risk Mitigation Strategy', desc: 'Quantified risk scoring across genre, talent, budget tier, and release window — decision intelligence, not gut instinct.' },
       { label: 'Talent Impact Analytics', desc: 'Model how specific cast and crew combinations affect projected performance based on historical comparable data.' },
     ],
-    href: '#',
+    href: null,
     accentColor: 'var(--orange)',
   },
   {
@@ -48,17 +49,17 @@ const FEATURED = [
       { label: 'Margin Intelligence', desc: 'See your full menu ranked by contribution margin. Identify the underperformers that look busy but drain the bottom line.' },
       { label: 'Price Optimization', desc: 'Data-driven pricing recommendations that protect margins without alienating customers — grounded in your actual cost structure.' },
     ],
-    href: '#',
+    href: null,
     accentColor: 'var(--orange)',
   },
 ]
 
 const CATALOG = [
-  { name: 'LaunchOS', price: '$29/mo', vertical: 'Creative & Film Tools', desc: 'The social media and marketing director filmmakers use to dominate their campaigns.', status: 'Live', href: '#' },
-  { name: 'ProductionOS', price: '$49/mo', vertical: 'Creative & Film Tools', desc: 'End-to-end OS for filmmakers — from pre-production to distribution.', status: 'Live', href: '#' },
-  { name: 'PricingCopilot', price: '$49/mo', vertical: 'Business Intelligence', desc: 'The pricing intelligence platform for small businesses and nonprofits.', status: 'Early Access', href: '#' },
-  { name: 'The Bible Soul Guide', price: '$9/mo', vertical: 'Faith & Wellbeing', desc: 'AI-powered Bible study companion with personal devotionals and scholarly context.', status: 'Live', href: '#' },
-  { name: 'GameNightz Online', price: 'Free', vertical: 'Games & Play', desc: '8 party games, zero downloads. Players join instantly on their phones.', status: 'Live', href: '#' },
+  { name: 'LaunchOS', price: '$29/mo', vertical: 'Creative & Film Tools', desc: 'The social media and marketing director filmmakers use to dominate their campaigns.', status: 'Live', href: null },
+  { name: 'ProductionOS', price: '$49/mo', vertical: 'Creative & Film Tools', desc: 'End-to-end OS for filmmakers — from pre-production to distribution.', status: 'Live', href: null },
+  { name: 'PricingCopilot', price: '$49/mo', vertical: 'Business Intelligence', desc: 'The pricing intelligence platform for small businesses and nonprofits.', status: 'Early Access', href: null },
+  { name: 'The Bible Soul Guide', price: '$9/mo', vertical: 'Faith & Wellbeing', desc: 'AI-powered Bible study companion with personal devotionals and scholarly context.', status: 'Live', href: null },
+  { name: 'GameNightz Online', price: 'Free', vertical: 'Games & Play', desc: '8 party games, zero downloads. Players join instantly on their phones.', status: 'Live', href: null },
 ]
 
 function ProductsNav() {
@@ -108,6 +109,49 @@ function ProductsHero() {
   )
 }
 
+function ProductAction({ href, status }) {
+  if (!href) {
+    return (
+      <span className="btn-primary btn-disabled" aria-disabled="true">
+        {status === 'Live' ? 'Link Available On Request' : 'Early Access By Request'}
+      </span>
+    )
+  }
+
+  return (
+    <a href={href} className="btn-primary" target="_blank" rel="noreferrer">
+      {status === 'Live' ? 'Visit Website →' : 'Join Early Access →'}
+    </a>
+  )
+}
+
+function CatalogCard({ product }) {
+  const content = (
+    <>
+      <div className="catalog-card-top">
+        <div className="catalog-card-vertical">{product.vertical}</div>
+        <div className={`catalog-card-status ${product.status === 'Live' ? 'live' : ''}`}>{product.status}</div>
+      </div>
+      <div className="catalog-card-name">{product.name}</div>
+      <div className="catalog-card-price">{product.price}</div>
+      <p className="catalog-card-desc">{product.desc}</p>
+      <span className="catalog-card-cta">
+        {product.href ? 'Visit →' : product.status === 'Live' ? 'Link Available On Request' : 'Early Access By Request'}
+      </span>
+    </>
+  )
+
+  if (!product.href) {
+    return <article className="catalog-card catalog-card-disabled">{content}</article>
+  }
+
+  return (
+    <a href={product.href} className="catalog-card" target="_blank" rel="noreferrer">
+      {content}
+    </a>
+  )
+}
+
 function FeaturedProduct({ product, index, flip }) {
   const ref = useReveal()
   return (
@@ -141,9 +185,7 @@ function FeaturedProduct({ product, index, flip }) {
         </div>
 
         <div style={{ marginTop: '2rem' }}>
-          <a href={product.href} className="btn-primary" target="_blank" rel="noreferrer">
-            {product.status === 'Live' ? 'Visit Website →' : 'Join Early Access →'}
-          </a>
+          <ProductAction href={product.href} status={product.status} />
         </div>
       </div>
     </section>
@@ -165,17 +207,8 @@ function CatalogSection() {
         </h2>
         <p className="method-intro">The full Revuity catalog spans games, faith, film, and business — each product independently operated, each solving a distinct problem in its vertical.</p>
         <div className="catalog-grid reveal" ref={ref}>
-          {CATALOG.map(p => (
-            <a href={p.href} className="catalog-card" key={p.name} target="_blank" rel="noreferrer">
-              <div className="catalog-card-top">
-                <div className="catalog-card-vertical">{p.vertical}</div>
-                <div className={`catalog-card-status ${p.status === 'Live' ? 'live' : ''}`}>{p.status}</div>
-              </div>
-              <div className="catalog-card-name">{p.name}</div>
-              <div className="catalog-card-price">{p.price}</div>
-              <p className="catalog-card-desc">{p.desc}</p>
-              <span className="catalog-card-cta">Visit →</span>
-            </a>
+          {CATALOG.map(product => (
+            <CatalogCard key={product.name} product={product} />
           ))}
         </div>
       </div>
@@ -206,6 +239,12 @@ function ProductsFooter() {
 }
 
 export default function RevuityProductsPage() {
+  usePageMeta({
+    title: 'Revuity Products — Jay Burgess',
+    description:
+      'Eight independent Revuity Systems products across data intelligence, film tools, games, faith, and business intelligence.',
+  })
+
   return (
     <>
       <ProductsNav />

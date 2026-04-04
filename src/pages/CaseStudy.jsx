@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { usePageMeta } from '../hooks/usePageMeta'
 import '../casestudy.css'
 
 function CaseStudyNav() {
@@ -269,6 +270,12 @@ function CaseStudyFooter() {
 }
 
 export default function CaseStudy() {
+  usePageMeta({
+    title: 'ReggieAI Case Study — Jay Burgess',
+    description:
+      'How Jay Burgess diagnosed a broken Title IV compliance process, built a guardrailed agentic AI system, and deployed it in a federally regulated environment.',
+  })
+
   return (
     <>
       <CaseStudyNav />

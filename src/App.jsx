@@ -5,6 +5,7 @@ import CaseStudy from './pages/CaseStudy'
 import RevuityCaseStudy from './pages/RevuityCaseStudy'
 import WalmartCaseStudy from './pages/WalmartCaseStudy'
 import RevuityProductsPage from './pages/RevuityProductsPage'
+import EngagementPage from './pages/EngagementPage'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/revuity-case-study" element={<RevuityCaseStudy />} />
         <Route path="/walmart-case-study" element={<WalmartCaseStudy />} />
         <Route path="/revuity-products" element={<RevuityProductsPage />} />
+        <Route path="/engagement" element={<EngagementPage />} />
       </Routes>
     </BrowserRouter>
   )

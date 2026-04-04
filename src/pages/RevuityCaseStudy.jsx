@@ -1,5 +1,7 @@
+import { Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
+import { usePageMeta } from '../hooks/usePageMeta'
 import '../casestudy.css'
 
 function CaseStudyNav() {
@@ -92,14 +94,14 @@ function BuildModel() {
         <p className="build-intro">Revuity Systems isn't a collection of one-off projects. It's proof of a repeatable method for identifying a problem, validating it fast, and shipping a production product — across completely different industries.</p>
         <div className="model-flow reveal" ref={flowRef}>
           {steps.map((s, i) => (
-            <>
-              <div className="flow-step" key={s.label}>
+            <Fragment key={s.label}>
+              <div className="flow-step">
                 <div className="fs-icon">{s.icon}</div>
                 <div className="fs-label">{s.label}</div>
                 <div className="fs-desc">{s.desc}</div>
               </div>
-              {i < steps.length - 1 && <div className="flow-arrow" key={`arrow-${i}`}>→</div>}
-            </>
+              {i < steps.length - 1 && <div className="flow-arrow">→</div>}
+            </Fragment>
           ))}
         </div>
         <div className="model-proof reveal" ref={proofRef}>
@@ -267,6 +269,12 @@ function CaseStudyFooter() {
 }
 
 export default function RevuityCaseStudy() {
+  usePageMeta({
+    title: 'Revuity Systems Case Study — Jay Burgess',
+    description:
+      'Inside Revuity Systems: AI advisory, agentic engineering, and SaaS product development built and operated by Jay Burgess as Founder and CTO.',
+  })
+
   return (
     <>
       <CaseStudyNav />

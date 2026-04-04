@@ -55,7 +55,7 @@
       overflow-x: hidden;
     }
 
-    /* ─── NAV — exact match to portfolio ─── */
+    /* ─── NAV ─── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -63,43 +63,33 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.4rem 2.5rem;
+      padding: 1.25rem 2.5rem;
       border-bottom: 1px solid var(--rule);
-      background: rgba(8,8,9,0.92);
-      backdrop-filter: blur(16px);
+      background: rgba(8,8,9,0.88);
+      backdrop-filter: blur(20px);
     }
-    .nav-id {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      color: var(--dim);
-      text-transform: uppercase;
+    .nav-wordmark {
+      font-family: 'IBM Plex Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--white);
+      text-decoration: none;
+      transition: color 0.2s;
     }
-    .nav-id strong { color: var(--white); font-weight: 500; }
-    .nav-right { display: flex; align-items: center; gap: 2rem; }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-wordmark:hover { color: var(--orange); }
+    .nav-right { display: flex; align-items: center; gap: 1.75rem; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
     .nav-links a {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.68rem;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--dim);
       text-decoration: none;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--orange); }
-    .nav-slides {
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      border: 1px solid var(--rule2);
-      color: var(--dim);
-      text-decoration: none;
-      padding: 0.55rem 1.4rem;
-      transition: border-color 0.2s, color 0.2s;
-    }
-    .nav-slides:hover { border-color: var(--orange); color: var(--orange); }
+    .nav-links a:hover { color: var(--white); }
     .nav-cta {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 0.68rem;
@@ -108,7 +98,7 @@
       background: var(--orange);
       color: #fff;
       text-decoration: none;
-      padding: 0.55rem 1.4rem;
+      padding: 0.5rem 1.25rem;
       transition: background 0.2s;
     }
     .nav-cta:hover { background: var(--orange2); }
@@ -324,24 +314,19 @@
     function SiteNav({ theme, toggle }) {
       return (
         <nav>
-          <div className="nav-id">
-            <strong>Jay Burgess</strong> · AI Systems Architect · Builder · Operator
-          </div>
+          <a href="https://jayburgess.netlify.app/" className="nav-wordmark">Jay Burgess</a>
           <div className="nav-right">
             <ul className="nav-links">
-              <li><a href="https://jayburgess.netlify.app/">← Portfolio</a></li>
-              <li><a href="https://jayburgess.netlify.app/#method">The Method</a></li>
+              <li><a href="https://jayburgess.netlify.app/">Portfolio</a></li>
+              <li><a href="https://jayburgess.netlify.app/#method">Method</a></li>
               <li><a href="https://jayburgess.netlify.app/#skills">Skills</a></li>
             </ul>
-            <a href="https://www.canva.com/design/DAHEKlOQl-o/Ra60KaYOrYJeyqpgt6xWQA/view?utm_content=DAHEKlOQl-o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5c5a1db5ea" className="nav-slides" target="_blank" rel="noreferrer">
-              View My Slides
-            </a>
-            <a href="https://calendly.com/jayburgessjr/long-meet" className="nav-cta" target="_blank" rel="noreferrer">
-              Schedule a Call
-            </a>
             <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
               {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
             </button>
+            <a href="https://calendly.com/jayburgessjr/long-meet" className="nav-cta" target="_blank" rel="noreferrer">
+              Schedule a Call
+            </a>
           </div>
         </nav>
       );
