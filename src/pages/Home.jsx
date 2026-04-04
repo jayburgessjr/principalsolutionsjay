@@ -6,6 +6,7 @@ import Proof from '../components/Proof'
 import Companies from '../components/Companies'
 import Skills from '../components/Skills'
 import RevuityBand from '../components/RevuityBand'
+import ProductsBand from '../components/ProductsBand'
 import Methodology from '../components/Methodology'
 import WalmartBand from '../components/WalmartBand'
 import CTA from '../components/CTA'
@@ -23,6 +24,7 @@ export default function Home() {
       <WalmartBand />
       <Skills />
       <RevuityBand />
+      <ProductsBand />
       <Methodology />
       <CTA />
       <Footer />
