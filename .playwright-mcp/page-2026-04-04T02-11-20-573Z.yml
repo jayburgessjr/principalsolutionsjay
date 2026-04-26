@@ -1,0 +1,161 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "← Back to Portfolio" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e5]: Products · Revuity Systems
+  - generic [ref=e6]:
+    - generic: RSP
+    - generic [ref=e7]:
+      - generic [ref=e8]: Revuity Systems · Product Catalog · 8 Independent Products
+      - heading "Revuity Products" [level=1] [ref=e9]:
+        - text: Revuity
+        - text: Products
+      - paragraph [ref=e10]: Eight independent products. Five verticals. Each one built to run without you.
+      - paragraph [ref=e11]: Vertical Data Intelligence. Creative & Film Tools. Games & Play. Faith & Wellbeing. Business Intelligence. Every product is scoped to a specific market problem, architected for autonomous operation, and priced for recurring revenue from day one.
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: Studio
+          - generic [ref=e15]: Revuity Systems
+        - generic [ref=e16]:
+          - generic [ref=e17]: Products
+          - generic [ref=e18]: 8 independent SaaS products
+        - generic [ref=e19]:
+          - generic [ref=e20]: Verticals
+          - generic [ref=e21]: Data Intelligence · Film · Games · Faith · Business
+        - generic [ref=e22]:
+          - generic [ref=e23]: Model
+          - generic [ref=e24]: Recurring SaaS · Free → $199/mo · Built to run without you
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]: "01"
+      - generic [ref=e29]: Vertical Data Intelligence
+    - generic [ref=e31]:
+      - generic [ref=e32]: Early Access
+      - heading "VoltIQ" [level=2] [ref=e33]
+      - generic [ref=e34]: $199/mo
+      - paragraph [ref=e35]: Your solar market edge, delivered weekly.
+    - paragraph [ref=e36]: The market intelligence platform LA solar contractors use to benchmark pricing, track permit velocity, and stay ahead of competitors in a post-NEM 3.0 world. Weekly data. Actionable signals. Built for the close.
+    - generic [ref=e37]:
+      - generic [ref=e38]:
+        - generic [ref=e39]: Weekly Permit Velocity
+        - generic [ref=e40]: Track how fast permits are being pulled across your target markets — surface emerging demand before competitors act.
+      - generic [ref=e41]:
+        - generic [ref=e42]: $/W Benchmark Tracker
+        - generic [ref=e43]: Know where your pricing sits relative to the market in real time. Stop leaving margin on the table.
+      - generic [ref=e44]:
+        - generic [ref=e45]: Market Heat Index
+        - generic [ref=e46]: Composite signal combining permit velocity, competitive density, and pricing movement into a single weekly read.
+    - link "Join Early Access →" [ref=e48] [cursor=pointer]:
+      - /url: "#"
+  - generic [ref=e50]:
+    - generic [ref=e51]:
+      - generic [ref=e52]: "02"
+      - generic [ref=e53]: Creative & Film Tools
+    - generic [ref=e55]:
+      - generic [ref=e56]: Early Access
+      - heading "Box Office Beacon" [level=2] [ref=e57]
+      - generic [ref=e58]: $99/mo
+      - paragraph [ref=e59]: Revenue prediction for independent film.
+    - paragraph [ref=e60]: Assess the commercial viability of your film projects before major investments using data-backed predictive modeling and talent impact analytics. Know your ceiling before you commit the budget.
+    - generic [ref=e61]:
+      - generic [ref=e62]:
+        - generic [ref=e63]: Revenue Prediction
+        - generic [ref=e64]: ML models trained on comparable titles, distribution channels, and market conditions to forecast commercial range before greenlight.
+      - generic [ref=e65]:
+        - generic [ref=e66]: Risk Mitigation Strategy
+        - generic [ref=e67]: Quantified risk scoring across genre, talent, budget tier, and release window — decision intelligence, not gut instinct.
+      - generic [ref=e68]:
+        - generic [ref=e69]: Talent Impact Analytics
+        - generic [ref=e70]: Model how specific cast and crew combinations affect projected performance based on historical comparable data.
+    - link "Join Early Access →" [ref=e72] [cursor=pointer]:
+      - /url: "#"
+  - generic [ref=e74]:
+    - generic [ref=e75]:
+      - generic [ref=e76]: "03"
+      - generic [ref=e77]: Business Intelligence
+    - generic [ref=e79]:
+      - generic [ref=e80]: Early Access
+      - heading "MenuIQ" [level=2] [ref=e81]
+      - generic [ref=e82]: Free / $49/mo
+      - paragraph [ref=e83]: Built for restaurant operators, not accountants.
+    - paragraph [ref=e84]: Analyzing your recipes, costs, and pricing to show you exactly which dishes make money — and which ones quietly drain it. Protect your margins with data you can actually act on.
+    - generic [ref=e85]:
+      - generic [ref=e86]:
+        - generic [ref=e87]: Food Cost Calculator
+        - generic [ref=e88]: Input your recipe ingredients and supplier costs. Get an accurate food cost percentage per dish — updated whenever costs change.
+      - generic [ref=e89]:
+        - generic [ref=e90]: Margin Intelligence
+        - generic [ref=e91]: See your full menu ranked by contribution margin. Identify the underperformers that look busy but drain the bottom line.
+      - generic [ref=e92]:
+        - generic [ref=e93]: Price Optimization
+        - generic [ref=e94]: Data-driven pricing recommendations that protect margins without alienating customers — grounded in your actual cost structure.
+    - link "Join Early Access →" [ref=e96] [cursor=pointer]:
+      - /url: "#"
+  - generic [ref=e98]:
+    - generic [ref=e99]:
+      - generic [ref=e100]: "04"
+      - generic [ref=e101]: Full Catalog
+    - heading "Five more products. All live or in early access." [level=2] [ref=e102]:
+      - text: Five more products.
+      - emphasis [ref=e103]: All live or in early access.
+    - paragraph [ref=e104]: The full Revuity catalog spans games, faith, film, and business — each product independently operated, each solving a distinct problem in its vertical.
+    - generic [ref=e105]:
+      - link "Creative & Film Tools Live LaunchOS $29/mo The social media and marketing director filmmakers use to dominate their campaigns. Visit →" [ref=e106] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e107]:
+          - generic [ref=e108]: Creative & Film Tools
+          - generic [ref=e109]: Live
+        - generic [ref=e110]: LaunchOS
+        - generic [ref=e111]: $29/mo
+        - paragraph [ref=e112]: The social media and marketing director filmmakers use to dominate their campaigns.
+        - generic [ref=e113]: Visit →
+      - link "Creative & Film Tools Live ProductionOS $49/mo End-to-end OS for filmmakers — from pre-production to distribution. Visit →" [ref=e114] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e115]:
+          - generic [ref=e116]: Creative & Film Tools
+          - generic [ref=e117]: Live
+        - generic [ref=e118]: ProductionOS
+        - generic [ref=e119]: $49/mo
+        - paragraph [ref=e120]: End-to-end OS for filmmakers — from pre-production to distribution.
+        - generic [ref=e121]: Visit →
+      - link "Business Intelligence Early Access PricingCopilot $49/mo The pricing intelligence platform for small businesses and nonprofits. Visit →" [ref=e122] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e123]:
+          - generic [ref=e124]: Business Intelligence
+          - generic [ref=e125]: Early Access
+        - generic [ref=e126]: PricingCopilot
+        - generic [ref=e127]: $49/mo
+        - paragraph [ref=e128]: The pricing intelligence platform for small businesses and nonprofits.
+        - generic [ref=e129]: Visit →
+      - link "Faith & Wellbeing Live The Bible Soul Guide $9/mo AI-powered Bible study companion with personal devotionals and scholarly context. Visit →" [ref=e130] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e131]:
+          - generic [ref=e132]: Faith & Wellbeing
+          - generic [ref=e133]: Live
+        - generic [ref=e134]: The Bible Soul Guide
+        - generic [ref=e135]: $9/mo
+        - paragraph [ref=e136]: AI-powered Bible study companion with personal devotionals and scholarly context.
+        - generic [ref=e137]: Visit →
+      - link "Games & Play Live GameNightz Online Free 8 party games, zero downloads. Players join instantly on their phones. Visit →" [ref=e138] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e139]:
+          - generic [ref=e140]: Games & Play
+          - generic [ref=e141]: Live
+        - generic [ref=e142]: GameNightz Online
+        - generic [ref=e143]: Free
+        - paragraph [ref=e144]: 8 party games, zero downloads. Players join instantly on their phones.
+        - generic [ref=e145]: Visit →
+  - generic [ref=e147]:
+    - heading "Eight products. One studio." [level=3] [ref=e148]:
+      - text: Eight products.
+      - text: One studio.
+    - paragraph [ref=e149]: Revuity is how I demonstrate I can build and ship AI products at speed — across verticals, without a team. That's the operator proof.
+    - link "Schedule a Call →" [ref=e150] [cursor=pointer]:
+      - /url: https://calendly.com/jayburgessjr/long-meet
+    - link "Revuity Case Study →" [ref=e151] [cursor=pointer]:
+      - /url: /revuity-case-study
+  - contentinfo [ref=e152]:
+    - generic [ref=e153]:
+      - strong [ref=e154]: Jay Burgess
+      - text: · AI Systems Architect · Builder · Operator
+    - generic [ref=e155]: jay@revuitysys.com

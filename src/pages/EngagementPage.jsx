@@ -19,7 +19,7 @@ const models = [
   },
   {
     phase: '02',
-    name: 'Fractional Architect / CTO',
+    name: 'Fractional Architect / CTO / CIO',
     range: '$8K–$25K+/mo',
     tag: 'Monthly Retainer · Strategy + Execution',
     description:
@@ -211,7 +211,7 @@ function CTA() {
 function Footer() {
   return (
     <footer>
-      <div className="footer-id"><strong>Jay Burgess</strong> · AI Systems Architect · Builder · Operator</div>
+      <div className="footer-id"><strong>Jay Burgess</strong> · Fractional Architect / CTO / CIO</div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
   )
@@ -221,7 +221,7 @@ export default function EngagementPage() {
   usePageMeta({
     title: 'Engagement Models — Jay Burgess',
     description:
-      'How to work with Jay Burgess: diagnostic sprints, fractional architecture and CTO engagements, embedded build ownership, and compensation fit.',
+      'How to work with Jay Burgess: diagnostic sprints, fractional architecture, CTO, and CIO engagements, embedded build ownership, and compensation fit.',
   })
 
   return (

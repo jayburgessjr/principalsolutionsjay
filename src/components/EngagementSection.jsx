@@ -8,7 +8,7 @@ const engagements = [
       'Used when the problem is still blurry and the business needs a clear diagnosis, system map, and execution path.',
   },
   {
-    label: 'Fractional Architect / CTO',
+    label: 'Fractional Architect / CTO / CIO',
     tag: 'Monthly Retainer',
     description:
       'Used when a team needs senior technical judgment, architecture leadership, and operator-level direction without a full-time executive hire.',

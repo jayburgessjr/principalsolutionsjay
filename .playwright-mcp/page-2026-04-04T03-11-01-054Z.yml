@@ -1,0 +1,116 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "← Back to Portfolio" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e5]: Engagement · Models & Compensation
+  - generic [ref=e6]:
+    - generic: ENG
+    - generic [ref=e7]:
+      - generic [ref=e8]: Engagement Models · Compensation Fit · Operator-Level Scope
+      - heading "Ways To Work With Me" [level=1] [ref=e9]:
+        - text: Ways To
+        - text: Work With Me
+      - paragraph [ref=e10]: Fractional leadership, fixed-scope diagnosis, and embedded build ownership.
+      - paragraph [ref=e11]: "The question is not whether I can architect the system. The question is what level of ownership you need: diagnosis, ongoing senior judgment, or someone who can go from root cause to shipped fix and leave behind the playbook."
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: Advisory
+          - generic [ref=e15]: Diagnostic sprints for high-leverage problems
+        - generic [ref=e16]:
+          - generic [ref=e17]: Fractional
+          - generic [ref=e18]: $8K–$25K+/month
+        - generic [ref=e19]:
+          - generic [ref=e20]: Embedded
+          - generic [ref=e21]: $25K–$40K+/month
+        - generic [ref=e22]:
+          - generic [ref=e23]: Full-Time Fit
+          - generic [ref=e24]: $250K–$400K+ total comp
+  - generic [ref=e26]:
+    - generic [ref=e27]:
+      - generic [ref=e28]: PHASE 01
+      - generic [ref=e29]: Engagement Models
+    - heading "Three ways to engage. Different scope. Same standard." [level=2] [ref=e30]:
+      - text: Three ways to engage.
+      - emphasis [ref=e31]: Different scope. Same standard.
+    - generic [ref=e32]:
+      - article [ref=e33]:
+        - generic [ref=e34]:
+          - generic [ref=e35]: "01"
+          - generic [ref=e36]: 2–4 Weeks · Fixed Scope
+        - generic [ref=e37]: Diagnostic Sprint
+        - generic [ref=e38]: $15K–$35K
+        - paragraph [ref=e39]: Used when the business problem is still blurry. I diagnose the real failure mode, map the architecture, and define the shortest credible path to a working fix.
+        - list [ref=e40]:
+          - listitem [ref=e41]: Root-cause analysis across process, data, tooling, and org design
+          - listitem [ref=e42]: Architecture memo and operating recommendations
+          - listitem [ref=e43]: Delivery plan with priorities, risks, and build sequence
+      - article [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]: "02"
+          - generic [ref=e47]: Monthly Retainer · Strategy + Execution
+        - generic [ref=e48]: Fractional Architect / CTO
+        - generic [ref=e49]: $8K–$25K+/mo
+        - paragraph [ref=e50]: Used when a team needs senior technical judgment every week but is not yet ready for a full-time hire. I operate as a high-context decision-maker, not a passive advisor.
+        - list [ref=e51]:
+          - listitem [ref=e52]: AI systems, internal tools, and data architecture leadership
+          - listitem [ref=e53]: Roadmap, vendor, and technical decision support
+          - listitem [ref=e54]: Hands-on build guidance with direct operator accountability
+      - article [ref=e55]:
+        - generic [ref=e56]:
+          - generic [ref=e57]: "03"
+          - generic [ref=e58]: Deep Execution · Operator-Level Ownership
+        - generic [ref=e59]: Embedded Build Partner
+        - generic [ref=e60]: $25K–$40K+/mo
+        - paragraph [ref=e61]: Used when the mandate is not “help us think” but “fix it and ship it.” This model is closest to dropping me in as an interim senior operator with full-stack responsibility.
+        - list [ref=e62]:
+          - listitem [ref=e63]: System architecture and implementation
+          - listitem [ref=e64]: Cross-functional ownership across business, product, and technical layers
+          - listitem [ref=e65]: Documentation, handoff, and repeatable playbooks
+  - generic [ref=e67]:
+    - generic [ref=e68]:
+      - generic [ref=e69]: PHASE 02
+      - generic [ref=e70]: Compensation Fit
+    - heading "Worth in market terms. Positioned above a generic architect title." [level=2] [ref=e71]:
+      - text: Worth in market terms.
+      - emphasis [ref=e72]: Positioned above a generic architect title.
+    - generic [ref=e73]:
+      - generic [ref=e74]:
+        - generic [ref=e75]: Best Fit
+        - paragraph [ref=e76]: Founder-led teams, PE-backed operators, regulated-environment AI, internal systems, data infrastructure, and situations where recommendations alone are too slow.
+      - generic [ref=e77]:
+        - generic [ref=e78]: Full-Time Target
+        - paragraph [ref=e79]: $180K–$230K base, with $250K–$400K+ total compensation for the right principal, VP, or operator-level role.
+      - generic [ref=e80]:
+        - generic [ref=e81]: Not A Fit
+        - paragraph [ref=e82]: Commodity staff augmentation, vague “innovation” projects with no owner, or teams that want strategy without accountability for shipping.
+  - generic [ref=e84]:
+    - generic [ref=e85]:
+      - generic [ref=e86]: PHASE 03
+      - generic [ref=e87]: Why
+    - heading "The price is for outcomes. Not hours." [level=2] [ref=e88]:
+      - text: The price is for outcomes.
+      - emphasis [ref=e89]: Not hours.
+    - generic [ref=e90]:
+      - generic [ref=e91]:
+        - generic [ref=e92]: I diagnose
+        - paragraph [ref=e93]: I find the actual failure mode instead of accepting the first explanation the organization gives me.
+      - generic [ref=e94]:
+        - generic [ref=e95]: I build
+        - paragraph [ref=e96]: I do not stop at architecture diagrams. I ship the system, the workflow, the data layer, or the tool itself.
+      - generic [ref=e97]:
+        - generic [ref=e98]: I hand off
+        - paragraph [ref=e99]: The output is a system and a playbook that continues to work after I leave, which is where the real leverage comes from.
+  - generic [ref=e101]:
+    - heading "If the problem is real, I’m interested." [level=3] [ref=e102]:
+      - text: If the problem is real,
+      - text: I’m interested.
+    - paragraph [ref=e103]: The right engagement depends on how much ownership you need. If you want someone who can diagnose, build, and leave behind a system that runs, let’s talk.
+    - link "Schedule a Call →" [ref=e104] [cursor=pointer]:
+      - /url: https://calendly.com/jayburgessjr/long-meet
+    - link "Back to Portfolio →" [ref=e105] [cursor=pointer]:
+      - /url: /
+  - contentinfo [ref=e106]:
+    - generic [ref=e107]:
+      - strong [ref=e108]: Jay Burgess
+      - text: · AI Systems Architect · Builder · Operator
+    - generic [ref=e109]: jay@revuitysys.com

@@ -1,0 +1,341 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "Jay Burgess" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Method" [ref=e8] [cursor=pointer]:
+            - /url: "#method"
+        - listitem [ref=e9]:
+          - link "Proof" [ref=e10] [cursor=pointer]:
+            - /url: "#proof"
+        - listitem [ref=e11]:
+          - link "Skills" [ref=e12] [cursor=pointer]:
+            - /url: "#skills"
+        - listitem [ref=e13]:
+          - link "Portfolio" [ref=e14] [cursor=pointer]:
+            - /url: "#products"
+        - listitem [ref=e15]:
+          - link "Frameworks" [ref=e16] [cursor=pointer]:
+            - /url: "#methodology"
+      - button "Toggle theme" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+      - link "Schedule a Call" [ref=e24] [cursor=pointer]:
+        - /url: https://calendly.com/jayburgessjr/long-meet
+  - generic [ref=e25]:
+    - generic [ref=e26]:
+      - generic [ref=e27]:
+        - generic [ref=e28]: AI Systems Architect · Builder · Operator
+        - heading "I Walk In. I Find It. I Ship It." [level=1] [ref=e29]:
+          - text: I Walk In.
+          - text: I Find It.
+          - text: I Ship It.
+        - paragraph [ref=e30]: AI systems architect who designs, builds, and operates production-grade AI in regulated environments. Fourteen-plus years spanning Fortune 500, higher education, and venture-backed software. Built ReggieAI — a production agentic compliance platform for Title IV federal financial aid with $2.7M in documented business impact. Founder & CTO of Revuity Systems, an LA-based AI-first software studio. I don't just use AI — I architect the systems that make it reliable at scale.
+      - img "Jay Burgess" [ref=e33]
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]: Experience
+        - generic [ref=e37]: 15+
+        - generic [ref=e38]: Years solving business problems with technology — end to end
+      - generic [ref=e39]:
+        - generic [ref=e40]: Verified Impact
+        - generic [ref=e41]: $2.7M
+        - generic [ref=e42]: Documented ROI across enterprise and regulated industry work
+      - generic [ref=e43]:
+        - generic [ref=e44]: Fortune 500
+        - generic [ref=e45]: Walmart.
+        - generic [ref=e46]: Adobe · HEAG · Revuity Systems · Harvard · LMU
+  - generic [ref=e48]:
+    - generic [ref=e49]: How I operate
+    - heading "Three moves. Every time. Every business." [level=2] [ref=e50]:
+      - text: Three moves.
+      - text: Every time.
+      - emphasis [ref=e51]: Every business.
+    - paragraph [ref=e52]: Most people diagnose or build or document. I do all three in sequence — and I don't leave until the system runs without me.
+    - generic [ref=e53]:
+      - generic [ref=e54]:
+        - generic [ref=e55]: "01"
+        - generic [ref=e56]: Diagnose
+        - heading "Find the real root cause — not the symptom" [level=3] [ref=e57]
+        - paragraph [ref=e58]: "I go deep into how a business actually operates: where data breaks down, where manual work masks systemic failure, where the real bottleneck is hiding. I don't take the first answer."
+        - generic [ref=e59]: "→ ReggieAI: Found that compliance failures stemmed from zero structured knowledge, not staff error"
+      - generic [ref=e60]:
+        - generic [ref=e61]: "02"
+        - generic [ref=e62]: Build
+        - heading "Ship the actual fix — not a recommendation" [level=3] [ref=e63]
+        - paragraph [ref=e64]: "I architect and build the solution myself: RAG pipelines, agentic workflows, data infrastructure, internal tooling, process redesigns. I hand off working systems, not decks."
+        - generic [ref=e65]: "→ ReggieAI: Built RAG pipeline, anti-hallucination system prompt, HubSpot API, and staged it ahead of schedule"
+      - generic [ref=e66]:
+        - generic [ref=e67]: "03"
+        - generic [ref=e68]: Scale
+        - heading "Turn the fix into a playbook others can run" [level=3] [ref=e69]
+        - paragraph [ref=e70]: "Every solution I build gets documented as a replicable standard — QA specs, engineering guides, dashboards, toolkits. The goal is always: runs without me in the room."
+        - generic [ref=e71]: → Built internal PM platform at HEAG — team uses it independently, zero dependency on me
+  - generic [ref=e72]:
+    - generic [ref=e73]:
+      - heading "ReggieAI Case Study — Full Breakdown" [level=3] [ref=e74]
+      - paragraph [ref=e75]: Diagnose → Build → Ship, documented end to end. See the exact process.
+    - link "Read the Case Study →" [ref=e76] [cursor=pointer]:
+      - /url: /reggie-case-study
+  - generic [ref=e78]:
+    - generic [ref=e79]: Selected work
+    - heading "Where I've delivered." [level=2] [ref=e80]:
+      - text: Where I've
+      - emphasis [ref=e81]: delivered.
+    - paragraph [ref=e82]: Real problems. Real systems. Real outcomes.
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - generic [ref=e85]: "01"
+        - generic [ref=e86]:
+          - generic [ref=e87]: AI System · HEAG · 2025
+          - heading "ReggieAI — Title IV Compliance AI" [level=3] [ref=e88]
+          - paragraph [ref=e89]: Built a production agentic AI system for federal student aid compliance. Went from broken manual process to live, auditable AI — with guardrails, API integration, and a structured regulatory knowledge base — ahead of schedule.
+        - generic [ref=e90]:
+          - generic [ref=e91]: How I did it
+          - list [ref=e92]:
+            - listitem [ref=e93]: "→ Diagnosed: compliance errors from unstructured knowledge"
+            - listitem [ref=e94]: → Architected JSON knowledge base from FSA sources
+            - listitem [ref=e95]: → Built RAG pipeline + anti-hallucination system prompt
+            - listitem [ref=e96]: → Replaced embedded form with live HubSpot API
+            - listitem [ref=e97]: → Deployed staging · documented for team handoff
+        - generic [ref=e98]:
+          - generic [ref=e99]: Outcome
+          - generic [ref=e100]: Live
+          - paragraph [ref=e101]: Production deployment. Compliance ops transformed. Zero hallucinations in testing.
+      - generic [ref=e102]:
+        - generic [ref=e103]: "02"
+        - generic [ref=e104]:
+          - generic [ref=e105]: Enterprise · Fortune 500
+          - heading "Walmart & Adobe Engagements" [level=3] [ref=e106]
+          - paragraph [ref=e107]: Data science and solutions architecture at two of the most demanding enterprise environments on earth. Built systems that had to perform at scale, survive complex stakeholder politics, and generate verifiable ROI.
+        - generic [ref=e108]:
+          - generic [ref=e109]: What I brought
+          - list [ref=e110]:
+            - listitem [ref=e111]: → Diagnosed process gaps at enterprise scale
+            - listitem [ref=e112]: → Built scalable data pipelines and reporting architecture
+            - listitem [ref=e113]: → Translated technical systems into executive-ready comms
+            - listitem [ref=e114]: → Delivered with rigorous documentation and handoff
+        - generic [ref=e115]:
+          - generic [ref=e116]: Impact
+          - generic [ref=e117]: $2.7M
+          - paragraph [ref=e118]: Verified business ROI across Fortune 500 engagements.
+      - generic [ref=e119]:
+        - generic [ref=e120]: "03"
+        - generic [ref=e121]:
+          - generic [ref=e122]: Internal Tooling · HEAG
+          - heading "Custom PM Platform — Built From Zero" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Diagnosed that fragmented project management was costing the team coordination overhead. Built a custom Jira-style tool from scratch — data model, interface, QA specs, and engineering standards. Trained the team. Walked away.
+        - generic [ref=e125]:
+          - generic [ref=e126]: How I did it
+          - list [ref=e127]:
+            - listitem [ref=e128]: → Identified coordination failure as root cause
+            - listitem [ref=e129]: → Designed data model and UX from scratch
+            - listitem [ref=e130]: → Wrote QA specs and engineering standards
+            - listitem [ref=e131]: → Trained team · system runs without me
+        - generic [ref=e132]:
+          - generic [ref=e133]: Status
+          - generic [ref=e134]: Runs
+          - paragraph [ref=e135]: Team operates it independently. Zero ongoing dependency on me.
+      - generic [ref=e136]:
+        - generic [ref=e137]: "04"
+        - generic [ref=e138]:
+          - generic [ref=e139]: Founder · Revuity Systems
+          - heading "4 Products Shipped — As Founder & Builder" [level=3] [ref=e140]
+          - paragraph [ref=e141]: Founded Revuity Systems, a lean product studio. Shipped WedData (B2B SaaS pricing intelligence), CertPath (certification platform), GameNight (multiplayer app), and Box Office Beacon — each designed, architected, and deployed solo.
+        - generic [ref=e142]:
+          - generic [ref=e143]: What this proves
+          - list [ref=e144]:
+            - listitem [ref=e145]: → I own outcomes — no team to hide behind
+            - listitem [ref=e146]: → I ship in weeks, not quarters
+            - listitem [ref=e147]: → I validate before I over-build
+            - listitem [ref=e148]: → I operate with founder accountability
+        - generic [ref=e149]:
+          - generic [ref=e150]: Products
+          - generic [ref=e151]: "4"
+          - paragraph [ref=e152]: Active products in market. Subscription SaaS model.
+  - generic [ref=e154]:
+    - generic [ref=e155]: Delivered for
+    - generic [ref=e156]: Walmart
+    - generic [ref=e157]: Adobe
+    - generic [ref=e158]: HEAG
+    - generic [ref=e159]: Harvard
+    - generic [ref=e160]: LMU
+    - generic [ref=e161]: Revuity Systems
+  - generic [ref=e162]:
+    - generic [ref=e163]:
+      - heading "Walmart Creative Operations — Full Breakdown" [level=3] [ref=e164]
+      - paragraph [ref=e165]: $750K recovered. Full data org built from zero. Fortune 1 scale, in three quarters.
+    - link "Read the Case Study →" [ref=e166] [cursor=pointer]:
+      - /url: /walmart-case-study
+  - generic [ref=e168]:
+    - generic [ref=e169]: Technical depth
+    - generic [ref=e170]:
+      - generic [ref=e171]:
+        - heading "Deep enough to build it. Fast." [level=2] [ref=e172]:
+          - text: Deep enough
+          - text: to build it.
+          - emphasis [ref=e173]: Fast.
+        - paragraph [ref=e174]: I don't need to hire a team to ship a solution. I can architect, build, test, and document production-grade AI systems myself — then lead engineers to scale them.
+        - list [ref=e175]:
+          - listitem [ref=e176]: ✓ MBA · Eastern University · 2024
+          - listitem [ref=e177]: ✓ M.S. Data Science · Eastern University · 2022
+          - listitem [ref=e178]: ✓ M.Ed. · Loyola Marymount University · 2013
+          - listitem [ref=e179]: ✓ B.A. Sociology · Loyola Marymount University · 2005
+      - generic [ref=e180]:
+        - generic [ref=e181]:
+          - generic [ref=e182]: AI Systems Architecture
+          - list [ref=e183]:
+            - listitem [ref=e184]: › Specification Design & System Prompting
+            - listitem [ref=e185]: › Evaluation Frameworks & QA Pipelines
+            - listitem [ref=e186]: › Multi-Agent Orchestration
+            - listitem [ref=e187]: › Failure Pattern Analysis (context drift, spec drift, silent failures)
+            - listitem [ref=e188]: › Trust & Guardrail Design
+            - listitem [ref=e189]: › Context Architecture (RAG)
+            - listitem [ref=e190]: › AI Economics & Token Cost Modeling
+        - generic [ref=e191]:
+          - generic [ref=e192]: Data Engineering
+          - list [ref=e193]:
+            - listitem [ref=e194]: › Python · SQL
+            - listitem [ref=e195]: › Microsoft Fabric · Databricks
+            - listitem [ref=e196]: › dbt · Airflow · Spark
+            - listitem [ref=e197]: › Pipeline Architecture
+            - listitem [ref=e198]: › Data Modeling
+            - listitem [ref=e199]: › Power BI · Google BI
+        - generic [ref=e200]:
+          - generic [ref=e201]: Systems Architecture
+          - list [ref=e202]:
+            - listitem [ref=e203]: › Process Mapping & Redesign
+            - listitem [ref=e204]: › API Integration Design
+            - listitem [ref=e205]: › Tech Stack Selection
+            - listitem [ref=e206]: › QA Spec Writing
+            - listitem [ref=e207]: › Engineering Standards
+        - generic [ref=e208]:
+          - generic [ref=e209]: Product & Delivery
+          - list [ref=e210]:
+            - listitem [ref=e211]: › Lovable + Supabase Stack
+            - listitem [ref=e212]: › 0→1 Product Development
+            - listitem [ref=e213]: › B2B SaaS Design
+            - listitem [ref=e214]: › Team Management (3–4 reports)
+            - listitem [ref=e215]: › Stakeholder Communication
+  - generic [ref=e216]:
+    - generic [ref=e217]:
+      - heading "Revuity Systems Case Study — Full Breakdown" [level=3] [ref=e218]
+      - paragraph [ref=e219]: AI advisory, agentic engineering, and SaaS product development for PE firms. See how the studio was built.
+    - link "Read the Case Study →" [ref=e220] [cursor=pointer]:
+      - /url: /revuity-case-study
+  - generic [ref=e221]:
+    - generic [ref=e222]:
+      - generic [ref=e223]: Revuity Systems · Products
+      - heading "Eight independent products. Built to run without you." [level=2] [ref=e224]:
+        - text: Eight independent products.
+        - emphasis [ref=e225]: Built to run without you.
+      - paragraph [ref=e226]: Five verticals. Eight products. Each scoped to a specific market intelligence or operational problem — and each architected to operate without ongoing maintenance.
+      - generic [ref=e227]:
+        - generic [ref=e228]:
+          - generic [ref=e229]: "01"
+          - generic [ref=e230]:
+            - generic [ref=e231]: Vertical Data Intelligence · Solar Market
+            - heading "VoltIQ" [level=3] [ref=e232]
+            - paragraph [ref=e233]: The market intelligence platform LA solar contractors use to benchmark pricing, track permit velocity, and stay ahead of competitors in a post-NEM 3.0 world.
+          - generic [ref=e234]:
+            - generic [ref=e235]: Features
+            - list [ref=e236]:
+              - listitem [ref=e237]: → Weekly Permit Velocity
+              - listitem [ref=e238]: → $/W Benchmark Tracker
+              - listitem [ref=e239]: → Market Heat Index
+          - generic [ref=e240]:
+            - generic [ref=e241]: Pricing
+            - generic [ref=e242]: $199/mo
+            - paragraph [ref=e243]: Early Access
+        - generic [ref=e244]:
+          - generic [ref=e245]: "02"
+          - generic [ref=e246]:
+            - generic [ref=e247]: Creative & Film Tools · Predictive Modeling
+            - heading "Box Office Beacon" [level=3] [ref=e248]
+            - paragraph [ref=e249]: Assess the commercial viability of your film projects before major investments using data-backed predictive modeling and talent impact analytics.
+          - generic [ref=e250]:
+            - generic [ref=e251]: Features
+            - list [ref=e252]:
+              - listitem [ref=e253]: → Revenue Prediction
+              - listitem [ref=e254]: → Risk Mitigation
+              - listitem [ref=e255]: → Talent Impact Analytics
+          - generic [ref=e256]:
+            - generic [ref=e257]: Pricing
+            - generic [ref=e258]: $99/mo
+            - paragraph [ref=e259]: Early Access
+        - generic [ref=e260]:
+          - generic [ref=e261]: "03"
+          - generic [ref=e262]:
+            - generic [ref=e263]: Business Intelligence · Restaurant Operations
+            - heading "MenuIQ" [level=3] [ref=e264]
+            - paragraph [ref=e265]: Analyzing your recipes, costs, and pricing to show you exactly which dishes make money — and which ones quietly drain it.
+          - generic [ref=e266]:
+            - generic [ref=e267]: Features
+            - list [ref=e268]:
+              - listitem [ref=e269]: → Food Cost Calculator
+              - listitem [ref=e270]: → Margin Intelligence
+              - listitem [ref=e271]: → Price Optimization
+          - generic [ref=e272]:
+            - generic [ref=e273]: Pricing
+            - generic [ref=e274]: $49/mo
+            - paragraph [ref=e275]: Early Access
+    - link "See All 8 Products →" [ref=e277] [cursor=pointer]:
+      - /url: /revuity-products
+  - generic [ref=e279]:
+    - generic [ref=e280]: Open-Source Methodology
+    - heading "Built in production. Open to use." [level=2] [ref=e281]:
+      - text: Built in production.
+      - emphasis [ref=e282]: Open to use.
+    - paragraph [ref=e283]: The evaluation frameworks I built to QA production AI in regulated environments — now available as interactive tools.
+    - generic [ref=e284]:
+      - generic [ref=e285]:
+        - generic [ref=e286]: "01"
+        - generic [ref=e287]:
+          - generic [ref=e288]: Evaluation · 5 Dimensions · 0–100 Score
+          - heading "BurgessEval Framework" [level=3] [ref=e289]
+          - paragraph [ref=e290]: A weighted, rubric-driven scoring system for evaluating AI outputs in regulated environments. 5 dimensions. 7 failure pattern tags. Composite 0–100 score.
+        - generic [ref=e291]:
+          - generic [ref=e292]: Framework
+          - list [ref=e293]:
+            - listitem [ref=e294]: → 5 Evaluation Dimensions
+            - listitem [ref=e295]: → 7 Failure Pattern Tags
+            - listitem [ref=e296]: → Weighted Composite Score
+        - generic [ref=e297]:
+          - generic [ref=e298]: Scope
+          - generic [ref=e299]: "5"
+          - paragraph [ref=e300]: Evaluation dimensions. Open framework — free to use.
+          - link "Open Framework →" [ref=e301] [cursor=pointer]:
+            - /url: /burgess-eval.html
+      - generic [ref=e302]:
+        - generic [ref=e303]: "02"
+        - generic [ref=e304]:
+          - generic [ref=e305]: 15 Test Cases · Compliance AI · Stress Testing
+          - heading "BurgessTest Suite" [level=3] [ref=e306]
+          - paragraph [ref=e307]: 15 structured test cases designed to stress-test compliance AI systems — from routine lookups to out-of-scope traps. Built on the Burgess Evaluation Framework.
+        - generic [ref=e308]:
+          - generic [ref=e309]: Test Coverage
+          - list [ref=e310]:
+            - listitem [ref=e311]: → Routine Compliance Lookups
+            - listitem [ref=e312]: → Out-of-Scope Traps
+            - listitem [ref=e313]: → Edge Case Scenarios
+        - generic [ref=e314]:
+          - generic [ref=e315]: Test Cases
+          - generic [ref=e316]: "15"
+          - paragraph [ref=e317]: Stress-tests compliance AI end-to-end. Open source.
+          - link "Open Test Suite →" [ref=e318] [cursor=pointer]:
+            - /url: /burgess-test.html
+  - generic [ref=e320]:
+    - heading "Let's talk about it." [level=2] [ref=e321]:
+      - text: Let's talk
+      - text: about it.
+    - paragraph [ref=e322]: I architect production-grade AI systems and have been doing it for 15 years. If you're building something that needs to be reliable at scale, let's connect.
+    - link "Schedule a Call →" [ref=e323] [cursor=pointer]:
+      - /url: https://calendly.com/jayburgessjr/long-meet
+    - link "View My Slides →" [ref=e324] [cursor=pointer]:
+      - /url: https://www.canva.com/design/DAHEKlOQl-o/Ra60KaYOrYJeyqpgt6xWQA/view?utm_content=DAHEKlOQl-o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5c5a1db5ea
+  - contentinfo [ref=e325]:
+    - generic [ref=e326]:
+      - strong [ref=e327]: Jay Burgess
+      - text: · AI Systems Architect · Builder · Operator
+    - generic [ref=e328]: jay@revuitysys.com

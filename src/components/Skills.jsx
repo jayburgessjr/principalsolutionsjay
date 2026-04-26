@@ -1,54 +1,56 @@
 import { useReveal } from '../hooks/useReveal'
 
 const certifications = [
+  'Certified Agentic Engineer',
+  'Certified Forward Deployment Engineer',
+  'Graduate Certificate, AI · Harvard University',
   'MBA · Eastern University · 2024',
   'M.S. Data Science · Eastern University · 2022',
   'M.Ed. · Loyola Marymount University · 2013',
-  'B.A. Sociology · Loyola Marymount University · 2005',
 ]
 
 const skillBlocks = [
   {
-    head: 'AI Systems Architecture',
+    head: 'Enterprise & Compliance',
     items: [
-      'Specification Design & System Prompting',
-      'Evaluation Frameworks & QA Pipelines',
-      'Multi-Agent Orchestration',
-      'Failure Pattern Analysis (context drift, spec drift, silent failures)',
-      'Trust & Guardrail Design',
-      'Context Architecture (RAG)',
-      'AI Economics & Token Cost Modeling',
+      'Enterprise Systems Strategy (HR, Finance, CRM)',
+      'IT Governance & Risk Management',
+      'Title IV & Regulatory Compliance',
+      'Vendor & Contract Management (RFPs, SOWs)',
+      'Multi-Site Operations Enablement',
+      'Data Governance & Metric Standardization',
     ],
   },
   {
     head: 'Data Engineering',
     items: [
-      'Python · SQL',
+      'Python · SQL · Azure AI',
       'Microsoft Fabric · Databricks',
-      'dbt · Airflow · Spark',
-      'Pipeline Architecture',
-      'Data Modeling',
+      'Pipeline Architecture & ETL/ELT',
       'Power BI · Google BI',
+      'Warehouse & Data Modeling',
+      'Data Quality Monitoring & Monitoring',
     ],
   },
   {
-    head: 'Systems Architecture',
+    head: 'AI & Agentic Engineering',
     items: [
-      'Process Mapping & Redesign',
-      'API Integration Design',
-      'Tech Stack Selection',
-      'QA Spec Writing',
-      'Engineering Standards',
+      'Specification Design & System Prompting',
+      'Evaluation Frameworks & QA Pipelines',
+      'Multi-Agent Orchestration',
+      'RAG Context Architecture',
+      'Failure Pattern Analysis (context/spec drift)',
+      'AI Economics & Token Cost Modeling',
     ],
   },
   {
-    head: 'Product & Delivery',
+    head: 'Leadership & Delivery',
     items: [
-      'Lovable + Supabase Stack',
-      '0→1 Product Development',
-      'B2B SaaS Design',
-      'Team Management (3–4 reports)',
-      'Stakeholder Communication',
+      '0→1 Platform Development',
+      'Scaling Technology Functions',
+      'Executive Stakeholder Alignment',
+      'Team Building & Mentorship',
+      'Cross-Functional Infrastructure Design',
     ],
   },
 ]

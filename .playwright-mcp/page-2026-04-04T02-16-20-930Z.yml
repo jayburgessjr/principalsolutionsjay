@@ -1,0 +1,252 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - link "← Back to Portfolio" [ref=e4] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e5]: Case Study · Revuity Systems
+  - generic [ref=e6]:
+    - generic: RS
+    - generic [ref=e7]:
+      - generic [ref=e8]: Case Study · Founder & CTO · AI-First Software Studio
+      - heading "Revuity Systems" [level=1] [ref=e9]:
+        - text: Revuity
+        - text: Systems
+      - paragraph [ref=e10]: AI Advisory. Agentic Engineering. SaaS Products. PE Focus.
+      - paragraph [ref=e11]: An LA-based AI-first software studio offering AI advisory & agentic engineering, solution architecture for PE firms, SaaS product development, portfolio operations intelligence, and AI agentic engineering workshops — built and operated as Founder & CTO.
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - generic [ref=e14]: Entity
+          - generic [ref=e15]: Revuity Systems — AI-First Software Studio
+        - generic [ref=e16]:
+          - generic [ref=e17]: My Role
+          - generic [ref=e18]: Founder & CTO
+        - generic [ref=e19]:
+          - generic [ref=e20]: Products Shipped
+          - generic [ref=e21]: VoltIQ · PricingCopilot · MenuIQ · ROAAS
+        - generic [ref=e22]:
+          - generic [ref=e23]: Focus
+          - generic [ref=e24]: AI Advisory · PE Firms · Agentic Engineering
+  - generic [ref=e26]:
+    - generic [ref=e27]: The Studio Philosophy
+    - heading "Not a Consulting Firm. Not a Startup Factory. A Focused Builder Studio." [level=2] [ref=e28]:
+      - text: Not a Consulting Firm.
+      - text: Not a Startup Factory.
+      - emphasis [ref=e29]: A Focused Builder Studio.
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]: "01"
+        - generic [ref=e33]: Lean by Design
+        - paragraph [ref=e34]: Revuity Systems is intentionally small. No bloated team, no investor overhead, no burn rate pressure. Every product is designed to generate revenue with minimal operating cost — because lean systems are durable systems.
+      - generic [ref=e35]:
+        - generic [ref=e36]: "02"
+        - generic [ref=e37]: Vertical Focus
+        - paragraph [ref=e38]: Each product targets a specific vertical with a specific data problem that existing tools solve poorly. Weddings. Certifications. Entertainment. Party gaming. Niche markets with real pain and no dominant incumbents.
+      - generic [ref=e39]:
+        - generic [ref=e40]: "03"
+        - generic [ref=e41]: Ship First, Scale Second
+        - paragraph [ref=e42]: I validate before I over-engineer. The goal of every product is a working version in the hands of real users as fast as possible. Feedback from real users beats assumptions from any amount of market research.
+  - generic [ref=e44]:
+    - generic [ref=e45]: The Repeatable Build Model
+    - heading "Same Five Moves. Every Product. Every Time." [level=2] [ref=e46]:
+      - text: Same Five Moves.
+      - emphasis [ref=e47]: Every Product. Every Time.
+    - paragraph [ref=e48]: Revuity Systems isn't a collection of one-off projects. It's proof of a repeatable method for identifying a problem, validating it fast, and shipping a production product — across completely different industries.
+    - generic [ref=e49]:
+      - generic [ref=e50]:
+        - generic [ref=e51]: ◎
+        - generic [ref=e52]: Identify
+        - generic [ref=e53]: Find a vertical with a real data problem and no good existing solution
+      - generic [ref=e54]:
+        - generic [ref=e55]: ◈
+        - generic [ref=e56]: Validate
+        - generic [ref=e57]: Confirm the pain is real before writing a line of code
+      - generic [ref=e58]:
+        - generic [ref=e59]: ⬡
+        - generic [ref=e60]: Architect
+        - generic [ref=e61]: Design the data model, UX, and tech stack for the specific problem
+      - generic [ref=e62]:
+        - generic [ref=e63]: △
+        - generic [ref=e64]: Ship
+        - generic [ref=e65]: Deploy a working product using Lovable + Supabase stack
+      - generic [ref=e66]:
+        - generic [ref=e67]: ◻
+        - generic [ref=e68]: Iterate
+        - generic [ref=e69]: Refine based on real user behavior, not assumptions
+    - generic [ref=e70]:
+      - generic [ref=e71]: Why This Matters
+      - generic [ref=e72]:
+        - text: This is the same motion I'd apply inside a portfolio company.
+        - strong [ref=e73]: Identify the highest-leverage problem. Validate the root cause. Architect the right solution. Ship something real.
+        - text: Revuity Systems is 4 live proof points that I can execute this loop across different industries, different users, and different constraints — without a team or a runway to fall back on.
+  - generic [ref=e75]:
+    - generic [ref=e76]: The Products
+    - heading "Four Verticals. Four Real Problems Solved." [level=2] [ref=e77]:
+      - text: Four Verticals.
+      - emphasis [ref=e78]: Four Real Problems Solved.
+    - paragraph [ref=e79]: "Each product represents a different market, a different user, and a different data problem. The common thread: I built them all, shipped them all, and own every decision in each one."
+    - generic [ref=e80]:
+      - generic [ref=e81]:
+        - generic [ref=e82]: Product 01 · B2B SaaS · Energy & Operations
+        - generic [ref=e83]: VoltIQ
+        - generic [ref=e84]: AI-powered operations intelligence for portfolio companies
+        - paragraph [ref=e85]: Portfolio companies generate enormous operational data — but most of it sits in disconnected systems with no intelligence layer on top. VoltIQ aggregates operational and performance signals across portfolio companies, surfacing anomalies, benchmarks, and optimization opportunities through an AI-driven analytics layer built for PE operators.
+      - generic [ref=e86]:
+        - generic [ref=e87]: Stack
+        - generic [ref=e88]:
+          - generic [ref=e89]: Lovable
+          - generic [ref=e90]: Supabase
+          - generic [ref=e91]: PostgreSQL
+          - generic [ref=e92]: AI Analytics
+          - generic [ref=e93]: Subscription SaaS
+        - generic [ref=e94]: Key Decisions
+        - list [ref=e95]:
+          - listitem [ref=e96]: → PE operator focus — built for the GP layer, not individual companies
+          - listitem [ref=e97]: → AI-first architecture — every data point flows through an intelligence layer
+          - listitem [ref=e98]: → Multi-entity data model from day one — horizontal portfolio expansion built in
+          - listitem [ref=e99]: → Minimal surface area on launch — operations intelligence only, no bloat
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - generic [ref=e102]: Target
+          - generic [ref=e103]: PE
+          - generic [ref=e104]: Portfolio operations intelligence for private equity firms and their operating teams.
+        - generic [ref=e105]: In Development
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]: Product 02 · AI SaaS · Pricing Intelligence
+        - generic [ref=e109]: PricingCopilot
+        - generic [ref=e110]: AI pricing optimization for SMB and mid-market operators
+        - paragraph [ref=e111]: Most businesses set prices by gut, competitor observation, or inertia. PricingCopilot is an AI-powered pricing intelligence layer that analyzes cost structure, market signals, and competitive positioning to surface pricing opportunities and risk — giving operators the data-driven pricing advantage that was previously only available to enterprise teams with analytics departments.
+      - generic [ref=e112]:
+        - generic [ref=e113]: Stack
+        - generic [ref=e114]:
+          - generic [ref=e115]: Lovable
+          - generic [ref=e116]: Supabase
+          - generic [ref=e117]: LLM Integration
+          - generic [ref=e118]: AI Analytics
+          - generic [ref=e119]: Subscription Model
+        - generic [ref=e120]: Key Decisions
+        - list [ref=e121]:
+          - listitem [ref=e122]: → AI copilot model — augments operator judgment, doesn't replace it
+          - listitem [ref=e123]: → SMB-first pricing — democratizes intelligence previously limited to enterprise
+          - listitem [ref=e124]: → Subscription over per-seat — predictable revenue, low churn
+          - listitem [ref=e125]: → Modular by vertical — one engine, configurable per industry
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - generic [ref=e128]: Model
+          - generic [ref=e129]: AI
+          - generic [ref=e130]: AI-assisted pricing intelligence. Subscription SaaS targeting under-served mid-market operators.
+        - generic [ref=e131]: In Development
+    - generic [ref=e132]:
+      - generic [ref=e133]:
+        - generic [ref=e134]: Product 03 · AI SaaS · Food & Hospitality
+        - generic [ref=e135]: MenuIQ
+        - generic [ref=e136]: AI menu engineering and pricing intelligence for restaurants
+        - paragraph [ref=e137]: Restaurant operators change menus and prices based on intuition. MenuIQ brings AI-driven menu engineering to food service — analyzing item performance, margin contribution, and pricing elasticity to recommend what to keep, cut, reprice, or promote. Built for independent operators and small chains who can't afford a consulting firm but need the same intelligence.
+      - generic [ref=e138]:
+        - generic [ref=e139]: Stack
+        - generic [ref=e140]:
+          - generic [ref=e141]: Lovable
+          - generic [ref=e142]: Supabase
+          - generic [ref=e143]: AI Analytics
+          - generic [ref=e144]: Realtime Data
+          - generic [ref=e145]: SaaS
+        - generic [ref=e146]: Key Decisions
+        - list [ref=e147]:
+          - listitem [ref=e148]: → Operator-grade UX — built for the restaurant owner, not a data analyst
+          - listitem [ref=e149]: → Menu engineering framework baked into the data model
+          - listitem [ref=e150]: → Real-time cost and margin visibility — not just static reports
+          - listitem [ref=e151]: → Independent restaurant focus — chain complexity handled later
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - generic [ref=e154]: Differentiator
+          - generic [ref=e155]: AI
+          - generic [ref=e156]: AI menu engineering at a price point accessible to independent restaurant operators.
+        - generic [ref=e157]: In Beta
+    - generic [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e160]: Product 04 · Advisory SaaS · PE Firms
+        - generic [ref=e161]: ROAAS
+        - generic [ref=e162]: Return on AI as a Service — AI ROI measurement for PE portfolio companies
+        - paragraph [ref=e163]: PE firms are deploying AI across portfolio companies but have no standardized way to measure what it's actually returning. ROAAS (Return on AI as a Service) is an AI economics platform that tracks deployment costs, output quality, and business impact across portfolio companies — giving GPs the ROI visibility they need to make intelligent AI investment decisions at scale.
+      - generic [ref=e164]:
+        - generic [ref=e165]: Stack
+        - generic [ref=e166]:
+          - generic [ref=e167]: AI Economics Framework
+          - generic [ref=e168]: Supabase
+          - generic [ref=e169]: Lovable
+          - generic [ref=e170]: Portfolio Analytics
+          - generic [ref=e171]: SaaS
+        - generic [ref=e172]: Key Decisions
+        - list [ref=e173]:
+          - listitem [ref=e174]: → GP-layer reporting — aggregates across portfolio, not just per company
+          - listitem [ref=e175]: → AI economics model built from first principles — not vanity metrics
+          - listitem [ref=e176]: → Token cost modeling and quality benchmarking as core data primitives
+          - listitem [ref=e177]: → Built from my own evaluation framework methodology used in production AI
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - generic [ref=e180]: Market
+          - generic [ref=e181]: PE
+          - generic [ref=e182]: Built for private equity firms that need standardized AI ROI measurement across their portfolios.
+        - generic [ref=e183]: Live
+  - generic [ref=e185]:
+    - generic [ref=e186]: "\"When you build products with your own time and your own money, you have to ship things that actually work. There's no team to diffuse accountability onto. Every decision is yours. Every failure is yours. So is every win.\""
+    - generic [ref=e187]: Jay Burgess · Founder, Revuity Systems
+  - generic [ref=e189]:
+    - generic [ref=e190]: What Revuity Systems Proves
+    - heading "Four Products Built Solo. Here's What That Actually Means." [level=2] [ref=e191]:
+      - text: Four Products Built Solo.
+      - emphasis [ref=e192]: Here's What That Actually Means.
+    - paragraph [ref=e193]: Anyone can have ideas. Revuity Systems is proof that I execute them — across different markets, different users, and different technical challenges — without a team, a runway, or a safety net.
+    - generic [ref=e194]:
+      - generic [ref=e195]:
+        - generic [ref=e196]: "01"
+        - generic [ref=e197]: I Own Outcomes — Not Tasks
+        - paragraph [ref=e198]:
+          - text: There's no PM to escalate to. No engineering team to hand specs to. No designer to review my work.
+          - strong [ref=e199]: I make every call and live with every result.
+          - text: That's the accountability level I operate at — and it's exactly what "high autonomy, high accountability" means in practice.
+      - generic [ref=e200]:
+        - generic [ref=e201]: "02"
+        - generic [ref=e202]: I Ship Fast Across Different Contexts
+        - paragraph [ref=e203]:
+          - text: WedData, CertPath, GameNight, and Box Office Beacon are not variations on one product — they're four completely different markets, user types, data models, and go-to-market approaches.
+          - strong [ref=e204]: I don't need to be handed a context. I build one.
+      - generic [ref=e205]:
+        - generic [ref=e206]: "03"
+        - generic [ref=e207]: I Validate Before I Over-Build
+        - paragraph [ref=e208]:
+          - text: Every Revuity product starts with a real problem, not a cool technology. I identify the pain first, confirm it's real, then build the minimum version that solves it.
+          - strong [ref=e209]: This is exactly how I'd approach a portfolio company diagnosis
+          - text: — find the root cause, validate it, then build the fix.
+      - generic [ref=e210]:
+        - generic [ref=e211]: "04"
+        - generic [ref=e212]: I Operate in Parallel at Scale
+        - paragraph [ref=e213]:
+          - text: Revuity Systems runs alongside a full-time Principal Solutions Architect role at HEAG, where I hold 5 functional responsibilities simultaneously.
+          - strong [ref=e214]: Operating across multiple contexts with different priorities is not a new challenge for me — it is my default operating mode.
+    - generic [ref=e215]:
+      - generic [ref=e216]:
+        - generic [ref=e217]: "4"
+        - generic [ref=e218]: Products Shipped
+      - generic [ref=e219]:
+        - generic [ref=e220]: "4"
+        - generic [ref=e221]: Different Verticals
+      - generic [ref=e222]:
+        - generic [ref=e223]: "1"
+        - generic [ref=e224]: Builder — Solo
+      - generic [ref=e225]:
+        - generic [ref=e226]: ∞
+        - generic [ref=e227]: Accountability
+  - generic [ref=e229]:
+    - heading "The portfolio is waiting." [level=3] [ref=e230]:
+      - text: The portfolio is
+      - text: waiting.
+    - paragraph [ref=e231]: Revuity Systems is what I build when there's no mandate to build it. Imagine what I'd ship with 20 companies, a team, and a mission behind it.
+    - link "Schedule a Call →" [ref=e232] [cursor=pointer]:
+      - /url: https://calendly.com/jayburgessjr/long-meet
+    - link "Read the ReggieAI Case Study →" [ref=e233] [cursor=pointer]:
+      - /url: /reggie-case-study
+  - contentinfo [ref=e234]:
+    - generic [ref=e235]:
+      - strong [ref=e236]: Jay Burgess
+      - text: · AI Systems Architect · Founder & CTO, Revuity Systems
+    - generic [ref=e237]: jay@revuitysys.com

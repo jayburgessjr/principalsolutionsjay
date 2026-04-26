@@ -1,4 +1,4 @@
-import jayPhoto from '../assets/jay-profile.png'
+
 
 export default function Hero() {
   return (
@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-eyebrow">
-            AI Systems Architect · Builder · Operator
+            Fractional Architect / CTO / CIO
           </div>
           <h1 className="hero-headline">
             I Walk In.<br />
@@ -14,13 +14,13 @@ export default function Hero() {
             <span className="outline">I Ship It.</span>
           </h1>
           <p className="hero-summary">
-            AI systems architect who designs, builds, and operates production-grade AI in regulated environments. Fourteen-plus years spanning Fortune 500, higher education, and venture-backed software. Built ReggieAI — a production agentic compliance platform for Title IV federal financial aid with $2.7M in documented business impact. Founder &amp; CTO of Revuity Systems, an LA-based AI-first software studio. I don't just use AI — I architect the systems that make it reliable at scale.
+            Technology executive leading enterprise systems, data strategy, and AI-enabled operations. Built ReggieAI — a production agentic compliance platform generating $2.7M+ in documented impact. Spanning Fortune 500 leadership at Walmart and Adobe (86% reporting turnaround reduction) and higher-ed. Certified Agentic Engineer &amp; Forward Deployment Engineer. Founder &amp; CTO of Revuity Systems. I don't just use AI — I architect the integrated technology ecosystems that make it reliable at scale.
           </p>
         </div>
 
         <div className="hero-photo-wrap">
           <div className="hero-photo-placeholder">
-            <img src={jayPhoto} alt="Jay Burgess" />
+            <img src="/jay_burgess_.png" alt="Jay Burgess" />
           </div>
         </div>
       </div>
