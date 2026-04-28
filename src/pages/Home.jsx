@@ -2,6 +2,7 @@ import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import Method from '../components/Method'
 import CaseBand from '../components/CaseBand'
+import AboutBand from '../components/AboutBand'
 import Proof from '../components/Proof'
 import Testimonials from '../components/Testimonials'
 import Companies from '../components/Companies'
@@ -30,7 +31,7 @@ export default function Home() {
       <Hero />
       <Method />
       <Companies />
-      <CaseBand />
+      <AboutBand />
       <Proof />
       <CaseBand />
       <Testimonials />
