@@ -11,6 +11,7 @@ import ProductsBand from '../components/ProductsBand'
 import EngagementSection from '../components/EngagementSection'
 import EngagementBand from '../components/EngagementBand'
 import Methodology from '../components/Methodology'
+import MethodologyBand from '../components/MethodologyBand'
 import WalmartBand from '../components/WalmartBand'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
@@ -40,6 +41,7 @@ export default function Home() {
       <EngagementSection />
       <EngagementBand />
       <Methodology />
+      <MethodologyBand />
       <CTA />
       <Footer />
     </>
