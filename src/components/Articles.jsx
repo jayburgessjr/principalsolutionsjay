@@ -1,30 +1,27 @@
 import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
 
-const ARTICLES = [
+const FEATURED_ARTICLES = [
   {
     slug: '/article/ai-systems-at-scale',
     category: 'AI Systems',
     readTime: '9 min read',
     title: 'Why AI Systems Fail at Scale: The Architecture Gap Between Demo and Production',
-    abstract:
-      'Most AI proofs of concept succeed. Most production deployments struggle. The gap is not model quality — it is the architecture beneath the model. A framework for diagnosing and closing that gap before it costs you.',
+    abstract: 'Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural — and fully diagnosable before scale commitment.',
   },
   {
-    slug: '/article/data-debt',
-    category: 'Data Infrastructure',
-    readTime: '7 min read',
-    title: 'The Organizational Cost of Data Debt: How Unstructured Information Erodes Strategic Decisions',
-    abstract:
-      'Data debt is not a storage problem. It is a decision-making problem. Organizations that allow it to compound find themselves unable to answer basic strategic questions with confidence.',
-  },
-  {
-    slug: '/article/internal-tools',
-    category: 'Internal Infrastructure',
+    slug: '/article/root-cause-diagnosis',
+    category: 'Systems Diagnosis',
     readTime: '8 min read',
-    title: 'Internal Tools as Strategic Infrastructure: Why How You Build for Yourself Predicts Everything',
-    abstract:
-      'The internal tools an organization builds for itself are not overhead — they are a diagnostic signal. Their quality predicts the quality of every product and system you will ever ship externally.',
+    title: 'The Principal Architect\'s Method: How to Walk Into Any System and Find the Root Cause',
+    abstract: 'Most systems problems are diagnosed at the symptom layer. A structured framework for finding root causes at the architectural level — where fixes actually hold.',
+  },
+  {
+    slug: '/article/the-handoff-problem',
+    category: 'Technical Leadership',
+    readTime: '8 min read',
+    title: 'The Handoff Problem: Building Systems That Run Without Their Architect',
+    abstract: 'A system that works is not a complete deliverable. Four properties that distinguish systems built for handoff from systems built for their builders.',
   },
 ]
 
@@ -40,7 +37,7 @@ export default function Articles() {
         </p>
       </div>
       <div className="articles-grid reveal" ref={gridRef}>
-        {ARTICLES.map((a) => (
+        {FEATURED_ARTICLES.map((a) => (
           <Link key={a.slug} to={a.slug} className="article-card">
             <div className="article-card-tag">{a.category} · {a.readTime}</div>
             <div className="article-card-title">{a.title}</div>
@@ -48,6 +45,21 @@ export default function Articles() {
             <div className="article-card-cta">Read Article →</div>
           </Link>
         ))}
+      </div>
+      <div style={{ marginTop: '1.5rem', textAlign: 'right' }}>
+        <Link
+          to="/articles"
+          style={{
+            fontFamily: 'IBM Plex Mono, monospace',
+            fontSize: '0.68rem',
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            color: 'var(--orange)',
+            textDecoration: 'none',
+          }}
+        >
+          View All 13 Articles →
+        </Link>
       </div>
     </section>
   )
