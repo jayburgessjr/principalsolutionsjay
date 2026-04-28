@@ -3,68 +3,69 @@ import { useReveal } from '../hooks/useReveal'
 const proofRows = [
   {
     index: '01',
-    label: 'AI System · HEAG · 2025',
+    label: 'AI System · HEAG · 2025 · Live',
     title: 'ReggieAI — Title IV Compliance AI',
-    desc: 'Built a production agentic AI system for federal student aid compliance. Went from broken manual process to live, auditable AI — with guardrails, API integration, and a structured regulatory knowledge base — ahead of schedule.',
+    desc: 'Led the full initiative end to end — diagnosis, architecture, build, team handoff. Transformed broken manual compliance processes into a production agentic AI system with guardrails, API integration, and a structured regulatory knowledge base. Delivered ahead of schedule. Team runs it independently.',
     methodLabel: 'How I did it',
     steps: [
-      'Diagnosed: compliance errors from unstructured knowledge',
-      'Architected JSON knowledge base from FSA sources',
+      'Diagnosed: compliance errors from unstructured knowledge, not staff error',
+      'Architected JSON knowledge base from FSA regulatory sources',
       'Built RAG pipeline + anti-hallucination system prompt',
-      'Replaced embedded form with live HubSpot API',
-      'Deployed staging · documented for team handoff',
+      'Replaced manual process with live HubSpot API integration',
+      'Trained team on system — documented for full independent operation',
     ],
-    outcomeLabel: 'Outcome',
-    outcomeNum: 'Live',
-    outcomeDesc: 'Production deployment. Compliance ops transformed. Zero hallucinations in testing.',
+    outcomeLabel: 'Documented business impact',
+    outcomeNum: '$2.7M',
+    outcomeDesc: 'Production deployment. Team runs it independently.',
   },
   {
     index: '02',
     label: 'Enterprise · Fortune 500',
-    title: 'Walmart & Adobe Engagements',
-    desc: 'Data science and solutions architecture at two of the most demanding enterprise environments on earth. Built systems that had to perform at scale, survive complex stakeholder politics, and generate verifiable ROI.',
+    title: 'Walmart & Adobe — Enterprise Systems',
+    desc: 'Designed and led data and systems architecture inside two of the most demanding enterprise environments on earth. Built organizations around the work — not just systems. Left behind documented standards and capable teams.',
     methodLabel: 'What I brought',
     steps: [
-      'Diagnosed process gaps at enterprise scale',
-      'Built scalable data pipelines and reporting architecture',
-      'Translated technical systems into executive-ready comms',
-      'Delivered with rigorous documentation and handoff',
+      'Built Creative Operations data org from zero at Walmart — Fortune 1 scale',
+      'Developed team capability and documented standards for independent operation',
+      '86% reduction in executive reporting turnaround at Adobe',
+      'Translated complex technical systems into executive-level decision support',
+      'Delivered with rigorous documentation, training, and structured handoff',
     ],
     outcomeLabel: 'Impact',
-    outcomeNum: '$2.7M',
-    outcomeDesc: 'Verified business ROI across Fortune 500 engagements.',
+    outcomeNum: '$750K',
+    outcomeDesc: 'Recovered · Walmart',
   },
   {
     index: '03',
-    label: 'Internal Tooling · HEAG',
-    title: 'Custom PM Platform — Built From Zero',
-    desc: 'Diagnosed that fragmented project management was costing the team coordination overhead. Built a custom Jira-style tool from scratch — data model, interface, QA specs, and engineering standards. Trained the team. Walked away.',
+    label: 'Internal Tooling · HEAG · Runs independently',
+    title: 'Custom PM Platform — Built from zero',
+    desc: 'Diagnosed fragmented project management as a root-cause coordination failure. Designed and led the build of a custom Jira-style platform — data model, interface, QA specs, engineering standards. Trained the team to own it. Walked away. It still runs.',
     methodLabel: 'How I did it',
     steps: [
-      'Identified coordination failure as root cause',
+      'Identified coordination failure as root cause of delivery delays',
       'Designed data model and UX from scratch',
-      'Wrote QA specs and engineering standards',
-      'Trained team · system runs without me',
+      'Wrote QA specs and engineering standards the team now owns',
+      'Structured and led team training — zero ongoing dependency on me',
     ],
-    outcomeLabel: 'Status',
-    outcomeNum: 'Runs',
-    outcomeDesc: 'Team operates it independently. Zero ongoing dependency on me.',
+    outcomeLabel: 'Dependency on me after handoff',
+    outcomeNum: '0',
+    outcomeDesc: 'Team owns it fully — runs without me.',
   },
   {
     index: '04',
     label: 'Founder · Revuity Systems',
-    title: '8 Products Shipped — As Founder & Builder',
-    desc: 'Founded Revuity Systems, a lean AI product studio. Shipped 8 products across 5 verticals — VoltIQ, Box Office Beacon, MenuIQ, and more — each designed, architected, and deployed solo or with a small team.',
+    title: '8 products shipped — as founder & operator',
+    desc: 'Founded Revuity Systems and shipped 8 products across 5 verticals — solo or with a small team. This proves I can own outcomes, lead the build, and hold accountability with no organization to fall back on.',
     methodLabel: 'What this proves',
     steps: [
-      'I own outcomes — no team to hide behind',
-      'I ship in weeks, not quarters',
-      'I validate before I over-build',
-      'I operate with founder accountability',
+      'VoltIQ, Box Office Beacon, MenuIQ, and more — each architected and deployed',
+      'Led design, architecture, and delivery decisions across every product',
+      'Shipped in weeks, not quarters — validated before over-building',
+      'Each product runs without ongoing maintenance dependency',
     ],
-    outcomeLabel: 'Products',
-    outcomeNum: '8',
-    outcomeDesc: 'AI and data products in market across 5 verticals.',
+    outcomeLabel: 'Verticals · products in market',
+    outcomeNum: '5',
+    outcomeDesc: '8 products across 5 verticals.',
   },
 ]
 
@@ -76,9 +77,9 @@ export default function Proof() {
       <div className="proof-inner">
         <div className="section-label">Selected work</div>
         <h2 className="method-h2" style={{ marginBottom: '1rem' }}>
-          Where I've <em>delivered.</em>
+          Where I've <em>led and delivered.</em>
         </h2>
-        <p className="method-intro">Real problems. Real systems. Real outcomes.</p>
+        <p className="method-intro">Real problems. Real systems. Real outcomes — with teams that can operate them independently.</p>
 
         <div className="proof-grid reveal" ref={gridRef}>
           {proofRows.map((row) => (

@@ -3,22 +3,22 @@ import { useReveal } from '../hooks/useReveal'
 const certifications = [
   'Certified Agentic Engineer',
   'Certified Forward Deployment Engineer',
-  'Graduate Certificate, AI · Harvard University',
-  'MBA · Eastern University · 2024',
-  'M.S. Data Science · Eastern University · 2022',
-  'M.Ed. · Loyola Marymount University · 2013',
+  'Graduate Certificate, AI · Harvard',
+  'MBA · Eastern University',
+  'M.S. Data Science · Eastern University',
+  'M.Ed. · Loyola Marymount',
 ]
 
 const skillBlocks = [
   {
-    head: 'Enterprise & Compliance',
+    head: 'AI & Agentic Systems',
     items: [
-      'Enterprise Systems Strategy (HR, Finance, CRM)',
-      'IT Governance & Risk Management',
-      'Title IV & Regulatory Compliance',
-      'Vendor & Contract Management (RFPs, SOWs)',
-      'Multi-Site Operations Enablement',
-      'Data Governance & Metric Standardization',
+      'RAG context architecture',
+      'Multi-agent orchestration',
+      'Evaluation frameworks & QA pipelines',
+      'Anti-hallucination system prompting',
+      'AI economics & token cost modeling',
+      'Failure pattern analysis',
     ],
   },
   {
@@ -26,31 +26,32 @@ const skillBlocks = [
     items: [
       'Python · SQL · Azure AI',
       'Microsoft Fabric · Databricks',
-      'Pipeline Architecture & ETL/ELT',
+      'Pipeline architecture & ETL/ELT',
       'Power BI · Google BI',
-      'Warehouse & Data Modeling',
-      'Data Quality & Observability Monitoring',
+      'Warehouse & data modeling',
+      'Data quality & observability',
     ],
   },
   {
-    head: 'AI & Agentic Engineering',
+    head: 'Enterprise Systems',
     items: [
-      'Specification Design & System Prompting',
-      'Evaluation Frameworks & QA Pipelines',
-      'Multi-Agent Orchestration',
-      'RAG Context Architecture',
-      'Failure Pattern Analysis (context/spec drift)',
-      'AI Economics & Token Cost Modeling',
+      'Enterprise systems strategy',
+      'IT governance & risk management',
+      'Title IV & regulatory compliance',
+      'Vendor & contract management',
+      'Multi-site operations enablement',
+      'Data governance & metric standardization',
     ],
   },
   {
     head: 'Leadership & Delivery',
     items: [
-      '0→1 Platform Development',
-      'Scaling Technology Functions',
-      'Executive Stakeholder Alignment',
-      'Team Building & Mentorship',
-      'Cross-Functional Infrastructure Design',
+      '0→1 platform development',
+      'Team building & development',
+      'Scaling technology functions',
+      'Executive stakeholder alignment',
+      'Cross-functional ownership',
+      'Structured documentation & handoff',
     ],
   },
 ]
@@ -66,13 +67,12 @@ export default function Skills() {
         <div className="skills-layout">
           <div className="skills-left reveal" ref={leftRef}>
             <h2>
-              Deep enough<br />
-              to build it.<br />
-              <em>Fast.</em>
+              Deep enough to lead the build.<br />
+              <em>Close enough to get in when it matters.</em>
             </h2>
             <p>
-              I don't need to hire a team to ship a solution. I can architect, build, test, and
-              document production-grade AI systems myself — then lead engineers to scale them.
+              I can architect, build, test, and document production-grade AI systems — and develop
+              the engineering team to scale and own them.
             </p>
             <ul className="cert-list">
               {certifications.map((c) => <li key={c}>{c}</li>)}

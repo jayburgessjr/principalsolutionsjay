@@ -1,6 +1,7 @@
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
 import Method from '../components/Method'
+import LeadershipLayer from '../components/LeadershipLayer'
 import CaseBand from '../components/CaseBand'
 import AboutBand from '../components/AboutBand'
 import Proof from '../components/Proof'
@@ -31,20 +32,21 @@ export default function Home() {
       <Nav />
       <Hero />
       <Method />
+      <LeadershipLayer />
+      <Skills />
       <Companies />
-      <AboutBand />
       <Proof />
       <CaseBand />
       <Testimonials />
       <WalmartBand />
-      <Skills />
-      <RevuityBand />
-      <ProductsBand />
       <EngagementSection />
-      <EngagementBand />
+      <ProductsBand />
+      <RevuityBand />
+      <AboutBand />
       <Methodology />
-      <MethodologyBand />
+      <EngagementBand />
       <Articles />
+      <MethodologyBand />
       <CTA />
       <Footer />
     </>

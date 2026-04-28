@@ -28,10 +28,13 @@ const FEATURED_ARTICLES = [
 export default function Articles() {
   const gridRef = useReveal()
   return (
-    <section className="articles-section">
+    <section className="articles-section" id="articles">
+      <div className="articles-inner">
       <div className="articles-header">
-        <div className="articles-eyebrow">Perspectives</div>
-        <h2 className="articles-heading">The Thinking<br />Behind the Work</h2>
+        <div className="section-label">Perspectives</div>
+        <h2 style={{ fontFamily: "'Libre Baskerville', serif", fontSize: 'clamp(1.8rem, 2.8vw, 2.8rem)', fontWeight: 700, lineHeight: 1.2, marginBottom: '1rem', maxWidth: '640px' }}>
+          The Thinking<br /><em style={{ fontStyle: 'italic', color: 'var(--orange)' }}>Behind the Work</em>
+        </h2>
         <p className="articles-sub">
           Expert writing on AI systems, data infrastructure, and how organizations build things that last.
         </p>
@@ -60,6 +63,7 @@ export default function Articles() {
         >
           View All 13 Articles →
         </Link>
+      </div>
       </div>
     </section>
   )

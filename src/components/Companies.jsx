@@ -2,7 +2,7 @@ const companies = ['Walmart', 'Adobe', 'HEAG', 'Harvard', 'LMU', 'Revuity System
 
 export default function Companies() {
   return (
-    <div className="companies">
+    <div className="companies" id="companies">
       <div className="companies-inner">
         <div className="co-label">Delivered for</div>
         {companies.map((c) => (

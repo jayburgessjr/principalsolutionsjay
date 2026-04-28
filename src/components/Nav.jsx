@@ -46,11 +46,13 @@ export default function Nav() {
       <div className="nav-right">
         <ul className="nav-links">
           <li><a href="#method">Method</a></li>
-          <li><a href="#proof">Proof</a></li>
+          <li><a href="#companies">Clients</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#proof">Work</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="#products">Portfolio</a></li>
           <li><a href="#engagement">Engagement</a></li>
           <li><a href="#methodology">Frameworks</a></li>
+          <li><a href="#articles">Articles</a></li>
         </ul>
         <a href={LINKEDIN_URL} className="nav-linkedin" target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <LinkedInIcon />

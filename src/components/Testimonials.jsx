@@ -12,7 +12,7 @@ const testimonials = [
     title: 'Sales Executive · Toshiba International Corporation',
   },
   {
-    quote: 'Always the consummate professional, Jay was able to navigate difficult conversations with skill, empathy, and a willingness to ensure each person was treated with the care they deserved. I have no doubt that Jay will achieve much success — he has an innate drive and determination that sets him apart.',
+    quote: 'Always the consummate professional, Jay was able to navigate difficult conversations with skill, empathy, and a willingness to ensure each person was treated with the care they deserved. He has an innate drive and determination that sets him apart.',
     name: 'Thomas Gutto',
     title: 'Associate Vice Provost · Loyola Marymount University',
   },

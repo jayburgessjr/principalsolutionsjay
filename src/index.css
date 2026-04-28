@@ -238,6 +238,15 @@ nav {
   max-width: 520px;
   animation: fadeUp 0.7s 0.25s ease both;
 }
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.hero-ctas .cta-btn { padding: 0.9rem 2rem; font-size: 0.72rem; }
+.hero-ctas .cta-btn-ghost { padding: 0.9rem 2rem; font-size: 0.72rem; margin-left: 1rem; }
 .hero-availability {
   display: flex;
   align-items: center;
@@ -266,6 +275,7 @@ nav {
 .hero-headline .outline {
   -webkit-text-stroke: 1px var(--outline-color);
   color: transparent;
+  font-size: 0.65em;
 }
 .hero-bottom {
   max-width: 1140px;
@@ -367,12 +377,12 @@ nav {
 }
 .steps {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border: 1px solid var(--rule);
 }
 .step {
-  padding: 3rem 2.5rem;
+  padding: 2.5rem 1.75rem;
   border-right: 1px solid var(--rule);
   position: relative;
   transition: background 0.3s;
@@ -416,6 +426,63 @@ nav {
   font-size: 0.68rem;
   color: var(--orange);
   letter-spacing: 0.06em;
+}
+
+/* ─── ABOUT BAND ─── */
+.about-band {
+  background: var(--panel);
+  border-top: 3px solid var(--orange);
+  padding: 6rem 2.5rem;
+  text-align: center;
+}
+.about-band-inner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.about-band-label {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 1.25rem;
+}
+.about-band-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3.75rem;
+  color: var(--white);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.about-band-sub {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.5rem;
+  color: var(--orange);
+  letter-spacing: 0.06em;
+  margin-top: 0.3rem;
+}
+.about-band-body {
+  font-size: 1rem;
+  color: var(--mid);
+  margin-top: 1.75rem;
+  line-height: 1.8;
+}
+.about-band-link {
+  display: inline-block;
+  margin-top: 2.25rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 0.85rem 2.25rem;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+.about-band-link:hover {
+  border-color: var(--orange);
+  color: var(--orange);
 }
 
 /* ─── CASE STUDY BAND ─── */
@@ -660,6 +727,55 @@ nav {
   color: var(--dim);
   text-transform: uppercase;
 }
+
+/* ─── LEADERSHIP LAYER ─── */
+.leadership-layer {
+  padding: 8rem 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.leadership-inner { max-width: 1140px; margin: 0 auto; }
+.leadership-h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.4rem, 4.5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.leadership-h2 em { font-style: normal; color: var(--orange); }
+.leadership-intro {
+  font-size: 1rem;
+  color: var(--mid);
+  max-width: 580px;
+  margin-bottom: 4rem;
+  line-height: 1.75;
+}
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+.leadership-cell {
+  padding: 2.5rem;
+  border-right: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  transition: background 0.3s;
+}
+.leadership-cell:nth-child(even) { border-right: none; }
+.leadership-cell:nth-child(3),
+.leadership-cell:nth-child(4) { border-bottom: none; }
+.leadership-cell:hover { background: var(--panel); }
+.leadership-icon { font-size: 1.4rem; margin-bottom: 0.75rem; }
+.leadership-cell-head {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+}
+.leadership-cell p { font-size: 0.88rem; color: var(--mid); line-height: 1.75; }
 
 /* ─── SKILLS ─── */
 .skills {
@@ -1499,7 +1615,7 @@ footer {
   .hero-photo-wrap { order: -1; }
   .hero-photo-placeholder { width: 200px; height: 250px; }
   .hero-bottom { grid-template-columns: 1fr 1fr; margin: 2rem 0 0; }
-  .method, .proof, .skills, .why, .cta, .operating-law { padding: 5rem 1.5rem; }
+  .method, .proof, .skills, .why, .cta, .operating-law, .articles-section { padding: 5rem 1.5rem; }
   .ol-stages { gap: 0.4rem 0.85rem; }
   .steps { grid-template-columns: 1fr; }
   .step { border-right: none; border-bottom: 1px solid var(--rule); }
@@ -1528,30 +1644,16 @@ footer {
 /* ─── ARTICLES SECTION ─── */
 .articles-section {
   border-top: 1px solid var(--rule);
-  padding: 5rem 2.5rem;
+  padding: 8rem 2.5rem;
 }
+.articles-inner { max-width: 1140px; margin: 0 auto; }
 .articles-header { margin-bottom: 3rem; }
-.articles-eyebrow {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 0.75rem;
-}
-.articles-heading {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  letter-spacing: 0.03em;
-  color: var(--white);
-  line-height: 1;
-  margin-bottom: 0.75rem;
-}
 .articles-sub {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--mid);
   max-width: 480px;
-  line-height: 1.65;
+  line-height: 1.75;
+  margin-bottom: 0;
 }
 .articles-grid {
   display: grid;

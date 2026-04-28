@@ -38,42 +38,7 @@ export default function ProductsBand() {
   const gridRef = useReveal()
 
   return (
-    <section className="products-band" id="products">
-      <div className="products-band-inner">
-        <div className="section-label">Revuity Systems · Products</div>
-        <h2 className="products-h2">
-          Eight independent products.<br />
-          <em>Built to run without you.</em>
-        </h2>
-        <p className="products-intro">
-          Five verticals. Eight products. Each scoped to a specific market intelligence or operational problem — and each architected to operate without ongoing maintenance.
-        </p>
-
-        <div className="proof-grid reveal" ref={gridRef} style={{ marginTop: '3rem' }}>
-          {featured.map(p => (
-            <div className="proof-row" key={p.name}>
-              <div className="pr-index">{p.index}</div>
-              <div className="pr-main">
-                <div className="pr-main-label">{p.tag}</div>
-                <h3>{p.name}</h3>
-                <p>{p.desc}</p>
-              </div>
-              <div className="pr-method">
-                <div className="pr-method-label">Features</div>
-                <ul className="pr-steps">
-                  {p.features.map(f => <li key={f}>{f}</li>)}
-                </ul>
-              </div>
-              <div className="pr-outcome">
-                <div className="pr-outcome-label">Pricing</div>
-                <div className="pr-outcome-num">{p.price}</div>
-                <p>{p.status}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-      </div>
+    <>
       <div className="case-band">
         <div className="case-band-text">
           <h3>Eight Products. Five Verticals.</h3>
@@ -81,6 +46,43 @@ export default function ProductsBand() {
         </div>
         <Link to="/revuity-products" className="case-band-link">See All 8 Products →</Link>
       </div>
-    </section>
+      <section className="products-band" id="products">
+        <div className="products-band-inner">
+          <div className="section-label">Revuity Systems · Products</div>
+          <h2 className="products-h2">
+            Eight independent products.<br />
+            <em>Built to run without you.</em>
+          </h2>
+          <p className="products-intro">
+            Five verticals. Eight products. Each scoped to a specific market intelligence or operational problem — and each architected to operate without ongoing maintenance.
+          </p>
+
+          <div className="proof-grid reveal" ref={gridRef} style={{ marginTop: '3rem' }}>
+            {featured.map(p => (
+              <div className="proof-row" key={p.name}>
+                <div className="pr-index">{p.index}</div>
+                <div className="pr-main">
+                  <div className="pr-main-label">{p.tag}</div>
+                  <h3>{p.name}</h3>
+                  <p>{p.desc}</p>
+                </div>
+                <div className="pr-method">
+                  <div className="pr-method-label">Features</div>
+                  <ul className="pr-steps">
+                    {p.features.map(f => <li key={f}>{f}</li>)}
+                  </ul>
+                </div>
+                <div className="pr-outcome">
+                  <div className="pr-outcome-label">Pricing</div>
+                  <div className="pr-outcome-num">{p.price}</div>
+                  <p>{p.status}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+    </>
   )
 }

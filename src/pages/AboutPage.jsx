@@ -21,10 +21,11 @@ function Hero() {
         <h1 className="cs-title">Who Is<br /><span>Jay Burgess</span></h1>
         <p className="cs-subtitle">The one-page read before the conversation.</p>
         <p className="cs-desc">
-          Jay Burgess is a Principal AI Systems Architect with 15+ years of experience diagnosing broken systems,
-          building the fix, and leaving behind organizations that can operate without him.
-          He has generated $2.7M+ in verified, documented ROI across Fortune 500 enterprise work,
-          regulated AI deployments, and product builds — and he does it by going deeper than anyone expects.
+          Jay Burgess is a Principal AI Systems Architect and systems owner with 15+ years of experience
+          diagnosing broken systems, developing the teams that lead the fix, and leaving behind
+          organizations that run without him. He has generated $2.7M+ in verified, documented ROI across
+          Fortune 500 enterprise work, regulated AI deployments, and product builds — and he does it by
+          owning the outcome, not just the work.
         </p>
         <div className="cs-meta-bar">
           <div className="cs-meta-item">
@@ -58,19 +59,19 @@ function TheOperator() {
           <div className="phase-num">01</div>
           <div className="phase-name">The Operator</div>
         </div>
-        <h2 className="cs-section-h2">Not a consultant.<br /><em>An operator who consults.</em></h2>
+        <h2 className="cs-section-h2">Not a consultant.<br /><em>A systems owner.</em></h2>
         <div className="proves-grid reveal" ref={ref}>
           <div className="proves-cell">
             <div className="proves-cell-label">The difference</div>
-            <p>Most architects deliver decks. Jay delivers working systems. Every engagement ends with something running in production — not a roadmap for someone else to execute.</p>
+            <p>Most architects hand off decks and disappear. Jay owns the outcome — developing the team to lead the initiative, setting the architecture they build to, and staying close enough to step in when the execution demands it.</p>
           </div>
           <div className="proves-cell" style={{ borderLeft: '1px solid var(--rule)', borderRight: '1px solid var(--rule)' }}>
             <div className="proves-cell-label">The method</div>
-            <p>Problem → Solution → System → Scale. He diagnoses the real root cause, builds the actual fix, and documents it as a repeatable standard. Then he leaves.</p>
+            <p>Problem → Solution → System → Scale. He diagnoses the real root cause, develops the team and architecture to fix it, and documents everything as a repeatable standard. The exit condition is a team that runs it without him.</p>
           </div>
           <div className="proves-cell">
             <div className="proves-cell-label">The standard</div>
-            <p>Every system Jay builds runs without him in the room. That is the exit condition. Dependency on the consultant is a design failure — he engineers against it by default.</p>
+            <p>Every initiative Jay owns ends with a team that can run it independently. Building that capability — and the system underneath it — is the deliverable. Single-point-of-failure, including Jay, is a design failure.</p>
           </div>
         </div>
         <blockquote className="about-pullquote">

@@ -9,14 +9,18 @@ export default function Hero() {
             Principal AI Systems Architect · Founder & CTO, Revuity Systems
           </div>
           <h1 className="hero-headline">
-            I Walk In.<br />
-            <span className="orange">I Find It.</span><br />
-            <span className="outline">I Ship It.</span>
+            The Architect.<br />
+            <span className="orange">The General.</span>
           </h1>
           <p className="hero-summary">
-            15+ years turning broken systems into working ones — from root cause to shipped fix.
-            I don't just use AI. I architect the integrated ecosystems that make it reliable at scale.
+            15+ years leading AI and data initiatives end to end — from diagnosing the real problem,
+            to architecting the fix, to developing the team that runs it in production. I set the
+            direction. I build the capability around it. And when the work demands it, I get in the trenches.
           </p>
+          <div className="hero-ctas">
+            <a href="https://calendly.com/jayburgessjr/long-meet" className="cta-btn" target="_blank" rel="noreferrer">Schedule a call →</a>
+            <a href="#proof" className="cta-btn-ghost">See the work</a>
+          </div>
           <div className="hero-availability">
             <span className="ha-dot" />
             Available now · Fractional engagements &amp; full-time principal roles at $350K+
