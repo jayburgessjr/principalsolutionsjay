@@ -29,19 +29,19 @@ function Hero() {
         <div className="cs-meta-bar">
           <div className="cs-meta-item">
             <div className="cmi-label">Experience</div>
-            <div className="cmi-val">15+ years end to end</div>
+            <div className="cmi-val">15+ yrs enterprise · 5+ yrs AI/agentic</div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">Verified ROI</div>
             <div className="cmi-val">$2.7M+ documented</div>
           </div>
           <div className="cs-meta-item">
-            <div className="cmi-label">Built</div>
-            <div className="cmi-val">AI systems, data orgs, 8 products</div>
+            <div className="cmi-label">Credentials</div>
+            <div className="cmi-val">Harvard AI · M.S. Data Science · MBA · Agentic Eng.</div>
           </div>
           <div className="cs-meta-item">
-            <div className="cmi-label">Status</div>
-            <div className="cmi-val">Available now</div>
+            <div className="cmi-label">Availability</div>
+            <div className="cmi-val">Taking select engagements</div>
           </div>
         </div>
       </div>
@@ -73,6 +73,11 @@ function TheOperator() {
             <p>Every system Jay builds runs without him in the room. That is the exit condition. Dependency on the consultant is a design failure — he engineers against it by default.</p>
           </div>
         </div>
+        <blockquote className="about-pullquote">
+          "A laser focus I would compare to a mad genius. He is a problem solver and a connector.
+          If you get a chance to work with this guy, your life will get better."
+          <cite>— Mark Fu · CFO &amp; Angel Investor</cite>
+        </blockquote>
       </div>
     </section>
   )
@@ -91,20 +96,20 @@ function TrackRecord() {
     {
       co: 'Walmart',
       role: 'Solutions Architect · Creative Operations',
-      impact: '$750K',
-      what: 'Built a Creative Operations data organization from scratch inside one of the most complex enterprise environments on earth. 86% reduction in reporting turnaround. Scalable pipelines, executive-ready reporting, full documentation and handoff.',
+      impact: '~$750K',
+      what: 'Built a Creative Operations data organization from scratch inside one of the most demanding enterprise environments on earth. 86% reduction in reporting turnaround. Verified through internal operational reporting.',
     },
     {
       co: 'Adobe',
       role: 'Enterprise Systems',
       impact: 'Fortune 500',
-      what: 'Enterprise systems and solutions architecture work at Adobe — operating at the intersection of technical systems, stakeholder management, and business outcomes at scale.',
+      what: 'Enterprise systems architecture at Fortune 500 scale. Credential on record — specific deliverable detail available on request.',
     },
     {
       co: 'Revuity Systems',
       role: 'Founder & CTO',
       impact: '8 Products',
-      what: 'Founded a lean AI product studio. Shipped 8 products across 5 verticals — VoltIQ, Box Office Beacon, MenuIQ, and more. Designed, architected, and deployed. Proves he can own outcomes with no team to hide behind.',
+      what: 'Founded a lean AI product studio. Shipped products across 5 verticals including VoltIQ and MenuIQ. Designed, architected, and deployed. Proves he can own outcomes with no team to hide behind.',
     },
   ]
 
@@ -151,9 +156,6 @@ function WhatHeBrings() {
           <div className="phase-name">What He Brings</div>
         </div>
         <h2 className="cs-section-h2">Deep enough to build it.<br /><em>Fast.</em></h2>
-        <p className="cs-desc" style={{ marginBottom: '3rem' }}>
-          Certified Agentic Engineer · Certified Forward Deployment Engineer · Graduate Certificate in AI, Harvard University · M.S. Data Science · MBA
-        </p>
         <div className="engagement-page-grid reveal" ref={ref}>
           {capabilities.map((c) => (
             <article className="engagement-page-card" key={c.label}>
@@ -235,7 +237,7 @@ export default function AboutPage() {
   usePageMeta({
     title: 'Who Is Jay Burgess — Executive Brief',
     description:
-      'Principal AI Systems Architect. 15+ years. $2.7M verified ROI. The one-page executive brief on who Jay Burgess is, what he has built, and how to work with him.',
+      'Principal AI Systems Architect. 15+ years enterprise systems, 5+ years AI/agentic. $2.7M verified ROI. The one-page executive brief on who Jay Burgess is, what he has built, and how to work with him.',
   })
 
   return (
