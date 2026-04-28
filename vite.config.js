@@ -43,7 +43,7 @@ export default defineConfig({
       renderer: new PuppeteerRenderer({
         renderAfterTime: 1500,
         headless: true,
-        executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
       }),
     }),
   ],
