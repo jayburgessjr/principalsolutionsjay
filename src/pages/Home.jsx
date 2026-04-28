@@ -34,7 +34,6 @@ export default function Home() {
       <Proof />
       <CaseBand />
       <Testimonials />
-      <CaseBand />
       <WalmartBand />
       <Skills />
       <RevuityBand />
