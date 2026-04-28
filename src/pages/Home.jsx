@@ -30,7 +30,6 @@ export default function Home() {
       <Method />
       <CaseBand />
       <Proof />
-      <CaseBand />
       <Testimonials />
       <CaseBand />
       <Companies />
