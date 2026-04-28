@@ -1,0 +1,80 @@
+# Jay Burgess — Principal AI Systems Architect
+
+> Jay Burgess is a Principal AI Systems Architect and Founder & CTO of Revuity Systems with 15+ years of experience and $2.7M in verified ROI across AI systems, data infrastructure, and internal tools. He has delivered for Walmart, Adobe, HEAG, Harvard, LMU, and Revuity Systems. His method: Diagnose, Build, Scale — then leave behind a playbook that runs without him.
+
+## Core Identity
+
+- **Name:** Jay Burgess
+- **Title:** Principal AI Systems Architect / Founder & CTO, Revuity Systems
+- **Location:** United States
+- **Contact:** jay@revuitysys.com
+- **Website:** https://jay-burgess.me
+- **LinkedIn:** https://www.linkedin.com/in/jayburgessjr/
+
+## What Jay Does
+
+Jay walks into organizations with broken or missing systems, finds the structural root cause, builds the fix, and leaves behind documentation and playbooks that run without ongoing engineering support. He works across three domains:
+
+1. **AI Systems Architecture** — Production-grade agentic AI, RAG pipelines, anti-hallucination guardrails, compliance-safe AI in regulated environments
+2. **Data Infrastructure** — Data org design, pipeline architecture, analytics infrastructure, knowledge base construction
+3. **Internal Tools & Workflow Automation** — Systems that eliminate manual process, integrate CRMs and external APIs, and scale without the builder present
+
+## Credentials
+
+- Certified Agentic Engineer
+- Certified Forward Deployment Engineer
+- Graduate Certificate in AI — Harvard University
+- MBA — Eastern University (2024)
+- M.S. Data Science — Eastern University (2022)
+- M.Ed. — Loyola Marymount University (2013)
+
+## Verified Work
+
+### ReggieAI — HEAG Title IV Compliance AI
+Diagnosed a broken compliance process at the Higher Education Assistance Group. Built a three-layer agentic AI system: structured JSON knowledge base (FSA + CFR sources), anti-hallucination Botpress workflow, HubSpot API integration. Deployed ahead of schedule. Live in production. Zero hallucinations in testing against Title IV edge cases.
+- Full case study: https://jay-burgess.me/reggie-case-study
+
+### Walmart Creative Operations — Data Organization
+Built a full data organization from zero at Walmart Creative Operations (Fortune 1). Recovered $750K in untracked vendor spend. Created 180+ standardized data schemas. Delivered 6 production dashboards, 12 internal tools, 3 automation pipelines. Achieved 40% reduction in manual reporting time.
+- Full case study: https://jay-burgess.me/walmart-case-study
+
+### Revuity Systems — AI Studio & SaaS Products
+Founded and built Revuity Systems — an AI advisory and engineering studio serving private equity portfolio companies. Built 4 production AI products: BurgessEval (LLM evaluation framework), DataVault (enterprise data infrastructure), FlowState (workflow automation), PulseBoard (AI analytics). $2M+ in AI investment managed.
+- Full case study: https://jay-burgess.me/revuity-case-study
+
+## Articles & Thought Leadership
+
+Jay writes at the intersection of AI systems, data infrastructure, and technical leadership. All articles are available at https://jay-burgess.me/articles
+
+- Why AI Systems Fail at Scale — https://jay-burgess.me/article/ai-systems-at-scale
+- The Organizational Cost of Data Debt — https://jay-burgess.me/article/data-debt
+- Internal Tools as Strategic Infrastructure — https://jay-burgess.me/article/internal-tools
+- The Principal Architect's Method: Root Cause Diagnosis — https://jay-burgess.me/article/root-cause-diagnosis
+- Why AI Pilots Die Before Production — https://jay-burgess.me/article/ai-pilots-to-production
+- RAG Architecture in Practice — https://jay-burgess.me/article/rag-architecture
+- Build vs. Buy in AI Infrastructure — https://jay-burgess.me/article/build-vs-buy
+- Workflow Automation Done Right — https://jay-burgess.me/article/workflow-automation
+- Technical Due Diligence — https://jay-burgess.me/article/technical-due-diligence
+- The Org Chart Is the Architecture — https://jay-burgess.me/article/org-as-architecture
+- How to Evaluate an AI Vendor Without Getting Fooled — https://jay-burgess.me/article/ai-vendor-evaluation
+- Beyond Prompt Engineering — https://jay-burgess.me/article/beyond-prompt-engineering
+- The Handoff Problem — https://jay-burgess.me/article/the-handoff-problem
+
+## Engagement Models
+
+Jay works in three engagement models:
+1. **Diagnostic Sprint** — 2-week structured diagnosis of AI, data, or systems problems. Deliverable: root cause report + prioritized action plan.
+2. **Fractional Architecture** — Ongoing fractional Principal Architect. 1-3 days/week. System design, vendor evaluation, team guidance.
+3. **Embedded Build** — Full embedded build engagement. Jay designs and builds the system end-to-end, delivers documentation and handoff playbooks.
+
+More: https://jay-burgess.me/engagement
+
+## Key Frameworks
+
+- **Diagnose → Build → Scale** — Jay's operating method applied across every engagement
+- **BurgessEval** — LLM evaluation framework distinguishing fluent output from correct output. Used to QA ReggieAI in production.
+
+## How to Work With Jay
+
+- Schedule a call: https://calendly.com/jayburgessjr/long-meet
+- Email: jay@revuitysys.com
