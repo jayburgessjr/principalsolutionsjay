@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jay-burgess.me/sitemap.xml

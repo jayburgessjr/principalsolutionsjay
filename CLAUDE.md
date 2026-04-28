@@ -216,7 +216,7 @@ Nav → Hero → Method → CaseBand (ReggieAI) → Proof → Companies → Walm
 - Calendly: `https://calendly.com` ← placeholder, user will update
 - Canva Slides: `https://www.canva.com/design/DAHEKlOQl-o/...`
 - GitHub: `https://github.com/jayburgessjr/principalsolutionsjay.git`
-- Netlify (production): `https://jayburgess.netlify.app/`
+- Netlify (production): `https://jay-burgess.me/`
 
 ### Design Tokens (Never Change Without Approval)
 ```
