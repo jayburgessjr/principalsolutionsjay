@@ -52,7 +52,7 @@ const fit = [
   },
   {
     label: 'Full-Time Target',
-    body: '$180K–$230K base, with $250K–$400K+ total compensation for the right principal, VP, or operator-level role.',
+    body: '$350K+ total compensation for the right principal, VP, or operator-level role — structured around ownership of outcomes, not hours.',
   },
   {
     label: 'Not A Fit',
@@ -97,7 +97,7 @@ function Hero() {
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">Full-Time Fit</div>
-            <div className="cmi-val">$250K–$400K+ total comp</div>
+            <div className="cmi-val">$350K+ total comp</div>
           </div>
         </div>
       </div>

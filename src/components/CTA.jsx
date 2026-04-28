@@ -7,8 +7,9 @@ export default function CTA() {
           <span className="orange">about it.</span>
         </h2>
         <p className="cta-sub">
-          I architect production-grade AI systems and have been doing it for 15 years.
-          If you're building something that needs to be reliable at scale, let's connect.
+          I don't stop at strategy — I build the system that runs it.
+          15 years architecting production-grade AI and data systems. If you're building
+          something that needs to be reliable at scale, let's connect.
         </p>
         <a href="https://calendly.com/jayburgessjr/long-meet" className="cta-btn" target="_blank" rel="noreferrer">
           Schedule a Call →

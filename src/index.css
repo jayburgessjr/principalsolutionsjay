@@ -1097,6 +1097,47 @@ footer {
   border-color: var(--orange);
 }
 
+/* ─── OPERATING LAW ─── */
+.operating-law {
+  padding: 5rem 2.5rem;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--ink);
+}
+.operating-law-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.operating-law .section-label { justify-content: center; }
+.operating-law .section-label::before { display: none; }
+.ol-stages {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(1.6rem, 4.5vw, 3.4rem);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  color: var(--white);
+  margin: 1.75rem 0 2.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1.4rem;
+}
+.ol-arrow { color: var(--orange); }
+.ol-quote {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+  color: var(--mid);
+  max-width: 760px;
+  margin: 0 auto;
+}
+.ol-quote em {
+  color: var(--orange);
+  font-style: italic;
+}
+
 /* ─── REVEAL ─── */
 .reveal {
   opacity: 0;
@@ -1121,7 +1162,8 @@ footer {
   .hero-photo-wrap { order: -1; }
   .hero-photo-placeholder { width: 200px; height: 250px; }
   .hero-bottom { grid-template-columns: 1fr 1fr; margin: 2rem 0 0; }
-  .method, .proof, .skills, .why, .cta { padding: 5rem 1.5rem; }
+  .method, .proof, .skills, .why, .cta, .operating-law { padding: 5rem 1.5rem; }
+  .ol-stages { gap: 0.4rem 0.85rem; }
   .steps { grid-template-columns: 1fr; }
   .step { border-right: none; border-bottom: 1px solid var(--rule); }
   .step:last-child { border-bottom: none; }
