@@ -8,6 +8,9 @@ import WalmartCaseStudy from './pages/WalmartCaseStudy'
 import RevuityProductsPage from './pages/RevuityProductsPage'
 import EngagementPage from './pages/EngagementPage'
 import AboutPage from './pages/AboutPage'
+import ArticleAIScale from './pages/ArticleAIScale'
+import ArticleDataDebt from './pages/ArticleDataDebt'
+import ArticleInternalTools from './pages/ArticleInternalTools'
 
 export default function App() {
   return (
@@ -22,6 +25,9 @@ export default function App() {
         <Route path="/revuity-products" element={<RevuityProductsPage />} />
         <Route path="/engagement" element={<EngagementPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/article/ai-systems-at-scale" element={<ArticleAIScale />} />
+        <Route path="/article/data-debt" element={<ArticleDataDebt />} />
+        <Route path="/article/internal-tools" element={<ArticleInternalTools />} />
       </Routes>
     </BrowserRouter>
   )
