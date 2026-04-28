@@ -34,10 +34,12 @@ const routes = [
   '/article/the-handoff-problem',
 ]
 
+const isNetlify = process.env.NETLIFY === 'true'
+
 export default defineConfig({
   plugins: [
     react(),
-    vitePrerender({
+    !isNetlify && vitePrerender({
       staticDir: path.join(__dirname, 'dist'),
       routes,
       renderer: new PuppeteerRenderer({
@@ -46,5 +48,5 @@ export default defineConfig({
         executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
       }),
     }),
-  ],
+  ].filter(Boolean),
 })
