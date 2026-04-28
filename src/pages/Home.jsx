@@ -31,6 +31,7 @@ export default function Home() {
       <CaseBand />
       <Proof />
       <Testimonials />
+      <CaseBand />
       <Companies />
       <WalmartBand />
       <Skills />
