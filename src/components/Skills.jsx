@@ -29,7 +29,7 @@ const skillBlocks = [
       'Pipeline Architecture & ETL/ELT',
       'Power BI · Google BI',
       'Warehouse & Data Modeling',
-      'Data Quality Monitoring & Monitoring',
+      'Data Quality & Observability Monitoring',
     ],
   },
   {

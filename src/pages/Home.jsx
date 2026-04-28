@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Method from '../components/Method'
 import CaseBand from '../components/CaseBand'
 import Proof from '../components/Proof'
+import Testimonials from '../components/Testimonials'
 import Companies from '../components/Companies'
 import Skills from '../components/Skills'
 import RevuityBand from '../components/RevuityBand'
@@ -29,6 +30,7 @@ export default function Home() {
       <Method />
       <CaseBand />
       <Proof />
+      <Testimonials />
       <Companies />
       <WalmartBand />
       <Skills />

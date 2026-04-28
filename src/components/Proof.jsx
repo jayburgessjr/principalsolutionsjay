@@ -53,8 +53,8 @@ const proofRows = [
   {
     index: '04',
     label: 'Founder · Revuity Systems',
-    title: '4 Products Shipped — As Founder & Builder',
-    desc: 'Founded Revuity Systems, a lean product studio. Shipped WedData (B2B SaaS pricing intelligence), CertPath (certification platform), GameNight (multiplayer app), and Box Office Beacon — each designed, architected, and deployed solo.',
+    title: '8 Products Shipped — As Founder & Builder',
+    desc: 'Founded Revuity Systems, a lean AI product studio. Shipped 8 products across 5 verticals — VoltIQ, Box Office Beacon, MenuIQ, and more — each designed, architected, and deployed solo or with a small team.',
     methodLabel: 'What this proves',
     steps: [
       'I own outcomes — no team to hide behind',
@@ -63,8 +63,8 @@ const proofRows = [
       'I operate with founder accountability',
     ],
     outcomeLabel: 'Products',
-    outcomeNum: '4',
-    outcomeDesc: 'Active products in market. Subscription SaaS model.',
+    outcomeNum: '8',
+    outcomeDesc: 'AI and data products in market across 5 verticals.',
   },
 ]
 

@@ -1,5 +1,18 @@
 import { useTheme } from '../hooks/useTheme'
 
+// UPDATE: replace with your actual LinkedIn URL
+const LINKEDIN_URL = 'https://www.linkedin.com/in/jayburgessjr/'
+
+function LinkedInIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+      <rect x="2" y="9" width="4" height="12"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  )
+}
+
 function SunIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -39,6 +52,9 @@ export default function Nav() {
           <li><a href="#engagement">Engagement</a></li>
           <li><a href="#methodology">Frameworks</a></li>
         </ul>
+        <a href={LINKEDIN_URL} className="nav-linkedin" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <LinkedInIcon />
+        </a>
         <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
           {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
         </button>

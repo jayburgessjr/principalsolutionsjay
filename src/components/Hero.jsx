@@ -14,8 +14,13 @@ export default function Hero() {
             <span className="outline">I Ship It.</span>
           </h1>
           <p className="hero-summary">
-            Principal AI Systems Architect leading enterprise systems, data strategy, and AI-enabled operations. Built ReggieAI — a production agentic compliance platform generating $2.7M+ in documented impact. Spanning Fortune 500 leadership at Walmart and Adobe (86% reporting turnaround reduction) and higher-ed. Certified Agentic Engineer &amp; Forward Deployment Engineer. Founder &amp; CTO of Revuity Systems. I don't just use AI — I architect the integrated technology ecosystems that make it reliable at scale.
+            15+ years turning broken systems into working ones — from root cause to shipped fix.
+            I don't just use AI. I architect the integrated ecosystems that make it reliable at scale.
           </p>
+          <div className="hero-availability">
+            <span className="ha-dot" />
+            Available now · Fractional engagements &amp; full-time principal roles at $350K+
+          </div>
         </div>
 
         <div className="hero-photo-wrap">

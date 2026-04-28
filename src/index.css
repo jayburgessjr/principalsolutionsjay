@@ -130,6 +130,13 @@ nav {
 }
 .theme-toggle:hover { border-color: var(--orange); color: var(--orange); }
 .theme-toggle svg { display: block; }
+.nav-linkedin {
+  color: var(--dim);
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+.nav-linkedin:hover { color: var(--orange); }
 
 /* ─── HERO ─── */
 .hero {
@@ -230,6 +237,30 @@ nav {
   color: var(--mid);
   max-width: 520px;
   animation: fadeUp 0.7s 0.25s ease both;
+}
+.hero-availability {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--mid);
+  animation: fadeUp 0.7s 0.35s ease both;
+}
+.ha-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  flex-shrink: 0;
+  animation: pulse-dot 2.5s ease infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); }
+  50% { box-shadow: 0 0 0 5px rgba(34, 197, 94, 0.08); }
 }
 .hero-headline .orange { color: var(--orange); }
 .hero-headline .outline {
@@ -561,6 +592,75 @@ nav {
 .co-item:hover { color: var(--orange); }
 .co-item:last-child { border-right: none; }
 
+/* ─── TESTIMONIALS ─── */
+.testimonials {
+  padding: 8rem 2.5rem;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  overflow: hidden;
+}
+.testimonials::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 50% 100%, var(--orange-glow), transparent 70%);
+  pointer-events: none;
+}
+.testimonials-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule);
+  margin-top: 4rem;
+}
+.testimonial-card {
+  padding: 2.75rem 2.5rem;
+  border-right: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  transition: background 0.3s;
+}
+.testimonial-card:last-child { border-right: none; }
+.testimonial-card:hover { background: var(--panel); }
+.testimonial-mark {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3.5rem;
+  color: var(--orange);
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  opacity: 0.5;
+}
+.testimonial-text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.85;
+  color: var(--white);
+  flex: 1;
+  margin-bottom: 2rem;
+}
+.testimonial-byline { margin-top: auto; }
+.testimonial-name {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.2rem;
+}
+.testimonial-title {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  text-transform: uppercase;
+}
+
 /* ─── SKILLS ─── */
 .skills {
   padding: 8rem 2.5rem;
@@ -793,6 +893,7 @@ footer {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.footer-left { display: flex; flex-direction: column; gap: 0.4rem; }
 .footer-id {
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.68rem;
@@ -800,6 +901,39 @@ footer {
   letter-spacing: 0.06em;
 }
 .footer-id strong { color: var(--mid); }
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+.footer-links a {
+  color: var(--dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--orange); }
+.footer-divider { color: var(--dim); opacity: 0.4; }
+.footer-right { display: flex; align-items: center; }
+.footer-avail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--dim);
+  text-transform: uppercase;
+}
+.footer-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+}
 
 /* ─── METHODOLOGY ─── */
 .methodology {
@@ -1378,6 +1512,9 @@ footer {
   .why-layout { grid-template-columns: 1fr; gap: 3rem; }
   .companies-inner { gap: 0; }
   .engagement-cards { grid-template-columns: 1fr; }
+  .testimonial-grid { grid-template-columns: 1fr; }
+  .testimonial-card { border-right: none; border-bottom: 1px solid var(--rule); }
+  .testimonial-card:last-child { border-bottom: none; }
 }
 @media (max-width: 600px) {
   .hero-headline { font-size: 2.75rem; }
@@ -1385,4 +1522,5 @@ footer {
   .hero-cell { border-right: none; border-bottom: 1px solid var(--rule); }
   .skills-right { grid-template-columns: 1fr; }
   .engagement-inner { padding: 5rem 1.5rem; }
+  footer { flex-direction: column; align-items: flex-start; }
 }

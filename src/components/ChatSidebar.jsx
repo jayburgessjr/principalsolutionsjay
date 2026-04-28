@@ -21,7 +21,12 @@ function renderAssistant(text) {
 
 export default function ChatSidebar() {
   const [open, setOpen] = useState(false)
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState([
+    {
+      role: 'assistant',
+      content: "Hi — I'm Jay's AI assistant. Ask me about his work, engagement rates, or how to book a call.",
+    },
+  ])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const bottomRef = useRef(null)
