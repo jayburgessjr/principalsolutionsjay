@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ScrollToTop from './components/ScrollToTop'
+import ChatSidebar from './components/ChatSidebar'
 import Home from './pages/Home'
 import CaseStudy from './pages/CaseStudy'
 import RevuityCaseStudy from './pages/RevuityCaseStudy'
@@ -11,6 +12,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <ChatSidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/reggie-case-study" element={<CaseStudy />} />

@@ -1,6 +1,5 @@
 import Nav from '../components/Nav'
 import Hero from '../components/Hero'
-import OperatingLaw from '../components/OperatingLaw'
 import Method from '../components/Method'
 import CaseBand from '../components/CaseBand'
 import Proof from '../components/Proof'
@@ -27,7 +26,6 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <OperatingLaw />
       <Method />
       <CaseBand />
       <Proof />

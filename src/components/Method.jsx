@@ -35,6 +35,15 @@ export default function Method() {
           Three moves.<br />
           Every time. <em>Every business.</em>
         </h2>
+        <div className="ol-stages">
+          <span>Problem</span>
+          <span className="ol-arrow">→</span>
+          <span>Solution</span>
+          <span className="ol-arrow">→</span>
+          <span>System</span>
+          <span className="ol-arrow">→</span>
+          <span>Scale</span>
+        </div>
         <p className="method-intro">
           Most people diagnose or build or document. I do all three in sequence — and I don't leave until the system runs without me.
         </p>
