@@ -19,7 +19,7 @@ export default function Home() {
   usePageMeta({
     title: 'Jay Burgess — I Walk In. I Find It. I Ship It.',
     description:
-      'Principal Solutions Architect with 15+ years and $2.7M in verified ROI. I diagnose, build, and scale AI systems, data infrastructure, and internal tools.',
+      'Principal AI Systems Architect and Founder & CTO of Revuity Systems. 15+ years, $2.7M in verified ROI. I diagnose, build, and scale AI systems, data infrastructure, and internal tools.',
   })
 
   return (

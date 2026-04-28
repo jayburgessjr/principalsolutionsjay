@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-eyebrow">
-            Fractional Architect / CTO / CIO
+            Principal AI Systems Architect · Founder & CTO, Revuity Systems
           </div>
           <h1 className="hero-headline">
             I Walk In.<br />
@@ -14,7 +14,7 @@ export default function Hero() {
             <span className="outline">I Ship It.</span>
           </h1>
           <p className="hero-summary">
-            Technology executive leading enterprise systems, data strategy, and AI-enabled operations. Built ReggieAI — a production agentic compliance platform generating $2.7M+ in documented impact. Spanning Fortune 500 leadership at Walmart and Adobe (86% reporting turnaround reduction) and higher-ed. Certified Agentic Engineer &amp; Forward Deployment Engineer. Founder &amp; CTO of Revuity Systems. I don't just use AI — I architect the integrated technology ecosystems that make it reliable at scale.
+            Principal AI Systems Architect leading enterprise systems, data strategy, and AI-enabled operations. Built ReggieAI — a production agentic compliance platform generating $2.7M+ in documented impact. Spanning Fortune 500 leadership at Walmart and Adobe (86% reporting turnaround reduction) and higher-ed. Certified Agentic Engineer &amp; Forward Deployment Engineer. Founder &amp; CTO of Revuity Systems. I don't just use AI — I architect the integrated technology ecosystems that make it reliable at scale.
           </p>
         </div>
 
