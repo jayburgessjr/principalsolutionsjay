@@ -28,9 +28,11 @@ export default function Home() {
       <Nav />
       <Hero />
       <Method />
+      <CaseBand />
       <Proof />
       <CaseBand />
       <Testimonials />
+      <CaseBand />
       <Companies />
       <WalmartBand />
       <Skills />
