@@ -28,10 +28,9 @@ export default function Home() {
       <Nav />
       <Hero />
       <Method />
-      <CaseBand />
       <Proof />
-      <Testimonials />
       <CaseBand />
+      <Testimonials />
       <Companies />
       <WalmartBand />
       <Skills />
