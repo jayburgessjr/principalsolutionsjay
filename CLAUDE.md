@@ -150,12 +150,14 @@ Before touching any code at the start of a new session:
 ### File Size Reference
 | File | Approximate Lines |
 |------|------------------|
-| `src/index.css` | ~780 |
-| `src/casestudy.css` | ~500+ |
-| `src/pages/RevuityCaseStudy.jsx` | ~250 |
-| `src/pages/WalmartCaseStudy.jsx` | ~220 |
-| `src/pages/CaseStudy.jsx` | ~210 |
-| `src/components/Proof.jsx` | ~100 |
+| `src/index.css` | ~1140 |
+| `src/casestudy.css` | ~1340 |
+| `src/pages/WalmartCaseStudy.jsx` | ~300 |
+| `src/pages/CaseStudy.jsx` | ~290 |
+| `src/pages/RevuityCaseStudy.jsx` | ~290 |
+| `src/pages/RevuityProductsPage.jsx` | ~260 |
+| `src/pages/EngagementPage.jsx` | ~240 |
+| `src/components/Proof.jsx` | ~110 |
 
 ---
 
@@ -204,9 +206,11 @@ If a guardrail was approached or a mistake was almost made, add an explicit rule
 | `/reggie-case-study` | `CaseStudy.jsx` | ReggieAI Title IV AI case study |
 | `/revuity-case-study` | `RevuityCaseStudy.jsx` | Revuity Systems 4-product studio |
 | `/walmart-case-study` | `WalmartCaseStudy.jsx` | Walmart Creative Operations data org |
+| `/revuity-products` | `RevuityProductsPage.jsx` | Full Revuity Systems product catalog |
+| `/engagement` | `EngagementPage.jsx` | Engagement models and compensation fit |
 
 ### Home Section Order
-Nav → Hero → Method → CaseBand (ReggieAI) → Proof → Companies → Skills → RevuityBand → Why → WalmartBand → CTA → Footer
+Nav → Hero → Method → CaseBand (ReggieAI) → Proof → Companies → WalmartBand → Skills → RevuityBand → ProductsBand → EngagementSection → EngagementBand → Methodology → CTA → Footer
 
 ### Key External URLs (Do Not Modify Without Instruction)
 - Calendly: `https://calendly.com` ← placeholder, user will update
