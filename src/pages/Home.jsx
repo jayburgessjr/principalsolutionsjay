@@ -47,8 +47,8 @@ export default function Home() {
       <Methodology />
       <EngagementBand />
       <Articles />
-      <Books />
       <MethodologyBand />
+      <Books />
       <CTA />
       <Footer />
     </>
