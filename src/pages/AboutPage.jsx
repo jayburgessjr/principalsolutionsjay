@@ -17,7 +17,7 @@ function Hero() {
     <section className="cs-hero" style={{ background: 'radial-gradient(ellipse 60% 70% at 100% 50%, rgba(232,98,26,0.08), transparent 70%)' }}>
       <div className="hero-bg-text">JAY</div>
       <div className="cs-inner">
-        <div className="cs-eyebrow">Executive Brief · Principal AI Systems Architect · Founder & CTO, Revuity Systems</div>
+        <div className="cs-eyebrow">Executive Brief · Principal AI Systems Architect · CEO, Revuity Systems</div>
         <h1 className="cs-title">Who Is<br /><span>Jay Burgess</span></h1>
         <p className="cs-subtitle">The one-page read before the conversation.</p>
         <p className="cs-desc">
@@ -108,7 +108,7 @@ function TrackRecord() {
     },
     {
       co: 'Revuity Systems',
-      role: 'Founder & CTO',
+      role: 'CEO',
       impact: '8 Products',
       what: 'Founded a lean AI product studio. Shipped products across 5 verticals including VoltIQ and MenuIQ. Designed, architected, and deployed. Proves he can own outcomes with no team to hide behind.',
     },
@@ -228,7 +228,7 @@ function CTA() {
 function Footer() {
   return (
     <footer>
-      <div className="footer-id"><strong>Jay Burgess</strong> · Principal AI Systems Architect · Founder & CTO, Revuity Systems</div>
+      <div className="footer-id"><strong>Jay Burgess</strong> · Principal AI Systems Architect · CEO, Revuity Systems</div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
   )

@@ -53,7 +53,7 @@ const proofRows = [
   },
   {
     index: '04',
-    label: 'Founder · Revuity Systems',
+    label: 'CEO · Revuity Systems',
     title: '8 products shipped — as founder & operator',
     desc: 'Founded Revuity Systems and shipped 8 products across 5 verticals — solo or with a small team. This proves I can own outcomes, lead the build, and hold accountability with no organization to fall back on.',
     methodLabel: 'What this proves',

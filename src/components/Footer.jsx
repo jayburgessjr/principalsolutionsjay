@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="footer-left">
         <div className="footer-id">
-          <strong>Jay Burgess</strong> · Principal AI Systems Architect · Founder &amp; CTO, Revuity Systems
+          <strong>Jay Burgess</strong> · Principal AI Systems Architect · CEO, Revuity Systems
         </div>
         <div className="footer-links">
           <a href={`mailto:jay@revuitysys.com`}>jay@revuitysys.com</a>

@@ -1,7 +1,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --black: #080809;
+  --black: #0d1a2e;
   --ink: #111113;
   --panel: #161618;
   --rule: rgba(255,255,255,0.08);
@@ -362,7 +362,7 @@ nav {
   margin-bottom: 1rem;
   max-width: 640px;
 }
-.method-h2 em { font-style: italic; color: var(--orange); }
+.method-h2 em { font-style: normal; color: var(--orange); }
 .method .ol-stages {
   justify-content: flex-start;
   font-size: clamp(1.2rem, 3vw, 2rem);
@@ -625,7 +625,7 @@ nav {
 .companies {
   padding: 4rem 2.5rem;
   border-bottom: 1px solid var(--rule);
-  background: #080809;
+  background: #0d1a2e;
 }
 .companies-inner {
   max-width: 1140px;
@@ -735,10 +735,11 @@ nav {
 }
 .leadership-inner { max-width: 1140px; margin: 0 auto; }
 .leadership-h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(2.4rem, 4.5vw, 3.75rem);
-  line-height: 1.05;
-  letter-spacing: 0.02em;
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2rem, 3.5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--white);
   margin-bottom: 1rem;
 }
@@ -796,7 +797,7 @@ nav {
   line-height: 1.2;
   margin-bottom: 1rem;
 }
-.skills-left h2 em { font-style: italic; color: var(--orange); }
+.skills-left h2 em { font-style: normal; color: var(--orange); }
 .skills-left p { font-size: 0.88rem; color: var(--mid); line-height: 1.75; margin-bottom: 2rem; }
 .cert-list { list-style: none; }
 .cert-list li {
@@ -1098,7 +1099,7 @@ footer {
   line-height: 1.15;
   margin-bottom: 0.75rem;
 }
-.products-h2 em { font-style: italic; color: var(--orange); }
+.products-h2 em { font-style: normal; color: var(--orange); }
 .products-intro {
   font-size: 0.9rem;
   color: var(--mid);
@@ -1277,7 +1278,7 @@ footer {
   line-height: 1.15;
   margin-bottom: 0.75rem;
 }
-.engagement-h2 em { font-style: italic; color: var(--orange); }
+.engagement-h2 em { font-style: normal; color: var(--orange); }
 .engagement-intro {
   font-size: 0.95rem;
   color: var(--mid);

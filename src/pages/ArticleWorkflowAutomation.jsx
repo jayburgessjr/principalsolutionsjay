@@ -147,7 +147,7 @@ function ArticleCTA() {
 function ArticleFooter() {
   return (
     <footer>
-      <div className="footer-id"><strong>Jay Burgess</strong> · Principal AI Systems Architect · Founder & CTO, Revuity Systems</div>
+      <div className="footer-id"><strong>Jay Burgess</strong> · Principal AI Systems Architect · CEO, Revuity Systems</div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
   )

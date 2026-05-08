@@ -99,7 +99,7 @@ Save to memory when any of the following occur:
 - A new case study page is added (record its route and purpose)
 
 ### Current Memory Index
-Located at: `.claude/projects/-Users-jayburgess-CODING-JAY-jay-portfolio/memory/`
+Located at: `/Users/jayburgess/.claude/projects/-Users-jayburgess-CODING-jaay-principalsolutionsjay/memory/`
 
 | File | Type | Contents |
 |------|------|----------|
@@ -150,8 +150,8 @@ Before touching any code at the start of a new session:
 ### File Size Reference
 | File | Approximate Lines |
 |------|------------------|
-| `src/index.css` | ~1140 |
-| `src/casestudy.css` | ~1340 |
+| `src/index.css` | ~1706 |
+| `src/casestudy.css` | ~1638 |
 | `src/pages/WalmartCaseStudy.jsx` | ~300 |
 | `src/pages/CaseStudy.jsx` | ~290 |
 | `src/pages/RevuityCaseStudy.jsx` | ~290 |
@@ -208,9 +208,12 @@ If a guardrail was approached or a mistake was almost made, add an explicit rule
 | `/walmart-case-study` | `WalmartCaseStudy.jsx` | Walmart Creative Operations data org |
 | `/revuity-products` | `RevuityProductsPage.jsx` | Full Revuity Systems product catalog |
 | `/engagement` | `EngagementPage.jsx` | Engagement models and compensation fit |
+| `/about` | `AboutPage.jsx` | About Jay page |
+| `/articles` | `ArticlesPage.jsx` | Articles index |
+| `/article/*` | `Article[Name].jsx` | 13 individual article pages |
 
 ### Home Section Order
-Nav → Hero → Method → CaseBand (ReggieAI) → Proof → Companies → WalmartBand → Skills → RevuityBand → ProductsBand → EngagementSection → EngagementBand → Methodology → CTA → Footer
+Nav → Hero → Method → LeadershipLayer → Skills → Companies → Proof → CaseBand → Testimonials → WalmartBand → EngagementSection → ProductsBand → RevuityBand → AboutBand → Methodology → EngagementBand → Articles → MethodologyBand → CTA → Footer
 
 ### Key External URLs (Do Not Modify Without Instruction)
 - Calendly: `https://calendly.com` ← placeholder, user will update

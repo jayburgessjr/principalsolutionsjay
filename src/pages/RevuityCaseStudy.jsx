@@ -18,11 +18,11 @@ function Hero() {
     <section className="cs-hero" style={{ background: 'radial-gradient(ellipse 60% 70% at 100% 50%, rgba(232,98,26,0.07), transparent 70%)' }}>
       <div className="hero-bg-text">RS</div>
       <div className="cs-inner">
-        <div className="cs-eyebrow">Case Study · Founder & CTO · AI-First Software Studio</div>
+        <div className="cs-eyebrow">Case Study · CEO · AI-First Software Studio</div>
         <h1 className="cs-title">Revuity<br /><span>Systems</span></h1>
         <p className="cs-subtitle">AI Advisory. Agentic Engineering. SaaS Products. PE Focus.</p>
         <p className="cs-desc">
-          An LA-based AI-first software studio offering AI advisory &amp; agentic engineering, solution architecture for PE firms, SaaS product development, portfolio operations intelligence, and AI agentic engineering workshops — built and operated as Founder &amp; CTO.
+          An LA-based AI-first software studio offering AI advisory &amp; agentic engineering, solution architecture for PE firms, SaaS product development, portfolio operations intelligence, and AI agentic engineering workshops — built and operated as CEO.
         </p>
         <div className="cs-meta-bar">
           <div className="cs-meta-item">
@@ -31,7 +31,7 @@ function Hero() {
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">My Role</div>
-            <div className="cmi-val">Founder & CTO</div>
+            <div className="cmi-val">CEO</div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">Products Shipped</div>
@@ -203,7 +203,7 @@ function KeyQuote() {
     <div className="key-quote">
       <div className="kq-inner">
         <div className="kq-text">"When you build products with your own time and your own money, you have to ship things that actually work. There's no team to diffuse accountability onto. Every decision is yours. Every failure is yours. So is every win."</div>
-        <div className="kq-attr">Jay Burgess · Founder, Revuity Systems</div>
+        <div className="kq-attr">Jay Burgess · CEO, Revuity Systems</div>
       </div>
     </div>
   )
@@ -262,7 +262,7 @@ function CTA() {
 function CaseStudyFooter() {
   return (
     <footer>
-      <div className="footer-id"><strong>Jay Burgess</strong> · Principal AI Systems Architect · Founder & CTO, Revuity Systems</div>
+      <div className="footer-id"><strong>Jay Burgess</strong> · Principal AI Systems Architect · CEO, Revuity Systems</div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
   )
@@ -272,7 +272,7 @@ export default function RevuityCaseStudy() {
   usePageMeta({
     title: 'Revuity Systems Case Study — Jay Burgess',
     description:
-      'Inside Revuity Systems: AI advisory, agentic engineering, and SaaS product development built and operated by Jay Burgess as Founder and CTO.',
+      'Inside Revuity Systems: AI advisory, agentic engineering, and SaaS product development built and operated by Jay Burgess as CEO.',
   })
 
   return (

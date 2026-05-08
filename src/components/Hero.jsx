@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-eyebrow">
-            Principal AI Systems Architect · Founder & CTO, Revuity Systems
+            Principal AI Systems Architect · CEO, Revuity Systems
           </div>
           <h1 className="hero-headline">
             The Architect.<br />

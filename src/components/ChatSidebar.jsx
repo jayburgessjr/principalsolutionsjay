@@ -8,12 +8,12 @@ const SUGGESTED = [
   "What's Jay's background?",
 ]
 
-const CALENDLY_RE = /(https:\/\/calendly\.com\/[^\s]+)/g
+const CALENDLY_PATTERN = /https:\/\/calendly\.com\/[^\s]+/
 
 function renderAssistant(text) {
-  const parts = text.split(CALENDLY_RE)
+  const parts = text.split(/(https:\/\/calendly\.com\/[^\s]+)/)
   return parts.map((part, i) =>
-    CALENDLY_RE.test(part)
+    CALENDLY_PATTERN.test(part)
       ? <a key={i} href={part} target="_blank" rel="noreferrer">{part}</a>
       : part
   )
