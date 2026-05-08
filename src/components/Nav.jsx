@@ -53,6 +53,7 @@ export default function Nav() {
           <li><a href="#engagement">Engagement</a></li>
           <li><a href="#methodology">Frameworks</a></li>
           <li><a href="#articles">Articles</a></li>
+          <li><a href="#books">Books</a></li>
         </ul>
         <a href={LINKEDIN_URL} className="nav-linkedin" target="_blank" rel="noreferrer" aria-label="LinkedIn">
           <LinkedInIcon />
