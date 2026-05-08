@@ -81,10 +81,10 @@ nav {
   backdrop-filter: blur(20px);
 }
 .nav-wordmark {
-  font-family: 'IBM Plex Sans', sans-serif;
-  font-size: 0.88rem;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
   color: var(--white);
   text-decoration: none;
   transition: color 0.2s;

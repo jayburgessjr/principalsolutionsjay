@@ -22,6 +22,8 @@ import ArticleOrgAsArchitecture from './pages/ArticleOrgAsArchitecture'
 import ArticleVendorEval from './pages/ArticleVendorEval'
 import ArticlePromptEngineering from './pages/ArticlePromptEngineering'
 import ArticleHandoff from './pages/ArticleHandoff'
+import ArticleAgenticTrap from './pages/ArticleAgenticTrap'
+import ArticleDataReadiness from './pages/ArticleDataReadiness'
 
 export default function App() {
   return (
@@ -50,6 +52,8 @@ export default function App() {
         <Route path="/article/ai-vendor-evaluation" element={<ArticleVendorEval />} />
         <Route path="/article/beyond-prompt-engineering" element={<ArticlePromptEngineering />} />
         <Route path="/article/the-handoff-problem" element={<ArticleHandoff />} />
+        <Route path="/article/the-agentic-trap" element={<ArticleAgenticTrap />} />
+        <Route path="/article/data-readiness" element={<ArticleDataReadiness />} />
       </Routes>
     </BrowserRouter>
   )

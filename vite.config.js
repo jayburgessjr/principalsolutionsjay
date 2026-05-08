@@ -32,6 +32,8 @@ const routes = [
   '/article/ai-vendor-evaluation',
   '/article/beyond-prompt-engineering',
   '/article/the-handoff-problem',
+  '/article/the-agentic-trap',
+  '/article/data-readiness',
 ]
 
 const isNetlify = process.env.NETLIFY === 'true'

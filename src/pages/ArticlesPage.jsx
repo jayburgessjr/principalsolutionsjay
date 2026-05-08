@@ -96,6 +96,20 @@ const ALL_ARTICLES = [
     title: 'The Handoff Problem: Building Systems That Run Without Their Architect',
     abstract: 'A system that works is not a complete deliverable. Four properties that distinguish systems built for handoff from systems built for their builders.',
   },
+  {
+    slug: '/article/the-agentic-trap',
+    category: 'Agentic Systems',
+    readTime: '9 min read',
+    title: 'The Agentic Trap: Why Multi-Agent Systems Break Before They Ship',
+    abstract: 'Five architectural failure patterns specific to agentic systems — and a build sequence that closes the gap between demo and production before it becomes an incident.',
+  },
+  {
+    slug: '/article/data-readiness',
+    category: 'Data Infrastructure',
+    readTime: '8 min read',
+    title: 'The Data Readiness Test: Why Most Organizations Aren\'t Ready to Build AI — and How to Know If You Are',
+    abstract: 'Most AI projects fail at the data layer, not the model layer. Four dimensions of data readiness and how to assess them before you commit to a build.',
+  },
 ]
 
 export default function ArticlesPage() {

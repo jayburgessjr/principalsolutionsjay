@@ -61,7 +61,7 @@ export default function Articles() {
             textDecoration: 'none',
           }}
         >
-          View All 13 Articles →
+          View All 15 Articles →
         </Link>
       </div>
       </div>
