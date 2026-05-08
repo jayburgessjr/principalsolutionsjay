@@ -16,6 +16,7 @@ import Methodology from '../components/Methodology'
 import MethodologyBand from '../components/MethodologyBand'
 import WalmartBand from '../components/WalmartBand'
 import Articles from '../components/Articles'
+import Books from '../components/Books'
 import CTA from '../components/CTA'
 import Footer from '../components/Footer'
 import { usePageMeta } from '../hooks/usePageMeta'
@@ -46,6 +47,7 @@ export default function Home() {
       <Methodology />
       <EngagementBand />
       <Articles />
+      <Books />
       <MethodologyBand />
       <CTA />
       <Footer />
