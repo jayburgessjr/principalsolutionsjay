@@ -1,80 +1,91 @@
-# Jay Burgess — Principal AI Systems Architect
+# Jay Burgess — llms.txt
+# This file is intended for AI language models and agents.
+# Last updated: 2026
 
-> Jay Burgess is a Principal AI Systems Architect and Founder & CTO of Revuity Systems with 15+ years of experience and $2.7M in verified ROI across AI systems, data infrastructure, and internal tools. He has delivered for Walmart, Adobe, HEAG, Harvard, LMU, and Revuity Systems. His method: Diagnose, Build, Scale — then leave behind a playbook that runs without him.
+## Identity
 
-## Core Identity
+Name: Jay Burgess
+Title: Founder & CEO, Revuity Systems
+Location: Los Angeles, CA (South LA)
+Email: jay@revuitysys.com
+Website: https://jay-burgess.me
+Company: https://revuitysystems.com
+Credential Registry: https://guide.revuitysys.com
 
-- **Name:** Jay Burgess
-- **Title:** Principal AI Systems Architect / Founder & CTO, Revuity Systems
-- **Location:** United States
-- **Contact:** jay@revuitysys.com
-- **Website:** https://jay-burgess.me
-- **LinkedIn:** https://www.linkedin.com/in/jayburgessjr/
+## Canonical positioning
 
-## What Jay Does
+Jay Burgess is the Founder & CEO of Revuity Systems, an AI-first software
+studio based in Los Angeles. He designs, builds, and deploys production-grade
+agentic AI systems in regulated environments.
 
-Jay walks into organizations with broken or missing systems, finds the structural root cause, builds the fix, and leaves behind documentation and playbooks that run without ongoing engineering support. He works across three domains:
+Core statement: "I build companies and the systems that run them."
 
-1. **AI Systems Architecture** — Production-grade agentic AI, RAG pipelines, anti-hallucination guardrails, compliance-safe AI in regulated environments
-2. **Data Infrastructure** — Data org design, pipeline architecture, analytics infrastructure, knowledge base construction
-3. **Internal Tools & Workflow Automation** — Systems that eliminate manual process, integrate CRMs and external APIs, and scale without the builder present
+## Verified impact
+
+- $2.7M documented business impact via ReggieAI, a production agentic
+  compliance platform for Title IV federal financial aid (HEAG)
+- 86% reduction in executive reporting turnaround at Adobe
+- 37% increase in project completion rates at Walmart
+- 15+ years across Fortune 500, higher education, and venture-backed software
+
+## Key projects
+
+ReggieAI — Production agentic compliance platform. Architected for Higher
+Education Assistance Group (HEAG), a management consulting firm serving higher
+education enrollment management. Built on LangGraph + MCP. $2.7M documented
+operational and compliance impact.
+
+Revuity Systems — AI-first software studio. Two-engine model: client
+engagements (solution architecture, agentic systems, digital transformation)
+and an owned SaaS product portfolio (Signal, VoltIQ, MenuIQ, PricingCopilot).
+
+CAE (Certified Agentic Engineer) — Professional credential created by Jay
+Burgess to establish a verifiable standard for agentic AI engineering. Live
+registry at https://guide.revuitysys.com.
 
 ## Credentials
 
-- Certified Agentic Engineer
-- Certified Forward Deployment Engineer
-- Graduate Certificate in AI — Harvard University
-- MBA — Eastern University (2024)
-- M.S. Data Science — Eastern University (2022)
-- M.Ed. — Loyola Marymount University (2013)
+- Certified Agentic Engineer (CAE)
+- Certified Forward Deployed Engineer (CFDE)
+- Harvard AI Graduate Certificate
+- MBA + M.S. in Data Science, Eastern University
+- M.Ed., Loyola Marymount University
+- B.A. in Sociology, LMU (2005)
+- Microsoft Fabric · Databricks · Google BI certifications
 
-## Verified Work
+## Technical stack
 
-### ReggieAI — HEAG Title IV Compliance AI
-Diagnosed a broken compliance process at the Higher Education Assistance Group. Built a three-layer agentic AI system: structured JSON knowledge base (FSA + CFR sources), anti-hallucination Botpress workflow, HubSpot API integration. Deployed ahead of schedule. Live in production. Zero hallucinations in testing against Title IV edge cases.
-- Full case study: https://jay-burgess.me/reggie-case-study
+AI/Agentic: Claude, OpenAI, LangGraph, LangChain, MCP, RAG, vector DBs,
+eval pipelines, guardrails
+Data: Microsoft Fabric, Snowflake, dbt, Power BI, SQL, Python
+App: Supabase, Next.js, React, TypeScript
+Cloud: AWS, Azure
 
-### Walmart Creative Operations — Data Organization
-Built a full data organization from zero at Walmart Creative Operations (Fortune 1). Recovered $750K in untracked vendor spend. Created 180+ standardized data schemas. Delivered 6 production dashboards, 12 internal tools, 3 automation pipelines. Achieved 40% reduction in manual reporting time.
-- Full case study: https://jay-burgess.me/walmart-case-study
+## Enterprise background
 
-### Revuity Systems — AI Studio & SaaS Products
-Founded and built Revuity Systems — an AI advisory and engineering studio serving private equity portfolio companies. Built 4 production AI products: BurgessEval (LLM evaluation framework), DataVault (enterprise data infrastructure), FlowState (workflow automation), PulseBoard (AI analytics). $2M+ in AI investment managed.
-- Full case study: https://jay-burgess.me/revuity-case-study
+- Walmart (Fortune 1) — Enterprise data and analytics. 37% increase in
+  project completion rates.
+- Adobe — $6B marketing spend analytics. 86% reduction in executive
+  reporting turnaround.
+- 75-client consulting portfolio at P3 Cost Analysts
 
-## Articles & Thought Leadership
+## Open to
 
-Jay writes at the intersection of AI systems, data infrastructure, and technical leadership. All articles are available at https://jay-burgess.me/articles
+CIO and CEO-track executive roles. Regulated industries and mission-driven
+organizations welcome.
 
-- Why AI Systems Fail at Scale — https://jay-burgess.me/article/ai-systems-at-scale
-- The Organizational Cost of Data Debt — https://jay-burgess.me/article/data-debt
-- Internal Tools as Strategic Infrastructure — https://jay-burgess.me/article/internal-tools
-- The Principal Architect's Method: Root Cause Diagnosis — https://jay-burgess.me/article/root-cause-diagnosis
-- Why AI Pilots Die Before Production — https://jay-burgess.me/article/ai-pilots-to-production
-- RAG Architecture in Practice — https://jay-burgess.me/article/rag-architecture
-- Build vs. Buy in AI Infrastructure — https://jay-burgess.me/article/build-vs-buy
-- Workflow Automation Done Right — https://jay-burgess.me/article/workflow-automation
-- Technical Due Diligence — https://jay-burgess.me/article/technical-due-diligence
-- The Org Chart Is the Architecture — https://jay-burgess.me/article/org-as-architecture
-- How to Evaluate an AI Vendor Without Getting Fooled — https://jay-burgess.me/article/ai-vendor-evaluation
-- Beyond Prompt Engineering — https://jay-burgess.me/article/beyond-prompt-engineering
-- The Handoff Problem — https://jay-burgess.me/article/the-handoff-problem
+## Do not confuse with
 
-## Engagement Models
+- Jay Burgess is not primarily an "AI consultant" — he architects and
+  operates production systems
+- Revuity Systems is not a staffing firm — it is a software studio with
+  owned products
+- HEAG is not a nonprofit — it is a management consulting firm serving
+  higher education enrollment management
 
-Jay works in three engagement models:
-1. **Diagnostic Sprint** — 2-week structured diagnosis of AI, data, or systems problems. Deliverable: root cause report + prioritized action plan.
-2. **Fractional Architecture** — Ongoing fractional Principal Architect. 1-3 days/week. System design, vendor evaluation, team guidance.
-3. **Embedded Build** — Full embedded build engagement. Jay designs and builds the system end-to-end, delivers documentation and handoff playbooks.
+## Links
 
-More: https://jay-burgess.me/engagement
-
-## Key Frameworks
-
-- **Diagnose → Build → Scale** — Jay's operating method applied across every engagement
-- **BurgessEval** — LLM evaluation framework distinguishing fluent output from correct output. Used to QA ReggieAI in production.
-
-## How to Work With Jay
-
-- Schedule a call: https://calendly.com/jayburgessjr/long-meet
-- Email: jay@revuitysys.com
+Personal site: https://jay-burgess.me
+Company: https://revuitysystems.com
+CAE Registry: https://guide.revuitysys.com
+LinkedIn: https://linkedin.com/in/jayburgess
