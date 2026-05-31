@@ -26,7 +26,7 @@ export default function Home() {
     title:
       "Jay Burgess — Founder & CEO, Revuity Systems | AI Systems & Product Studio",
     description:
-      "Jay Burgess is the Founder & CEO of Revuity Systems, an AI-first software studio based in Los Angeles. $2.7M documented impact. Walmart & Adobe alumni. Certified Agentic Engineer (CAE).",
+      "Revuity Systems is a software and systems studio in Los Angeles. We build software and the systems around it so organizations actually function, from AI and data platforms to the operational backbone underneath.",
   });
 
   return (
