@@ -24,9 +24,9 @@ import { usePageMeta } from "../hooks/usePageMeta";
 export default function Home() {
   usePageMeta({
     title:
-      "Jay Burgess — Founder & CEO, Revuity Systems | AI Systems & Product Studio",
+      "Jay Burgess — Founder & Principal Forward Deployed Engineer, Revuity Systems | AI Systems & Product Company",
     description:
-      "Revuity Systems is a software and systems studio in Los Angeles. We build software and the systems around it so organizations actually function, from AI and data platforms to the operational backbone underneath.",
+      "Revuity Systems is a software and systems company in Los Angeles. We build software and the systems around it so organizations actually function, from AI and data platforms to the operational backbone underneath.",
   });
 
   return (

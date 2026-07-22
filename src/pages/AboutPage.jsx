@@ -26,8 +26,8 @@ function Hero() {
       <div className="hero-bg-text">JAY</div>
       <div className="cs-inner">
         <div className="cs-eyebrow">
-          Executive Brief · Principal AI Systems Architect · CEO, Revuity
-          Systems
+          Executive Brief · Principal AI Engineer · Founder & Principal Forward
+          Deployed Engineer, Revuity Systems
         </div>
         <h1 className="cs-title">
           Who Is
@@ -38,13 +38,12 @@ function Hero() {
           The one-page read before the conversation.
         </p>
         <p className="cs-desc">
-          Jay Burgess is a Principal AI Systems Architect and systems owner with
-          15+ years of experience diagnosing broken systems, developing the
-          teams that lead the fix, and leaving behind organizations that run
-          without him. He has generated $2.7M+ in verified, documented ROI
-          across Fortune 500 enterprise work, regulated AI deployments, and
-          product builds — and he does it by owning the outcome, not just the
-          work.
+          Jay Burgess is a Principal AI Engineer and systems owner with 15+
+          years of experience diagnosing broken systems, developing the teams
+          that lead the fix, and leaving behind organizations that run without
+          him. He has delivered measurable, documented outcomes across Fortune
+          500 enterprise work, regulated AI deployments, and product builds —
+          and he does it by owning the outcome, not just the work.
         </p>
         <p className="cs-desc">
           AI will change work. That is not in question. What is in question is
@@ -60,13 +59,13 @@ function Hero() {
             </div>
           </div>
           <div className="cs-meta-item">
-            <div className="cmi-label">Verified ROI</div>
-            <div className="cmi-val">$2.7M+ documented</div>
+            <div className="cmi-label">Enterprise impact</div>
+            <div className="cmi-val">86% faster exec reporting (Adobe)</div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">Credentials</div>
             <div className="cmi-val">
-              Harvard AI · M.S. Data Science · MBA · Agentic Eng.
+              Harvard AI · M.S. Data Science · MBA · IBM AI Eng.
             </div>
           </div>
           <div className="cs-meta-item">
@@ -150,28 +149,34 @@ function TrackRecord() {
 
   const items = [
     {
+      co: "Revuity Systems",
+      role: "Founder & Principal Forward Deployed Engineer · Jan 2022–Present",
+      impact: "8 Products",
+      what: "Founded and built in parallel with the roles below. A lean AI-first software company — embedded with enterprise and PE stakeholders, translated operational workflows into production AI systems, and shipped products across 5 verticals including VoltIQ and MenuIQ. Owns outcomes with no team to hide behind.",
+    },
+    {
       co: "HEAG",
-      role: "Principal AI Systems Architect",
-      impact: "$2.7M+",
-      what: "Built ReggieAI — a production agentic compliance platform for Title IV financial aid regulations. RAG pipeline, anti-hallucination system prompt, HubSpot API integration. Delivered ahead of schedule. Also built a custom internal PM platform the team runs independently.",
+      role: "Principal AI Engineer · Nov 2024–Present",
+      impact: "Production",
+      what: "Concurrent with Revuity Systems. Architected and deployed ReggieAI, a production multi-agent Title IV compliance platform (Claude, LangGraph, MCP), and OpsFlow, a custom operational execution platform replacing Jira. Governed human review, deterministic policy execution, and full audit logging — delivered ahead of schedule and run independently by the team.",
     },
     {
       co: "Walmart",
-      role: "Solutions Architect · Creative Operations",
-      impact: "~$750K",
-      what: "Built a Creative Operations data organization from scratch inside one of the most demanding enterprise environments on earth. 86% reduction in reporting turnaround. Verified through internal operational reporting.",
+      role: "Senior Data Scientist · Dec 2023–Nov 2024",
+      impact: "37%",
+      what: "Built a Creative Operations reporting platform from scratch inside one of the most demanding enterprise environments on earth. Statistical anomaly detection surfaced operational bottlenecks and contributed to a 37% improvement in project completion rates.",
     },
     {
       co: "Adobe",
-      role: "Enterprise Systems",
-      impact: "Fortune 500",
-      what: "Enterprise systems architecture at Fortune 500 scale. Credential on record — specific deliverable detail available on request.",
+      role: "Senior Analyst · Nov 2022–Nov 2023",
+      impact: "86%",
+      what: "Engineered unified reporting pipelines supporting approximately $6B in global marketing spend, reducing executive reporting turnaround time by 86% and restoring executive confidence in enterprise reporting.",
     },
     {
-      co: "Revuity Systems",
-      role: "CEO",
-      impact: "8 Products",
-      what: "Founded a lean AI product studio. Shipped products across 5 verticals including VoltIQ and MenuIQ. Designed, architected, and deployed. Proves he can own outcomes with no team to hide behind.",
+      co: "P3 Cost Analysts",
+      role: "Senior Data Systems Architect · Dec 2019–Nov 2022",
+      impact: "$2.7M",
+      what: "Designed predictive customer retention analytics integrated into executive revenue operations, contributing approximately $2.7M in measurable business impact. Architected enterprise revenue platforms spanning forecasting, pricing analytics, and executive reporting.",
     },
   ];
 
@@ -354,8 +359,8 @@ function Footer() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Systems Architect · CEO,
-        Revuity Systems
+        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
+        Principal Forward Deployed Engineer, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -366,7 +371,7 @@ export default function AboutPage() {
   usePageMeta({
     title: "Who Is Jay Burgess — Executive Brief",
     description:
-      "Principal AI Systems Architect. 15+ years enterprise systems, 5+ years AI/agentic. $2.7M verified ROI. The one-page executive brief on who Jay Burgess is, what he has built, and how to work with him.",
+      "Principal AI Engineer. 15+ years enterprise systems, 5+ years AI/agentic. 86% reduction in executive reporting turnaround (Adobe). The one-page executive brief on who Jay Burgess is, what he has built, and how to work with him.",
   });
 
   return (

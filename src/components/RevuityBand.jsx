@@ -1,15 +1,18 @@
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 export default function RevuityBand() {
   return (
     <div className="case-band">
       <div className="case-band-text">
         <h3>Revuity Systems Case Study — Full Breakdown</h3>
-        <p>AI advisory, agentic engineering, and SaaS product development for PE firms. See how the studio was built.</p>
+        <p>
+          AI advisory, agentic engineering, and SaaS product development for PE
+          firms. See how the company was built.
+        </p>
       </div>
       <Link to="/revuity-case-study" className="case-band-link">
         Read the Case Study →
       </Link>
     </div>
-  )
+  );
 }

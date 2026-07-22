@@ -1,19 +1,28 @@
 // UPDATE: replace with your actual LinkedIn URL
-const LINKEDIN_URL = 'https://www.linkedin.com/in/jayburgessjr/'
+const LINKEDIN_URL = "https://www.linkedin.com/in/jayburgessjr/";
 
 export default function Footer() {
   return (
     <footer>
       <div className="footer-left">
         <div className="footer-id">
-          <strong>Jay Burgess</strong> · Principal AI Systems Architect · CEO, Revuity Systems
+          <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
+          Principal Forward Deployed Engineer, Revuity Systems
         </div>
         <div className="footer-links">
           <a href={`mailto:jay@revuitysys.com`}>jay@revuitysys.com</a>
           <span className="footer-divider">·</span>
-          <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
           <span className="footer-divider">·</span>
-          <a href="https://calendly.com/jayburgessjr/long-meet" target="_blank" rel="noreferrer">Schedule a Call</a>
+          <a
+            href="https://calendly.com/jayburgessjr/long-meet"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Schedule a Call
+          </a>
         </div>
       </div>
       <div className="footer-right">
@@ -23,5 +32,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

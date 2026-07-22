@@ -4,7 +4,8 @@ export default function Hero() {
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-eyebrow">
-            Principal AI Systems Architect · CEO, Revuity Systems
+            Principal AI Engineer · Founder & Principal Forward Deployed
+            Engineer, Revuity Systems
           </div>
           <h1 className="hero-headline">
             The Architect.
@@ -12,13 +13,14 @@ export default function Hero() {
             <span className="orange">The General.</span>
           </h1>
           <p className="hero-summary">
-            15+ years leading AI and data initiatives end to end — from
-            diagnosing the real problem, to architecting the fix, to developing
-            the team that runs it in production. I set the direction. I build
-            the capability around it. And when the work demands it, I get in the
-            trenches. AI will change work. What matters is whether it elevates
-            the people inside an organization or erases them. That is what I
-            build for.
+            15+ years embedding with teams to ship production AI and data
+            systems end to end — scoping the real problem, building the whole
+            stack with AI-assisted development (Claude Code), hardening it, and
+            handing it off so the team owns it. Days and weeks, not quarters. I
+            set the direction, build the capability around it, and get in the
+            trenches when the work demands it. AI will change work. What matters
+            is whether it elevates the people inside an organization or erases
+            them. That is what I build for.
           </p>
           <div className="hero-ctas">
             <a
@@ -63,7 +65,7 @@ export default function Hero() {
             $2.7<span>M</span>
           </div>
           <div className="hc-sub">
-            Documented ROI across enterprise and regulated industry work
+            Documented business impact in enterprise revenue operations
           </div>
         </div>
         <div className="hero-cell">
