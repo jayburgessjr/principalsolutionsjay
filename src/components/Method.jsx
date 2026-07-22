@@ -1,58 +1,75 @@
-import { useReveal } from '../hooks/useReveal'
+import { useReveal } from "../hooks/useReveal";
 
 const steps = [
   {
-    num: '01',
-    verb: 'Problem',
-    title: 'Find the real root cause.',
-    body: 'I go deep into how a business actually operates — where data breaks down, where manual work masks systemic failure, where the real bottleneck is hiding. I don\'t take the first answer.',
-    proof: '→ ReggieAI: compliance failures stemmed from zero structured knowledge — not staff error',
+    num: "01",
+    verb: "Scope",
+    title: "Turn a symptom into a build plan.",
+    body: "I sit with the business partner who describes a symptom, not a system, and pull out what they actually need — decomposed into a real build plan, in the room. I hold the line when the request needs to change.",
+    proof:
+      "→ ReggieAI: diagnosed compliance failures as zero structured knowledge — not staff error",
   },
   {
-    num: '02',
-    verb: 'Solution',
-    title: 'Build the actual fix.',
-    body: 'I architect and build the solution — RAG pipelines, agentic workflows, data infrastructure, process redesigns. I hand off working systems, not slide decks. And I hold the team accountable to shipping, not just planning.',
-    proof: '→ ReggieAI: RAG pipeline, anti-hallucination system prompt, HubSpot API — staged ahead of schedule',
+    num: "02",
+    verb: "Prototype",
+    title: "Build it fast with Claude Code.",
+    body: "I build the whole stack — data layer, backend, UI, and the LLM pieces — using AI-assisted development. Working software in days and weeks, not quarters.",
+    proof:
+      "→ ReggieAI: RAG pipeline, anti-hallucination prompting, MCP tool orchestration — staged ahead of schedule",
   },
   {
-    num: '03',
-    verb: 'System',
-    title: 'Wire it into the org.',
-    body: 'I integrate the solution into how the team actually operates. Handoff protocols, dashboards, QA specs, live integrations. Then I develop the people around it — so it runs on the team\'s capability, not mine.',
-    proof: '→ HEAG: built internal PM platform, trained the team, system runs independently — zero dependency on me',
+    num: "03",
+    verb: "Harden",
+    title: "Make it production-grade.",
+    body: "Eval suites with pass thresholds, guardrails, structured logging, audit trails, rollback, row-level security verified with negative tests. The phase regulated and rights-sensitive shops probe hardest.",
+    proof:
+      "→ ReggieAI: governed human review, deterministic policy execution, full audit logging in a Title IV environment",
   },
   {
-    num: '04',
-    verb: 'Scale',
-    title: 'Turn it into a repeatable standard.',
-    body: 'Every system I build gets documented as a replicable playbook — engineering guides, runbooks, team toolkits. The goal: deploy the same approach across the org, not just one account.',
-    proof: '→ Walmart: data org built from zero — documented standards now run across Creative Operations at Fortune 1 scale',
+    num: "04",
+    verb: "Hand off",
+    title: "Ship it so the team owns it.",
+    body: "Every build ships with a handoff package — README, runbook, ADRs — plus a pairing session so the receiving team stays self-sufficient, including with AI-assisted development after I leave.",
+    proof:
+      "→ HEAG: built OpsFlow, trained the team, runs independently — zero dependency on me",
   },
-]
+  {
+    num: "05",
+    verb: "Harvest",
+    title: "Push the pattern back into the platform.",
+    body: "After each build, the reusable patterns go into a shared library so the next engagement starts further along. Every system compounds into the next.",
+    proof:
+      "→ Revuity: reusable reference architectures and the open-source Eligibility-Agent — patterns the next build inherits",
+  },
+];
 
 export default function Method() {
-  const stepsRef = useReveal()
+  const stepsRef = useReveal();
 
   return (
     <section className="method" id="method">
       <div className="method-inner">
         <div className="section-label">How I operate</div>
         <h2 className="method-h2">
-          Four moves.<br />
+          Five moves.
+          <br />
           <em>Every system. Every time.</em>
         </h2>
         <div className="ol-stages">
-          <span>Problem</span>
+          <span>Scope</span>
           <span className="ol-arrow">→</span>
-          <span>Solution</span>
+          <span>Prototype</span>
           <span className="ol-arrow">→</span>
-          <span>System</span>
+          <span>Harden</span>
           <span className="ol-arrow">→</span>
-          <span>Scale</span>
+          <span>Hand off</span>
+          <span className="ol-arrow">→</span>
+          <span>Harvest</span>
         </div>
         <p className="method-intro">
-          Most people diagnose or build or document. I do all four in sequence — and I don't move on until the team can run it without me in the room.
+          Most engineers scope with a ticket and ship the AI part. I run the
+          whole loop — and I don't move on until the team can run it without me
+          in the room.
         </p>
 
         <div className="steps reveal" ref={stepsRef}>
@@ -68,5 +85,5 @@ export default function Method() {
         </div>
       </div>
     </section>
-  )
+  );
 }

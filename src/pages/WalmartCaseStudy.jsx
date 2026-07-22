@@ -453,46 +453,46 @@ function EVRelevance() {
   const ref = useReveal();
   const cards = [
     {
-      tag: '"diagnose inefficiencies at their root"',
+      tag: '"scope the real problem with non-technical stakeholders"',
       title: "What Walmart Proves",
       proof:
-        "I walked into a division where no one had articulated the root cause of the cost leakage because no one had the data to see it. I built the infrastructure to find it, then fixed it. Root cause diagnosis at Fortune 1 scale.",
+        "I walked into a division where no one had articulated the root cause of the operational drag because no one had the data to see it. I built the infrastructure to find it, then fixed it. Root-cause scoping at Fortune 1 scale.",
     },
     {
-      tag: '"architect data pipelines for intelligent decision-making"',
+      tag: '"ship every layer, not just the AI components"',
       title: "What Walmart Proves",
       proof:
         "The entire data architecture at Walmart Creative Operations — ingestion, transformation, modeling, visualization — was designed and built by me. Not configured. Architected from first principles for a specific operational context.",
     },
     {
-      tag: '"translate solutions into playbooks for the portfolio"',
+      tag: '"hand off so the team stays self-sufficient"',
       title: "What Walmart Proves",
       proof:
-        "The Data Council governance model was specifically designed to outlast my engagement. I didn't build a system that needed me — I built an institution that ran on its own. That's the playbook model EV needs across 20+ companies.",
+        "The Data Council governance model was specifically designed to outlast my engagement. I didn't build a system that needed me — I built an institution that ran on its own. That's the handoff discipline a forward-deployed role runs on.",
     },
   ];
   return (
     <section className="ev-relevance">
       <div className="ev-inner">
         <div className="section-label">
-          Why This Matters for Enduring Ventures
+          Why This Matters for a Forward Deployed Engineer Role
         </div>
         <h2 className="cs-section-h2" style={{ marginBottom: "1rem" }}>
-          I've Already Done the VP Job.
+          I've Already Run This Play.
           <br />
           <em>At the World's Largest Retailer.</em>
         </h2>
         <p className="method-intro">
-          The Walmart engagement wasn't a data science project. It was a
-          portfolio company turnaround — compressed into one division of a
-          Fortune 1 company. The motion is identical to what the VP role at EV
-          requires.
+          The Walmart engagement wasn't a data science project. It was an
+          embedded build — compressed into one division of a Fortune 1 company:
+          scope the real problem, ship every layer, harden it, and hand it off.
+          The same motion a forward deployed engineer runs every day.
         </p>
         <div className="ev-grid reveal" ref={ref}>
           {cards.map((c) => (
             <div className="ev-card" key={c.tag}>
               <div className="ev-card-tag">
-                EV Needs: <span>{c.tag}</span>
+                The role needs: <span>{c.tag}</span>
               </div>
               <div className="ev-card-title">{c.title}</div>
               <div className="ev-card-proof">{c.proof}</div>
@@ -516,7 +516,7 @@ function CTA() {
         <p>
           Walmart proved I can operate at the largest scale. ReggieAI proved I
           can ship AI in regulated environments. Revuity proves I move fast as a
-          founder. All three together — that's the VP role.
+          founder. All three together — that's a forward deployed engineer.
         </p>
         <a
           href="https://calendly.com/jayburgessjr/long-meet"
