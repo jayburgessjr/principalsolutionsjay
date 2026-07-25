@@ -2,7 +2,7 @@
 
 **[https://jay-burgess.me](https://jay-burgess.me)**
 
-Portfolio site for Jay Burgess — Founder & CEO, Revuity Systems. AI-first software studio based in Los Angeles.
+Portfolio site for Jay Burgess — Founder & Principal Forward Deployed Engineer, Revuity Systems. AI-first software company based in Los Angeles.
 
 ## Stack
 
