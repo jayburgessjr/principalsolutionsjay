@@ -29,14 +29,14 @@ function ArticleHero() {
         <div className="article-abstract">
           The build vs. buy decision in AI infrastructure is among the most
           consequential and most poorly analyzed choices an organization makes
-          during an AI investment cycle. The standard analysis — comparing
-          upfront build cost against vendor licensing cost — is systematically
+          during an AI investment cycle. The standard analysis, comparing
+          upfront build cost against vendor licensing cost, is systematically
           biased toward vendor purchase in ways that generate expensive
           surprises at scale. This paper presents a decision framework that
           accounts for the full cost topology of each option, identifies the
           five variables that determine which choice generates more value at
           scale, and argues that the most costly outcome is not the wrong choice
-          — it is a right choice made for the wrong reasons that cannot be
+         , it is a right choice made for the wrong reasons that cannot be
           revisited when circumstances change.
         </div>
         <div className="article-meta-bar">
@@ -82,18 +82,18 @@ const DIMENSIONS = [
     label: "Differentiation",
     title: "Is This Your Competitive Surface?",
     buildCase:
-      'If the capability is where your organization competes — if how you do this is a material source of differentiation — building preserves that differentiation. Buying gives your competitors access to the same capability on the same timeline. The relevant question is not "can we build it?" but "does it matter that we built it ourselves?"',
+      'If the capability is where your organization competes, if how you do this is a material source of differentiation, building preserves that differentiation. Buying gives your competitors access to the same capability on the same timeline. The relevant question is not "can we build it?" but "does it matter that we built it ourselves?"',
     buyCase:
-      "If the capability is necessary but not differentiating — compliance tooling, reporting infrastructure, standard workflow automation — buying captures the capability without the maintenance burden of a custom system in a non-differentiating domain.",
+      "If the capability is necessary but not differentiating, compliance tooling, reporting infrastructure, standard workflow automation, buying captures the capability without the maintenance burden of a custom system in a non-differentiating domain.",
   },
   {
     id: "data",
     label: "Data Sensitivity",
     title: "Can Your Data Leave Your Environment?",
     buildCase:
-      "Regulated industries, proprietary datasets, and systems processing sensitive customer information frequently cannot route data through third-party infrastructure. Build is not an option chosen for performance — it is required for compliance. The cost analysis is irrelevant if the vendor option is not legally available.",
+      "Regulated industries, proprietary datasets, and systems processing sensitive customer information frequently cannot route data through third-party infrastructure. Build is not an option chosen for performance, it is required for compliance. The cost analysis is irrelevant if the vendor option is not legally available.",
     buyCase:
-      "If data sensitivity does not constrain vendor options, the buy case is strengthened significantly. Vendor infrastructure absorbs the operational overhead of scale, security patching, and uptime SLA maintenance — overhead that is genuinely expensive when it falls on internal teams.",
+      "If data sensitivity does not constrain vendor options, the buy case is strengthened significantly. Vendor infrastructure absorbs the operational overhead of scale, security patching, and uptime SLA maintenance, overhead that is genuinely expensive when it falls on internal teams.",
   },
   {
     id: "velocity",
@@ -102,14 +102,14 @@ const DIMENSIONS = [
     buildCase:
       "Custom-built systems can be deployed at the exact scope required for immediate needs, without the integration overhead of configuring a vendor platform. For organizations with strong engineering capacity, initial time-to-deployment often favors build over the configuration and integration cycle of vendor onboarding.",
     buyCase:
-      "Vendor platforms provide capability that exists today, with the bugs already found and fixed by the vendor's other customers. For organizations with limited engineering bandwidth, buying accelerates time-to-value in ways that build cannot match — unless the build scope is tightly constrained.",
+      "Vendor platforms provide capability that exists today, with the bugs already found and fixed by the vendor's other customers. For organizations with limited engineering bandwidth, buying accelerates time-to-value in ways that build cannot match, unless the build scope is tightly constrained.",
   },
   {
     id: "maintenance",
     label: "Maintenance Horizon",
     title: "Who Maintains This for the Next Three Years?",
     buildCase:
-      "Custom systems require internal maintenance — bug fixes, dependency updates, security patches, feature evolution. This is a real cost that is consistently underestimated in build analyses. It is only justified when the team that builds the system has the capacity and the organizational mandate to maintain it indefinitely.",
+      "Custom systems require internal maintenance, bug fixes, dependency updates, security patches, feature evolution. This is a real cost that is consistently underestimated in build analyses. It is only justified when the team that builds the system has the capacity and the organizational mandate to maintain it indefinitely.",
     buyCase:
       "Vendor maintenance is the most undervalued component of the buy case. The vendor absorbs the ongoing cost of keeping the system functional, secure, and current. For organizations without dedicated platform engineering capacity, this is frequently the decisive factor.",
   },
@@ -118,7 +118,7 @@ const DIMENSIONS = [
     label: "Lock-In Tolerance",
     title: "How Reversible Does This Need to Be?",
     buildCase:
-      "Custom systems are portable by definition — you own the code, the data model, and the integration architecture. This optionality has real value in domains where vendor landscape, pricing, or capability is likely to change materially over the decision horizon.",
+      "Custom systems are portable by definition, you own the code, the data model, and the integration architecture. This optionality has real value in domains where vendor landscape, pricing, or capability is likely to change materially over the decision horizon.",
     buyCase:
       "Vendor lock-in is a real risk in AI infrastructure, where the pace of capability change means the vendor you select today may not be the best option in three years. If your vendor selection criteria include switching cost tolerance, the buy decision should include explicit analysis of migration complexity and data portability.",
   },
@@ -230,9 +230,9 @@ function ArticleBody() {
             not primarily a financial question.
           </p>
           <p>
-            The costs that most determine the long-term value of the decision —
+            The costs that most determine the long-term value of the decision,
             maintenance burden, vendor lock-in risk, data portability
-            constraints, differentiation value, and switching cost — are either
+            constraints, differentiation value, and switching cost, are either
             invisible in the standard analysis or are treated as qualitative
             footnotes to the quantitative conclusion. The result is a decision
             that is rigorous about the factors that matter least and silent
@@ -258,7 +258,7 @@ function ArticleBody() {
           <p>
             The decision framework below evaluates build vs. buy across five
             dimensions that collectively determine long-term value. Each
-            dimension generates a disposition — toward build or toward buy — and
+            dimension generates a disposition, toward build or toward buy, and
             the aggregate of those dispositions, weighted by organizational
             context, produces a more reliable decision basis than cost
             comparison alone. Select each dimension to see the build and buy
@@ -280,18 +280,18 @@ function ArticleBody() {
             system scales and accumulates dependencies; and{" "}
             <strong>opportunity cost</strong>, the engineering capacity that is
             consumed by the build and unavailable for the next investment. These
-            costs are real and predictable — they are systematically absent from
+            costs are real and predictable, they are systematically absent from
             build estimates because they are incurred after the decision is
             made.
           </p>
           <p>
             Buy analyses consistently undercount{" "}
-            <strong>vendor dependency risk</strong> — the cost of being unable
+            <strong>vendor dependency risk</strong>, the cost of being unable
             to change when the vendor's pricing, capability, or strategic
             direction diverges from your needs. They undercount{" "}
             <strong>data portability constraints</strong>, which become apparent
             only when migration is necessary. And they undercount{" "}
-            <strong>customization debt</strong> — the cost of building around
+            <strong>customization debt</strong>, the cost of building around
             vendor limitations that accumulates as organizational requirements
             evolve beyond what the vendor product supports.
           </p>
@@ -300,7 +300,7 @@ function ArticleBody() {
           <p>
             "The question is not which option is cheaper to acquire. It is which
             option generates more value at the scale and time horizon that
-            actually matters to your organization — and which option you can
+            actually matters to your organization, and which option you can
             recover from if you're wrong."
           </p>
         </div>
@@ -314,7 +314,7 @@ function ArticleBody() {
             The most costly outcome in the build vs. buy decision is not
             choosing the wrong option. It is choosing the right option in a way
             that makes it impossible to revisit when circumstances change. Both
-            build and buy decisions can be structured for reversibility — or can
+            build and buy decisions can be structured for reversibility, or can
             be structured in ways that make the decision permanent regardless of
             whether it continues to generate value.
           </p>
@@ -333,7 +333,7 @@ function ArticleBody() {
             characteristic: they treat the decision as provisional rather than
             permanent. They make the best choice available given current
             information, they structure it for reversibility, and they establish
-            explicit review criteria — the conditions under which the decision
+            explicit review criteria, the conditions under which the decision
             should be reconsidered. This is not indecision. It is the
             organizational capacity to be right about a decision and then be
             right about changing it.
@@ -380,7 +380,7 @@ function ArticleCTA() {
       </h3>
       <p>
         I've been on both sides of this decision across multiple organizations.
-        I can help you analyze it honestly — including the costs that standard
+        I can help you analyze it honestly, including the costs that standard
         analyses miss.
       </p>
       <a
@@ -399,8 +399,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -409,13 +408,12 @@ function ArticleFooter() {
 
 export default function ArticleBuildVsBuy() {
   usePageMeta({
-    title: "Build vs. Buy in AI Infrastructure — Jay Burgess",
+    title: "Build vs. Buy in AI Infrastructure, Jay Burgess",
     description:
       "The standard build vs. buy analysis is systematically biased. A decision framework that accounts for the full cost topology of each option.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

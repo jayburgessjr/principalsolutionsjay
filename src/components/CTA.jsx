@@ -8,13 +8,12 @@ export default function CTA() {
           <span className="orange">about it.</span>
         </h2>
         <p className="cta-sub">
-          I don't stop at strategy.
+          I don't stop at strategy. I build the system that runs it.
           <br />
-          I build the system that runs it.
-          <br />
-          15+ years owning AI and data initiatives in regulated environments. If
-          you're building something that needs to be reliable — and you need
-          someone who can lead the team and get in the work — let's connect.
+          Fifteen years owning AI and data work in regulated environments. If
+          you are building something that has to be reliable, and you want
+          someone who can lead the team and get in the work with them, let's
+          talk.
         </p>
         <a
           href="https://calendly.com/jayburgessjr/long-meet"
@@ -22,7 +21,7 @@ export default function CTA() {
           target="_blank"
           rel="noreferrer"
         >
-          Schedule a Call →
+          Book a call →
         </a>
       </div>
     </section>

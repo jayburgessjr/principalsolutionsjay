@@ -34,7 +34,7 @@ function ArticleHero() {
           structural causes of the demo-to-production gap, proposes a
           six-category taxonomy of architectural failure modes, and offers a
           framework for production readiness evaluation. The central argument is
-          that AI system failure is not primarily a model problem — it is an
+          that AI system failure is not primarily a model problem, it is an
           architecture problem, and one that is fully diagnosable before scale
           commitment.
         </div>
@@ -79,12 +79,12 @@ const FAILURE_MODES = [
   {
     label: "Failure Mode 01",
     title: "Knowledge Boundary Collapse",
-    body: "The system responds to queries outside its verified knowledge domain with high-confidence incorrect answers. In regulated environments — compliance, healthcare, finance — this is not a user experience failure. It is an organizational liability. Without explicit boundary enforcement architecture, default model behavior is confident confabulation at the edges of its training distribution.",
+    body: "The system responds to queries outside its verified knowledge domain with high-confidence incorrect answers. In regulated environments, compliance, healthcare, finance, this is not a user experience failure. It is an organizational liability. Without explicit boundary enforcement architecture, default model behavior is confident confabulation at the edges of its training distribution.",
   },
   {
     label: "Failure Mode 02",
     title: "Retrieval Drift",
-    body: "In RAG architectures, retrieval precision degrades as the knowledge base scales. The model continues generating fluent, confident responses while drawing from increasingly irrelevant retrieved context. This failure is silent — output quality degrades without visible error signals — making it one of the most dangerous failure modes in production retrieval-augmented systems.",
+    body: "In RAG architectures, retrieval precision degrades as the knowledge base scales. The model continues generating fluent, confident responses while drawing from increasingly irrelevant retrieved context. This failure is silent, output quality degrades without visible error signals, making it one of the most dangerous failure modes in production retrieval-augmented systems.",
   },
   {
     label: "Failure Mode 03",
@@ -94,12 +94,12 @@ const FAILURE_MODES = [
   {
     label: "Failure Mode 04",
     title: "Prompt Brittleness Under Variation",
-    body: "System prompts that enforce desired behavior in demo become insufficient as real user inputs introduce variation the prompt authors did not anticipate. The guardrails hold in testing. They erode under novel input. This is a prompt architecture failure — and it is predictable if the prompt is stress-tested against adversarial inputs before launch.",
+    body: "System prompts that enforce desired behavior in demo become insufficient as real user inputs introduce variation the prompt authors did not anticipate. The guardrails hold in testing. They erode under novel input. This is a prompt architecture failure, and it is predictable if the prompt is stress-tested against adversarial inputs before launch.",
   },
   {
     label: "Failure Mode 05",
     title: "Integration Latency at Scale",
-    body: "The AI model performs correctly, but the surrounding pipeline — retrieval, preprocessing, API calls, postprocessing — introduces latency that degrades user experience at production volume. What was a 280ms response in demo becomes a 2.6-second wait under load. At scale, pipeline architecture is frequently the binding constraint, not model performance.",
+    body: "The AI model performs correctly, but the surrounding pipeline, retrieval, preprocessing, API calls, postprocessing, introduces latency that degrades user experience at production volume. What was a 280ms response in demo becomes a 2.6-second wait under load. At scale, pipeline architecture is frequently the binding constraint, not model performance.",
   },
   {
     label: "Failure Mode 06",
@@ -160,7 +160,7 @@ function ArchDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — Demo Stack vs. Production Architecture
+        Fig. 1, Demo Stack vs. Production Architecture
       </div>
       <div style={{ display: "flex", gap: "1px", background: "var(--rule)" }}>
         {STACK_COLS.map((col) => (
@@ -231,7 +231,7 @@ function ArticleBody() {
     <div className="article-body">
       <div className="article-section reveal" ref={r1}>
         <div className="article-section-num">§ 1</div>
-        <h2>Introduction — The Success Trap</h2>
+        <h2>Introduction, The Success Trap</h2>
         <div className="article-prose">
           <p>
             A remarkable pattern has emerged across enterprise AI adoption over
@@ -243,7 +243,7 @@ function ArticleBody() {
           </p>
           <p>
             This failure is not random. It follows predictable patterns that are
-            visible — if you know where to look — before a single dollar of
+            visible, if you know where to look, before a single dollar of
             production infrastructure is committed. The organizations that
             understand this build systems that compound in value. The
             organizations that don't discover the pattern through expensive
@@ -253,7 +253,7 @@ function ArticleBody() {
             The gap is not in the underlying models. Large language models,
             classification systems, and retrieval architectures have genuine and
             substantial capability. The gap is in the architecture surrounding
-            those models — the layers responsible for data ingestion, context
+            those models, the layers responsible for data ingestion, context
             management, retrieval quality, failure handling, monitoring, and
             operational integration. These layers are rarely evaluated during
             the demo phase, because the demo phase is designed to evaluate the
@@ -271,13 +271,13 @@ function ArticleBody() {
             is curated for representativeness. The use cases are selected for
             tractability. The failure modes have not yet been discovered. And
             the team operating the demo possesses deep contextual knowledge
-            about what the system can and cannot do — knowledge that does not
+            about what the system can and cannot do, knowledge that does not
             transfer to end users in production.
           </p>
           <p>
             Three structural conditions differentiate the demo environment from
             production. <strong>Data diversity:</strong> demo inputs are
-            selected; production inputs arrive as they arrive — noisy,
+            selected; production inputs arrive as they arrive, noisy,
             malformed, and frequently outside the distribution the system was
             optimized for. <strong>Failure surface:</strong> demos exercise the
             system's capabilities; production exercises its failure modes daily.{" "}
@@ -290,7 +290,7 @@ function ArticleBody() {
             in controlled conditions can perform significantly below that
             threshold in production, and that gap is not a model quality
             problem. It is a distribution shift problem, a context problem, and
-            an architecture problem — all of which were present during
+            an architecture problem, all of which were present during
             evaluation and not surfaced because the evaluation was not designed
             to surface them.
           </p>
@@ -312,7 +312,7 @@ function ArticleBody() {
             Six failure modes account for the majority of AI production system
             underperformance. They are architectural rather than model-level
             problems, which means they are diagnosable and addressable before
-            scale commitment — if the right questions are asked during
+            scale commitment, if the right questions are asked during
             evaluation. Select any card to expand the full pattern description.
           </p>
         </div>
@@ -327,7 +327,7 @@ function ArticleBody() {
             The diagram below illustrates the structural difference between a
             typical demo stack and a production-grade architecture. The model
             occupies the same position in both. What changes is every layer
-            around it — and those layers are what determine whether the system
+            around it, and those layers are what determine whether the system
             performs reliably under real-world conditions.
           </p>
         </div>
@@ -362,7 +362,7 @@ function ArticleBody() {
           <p>
             <strong>Boundary testing</strong> maps the system's failure
             envelope. What happens when input is adversarial? Out of scope? At
-            context limits? The goal is not to eliminate failure modes — it is
+            context limits? The goal is not to eliminate failure modes, it is
             to ensure every failure mode is known, understood, and handled with
             intentional architecture rather than discovered by users at cost to
             the organization.
@@ -372,7 +372,7 @@ function ArticleBody() {
             independently from generation quality. In RAG systems, fluent
             generation consistently masks poor retrieval. A system can produce
             confident, well-structured responses while retrieving entirely
-            irrelevant documents. Measure retrieval at the document level — not
+            irrelevant documents. Measure retrieval at the document level, not
             at the answer level.
           </p>
           <p>
@@ -380,13 +380,13 @@ function ArticleBody() {
             pipeline under production-representative volume and data diversity.
             Every component upstream and downstream of the model must be tested
             under realistic conditions. The model is rarely the binding
-            constraint at scale — the pipeline typically is.
+            constraint at scale, the pipeline typically is.
           </p>
           <p>
             <strong>Monitoring protocol definition</strong> establishes what
             will be observed before launch. Response latency, retrieval
             precision, user feedback signals, and anomaly detection thresholds
-            must be operational at deployment — not retrofitted after the first
+            must be operational at deployment, not retrofitted after the first
             incident. Instrumentation built into the initial deployment is
             consistently less expensive than instrumentation built in response
             to a production failure.
@@ -395,7 +395,7 @@ function ArticleBody() {
         <div className="article-pullquote">
           <p>
             "The AI demo works. The production system must be designed to work
-            in conditions that demos do not replicate — and that gap is fully
+            in conditions that demos do not replicate, and that gap is fully
             diagnosable before scale commitment."
           </p>
         </div>
@@ -404,7 +404,7 @@ function ArticleBody() {
             Organizations that complete these four evaluations before committing
             to production scale build systems that compound in value over time.
             Those that discover the gaps after launch spend that time in
-            remediation — which is consistently more expensive, more disruptive,
+            remediation, which is consistently more expensive, more disruptive,
             and more damaging to organizational confidence in AI investment than
             the evaluation work that would have prevented it.
           </p>
@@ -471,8 +471,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -481,13 +480,12 @@ function ArticleFooter() {
 
 export default function ArticleAIScale() {
   usePageMeta({
-    title: "Why AI Systems Fail at Scale — Jay Burgess",
+    title: "Why AI Systems Fail at Scale, Jay Burgess",
     description:
       "Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural. A framework for diagnosing and closing it before it costs you.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

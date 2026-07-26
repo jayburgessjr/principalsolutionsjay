@@ -26,8 +26,8 @@ function ArticleHero() {
           Erodes Strategic Decisions
         </h1>
         <div className="article-abstract">
-          Data debt — the accumulation of unstructured, undocumented, or
-          inaccessible organizational information — is rarely treated with the
+          Data debt, the accumulation of unstructured, undocumented, or
+          inaccessible organizational information, is rarely treated with the
           urgency it deserves until a strategic decision fails for lack of
           reliable information. This paper defines data debt, distinguishes it
           from technical debt in both origin and consequence, traces four
@@ -86,7 +86,7 @@ function DebtDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — Data Debt Accumulation Over Time (Relative Cost Index)
+        Fig. 1, Data Debt Accumulation Over Time (Relative Cost Index)
       </div>
       <div className="debt-diagram">
         {DEBT_BARS.map((b) => (
@@ -104,7 +104,7 @@ function DebtDiagram() {
         }}
       >
         Data debt compounds non-linearly. The cost to remediate Year 5 debt is
-        not 5× Year 1 — it is an order of magnitude higher due to downstream
+        not 5× Year 1, it is an order of magnitude higher due to downstream
         dependencies, integration complexity, and institutional knowledge loss.
       </div>
     </div>
@@ -128,8 +128,8 @@ function ArticleBody() {
             Every organization accumulates information. Very few organizations
             manage it. The gap between those two facts is data debt: the growing
             body of organizational knowledge that exists somewhere in the system
-            — in email threads, in ad hoc spreadsheets, in the institutional
-            memory of employees who may or may not still be with the company —
+           , in email threads, in ad hoc spreadsheets, in the institutional
+            memory of employees who may or may not still be with the company,
             but cannot be reliably accessed, queried, or acted upon at the
             moment of a decision.
           </p>
@@ -137,14 +137,14 @@ function ArticleBody() {
             The concept borrows from Ward Cunningham's technical debt framework,
             but the mechanism is distinct. Technical debt accrues from
             implementation shortcuts that increase future maintenance cost. Data
-            debt accrues from governance shortcuts — failing to structure,
-            document, or index information at the point of creation — and the
+            debt accrues from governance shortcuts, failing to structure,
+            document, or index information at the point of creation, and the
             cost it generates is not maintenance cost. It is decision quality
             cost.
           </p>
           <p>
             Organizations carrying significant data debt consistently make
-            slower, less accurate strategic decisions — not because the relevant
+            slower, less accurate strategic decisions, not because the relevant
             information doesn't exist, but because it cannot be reliably found,
             or cannot be trusted when found. The gap is not between having data
             and not having data. It is between having data and being able to use
@@ -158,8 +158,8 @@ function ArticleBody() {
         <h2>Defining Data Debt</h2>
         <div className="article-prose">
           <p>
-            Data debt is not the same as having bad data. Bad data — inaccurate,
-            outdated, or duplicated records — is a data quality problem. Data
+            Data debt is not the same as having bad data. Bad data, inaccurate,
+            outdated, or duplicated records, is a data quality problem. Data
             debt is a structural problem: information that may be accurate but
             exists in a form, location, or format that prevents it from being
             reliably accessed and used.
@@ -167,12 +167,12 @@ function ArticleBody() {
           <p>
             Four manifestations are common in organizational systems.{" "}
             <strong>Unstructured accumulation:</strong> information created and
-            stored without schema, taxonomy, or consistent format — accurate but
+            stored without schema, taxonomy, or consistent format, accurate but
             unqueryable at scale. <strong>Documentation debt:</strong>{" "}
             processes, decisions, and institutional knowledge held informally in
             the heads of key personnel rather than captured in accessible form.{" "}
             <strong>Integration debt:</strong> data that exists in multiple
-            systems without reliable linkage — accurate in isolation, unusable
+            systems without reliable linkage, accurate in isolation, unusable
             in combination. <strong>Access debt:</strong> data that exists and
             is structured but is practically inaccessible due to permissions
             architecture, tooling limitations, or the absence of expertise
@@ -181,13 +181,13 @@ function ArticleBody() {
           <p>
             All four share a common characteristic: the information is present.
             The organizational capability to use it is not. And unlike bad data
-            — which is visible in incorrect outputs — data debt is invisible
+           , which is visible in incorrect outputs, data debt is invisible
             until someone needs the information and cannot find it.
           </p>
         </div>
         <div className="article-pullquote">
           <p>
-            "Data debt is not a storage problem. It is a retrieval problem — and
+            "Data debt is not a storage problem. It is a retrieval problem, and
             retrieval fails not when data is absent, but when it cannot be found
             or trusted at the moment of decision."
           </p>
@@ -204,15 +204,15 @@ function ArticleBody() {
             data debt consistently experience longer time-to-decision on
             strategic questions. The information required for the decision
             exists, but the time required to locate, validate, and synthesize it
-            extends decision cycles — sometimes by days, sometimes by weeks. In
+            extends decision cycles, sometimes by days, sometimes by weeks. In
             fast-moving markets, decision latency is a direct competitive
             disadvantage that compounds over time.
           </p>
           <p>
             <strong>Analysis Confidence Degradation.</strong> When analysts
-            cannot trust that they have accessed all relevant information — when
+            cannot trust that they have accessed all relevant information, when
             the answer to "what do we know about this?" is "it depends on
-            whether we've found it all" — analysis confidence degrades.
+            whether we've found it all", analysis confidence degrades.
             Decisions get hedged. Recommendations get qualified with caveats
             that reflect information uncertainty rather than genuine strategic
             ambiguity. The organization systematically underacts relative to the
@@ -222,7 +222,7 @@ function ArticleBody() {
             <strong>Onboarding and Knowledge Transfer Cost.</strong> Data debt
             makes institutional knowledge fragile. When the information required
             to understand a process, product, or customer relationship lives in
-            undocumented form, it must be transferred person-to-person — which
+            undocumented form, it must be transferred person-to-person, which
             is slow, lossy, and vulnerable to attrition. Every departure of a
             senior employee extracts more value from an organization carrying
             data debt than from one with structured information architecture.
@@ -233,7 +233,7 @@ function ArticleBody() {
             for AI systems. An organization's AI capability is bounded by the
             quality and accessibility of its information architecture. Data debt
             creates a hard ceiling on AI system performance that cannot be
-            engineered around — it can only be resolved by addressing the
+            engineered around, it can only be resolved by addressing the
             underlying information structure. This is the failure mode most
             organizations discover too late.
           </p>
@@ -247,7 +247,7 @@ function ArticleBody() {
           <p>
             The instinct when confronting data debt is to purchase technology. A
             new data warehouse. A better BI tool. An AI-powered search layer.
-            These investments are not worthless — but they are consistently
+            These investments are not worthless, but they are consistently
             insufficient when applied before the underlying information
             architecture problem is addressed.
           </p>
@@ -263,14 +263,14 @@ function ArticleBody() {
             when new tooling is acquired. New data continues to arrive in
             unstructured form. Documentation continues to live informally.
             Systems continue to operate without integration. The tooling layer
-            operates on top of the architecture problem — it does not resolve
+            operates on top of the architecture problem, it does not resolve
             it.
           </p>
         </div>
         <div className="article-pullquote">
           <p>
             "Most data remediation efforts begin with tool selection. This is
-            why most of them fail. The architecture must precede the tooling —
+            why most of them fail. The architecture must precede the tooling,
             and the governance must precede the architecture."
           </p>
         </div>
@@ -285,17 +285,17 @@ function ArticleBody() {
             prerequisite for the next.
           </p>
           <p>
-            <strong>Phase 1 — Mapping.</strong> Before any technology decision,
+            <strong>Phase 1, Mapping.</strong> Before any technology decision,
             map where organizational information lives: in what form, with what
             access conditions, and with what quality characteristics. This is an
             information audit, not a data migration. The output is a complete
-            taxonomy of organizational knowledge assets — structured and
-            unstructured, accessible and inaccessible — that makes the debt
+            taxonomy of organizational knowledge assets, structured and
+            unstructured, accessible and inaccessible, that makes the debt
             visible as a countable, prioritizable problem rather than a vague
             organizational feeling.
           </p>
           <p>
-            <strong>Phase 2 — Architecture.</strong> Design the information
+            <strong>Phase 2, Architecture.</strong> Design the information
             architecture the organization needs before selecting tools to
             implement it. Schema standards, documentation requirements,
             integration patterns, and access model must be defined at the
@@ -304,11 +304,11 @@ function ArticleBody() {
             had, and poorly suited to the one they actually have.
           </p>
           <p>
-            <strong>Phase 3 — Governance.</strong> Data debt is a governance
+            <strong>Phase 3, Governance.</strong> Data debt is a governance
             problem. It accrues when information creation is not paired with
             information management obligations. Remediation requires
             establishing and enforcing information governance at the point of
-            creation — not retrospectively applied to the accumulation. This is
+            creation, not retrospectively applied to the accumulation. This is
             the phase that requires leadership commitment rather than
             engineering effort, which is why it is the phase most frequently
             deferred.
@@ -318,7 +318,7 @@ function ArticleBody() {
             infrastructure that enables reliable decision-making, knowledge
             retention, and AI capability. Organizations that stop at Phase 1 or
             Phase 2 have done the analysis without making the structural change
-            — which means the debt continues to accumulate while they report on
+           , which means the debt continues to accumulate while they report on
             it.
           </p>
         </div>
@@ -370,7 +370,7 @@ function ArticleCTA() {
         <span>you can't trust?</span>
       </h3>
       <p>
-        I diagnose and resolve data architecture problems — from unstructured
+        I diagnose and resolve data architecture problems, from unstructured
         accumulation to integration debt to AI readiness gaps. Let's talk about
         what's blocking your organization.
       </p>
@@ -390,8 +390,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -400,13 +399,12 @@ function ArticleFooter() {
 
 export default function ArticleDataDebt() {
   usePageMeta({
-    title: "The Organizational Cost of Data Debt — Jay Burgess",
+    title: "The Organizational Cost of Data Debt, Jay Burgess",
     description:
-      "Data debt is not a storage problem — it is a decision-making problem. How unstructured information erodes strategic decisions and a framework for remediation.",
+      "Data debt is not a storage problem, it is a decision-making problem. How unstructured information erodes strategic decisions and a framework for remediation.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

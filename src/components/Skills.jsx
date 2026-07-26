@@ -58,7 +58,7 @@ const skillBlocks = [
       "Scaling technology functions",
       "Executive stakeholder alignment",
       "Cross-functional ownership",
-      "Handoff package — README, runbook, ADRs, team coaching",
+      "Handoff package, README, runbook, ADRs, team coaching",
     ],
   },
 ];
@@ -80,7 +80,7 @@ export default function Skills() {
             </h2>
             <p>
               I can architect, build, test, and document production-grade AI
-              systems — and develop the engineering team to scale and own them.
+              systems, and develop the engineering team to scale and own them.
             </p>
             <ul className="cert-list">
               {certifications.map((c) => (

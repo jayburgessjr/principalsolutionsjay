@@ -26,8 +26,8 @@ function ArticleHero() {
           Technical Due Diligence: What to Look For Before You Commit
         </h1>
         <div className="article-abstract">
-          Technical due diligence — the systematic evaluation of a technology
-          system, team, or platform before a consequential commitment — is
+          Technical due diligence, the systematic evaluation of a technology
+          system, team, or platform before a consequential commitment, is
           consistently performed too late, too narrowly, or too optimistically.
           Acquirers find architectural problems after close. Partners discover
           integration complexity after contract. Organizations adopt platforms
@@ -35,7 +35,7 @@ function ArticleHero() {
           scale. This paper presents a four-domain due diligence framework,
           identifies the questions that reliably surface the problems that
           comfortable evaluations miss, and argues that the goal of technical
-          due diligence is not to find reasons to say no — it is to ensure that
+          due diligence is not to find reasons to say no, it is to ensure that
           every yes is made with eyes open.
         </div>
         <div className="article-meta-bar">
@@ -82,11 +82,11 @@ const DOMAINS = [
     title: "System Architecture & Technical Debt",
     questions: [
       "What are the load-bearing components, and what happens to the system if any one of them fails?",
-      "What is the debt inventory — the known architectural shortcuts that will require rework — and what is the estimated cost to service it?",
+      "What is the debt inventory, the known architectural shortcuts that will require rework, and what is the estimated cost to service it?",
       "How are services decoupled? Are there hidden dependencies between components that the architecture diagrams don't show?",
       "What decisions were made for speed that will become constraints at 10x current scale?",
     ],
-    risk: "Architecture problems are the most expensive to remediate post-commitment. They are also the most likely to be rationalized away during evaluation — presented as known issues with clear remediation paths that rarely survive contact with post-commitment operational pressure.",
+    risk: "Architecture problems are the most expensive to remediate post-commitment. They are also the most likely to be rationalized away during evaluation, presented as known issues with clear remediation paths that rarely survive contact with post-commitment operational pressure.",
   },
   {
     id: "data",
@@ -94,7 +94,7 @@ const DOMAINS = [
     title: "Data Architecture & Quality",
     questions: [
       "What is the single source of truth for each critical data entity, and is that answer consistent across the engineering team?",
-      "What is the data quality monitoring in place — how does the team know when data quality degrades?",
+      "What is the data quality monitoring in place, how does the team know when data quality degrades?",
       "How are schema changes managed, and what is the blast radius of a breaking schema change?",
       "Is data portable? What would a migration to a different data store actually involve?",
     ],
@@ -105,24 +105,24 @@ const DOMAINS = [
     label: "Team",
     title: "Team & Knowledge Distribution",
     questions: [
-      "What is the bus factor of the system — how many people need to leave before critical system knowledge is lost?",
+      "What is the bus factor of the system, how many people need to leave before critical system knowledge is lost?",
       "Where is architectural knowledge concentrated, and what is the transition plan if those individuals are unavailable?",
-      "How is onboarding structured — can a new engineer become productive without the original builders?",
+      "How is onboarding structured, can a new engineer become productive without the original builders?",
       "What is the incident response protocol, and has it been tested?",
     ],
-    risk: "Knowledge concentration is the most underweighted risk in technical due diligence. A technically sound system maintained by two people who are the only ones who understand it is a fragile system — not because of its architecture, but because of its human dependencies.",
+    risk: "Knowledge concentration is the most underweighted risk in technical due diligence. A technically sound system maintained by two people who are the only ones who understand it is a fragile system, not because of its architecture, but because of its human dependencies.",
   },
   {
     id: "operations",
     label: "Operations",
     title: "Operational Maturity & Incident History",
     questions: [
-      "What is the incident history for the past 12 months — frequency, severity, time to resolution, and whether the root causes were addressed or patched?",
+      "What is the incident history for the past 12 months, frequency, severity, time to resolution, and whether the root causes were addressed or patched?",
       "What monitoring exists, and what is the alert-to-resolution workflow?",
       "What is the deployment process, and what is the blast radius of a bad deploy?",
       "What SLOs are defined, are they being met, and how are they measured?",
     ],
-    risk: "Operational maturity is the most reliable predictor of system reliability post-commitment. Organizations with immature operational practices — poor incident documentation, absent SLOs, manual deployment processes — consistently produce more post-commitment incidents than their pre-commitment technical architecture would suggest.",
+    risk: "Operational maturity is the most reliable predictor of system reliability post-commitment. Organizations with immature operational practices, poor incident documentation, absent SLOs, manual deployment processes, consistently produce more post-commitment incidents than their pre-commitment technical architecture would suggest.",
   },
 ];
 
@@ -234,7 +234,7 @@ function ArticleBody() {
           <p>
             Technical due diligence fails for three structural reasons. The
             first is scope: evaluations focus on what the system currently does
-            rather than what it will need to do — its architecture under load,
+            rather than what it will need to do, its architecture under load,
             its behavior at the edge of its design envelope, the cost and
             complexity of the changes the acquiring organization's roadmap will
             require. The system is evaluated as it is, not as it will need to
@@ -255,7 +255,7 @@ function ArticleBody() {
             have incentives to reach a conclusion. The seller wants the deal.
             The buyer wants the capability. Both parties are doing due diligence
             in an environment where the primary social pressure is toward
-            closing — and where the discovery of significant problems creates
+            closing, and where the discovery of significant problems creates
             friction that nobody in the room wants to create. The result is
             evaluations that identify known, manageable risks and systematically
             underweight unknown or uncomfortable ones.
@@ -284,7 +284,7 @@ function ArticleBody() {
         <div className="article-prose">
           <p>
             Standard due diligence questions produce standard due diligence
-            answers — prepared, rehearsed, and optimized for reassurance rather
+            answers, prepared, rehearsed, and optimized for reassurance rather
             than transparency. The questions that reliably surface real
             architectural risk are the ones that cannot be answered from a deck:
             walk me through the last three production incidents, end to end.
@@ -296,7 +296,7 @@ function ArticleBody() {
             These questions work because they require specificity and candor.
             They cannot be answered with generalities about engineering culture
             or architectural philosophy. They require the team to describe real
-            events, real tradeoffs, and real limitations — and the quality of
+            events, real tradeoffs, and real limitations, and the quality of
             those answers is itself a diagnostic signal about the team's
             self-awareness and operational maturity.
           </p>
@@ -318,7 +318,7 @@ function ArticleBody() {
           <p>
             The output of technical due diligence is not a pass/fail verdict. It
             is a risk-adjusted picture of what the commitment actually involves
-            — the capability that exists, the problems that are present, the
+           , the capability that exists, the problems that are present, the
             costs of addressing them, and the conditions under which the deal
             structure should change. This reframing matters because it changes
             what the evaluation is for: not to find reasons to say no, but to
@@ -327,7 +327,7 @@ function ArticleBody() {
           <p>
             Due diligence findings should produce three outputs: a prioritized
             list of architectural risks with estimated remediation cost; a set
-            of commitment conditions — the specific architectural improvements
+            of commitment conditions, the specific architectural improvements
             or documentation requirements that should be completed before or as
             part of the deal; and a post-commitment technical roadmap that
             sequences the work required to make the system fit for its intended
@@ -335,7 +335,7 @@ function ArticleBody() {
           </p>
           <p>
             Organizations that structure their due diligence this way
-            consistently get better outcomes from their technical commitments —
+            consistently get better outcomes from their technical commitments,
             not because they identify more problems, but because they deal with
             the problems they find rather than hoping they won't matter at
             scale.
@@ -401,8 +401,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -411,13 +410,12 @@ function ArticleFooter() {
 
 export default function ArticleTechDueDiligence() {
   usePageMeta({
-    title: "Technical Due Diligence — Jay Burgess",
+    title: "Technical Due Diligence, Jay Burgess",
     description:
       "Technical due diligence is consistently performed too late, too narrowly, or too optimistically. A four-domain framework for evaluations that find what comfort hides.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

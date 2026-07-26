@@ -1,56 +1,42 @@
-import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import "../casestudy.css";
-
-function CaseStudyNav() {
-  return (
-    <nav>
-      <Link to="/" className="nav-back">
-        ← Back to Portfolio
-      </Link>
-      <div className="nav-tag">Case Study · ReggieAI</div>
-    </nav>
-  );
-}
 
 function Hero() {
   return (
     <section className="cs-hero">
       <div className="cs-inner">
-        <div className="cs-eyebrow">Case Study · AI System · 2025</div>
+        <div className="cs-eyebrow">Case Study · Regulated AI · Title IV</div>
         <h1 className="cs-title">
-          Reggie<span>AI</span>
+          Higher Ed <span>Compliance Software</span>
         </h1>
         <p className="cs-desc">
-          How I diagnosed a broken compliance process, built a production
-          agentic AI system from the ground up, and deployed it ahead of
-          schedule — in a federally regulated environment.
+          A compliance team was drowning in Title IV rules and manual checks. I
+          scoped the real problem, built a multi-agent platform on Claude,
+          LangGraph, and MCP, hardened it for a federally regulated environment,
+          and handed it off so the team runs it without me. It generated $2.7M
+          in new revenue in its first three months.
         </p>
         <div className="cs-meta-bar">
           <div className="cs-meta-item">
             <div className="cmi-label">Organization</div>
             <div className="cmi-val">
-              Higher Education Assistance Group (HEAG)
+              A regulated Title IV student-aid provider
             </div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">Domain</div>
-            <div className="cmi-val">
-              Title IV Federal Student Aid Compliance
-            </div>
+            <div className="cmi-val">Title IV Federal Student Aid</div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">My Role</div>
             <div className="cmi-val">
-              Sole Architect, Builder & Deployment Lead
+              Principal Forward Deployed Engineer · Sole builder
             </div>
           </div>
           <div className="cs-meta-item">
-            <div className="cmi-label">Status</div>
-            <div className="cmi-val">
-              Live in Production · Staging Ahead of Schedule
-            </div>
+            <div className="cmi-label">Result</div>
+            <div className="cmi-val">$2.7M new revenue in three months</div>
           </div>
         </div>
       </div>
@@ -58,76 +44,69 @@ function Hero() {
   );
 }
 
-function Diagnose() {
+function Scope() {
   const bodyRef = useReveal();
   return (
     <section className="cs-section">
       <div className="cs-section-inner">
         <div className="phase-label">
-          <div className="phase-num">PHASE 01</div>
-          <div className="phase-name">Diagnose</div>
+          <div className="phase-num">Step 01</div>
+          <div className="phase-name">Scope</div>
         </div>
         <h2>
-          The real problem wasn't the staff.
+          Turn a symptom into a build plan.
           <br />
-          <em>It was the architecture underneath them.</em>
+          <em>The problem was never the staff.</em>
         </h2>
         <div className="cs-body reveal" ref={bodyRef}>
           <div className="cs-prose">
             <p>
-              When I came into this situation, the surface-level complaint was
-              that compliance errors were happening and the team was
-              overwhelmed. The instinct of most organizations would be to hire
-              more compliance staff or add more review steps.
+              The complaint on the surface was simple. Compliance errors kept
+              happening and the team was overwhelmed. The obvious fix would have
+              been to hire more compliance staff or bolt on more review steps.
+              That would have made the problem worse.
             </p>
             <p>
-              I dug deeper. What I found was a structural failure:{" "}
-              <strong>
-                there was no organized, authoritative knowledge base
-              </strong>{" "}
-              that the compliance process could reliably draw from. Staff were
-              working from memory, informal documents, and outdated references —
-              leading to inconsistent answers, missed regulatory requirements,
-              and an unsustainable manual review burden.
+              I sat with the operators and the VP of Compliance and pulled the
+              real problem out of the symptom. There was no organized,
+              authoritative knowledge base for the compliance process to draw
+              from. Staff were working from memory, informal documents, and
+              outdated references. That produced inconsistent answers, missed
+              regulatory requirements, and a manual review burden that could
+              only grow.
             </p>
             <p>
-              The secondary problem: the intake mechanism — an embedded web form
-              — had no integration with the CRM. Data entered by prospective
-              students disappeared into a silo. No tracking, no follow-up
-              triggers, no institutional memory.
+              Underneath it sat a second failure. The intake form on the website
+              had no connection to the CRM, so every prospective student who
+              filled it out vanished into a silo with no tracking and no
+              follow-up.
             </p>
             <p>
-              I identified three root causes that needed to be solved
-              simultaneously:{" "}
-              <strong>
-                knowledge architecture, AI guardrails, and workflow integration.
-              </strong>{" "}
-              That diagnosis drove every technical decision that followed.
+              I named three root causes that had to be solved together, and that
+              diagnosis drove every technical decision that followed.
             </p>
           </div>
           <div className="cs-sidebar">
             <div className="finding-box">
-              <div className="fb-label">Root Cause #1</div>
+              <div className="fb-label">Root cause 1</div>
               <div className="fb-text">
-                <strong>No structured knowledge base.</strong> Compliance
-                responses were drawn from informal docs, memory, and scattered
-                references — not authoritative FSA regulatory sources.
+                <strong>No structured knowledge base.</strong> Answers came from
+                informal docs and memory, not authoritative FSA and CFR sources.
               </div>
             </div>
             <div className="finding-box">
-              <div className="fb-label">Root Cause #2</div>
+              <div className="fb-label">Root cause 2</div>
               <div className="fb-text">
-                <strong>No AI guardrails.</strong> Any AI system deployed
-                without strict anti-hallucination architecture in a Title IV
-                context is a legal liability, not a solution.
+                <strong>No AI guardrails.</strong> In a Title IV context, an AI
+                without strict anti-hallucination architecture is a legal
+                liability, not a solution.
               </div>
             </div>
             <div className="finding-box">
-              <div className="fb-label">Root Cause #3</div>
+              <div className="fb-label">Root cause 3</div>
               <div className="fb-text">
-                <strong>Zero CRM integration.</strong> The embedded intake form
-                was a dead end — data never reached HubSpot, breaking follow-up
-                workflows entirely.
+                <strong>No CRM integration.</strong> The intake form was a dead
+                end. Data never reached HubSpot, and follow-up broke entirely.
               </div>
             </div>
           </div>
@@ -137,116 +116,87 @@ function Diagnose() {
   );
 }
 
-function Build() {
+function Prototype() {
   const bodyRef = useReveal();
   return (
     <section className="cs-section" style={{ background: "var(--panel)" }}>
       <div className="cs-section-inner">
         <div className="phase-label">
-          <div className="phase-num">PHASE 02</div>
-          <div className="phase-name">Build</div>
+          <div className="phase-num">Step 02</div>
+          <div className="phase-name">Prototype</div>
         </div>
         <h2>
-          Built the fix myself.
+          Build it fast, and build the whole stack.
           <br />
-          <em>End to end. No hand-offs.</em>
+          <em>Claude, LangGraph, and MCP.</em>
         </h2>
         <div className="cs-body reveal" ref={bodyRef}>
           <div className="cs-prose">
             <p>
               With the root causes clear, I designed and built a three-layer
-              solution: a structured knowledge base, an agentic AI workflow with
-              strict guardrails, and a live CRM integration.
+              system using AI-assisted development, and I owned every layer
+              myself.
             </p>
             <p>
-              <strong>Layer 1 — Knowledge Architecture:</strong> I built a
-              structured JSON knowledge base drawing exclusively from
-              authoritative Federal Student Aid (FSA) sources and Code of
-              Federal Regulations (CFR) citations. Every piece of knowledge was
-              sourced, structured, and version-controlled. This became the
-              single source of truth the AI draws from.
+              <strong>Layer 1, knowledge architecture.</strong> A structured
+              JSON knowledge base drawn only from authoritative Federal Student
+              Aid sources and Code of Federal Regulations citations. Every entry
+              was sourced, structured, and version-controlled. This became the
+              single source of truth the agents draw from.
             </p>
             <p>
-              <strong>Layer 2 — Agentic AI with Anti-Hallucination:</strong> I
-              engineered the Botpress workflow and system prompt to enforce
-              strict boundaries — the AI can only respond using the verified
-              knowledge base, must cite CFR references, and is explicitly
-              prohibited from generating responses outside its training data.
-              This is non-negotiable in a federally regulated environment.
+              <strong>Layer 2, the agent.</strong> A multi-agent workflow on
+              Claude and LangGraph, with MCP servers for tool calling. The agent
+              can only answer from the verified knowledge base, has to cite CFR
+              references, and is blocked from generating anything outside its
+              retrieved context. In a federally regulated environment that is
+              non-negotiable.
             </p>
             <p>
-              <strong>Layer 3 — HubSpot API Integration:</strong> I replaced the
-              broken embedded form with a live HubSpot API connection, ensuring
-              every prospective student interaction is captured, tracked, and
-              triggers appropriate follow-up workflows automatically.
+              <strong>Layer 3, CRM integration.</strong> I replaced the dead
+              intake form with a live HubSpot API connection, so every
+              prospective student interaction is captured, tracked, and triggers
+              the right follow-up automatically.
             </p>
             <div className="arch-diagram">
-              <div className="arch-title">System Architecture — ReggieAI</div>
+              <div className="arch-title">
+                System architecture, Higher Ed Compliance Software
+              </div>
               <div className="arch-flow">
                 <div className="arch-node">
-                  Student Query<span className="sub">Intake Layer</span>
+                  Student query<span className="sub">Intake layer</span>
                 </div>
                 <div className="arch-arrow">→</div>
                 <div className="arch-node highlight">
-                  Botpress Agent<span className="sub">Orchestration</span>
+                  LangGraph agent<span className="sub">Orchestration</span>
                 </div>
                 <div className="arch-arrow">→</div>
                 <div className="arch-node">
-                  RAG Pipeline<span className="sub">Retrieval Layer</span>
+                  RAG pipeline<span className="sub">Retrieval</span>
                 </div>
                 <div className="arch-arrow">→</div>
                 <div className="arch-node">
-                  JSON Knowledge Base
-                  <span className="sub">FSA + CFR Sources</span>
+                  JSON knowledge base
+                  <span className="sub">FSA + CFR sources</span>
                 </div>
               </div>
               <div className="arch-flow" style={{ marginTop: "1rem" }}>
                 <div className="arch-node">
-                  System Prompt<span className="sub">Anti-hallucination</span>
+                  MCP tools<span className="sub">Tool calling</span>
                 </div>
                 <div className="arch-arrow">→</div>
                 <div className="arch-node highlight">
-                  LLM Response<span className="sub">Guardrailed Output</span>
+                  Claude response<span className="sub">Guardrailed output</span>
                 </div>
                 <div className="arch-arrow">→</div>
                 <div className="arch-node">
-                  HubSpot API<span className="sub">CRM Integration</span>
+                  HubSpot API<span className="sub">CRM integration</span>
                 </div>
                 <div className="arch-arrow">→</div>
                 <div className="arch-node">
-                  Follow-up Workflow<span className="sub">Automated</span>
+                  Follow-up<span className="sub">Automated</span>
                 </div>
               </div>
-            </div>
-            <div className="eval-framework-callout">
-              <div className="fb-label">Evaluation Framework</div>
-              <p className="ef-intro">
-                Built a weighted evaluation framework to distinguish{" "}
-                <strong>fluent output from correct output</strong> — the central
-                failure mode in regulated AI.
-              </p>
-              <div className="ef-dimensions">
-                <div className="ef-dim">
-                  <span className="ef-weight">30%</span> Factual Accuracy
-                </div>
-                <div className="ef-dim">
-                  <span className="ef-weight">20%</span> Scope Adherence
-                </div>
-                <div className="ef-dim">
-                  <span className="ef-weight">20%</span> Escalation Logic
-                </div>
-                <div className="ef-dim">
-                  <span className="ef-weight">15%</span> Output Quality
-                </div>
-                <div className="ef-dim">
-                  <span className="ef-weight">15%</span> Retrieval Precision
-                </div>
-              </div>
-              <p className="ef-cases">
-                15 production test cases spanning routine calculation, policy
-                interpretation, edge cases, multi-step process, and out-of-scope
-                traps.
-              </p>
             </div>
           </div>
           <div className="cs-sidebar">
@@ -259,30 +209,123 @@ function Build() {
               }}
             >
               <div className="fb-label" style={{ marginBottom: "0.75rem" }}>
-                Technology Stack
+                Technology stack
               </div>
               <ul className="tech-list">
                 {[
-                  "Botpress (Agentic Orchestration)",
-                  "RAG Pipeline Architecture",
-                  "Structured JSON Knowledge Base",
-                  "System Prompt Engineering",
-                  "HubSpot API Integration",
-                  "CFR Regulatory References",
-                  "FSA Authoritative Sources",
-                  "Anti-hallucination Guardrails",
+                  "Claude (LLM)",
+                  "LangGraph (agent orchestration)",
+                  "MCP (tool calling)",
+                  "RAG pipeline architecture",
+                  "Structured JSON knowledge base",
+                  "System prompt engineering",
+                  "HubSpot API integration",
+                  "FSA + CFR authoritative sources",
                 ].map((t) => (
                   <li key={t}>{t}</li>
                 ))}
               </ul>
             </div>
             <div className="finding-box">
-              <div className="fb-label">Design Principle</div>
+              <div className="fb-label">Design principle</div>
               <div className="fb-text">
-                In a Title IV environment, a hallucinating AI isn't just wrong —
-                it's a <strong>federal compliance violation</strong>. Every
-                architectural decision prioritized reliability and auditability
-                over capability.
+                In a Title IV environment a hallucinating AI is not just wrong,
+                it is a <strong>federal compliance violation</strong>. Every
+                decision prioritized reliability and auditability over
+                capability.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Harden() {
+  const bodyRef = useReveal();
+  return (
+    <section className="cs-section">
+      <div className="cs-section-inner">
+        <div className="phase-label">
+          <div className="phase-num">Step 03</div>
+          <div className="phase-name">Harden</div>
+        </div>
+        <h2>
+          Make it production-grade.
+          <br />
+          <em>The phase regulated shops probe hardest.</em>
+        </h2>
+        <div className="cs-body reveal" ref={bodyRef}>
+          <div className="cs-prose">
+            <p>
+              Fluent output and correct output are not the same thing, and in
+              regulated AI the gap between them is the whole risk. So I built a
+              weighted evaluation framework to measure correctness, not
+              confidence, and ran it against production test cases before
+              anything went near a real user.
+            </p>
+            <p>
+              On top of the evals I added the controls a Title IV auditor would
+              ask for. Deterministic policy execution, human-in-the-loop review
+              for anything outside the routine, structured outputs, and full
+              audit logging so every AI-assisted decision is traceable back to
+              its CFR source.
+            </p>
+            <div className="eval-framework-callout">
+              <div className="fb-label">Evaluation framework</div>
+              <p className="ef-intro">
+                A weighted rubric that separates{" "}
+                <strong>fluent output from correct output</strong>, the central
+                failure mode in regulated AI.
+              </p>
+              <div className="ef-dimensions">
+                <div className="ef-dim">
+                  <span className="ef-weight">30%</span> Factual accuracy
+                </div>
+                <div className="ef-dim">
+                  <span className="ef-weight">20%</span> Scope adherence
+                </div>
+                <div className="ef-dim">
+                  <span className="ef-weight">20%</span> Escalation logic
+                </div>
+                <div className="ef-dim">
+                  <span className="ef-weight">15%</span> Output quality
+                </div>
+                <div className="ef-dim">
+                  <span className="ef-weight">15%</span> Retrieval precision
+                </div>
+              </div>
+              <p className="ef-cases">
+                15 production test cases spanning routine calculation, policy
+                interpretation, edge cases, multi-step processes, and
+                out-of-scope traps.
+              </p>
+            </div>
+          </div>
+          <div className="cs-sidebar">
+            <div className="finding-box">
+              <div className="fb-label">Guardrails</div>
+              <div className="fb-text">
+                Anti-hallucination system prompt, retrieval-only answers, and
+                mandatory CFR citation. The agent cannot speak outside its
+                sources.
+              </div>
+            </div>
+            <div className="finding-box">
+              <div className="fb-label">Human in the loop</div>
+              <div className="fb-text">
+                Anything outside a routine case routes to a human reviewer.
+                Governed AI, not autonomous AI, in a zero-margin-for-error
+                domain.
+              </div>
+            </div>
+            <div className="finding-box">
+              <div className="fb-label">Auditability</div>
+              <div className="fb-text">
+                Structured logging and audit trails on every decision, so a
+                compliance officer can reconstruct exactly what happened and
+                why.
               </div>
             </div>
           </div>
@@ -299,77 +342,80 @@ function KeyQuote() {
         <div className="kq-text">
           "The goal was never to build an impressive AI demo. It was to replace
           a broken process with a system that is more reliable, more auditable,
-          and more scalable than any human-run alternative — in a
+          and more scalable than any human-run alternative, in a
           zero-margin-for-error environment."
         </div>
-        <div className="kq-attr">Jay Burgess · Architect, ReggieAI</div>
+        <div className="kq-attr">
+          Jay Burgess · Architect, Higher Ed Compliance Software
+        </div>
       </div>
     </div>
   );
 }
 
-function Scale() {
+function HandOff() {
   const bodyRef = useReveal();
   const gridRef = useReveal();
   return (
-    <section className="cs-section">
+    <section className="cs-section" style={{ background: "var(--panel)" }}>
       <div className="cs-section-inner">
         <div className="phase-label">
-          <div className="phase-num">PHASE 03</div>
-          <div className="phase-name">Scale</div>
+          <div className="phase-num">Step 04</div>
+          <div className="phase-name">Hand off</div>
         </div>
         <h2>
-          Deployed ahead of schedule.
+          Ship it so the team owns it.
           <br />
-          <em>Documented for the team. Runs without me.</em>
+          <em>Deployed ahead of schedule. Runs without me.</em>
         </h2>
         <div className="cs-body reveal" ref={bodyRef}>
           <div className="cs-prose">
             <p>
-              Deployment isn't the finish line — handoff is. I coordinated
-              directly with Karyn Wright-Moore (VP of Compliance & QA) to ensure
-              the system was ready for team adoption before staging went live.
-              That meant documentation, demo readiness, and a clear operational
-              protocol the compliance team could follow without needing me in
-              the room.
+              Deployment is not the finish line. The handoff is. I worked
+              directly with the VP of Compliance and QA to make sure the system
+              was ready for the team to own before staging went live. That meant
+              documentation, a demo the team could run, and an operational
+              protocol they could follow without me in the room.
             </p>
             <p>
-              <strong>Staging was deployed ahead of schedule.</strong> The
-              knowledge base was reviewed and validated against current FSA
-              guidance. The anti-hallucination guardrails were tested against
-              edge cases specific to Title IV scenarios. The HubSpot workflow
-              triggers were verified end to end.
+              <strong>Staging went live ahead of schedule.</strong> The
+              knowledge base was validated against current FSA guidance, the
+              guardrails were tested against Title IV edge cases, and the
+              HubSpot triggers were verified end to end.
             </p>
             <p>
-              The system is now the operational backbone of compliance intake at
-              HEAG. It handles queries, captures data, routes follow-ups, and
-              provides auditable CFR-cited responses — without manual
-              intervention for routine cases.
+              Higher Ed Compliance Software is now the operational backbone of
+              compliance intake at the client. It handles queries, captures
+              data, routes follow-ups, and returns auditable, CFR-cited answers
+              without manual intervention on routine cases. In its first three
+              months it drove $2.7M in new client revenue against a $1.7M base
+              and lifted case-processing capacity by 25% with no added
+              headcount.
             </p>
             <p>
               This is what "build it to run without me" means in practice. Not a
-              hand-off to another engineer. A hand-off to a team that doesn't
+              handoff to another engineer. A handoff to a team that does not
               need an engineer anymore.
             </p>
           </div>
           <div className="cs-sidebar">
             <div className="outcome-big">
-              <div className="ob-num">Live</div>
-              <div className="ob-label">Production Deployment · 2025</div>
+              <div className="ob-num">$2.7M</div>
+              <div className="ob-label">New revenue in three months</div>
             </div>
             <div className="finding-box">
-              <div className="fb-label">Handoff Protocol</div>
+              <div className="fb-label">Handoff package</div>
               <div className="fb-text">
-                Coordinated staging readiness with VP of Compliance. Produced
-                operational docs, edge case handling guide, and knowledge base
-                update procedures — so the team owns it going forward.
+                Operational docs, an edge-case handling guide, and
+                knowledge-base update procedures, so the team owns it going
+                forward.
               </div>
             </div>
             <div className="finding-box">
-              <div className="fb-label">Ahead of Schedule</div>
+              <div className="fb-label">Ahead of schedule</div>
               <div className="fb-text">
-                Staging deployed before the agreed milestone date. Not because
-                corners were cut — because the architecture was clean from the
+                Staging deployed before the agreed milestone. Not because
+                corners were cut, because the architecture was clean from the
                 start.
               </div>
             </div>
@@ -377,27 +423,83 @@ function Scale() {
         </div>
         <div className="outcomes-grid reveal" ref={gridRef}>
           <div className="outcome-cell">
-            <div className="oc-label">Deployment Status</div>
-            <div className="oc-val">Live</div>
+            <div className="oc-label">New revenue</div>
+            <div className="oc-val">$2.7M</div>
             <div className="oc-desc">
-              Production system running in a federally regulated Title IV
-              compliance environment
+              In the first three months, against a $1.7M annual base
             </div>
           </div>
           <div className="outcome-cell">
-            <div className="oc-label">Hallucination Rate</div>
+            <div className="oc-label">Capacity</div>
+            <div className="oc-val">+25%</div>
+            <div className="oc-desc">
+              More case-processing capacity, with no added headcount
+            </div>
+          </div>
+          <div className="outcome-cell">
+            <div className="oc-label">Hallucination rate</div>
             <div className="oc-val">Zero</div>
             <div className="oc-desc">
-              Anti-hallucination architecture tested against Title IV edge cases
-              — zero out-of-bounds responses in testing
+              No out-of-bounds responses against Title IV edge cases in testing
             </div>
           </div>
-          <div className="outcome-cell">
-            <div className="oc-label">Timeline</div>
-            <div className="oc-val">Early</div>
-            <div className="oc-desc">
-              Staged ahead of agreed milestone. Clean architecture from day one
-              means no rework cycles
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Harvest() {
+  const bodyRef = useReveal();
+  return (
+    <section className="cs-section">
+      <div className="cs-section-inner">
+        <div className="phase-label">
+          <div className="phase-num">Step 05</div>
+          <div className="phase-name">Harvest</div>
+        </div>
+        <h2>
+          Push the pattern back into the platform.
+          <br />
+          <em>Every system compounds into the next.</em>
+        </h2>
+        <div className="cs-body reveal" ref={bodyRef}>
+          <div className="cs-prose">
+            <p>
+              A build like this should never be a one-off. Once Higher Ed
+              Compliance Software was running, I pulled the reusable pieces out
+              of it and pushed them into Revuity's shared library, so the next
+              regulated build starts much further along.
+            </p>
+            <p>
+              The guardrail pattern, the evaluation rubric, the
+              human-in-the-loop routing, and the retrieval architecture all
+              became reference components. Part of that work is open source as
+              the Eligibility-Agent, a reference implementation for regulated
+              agentic AI on Claude, LangGraph, and MCP that anyone can build
+              from.
+            </p>
+            <p>
+              That is the difference between shipping a project and building a
+              capability. Higher Ed Compliance Software solved one compliance
+              problem, and it also made every future one cheaper and faster to
+              solve.
+            </p>
+          </div>
+          <div className="cs-sidebar">
+            <div className="finding-box">
+              <div className="fb-label">Reference architecture</div>
+              <div className="fb-text">
+                Guardrails, evals, HITL routing, and retrieval, packaged as
+                reusable components in the Revuity library.
+              </div>
+            </div>
+            <div className="finding-box">
+              <div className="fb-label">Open source</div>
+              <div className="fb-text">
+                The Eligibility-Agent, an open reference pattern for regulated
+                agentic AI on Claude, LangGraph, and MCP.
+              </div>
             </div>
           </div>
         </div>
@@ -417,8 +519,9 @@ function WhatThisProves() {
       <div className="cs-section-inner">
         <div className="section-label">What this demonstrates</div>
         <h2 className="reveal" ref={h2Ref}>
-          The same motion — Diagnose, Build, Scale —<br />
-          <em>works across any business in any portfolio.</em>
+          The same five moves, Scope, Prototype, Harden, Hand off, Harvest,
+          <br />
+          <em>work across any business in any portfolio.</em>
         </h2>
         <div
           className="proves-grid reveal"
@@ -428,7 +531,7 @@ function WhatThisProves() {
           <div className="proves-cell">
             <div className="proves-cell-label">I walked in and found</div>
             <p>
-              A process that was broken at the structural level — not a people
+              A process that was broken at the structural level. Not a people
               problem, not a training problem. A system architecture problem
               that only compounds over time.
             </p>
@@ -442,17 +545,17 @@ function WhatThisProves() {
           >
             <div className="proves-cell-label">I built without a team</div>
             <p>
-              Three technical layers — knowledge base, AI orchestration, CRM
-              integration — designed, built, tested, and deployed by one person.
-              No dependency on an engineering team to move fast.
+              Three technical layers, knowledge base, agent, and CRM
+              integration, designed, built, hardened, and deployed by one
+              person. No dependency on an engineering team to move fast.
             </p>
           </div>
           <div className="proves-cell">
             <div className="proves-cell-label">I left it running</div>
             <p>
-              The compliance team runs this system independently. No ongoing
-              engineering support required. That's what scalable delivery looks
-              like — the work compounds after I'm gone.
+              The compliance team runs this system independently, with no
+              ongoing engineering support. The work compounds after I am gone.
+              That is what scalable delivery looks like.
             </p>
           </div>
         </div>
@@ -470,8 +573,8 @@ function CTA() {
         <span>build for you.</span>
       </h3>
       <p>
-        This case study is one example of one engagement. The motion is
-        repeatable. The results are real.
+        This is one example of one engagement. The five moves are repeatable.
+        The results are real.
       </p>
       <a
         href="https://calendly.com/jayburgessjr/long-meet"
@@ -479,7 +582,7 @@ function CTA() {
         target="_blank"
         rel="noreferrer"
       >
-        Schedule a Call →
+        Book a call →
       </a>
     </section>
   );
@@ -489,8 +592,8 @@ function CaseStudyFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
+        Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -499,19 +602,20 @@ function CaseStudyFooter() {
 
 export default function CaseStudy() {
   usePageMeta({
-    title: "ReggieAI Case Study — Jay Burgess",
+    title: "Higher Ed Compliance Software Case Study, Jay Burgess",
     description:
-      "How Jay Burgess diagnosed a broken Title IV compliance process, built a guardrailed agentic AI system, and deployed it in a federally regulated environment.",
+      "How Jay Burgess scoped a broken Title IV compliance process, built a multi-agent platform on Claude, LangGraph, and MCP, hardened it for a regulated environment, and handed it off. $2.7M in new revenue in three months.",
   });
 
   return (
     <>
-      <CaseStudyNav />
       <Hero />
-      <Diagnose />
-      <Build />
+      <Scope />
+      <Prototype />
+      <Harden />
       <KeyQuote />
-      <Scale />
+      <HandOff />
+      <Harvest />
       <WhatThisProves />
       <CTA />
       <CaseStudyFooter />

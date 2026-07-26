@@ -29,15 +29,15 @@ function ArticleHero() {
           Retrieval-Augmented Generation has become the dominant architecture
           for enterprise AI systems that require domain-specific knowledge. Its
           appeal is straightforward: rather than fine-tuning a model on
-          proprietary data — an expensive, brittle, and rapidly outdated
-          approach — RAG retrieves relevant documents at inference time and
+          proprietary data, an expensive, brittle, and rapidly outdated
+          approach, RAG retrieves relevant documents at inference time and
           provides them as context for generation. In theory, this constrains
           the model to known, verifiable information. In practice, poorly
           designed RAG systems produce confident, fluent, wrong answers at
           production scale. This paper examines the structural causes of RAG
           failure, presents a five-layer architecture for reliable
-          retrieval-augmented systems, and argues that retrieval quality — not
-          model quality — is the binding constraint in most enterprise RAG
+          retrieval-augmented systems, and argues that retrieval quality, not
+          model quality, is the binding constraint in most enterprise RAG
           deployments.
         </div>
         <div className="article-meta-bar">
@@ -81,7 +81,7 @@ const RAG_LAYERS = [
   {
     label: "Layer 1",
     name: "Knowledge Architecture",
-    desc: "The structure and quality of the document corpus. Source selection, chunking strategy, metadata schema, and version control. The retrieval system can only return what is in the corpus — garbage in, garbage out applies with particular force here.",
+    desc: "The structure and quality of the document corpus. Source selection, chunking strategy, metadata schema, and version control. The retrieval system can only return what is in the corpus, garbage in, garbage out applies with particular force here.",
     accent: false,
   },
   {
@@ -93,7 +93,7 @@ const RAG_LAYERS = [
   {
     label: "Layer 3",
     name: "Retrieval Engine",
-    desc: "The mechanism for identifying relevant chunks given a query. Semantic search, hybrid search, re-ranking, and query transformation all operate at this layer. This is the binding constraint in most RAG systems — and the most under-invested layer.",
+    desc: "The mechanism for identifying relevant chunks given a query. Semantic search, hybrid search, re-ranking, and query transformation all operate at this layer. This is the binding constraint in most RAG systems, and the most under-invested layer.",
     accent: true,
   },
   {
@@ -105,7 +105,7 @@ const RAG_LAYERS = [
   {
     label: "Layer 5",
     name: "Generation + Guardrails",
-    desc: "The LLM generation layer with behavioral constraints. System prompt design enforces boundary behavior — what the model can and cannot do with the retrieved context. Guardrails here are the last line of defense against out-of-scope generation.",
+    desc: "The LLM generation layer with behavioral constraints. System prompt design enforces boundary behavior, what the model can and cannot do with the retrieved context. Guardrails here are the last line of defense against out-of-scope generation.",
     accent: false,
   },
 ];
@@ -114,7 +114,7 @@ function RAGDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — Five-Layer RAG Architecture
+        Fig. 1, Five-Layer RAG Architecture
       </div>
       <div
         style={{
@@ -211,14 +211,14 @@ function ArticleBody() {
             appears. A poorly designed retrieval pipeline retrieves documents
             that are topically adjacent to the query but semantically irrelevant
             to answering it. The model, receiving apparently relevant context,
-            generates a fluent response grounded in that context — which may be
+            generates a fluent response grounded in that context, which may be
             wrong in the specific way the query requires it to be right.
           </p>
           <p>
             This failure is particularly dangerous because it is silent. The
             model does not report that its retrieved context was insufficient.
             It generates a confident, well-structured response. The failure is
-            only detectable through evaluation — and evaluation of RAG systems
+            only detectable through evaluation, and evaluation of RAG systems
             is consistently less rigorous than evaluation of the models that
             power them, because the assumption that retrieval constrains
             generation leads organizations to under-invest in retrieval quality
@@ -241,15 +241,15 @@ function ArticleBody() {
           <p>
             Reliable RAG systems are not simple pipelines. They are five-layer
             architectures, each with distinct design requirements and distinct
-            failure modes. The layers are not independent — failures at Layer 1
-            propagate downstream through every subsequent layer — but they
+            failure modes. The layers are not independent, failures at Layer 1
+            propagate downstream through every subsequent layer, but they
             require separate evaluation and separate investment decisions.
           </p>
         </div>
         <RAGDiagram />
         <div className="article-prose" style={{ marginTop: "1.5rem" }}>
           <p>
-            Most RAG optimization effort is applied at Layer 5 — the generation
+            Most RAG optimization effort is applied at Layer 5, the generation
             and guardrails layer. This is the most visible layer, the one most
             directly associated with the model, and the one that receives the
             most attention in model evaluation. It is also, in most production
@@ -269,7 +269,7 @@ function ArticleBody() {
           <p>
             The quality of a RAG system is bounded by the quality of its
             knowledge base. This is a constraint that cannot be engineered
-            around at the retrieval or generation layer — it is the ceiling
+            around at the retrieval or generation layer, it is the ceiling
             within which every downstream optimization operates. Organizations
             that invest in retrieval infrastructure without investing in
             knowledge architecture build systems with hard quality limits that
@@ -279,9 +279,9 @@ function ArticleBody() {
             <strong>Source selection</strong> determines what the system can
             possibly know. In enterprise contexts, source authority matters as
             much as coverage. Documents that are accurate in general but not
-            authoritative in the specific domain of the query — internally
+            authoritative in the specific domain of the query, internally
             produced summaries rather than primary sources, outdated policy
-            documents, unverified secondary references — contribute noise that
+            documents, unverified secondary references, contribute noise that
             the retrieval system cannot distinguish from signal.
           </p>
           <p>
@@ -291,7 +291,7 @@ function ArticleBody() {
             irrelevant text, degrading the signal-to-noise ratio of the context
             window. Chunks that are too small lose the surrounding context
             required for accurate interpretation. The correct chunking strategy
-            is domain-specific and requires empirical evaluation — not default
+            is domain-specific and requires empirical evaluation, not default
             parameter selection.
           </p>
           <p>
@@ -300,7 +300,7 @@ function ArticleBody() {
             authority levels, and domain tags allow the retrieval system to
             exclude documents that are semantically related but contextually
             inappropriate. Systems without metadata schema are fully dependent
-            on embedding similarity — which is a powerful but imprecise filter.
+            on embedding similarity, which is a powerful but imprecise filter.
           </p>
         </div>
       </div>
@@ -310,9 +310,9 @@ function ArticleBody() {
         <h2>Retrieval Precision: The Binding Constraint</h2>
         <div className="article-prose">
           <p>
-            In the majority of production RAG systems, retrieval precision — the
+            In the majority of production RAG systems, retrieval precision, the
             proportion of retrieved documents that are genuinely relevant to the
-            query — is the binding constraint on system quality. This is not
+            query, is the binding constraint on system quality. This is not
             widely understood, because retrieval precision is not directly
             observable in system output. The model generates responses that
             appear grounded in context regardless of whether that context is the
@@ -329,7 +329,7 @@ function ArticleBody() {
           </p>
           <p>
             Improving retrieval precision requires investment in the retrieval
-            engine itself — query expansion, re-ranking, hybrid search
+            engine itself, query expansion, re-ranking, hybrid search
             (combining semantic and keyword retrieval), and query-time metadata
             filtering. These are not simple parameter adjustments. They require
             architectural decisions with significant implications for latency,
@@ -352,8 +352,8 @@ function ArticleBody() {
         <h2>Guardrails: The Last Defense, Not the First</h2>
         <div className="article-prose">
           <p>
-            Generation-layer guardrails — system prompt constraints that limit
-            what the model can do with its retrieved context — are necessary but
+            Generation-layer guardrails, system prompt constraints that limit
+            what the model can do with its retrieved context, are necessary but
             insufficient. They are the last line of defense in a well-designed
             RAG system, not the primary quality mechanism. Organizations that
             rely on guardrails to compensate for poor knowledge architecture or
@@ -372,8 +372,8 @@ function ArticleBody() {
             rather than generating from prior training data.
           </p>
           <p>
-            These three properties together — scope definition, citation
-            requirement, graceful escalation — do not make a weak retrieval
+            These three properties together, scope definition, citation
+            requirement, graceful escalation, do not make a weak retrieval
             system strong. They make a strong retrieval system auditable and
             safe. The distinction matters: guardrails are a quality assurance
             layer, not a quality generation layer. The generation starts with
@@ -422,7 +422,7 @@ function ArticleCTA() {
       </h3>
       <p>
         I design retrieval architectures that are evaluated at the retrieval
-        layer — not just the generation layer. If your AI system needs to be
+        layer, not just the generation layer. If your AI system needs to be
         right, not just fluent, let's talk.
       </p>
       <a
@@ -441,8 +441,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -451,13 +450,12 @@ function ArticleFooter() {
 
 export default function ArticleRAG() {
   usePageMeta({
-    title: "RAG Architecture in Practice — Jay Burgess",
+    title: "RAG Architecture in Practice, Jay Burgess",
     description:
-      "Retrieval quality — not model quality — is the binding constraint in most enterprise RAG systems. A five-layer architecture for retrieval systems that don't lie.",
+      "Retrieval quality, not model quality, is the binding constraint in most enterprise RAG systems. A five-layer architecture for retrieval systems that don't lie.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

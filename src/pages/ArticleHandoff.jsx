@@ -26,8 +26,8 @@ function ArticleHero() {
         </h1>
         <div className="article-abstract">
           The most common failure mode of consulting and contracting engagements
-          — and a significant source of failure in internal engineering projects
-          — is not technical failure. It is handoff failure: the moment at which
+         , and a significant source of failure in internal engineering projects
+         , is not technical failure. It is handoff failure: the moment at which
           the people who built a system pass operational responsibility to the
           people who will run it, and the running team discovers that what they
           received is not what they can maintain. This paper defines the handoff
@@ -35,7 +35,7 @@ function ArticleHero() {
           that distinguish systems built for handoff from systems built for
           their builders, and argues that the ability to deliver complete,
           operational, independently runnable systems is a distinct engineering
-          competency — one that most organizations neither require nor reward,
+          competency, one that most organizations neither require nor reward,
           to their significant operational cost.
         </div>
         <div className="article-meta-bar">
@@ -79,12 +79,12 @@ const HANDOFF_PROPERTIES = [
   {
     num: "01",
     title: "Operational Documentation",
-    desc: "Documentation that enables a qualified operator to run the system without access to its builders. Not code comments, not architectural diagrams — operational documentation: how to start and stop the system, how to diagnose common failure modes, how to perform routine maintenance, how to escalate when standard procedures are insufficient. If this documentation does not exist, the system is not complete. It is a prototype with a deployment.",
+    desc: "Documentation that enables a qualified operator to run the system without access to its builders. Not code comments, not architectural diagrams, operational documentation: how to start and stop the system, how to diagnose common failure modes, how to perform routine maintenance, how to escalate when standard procedures are insufficient. If this documentation does not exist, the system is not complete. It is a prototype with a deployment.",
   },
   {
     num: "02",
     title: "Explicit Dependency Map",
-    desc: "A complete, accurate, current map of every external system, service, API, credential, and configuration value that the system depends on to function. In production, systems fail at their dependencies — and operators who do not have a dependency map cannot diagnose dependency failures without reverse-engineering the system from scratch. The dependency map is not overhead. It is the operator's first diagnostic tool.",
+    desc: "A complete, accurate, current map of every external system, service, API, credential, and configuration value that the system depends on to function. In production, systems fail at their dependencies, and operators who do not have a dependency map cannot diagnose dependency failures without reverse-engineering the system from scratch. The dependency map is not overhead. It is the operator's first diagnostic tool.",
   },
   {
     num: "03",
@@ -94,7 +94,7 @@ const HANDOFF_PROPERTIES = [
   {
     num: "04",
     title: "Update and Maintenance Protocol",
-    desc: "A documented process for the operations that will recur after handoff: how to update the system, how to update the knowledge base or data that the system depends on, how to add or remove users, how to scale capacity, how to apply security patches. Systems without maintenance protocols are maintained by improvisation — which is inconsistent, error-prone, and produces undocumented system state that compounds future maintenance difficulty.",
+    desc: "A documented process for the operations that will recur after handoff: how to update the system, how to update the knowledge base or data that the system depends on, how to add or remove users, how to scale capacity, how to apply security patches. Systems without maintenance protocols are maintained by improvisation, which is inconsistent, error-prone, and produces undocumented system state that compounds future maintenance difficulty.",
   },
 ];
 
@@ -102,7 +102,7 @@ function PropertiesDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — Four Properties of Handoff-Ready Systems
+        Fig. 1, Four Properties of Handoff-Ready Systems
       </div>
       <div
         style={{
@@ -188,7 +188,7 @@ function ArticleBody() {
           <p>
             This is the handoff problem. It is not caused by malice. It is
             caused by a structural gap between the knowledge required to build a
-            system and the knowledge required to operate one — and the
+            system and the knowledge required to operate one, and the
             consistent failure to treat knowledge transfer as a first-class
             deliverable of the building process.
           </p>
@@ -197,7 +197,7 @@ function ArticleBody() {
             course of building it: the failure modes they encountered and
             resolved, the configuration decisions they made and why, the edge
             cases the system handles and the ones it does not. This knowledge is
-            not documented because it is not perceived as documentation — it is
+            not documented because it is not perceived as documentation, it is
             the background knowledge within which the builder operates. When the
             builder leaves, the knowledge leaves with them.
           </p>
@@ -214,17 +214,17 @@ function ArticleBody() {
             <strong>Knowledge asymmetry:</strong> builders know the system in a
             way that operators do not and cannot without significant investment
             in system exploration. The operational knowledge that makes the
-            builder effective is largely tacit — embedded in pattern recognition
+            builder effective is largely tacit, embedded in pattern recognition
             and diagnostic intuition rather than explicit procedures. It
             transfers poorly through documentation and almost not at all through
             brief handoff meetings.
           </p>
           <p>
             <strong>Delivery incentives:</strong> projects are evaluated on
-            delivery — on whether the system was built and deployed on schedule,
-            within budget, and to specification. Operational readiness — whether
+            delivery, on whether the system was built and deployed on schedule,
+            within budget, and to specification. Operational readiness, whether
             the system can be operated, maintained, and evolved by a team that
-            did not build it — is rarely part of the delivery evaluation. The
+            did not build it, is rarely part of the delivery evaluation. The
             incentive is to ship the system, not to ship the operational
             knowledge required to run it.
           </p>
@@ -232,7 +232,7 @@ function ArticleBody() {
             <strong>Scope definition:</strong> most project scopes define what
             the system will do, not what the operators of that system will need
             to know. The deliverable is the system. The operational
-            documentation, the failure mode playbook, the maintenance protocol —
+            documentation, the failure mode playbook, the maintenance protocol,
             these are not in scope unless they are explicitly specified as
             deliverables. They are not specified because the people who define
             scope often do not have the operational experience to know they are
@@ -243,7 +243,7 @@ function ArticleBody() {
           <p>
             "A system that works is not a complete deliverable. A system that
             works and can be operated, diagnosed, and maintained by a team that
-            did not build it — that is a complete deliverable."
+            did not build it, that is a complete deliverable."
           </p>
         </div>
       </div>
@@ -255,7 +255,7 @@ function ArticleBody() {
           <p>
             Systems built for handoff share four properties that are absent in
             systems built primarily for deployment. These are not documentation
-            checklist items — they are architectural commitments that must be
+            checklist items, they are architectural commitments that must be
             made during the build, not assembled in the final week before
             delivery.
           </p>
@@ -267,7 +267,7 @@ function ArticleBody() {
             operator who did not build the system diagnose and resolve a
             production incident within the standard incident response window,
             using only the handoff materials provided? If not, the handoff is
-            not complete — regardless of how impressive the system's
+            not complete, regardless of how impressive the system's
             functionality is.
           </p>
         </div>
@@ -284,14 +284,14 @@ function ArticleBody() {
             reverse-engineered from the codebase. But systems in which these
             artifacts are built retrospectively are consistently less reliable
             as operational guides than systems in which they are developed
-            alongside the system itself — because retrospective documentation
+            alongside the system itself, because retrospective documentation
             reflects what the builder remembers, not what the operator will
             encounter.
           </p>
           <p>
             The operational documentation is most accurate when it is written by
             the builder at the moment of first encountering the operational
-            decision — when the context for why the decision was made is fresh,
+            decision, when the context for why the decision was made is fresh,
             when the failure modes that were considered and rejected are still
             visible, when the configuration choices are explained by the
             conditions that produced them rather than reconstructed from their
@@ -299,10 +299,10 @@ function ArticleBody() {
           </p>
           <p>
             This requires treating documentation as a concurrent deliverable
-            rather than a final deliverable — which requires project structures
+            rather than a final deliverable, which requires project structures
             and incentive systems that reward operational readiness alongside
             functional completion. In organizations that have made this shift,
-            handoff failures decrease significantly — not because the builders
+            handoff failures decrease significantly, not because the builders
             are more skilled, but because the definition of skill includes the
             ability to leave behind something that runs without you.
           </p>
@@ -319,7 +319,7 @@ function ArticleBody() {
             original builders are no longer available and the operational team
             is managing the system through its first production challenges. At
             that moment, the quality of the handoff materials is the quality of
-            the delivery — because the system's operational value is entirely
+            the delivery, because the system's operational value is entirely
             determined by the operators' ability to keep it running, extend it,
             and diagnose it when it fails.
           </p>
@@ -336,7 +336,7 @@ function ArticleBody() {
             is not "does it work?" It is "can you run it without us?" If the
             answer is yes, the delivery is complete. If the answer is "mostly"
             or "we'll figure it out," the delivery has not yet produced its
-            operational value — and the cost of completing it will fall on the
+            operational value, and the cost of completing it will fall on the
             operators rather than the builders.
           </p>
         </div>
@@ -381,7 +381,7 @@ function ArticleCTA() {
       </h3>
       <p>
         Every system I build includes the documentation, playbooks, and
-        protocols for the team that inherits it. That's not a bonus — it's the
+        protocols for the team that inherits it. That's not a bonus, it's the
         deliverable. Let's talk.
       </p>
       <a
@@ -400,8 +400,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -410,13 +409,12 @@ function ArticleFooter() {
 
 export default function ArticleHandoff() {
   usePageMeta({
-    title: "The Handoff Problem — Jay Burgess",
+    title: "The Handoff Problem, Jay Burgess",
     description:
       "A system that works is not a complete deliverable. Four properties that distinguish systems built for handoff from systems built for their builders.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

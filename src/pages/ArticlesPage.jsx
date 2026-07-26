@@ -1,10 +1,18 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
-import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 
 const ALL_ARTICLES = [
+  {
+    slug: "/article/governing-forward-deployed-ai",
+    category: "AI Governance",
+    readTime: "16 min read",
+    title:
+      "Governing Forward Deployed AI in Regulated Enterprises: A Delivery Framework",
+    abstract:
+      "AI governance frameworks say what good looks like. They rarely say who approves a model change, what evidence a release needs, or how a human override actually works. This is the operating model that closes the gap.",
+  },
   {
     slug: "/article/ai-systems-at-scale",
     category: "AI Systems",
@@ -12,7 +20,7 @@ const ALL_ARTICLES = [
     title:
       "Why AI Systems Fail at Scale: The Architecture Gap Between Demo and Production",
     abstract:
-      "Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural — and fully diagnosable before scale commitment.",
+      "Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural, and fully diagnosable before scale commitment.",
   },
   {
     slug: "/article/data-debt",
@@ -30,7 +38,7 @@ const ALL_ARTICLES = [
     title:
       "Internal Tools as Strategic Infrastructure: Why How You Build for Yourself Predicts Everything",
     abstract:
-      "Internal tools are not overhead — they are the most honest signal an engineering culture emits about its architectural values.",
+      "Internal tools are not overhead, they are the most honest signal an engineering culture emits about its architectural values.",
   },
   {
     slug: "/article/root-cause-diagnosis",
@@ -39,7 +47,7 @@ const ALL_ARTICLES = [
     title:
       "The Principal Architect's Method: How to Walk Into Any System and Find the Root Cause",
     abstract:
-      "Most systems problems are diagnosed at the symptom layer. A structured framework for finding root causes at the architectural level — where fixes actually hold.",
+      "Most systems problems are diagnosed at the symptom layer. A structured framework for finding root causes at the architectural level, where fixes actually hold.",
   },
   {
     slug: "/article/ai-pilots-to-production",
@@ -48,7 +56,7 @@ const ALL_ARTICLES = [
     title:
       "Why AI Pilots Die Before Production: The Organizational Gaps That Kill Good Projects",
     abstract:
-      "AI pilots succeed. Production deployments fail. Five organizational gaps that are diagnosable before the pilot begins — and addressable before they cost you.",
+      "AI pilots succeed. Production deployments fail. Five organizational gaps that are diagnosable before the pilot begins, and addressable before they cost you.",
   },
   {
     slug: "/article/rag-architecture",
@@ -57,7 +65,7 @@ const ALL_ARTICLES = [
     title:
       "RAG Architecture in Practice: Building Retrieval Systems That Don't Lie",
     abstract:
-      "Retrieval quality — not model quality — is the binding constraint in most enterprise RAG deployments. A five-layer architecture for systems that are right, not just fluent.",
+      "Retrieval quality, not model quality, is the binding constraint in most enterprise RAG deployments. A five-layer architecture for systems that are right, not just fluent.",
   },
   {
     slug: "/article/build-vs-buy",
@@ -75,7 +83,7 @@ const ALL_ARTICLES = [
     title:
       "Workflow Automation Done Right: Why Most Automations Break and How to Build Ones That Don't",
     abstract:
-      "Most automations are built for the clean case. Five design principles for automation that survives real-world conditions — edge cases, interface changes, and all.",
+      "Most automations are built for the clean case. Five design principles for automation that survives real-world conditions, edge cases, interface changes, and all.",
   },
   {
     slug: "/article/technical-due-diligence",
@@ -100,7 +108,7 @@ const ALL_ARTICLES = [
     readTime: "7 min read",
     title: "How to Evaluate an AI Vendor Without Getting Fooled by the Demo",
     abstract:
-      "AI vendor demos are engineered for the evaluator. A structured methodology that surfaces production reality — and the questions vendors can't rehearse.",
+      "AI vendor demos are engineered for the evaluator. A structured methodology that surfaces production reality, and the questions vendors can't rehearse.",
   },
   {
     slug: "/article/beyond-prompt-engineering",
@@ -125,14 +133,14 @@ const ALL_ARTICLES = [
     readTime: "9 min read",
     title: "The Agentic Trap: Why Multi-Agent Systems Break Before They Ship",
     abstract:
-      "Five architectural failure patterns specific to agentic systems — and a build sequence that closes the gap between demo and production before it becomes an incident.",
+      "Five architectural failure patterns specific to agentic systems, and a build sequence that closes the gap between demo and production before it becomes an incident.",
   },
   {
     slug: "/article/data-readiness",
     category: "Data Infrastructure",
     readTime: "8 min read",
     title:
-      "The Data Readiness Test: Why Most Organizations Aren't Ready to Build AI — and How to Know If You Are",
+      "The Data Readiness Test: Why Most Organizations Aren't Ready to Build AI, and How to Know If You Are",
     abstract:
       "Most AI projects fail at the data layer, not the model layer. Four dimensions of data readiness and how to assess them before you commit to a build.",
   },
@@ -140,16 +148,15 @@ const ALL_ARTICLES = [
 
 export default function ArticlesPage() {
   usePageMeta({
-    title: "Articles — Jay Burgess",
+    title: "Articles, Jay Burgess",
     description:
-      "Expert writing on AI systems, data infrastructure, internal tools, and technical leadership from Jay Burgess — Principal AI Engineer.",
+      "Expert writing on AI systems, data infrastructure, internal tools, and technical leadership from Jay Burgess, Principal Forward Deployed Engineer.",
   });
 
   const gridRef = useReveal();
 
   return (
     <>
-      <Nav />
       <section
         style={{
           paddingTop: "8rem",
@@ -167,8 +174,8 @@ export default function ArticlesPage() {
           <p className="articles-sub">
             Expert writing on AI systems, data infrastructure, internal tools,
             and technical leadership. Each piece is written from the perspective
-            of someone who has built and broken these systems in production —
-            not from the outside looking in.
+            of someone who has built and broken these systems in production, not
+            from the outside looking in.
           </p>
         </div>
       </section>

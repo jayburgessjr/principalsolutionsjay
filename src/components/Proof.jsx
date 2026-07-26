@@ -1,88 +1,59 @@
+import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 
 const proofRows = [
   {
     index: "01",
-    label: "AI System · HEAG · 2025 · Live",
-    title: "ReggieAI — Title IV Compliance AI",
-    desc: "Led the full initiative end to end — diagnosis, architecture, build, team handoff. Transformed broken manual compliance processes into a production agentic AI system with guardrails, API integration, and a structured regulatory knowledge base. Delivered ahead of schedule. Team runs it independently.",
-    methodLabel: "How I did it",
+    label: "Regulated AI · Title IV · Live",
+    title: "Higher Ed Compliance Software",
+    desc: "A compliance team at a regulated Title IV student-aid provider was buried in rules and manual checks. I built them a multi-agent platform on Claude, LangGraph, and MCP, and I stayed with it from the first discovery call through launch and the handoff. It runs today inside a federally regulated environment.",
+    methodLabel: "What I built",
     steps: [
-      "Diagnosed: compliance errors from unstructured knowledge, not staff error",
-      "Architected JSON knowledge base from FSA regulatory sources",
-      "Built RAG pipeline + anti-hallucination system prompt",
-      "Replaced manual process with live HubSpot API integration",
-      "Trained team on system — documented for full independent operation",
+      "JSON regulatory knowledge base built from FSA Title IV sources",
+      "RAG pipeline with anti-hallucination guardrails and deterministic policy execution",
+      "Human-in-the-loop review, audit logging, and structured outputs",
+      "Live HubSpot API integration replacing the manual process",
     ],
-    outcomeLabel: "Deployment status",
-    outcomeNum: "Live",
-    outcomeDesc: "Production deployment. Team runs it independently.",
+    outcomeLabel: "Result",
+    outcomeNum: "$2.7M",
+    outcomeDesc:
+      "New revenue in the first three months on a $1.7M base, and 25% more case-processing capacity with no new hires.",
+    link: "/higher-ed-compliance-software",
   },
   {
     index: "02",
-    label: "Open Source · Reference Architecture",
-    title: "Eligibility-Agent — Regulated Agentic AI",
-    desc: "Designed and open-sourced a reference implementation for regulated agentic AI using Claude, LangGraph, and MCP. Demonstrates deterministic policy evaluation, structured JSON outputs, human-in-the-loop routing, and production-ready compliance architecture.",
-    methodLabel: "What it demonstrates",
+    label: "Enterprise scale · Walmart · Creative Operations",
+    title: "Walmart, a data org built from scratch",
+    desc: "Creative Operations had plenty of data and no way to trust it. As Senior Data Scientist and Analytics Lead I turned the bottlenecks into clean models and tools leaders could actually decide with, then built the data organization to keep it running at Walmart's scale.",
+    methodLabel: "What I built",
     steps: [
-      "Deterministic policy evaluation with structured JSON outputs",
-      "Human-in-the-loop routing for regulated decisions",
-      "Production-ready compliance architecture on Claude + LangGraph + MCP",
-      "An open pattern others can build regulated agents from",
+      "SQL and dbt pipelines unifying creative production and campaign operations into governed models",
+      "Python and scikit-learn anomaly detection for spend spikes and workflow deviations",
+      "Real-time operating metrics and executive decision-support tools",
+      "A Data Council governance model designed to outlast my engagement",
     ],
-    outcomeLabel: "Availability",
-    outcomeNum: "Open source",
-    outcomeDesc: "github.com/jayburgessjr/eligibility-agent",
+    outcomeLabel: "Result",
+    outcomeNum: "37%",
+    outcomeDesc: "A 37% jump in project completion rates across the division.",
+    link: "/walmart-case-study",
   },
   {
     index: "03",
-    label: "Internal Tooling · HEAG · Runs independently",
-    title: "OpsFlow — Operational Execution Platform",
-    desc: "Diagnosed fragmented project management as a root-cause coordination failure. Designed and built a custom execution platform replacing Jira — real-time compliance tracking, workflow orchestration, analytics, and executive reporting aligned to federal policy requirements. Trained the team to own it. It still runs.",
-    methodLabel: "How I did it",
-    steps: [
-      "Identified coordination failure as root cause of delivery delays",
-      "Designed data model and UX from scratch",
-      "Wrote QA specs and engineering standards the team now owns",
-      "Structured and led team training — zero ongoing dependency on me",
-    ],
-    outcomeLabel: "Dependency on me after handoff",
-    outcomeNum: "0",
-    outcomeDesc: "Team owns it fully — runs without me.",
-  },
-  {
-    index: "04",
-    label: "Enterprise · Fortune 500",
-    title: "Walmart & Adobe — Enterprise Systems",
-    desc: "Designed and led data and systems architecture inside two of the most demanding enterprise environments on earth. Built organizations around the work — not just systems. Left behind documented standards and capable teams.",
-    methodLabel: "What I brought",
-    steps: [
-      "Built Creative Operations data org from zero at Walmart — Fortune 1 scale",
-      "37% improvement in project completion rates at Walmart",
-      "86% reduction in executive reporting turnaround at Adobe (~$6B marketing spend)",
-      "Translated complex technical systems into executive-level decision support",
-      "Delivered with rigorous documentation, training, and structured handoff",
-    ],
-    outcomeLabel: "Enterprise outcomes",
-    outcomeNum: "86%",
-    outcomeDesc:
-      "Faster exec reporting · Adobe. 37% higher project completion · Walmart.",
-  },
-  {
-    index: "05",
     label: "Founder · Revuity Systems",
-    title: "8 products shipped — as founder & operator",
-    desc: "Founded Revuity Systems and shipped 8 products across 5 verticals — solo or with a small team. This proves I can own outcomes, lead the build, and hold accountability with no organization to fall back on.",
-    methodLabel: "What this proves",
+    title: "Revuity Agentic OS",
+    desc: "Revuity is the company I started to prove I could do this with no big organization behind me. Its Agentic OS is the machinery that makes agentic delivery repeatable, and I built the whole thing myself.",
+    methodLabel: "What I built",
     steps: [
-      "VoltIQ, Box Office Beacon, MenuIQ, and more — each architected and deployed",
-      "Led design, architecture, and delivery decisions across every product",
-      "Shipped in weeks, not quarters — validated before over-building",
-      "Each product runs without ongoing maintenance dependency",
+      "8 agents, 12 MCP servers, and 197 reusable skills",
+      "Multi-tenant SaaS on Next.js, FastAPI, Supabase, PostgreSQL, pgvector, RBAC, row-level security",
+      "Production LLM controls: tool contracts, evals, deterministic routing, audit trails, human approval",
+      "Platform consolidation and white-label deployments",
     ],
-    outcomeLabel: "Verticals · products in market",
-    outcomeNum: "5",
-    outcomeDesc: "8 products across 5 verticals.",
+    outcomeLabel: "Result",
+    outcomeNum: "$250K+",
+    outcomeDesc:
+      "More than $250K in SaaS savings, plus a 15% lift in sales and marketing.",
+    link: "/revuity-case-study",
   },
 ];
 
@@ -94,11 +65,12 @@ export default function Proof() {
       <div className="proof-inner">
         <div className="section-label">Selected work</div>
         <h2 className="method-h2" style={{ marginBottom: "1rem" }}>
-          Where I've <em>led and delivered.</em>
+          Three systems. Regulated AI, enterprise scale, founder speed.
         </h2>
         <p className="method-intro">
-          Real problems. Real systems. Real outcomes — with teams that can
-          operate them independently.
+          Different problems, one job. I owned each of these from the first
+          conversation to the day the team ran it without me, and all three are
+          live in production.
         </p>
 
         <div className="proof-grid reveal" ref={gridRef}>
@@ -109,6 +81,9 @@ export default function Proof() {
                 <div className="pr-main-label">{row.label}</div>
                 <h3>{row.title}</h3>
                 <p>{row.desc}</p>
+                <Link to={row.link} className="pr-link">
+                  Read the case study →
+                </Link>
               </div>
               <div className="pr-method">
                 <div className="pr-method-label">{row.methodLabel}</div>

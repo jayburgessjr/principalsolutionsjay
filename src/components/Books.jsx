@@ -28,7 +28,7 @@ export default function Books() {
             <em>Built From the Field.</em>
           </h2>
           <p className="books-sub">
-            Practical frameworks for engineers and operators building autonomous AI systems — drawn from real deployments, not demos.
+            Practical frameworks for engineers and operators building autonomous AI systems, drawn from real deployments, not demos.
           </p>
         </div>
         <div className="books-row reveal" ref={rowRef}>

@@ -19,7 +19,7 @@ Portfolio site for Jay Burgess — Founder & Principal Forward Deployed Engineer
 | `/`                   | Main portfolio                    |
 | `/about`              | About Jay                         |
 | `/engagement`         | Engagement models & rates         |
-| `/reggie-case-study`  | ReggieAI — Title IV compliance AI |
+| `/higher-ed-compliance-software`  | Higher Ed Compliance Software (Title IV) |
 | `/revuity-case-study` | Revuity Systems — AI studio       |
 | `/walmart-case-study` | Walmart Creative Operations       |
 | `/revuity-products`   | Full product catalog              |

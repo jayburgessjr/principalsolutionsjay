@@ -52,7 +52,7 @@ const fit = [
   },
   {
     label: "Full-Time Target",
-    body: "$350K+ total compensation for the right principal, VP, or operator-level role — structured around ownership of outcomes, not hours.",
+    body: "$350K+ total compensation for the right principal, VP, or operator-level role, structured around ownership of outcomes, not hours.",
   },
   {
     label: "Not A Fit",
@@ -274,8 +274,7 @@ function Footer() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -284,14 +283,13 @@ function Footer() {
 
 export default function EngagementPage() {
   usePageMeta({
-    title: "Engagement Models — Jay Burgess",
+    title: "Engagement Models, Jay Burgess",
     description:
       "How to work with Jay Burgess: diagnostic sprints, fractional architecture, CTO, and CIO engagements, embedded build ownership, and compensation fit.",
   });
 
   return (
     <>
-      <EngagementNav />
       <Hero />
       <Models />
       <CompensationFit />

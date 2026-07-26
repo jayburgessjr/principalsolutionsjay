@@ -30,12 +30,12 @@ function Hero() {
           Operations
         </h1>
         <p className="cs-subtitle">
-          From Spreadsheets and Chaos to Decision Intelligence — in Three
+          From Spreadsheets and Chaos to Decision Intelligence, in Three
           Quarters
         </p>
         <p className="cs-desc">
           How I walked into the world's largest retailer with no data
-          department, no infrastructure, and no playbook — and built an entire
+          department, no infrastructure, and no playbook, and built an entire
           data organization from the ground up, driving a 37% improvement in
           project completion rates in three quarters.
         </p>
@@ -43,13 +43,13 @@ function Hero() {
           <div className="cs-meta-item">
             <div className="cmi-label">Organization</div>
             <div className="cmi-val">
-              Walmart Creative Operations — Marketing & Advertising Division
+              Walmart Creative Operations, Marketing & Advertising Division
             </div>
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">My Role</div>
             <div className="cmi-val">
-              Data Scientist — functioning as full Data Organization Architect
+              Data Scientist, functioning as full Data Organization Architect
             </div>
           </div>
           <div className="cs-meta-item">
@@ -87,9 +87,9 @@ function Situation() {
         <div className="situation-grid reveal" ref={ref}>
           <div className="situation-prose">
             <p>
-              When I was brought into Walmart's Creative Operations division —
+              When I was brought into Walmart's Creative Operations division,
               the team responsible for marketing, advertising, and creative
-              production at scale — I found something that shouldn't exist at a
+              production at scale, I found something that shouldn't exist at a
               Fortune 1 company: <strong>no data department.</strong>
             </p>
             <p>
@@ -97,7 +97,7 @@ function Situation() {
               financial data across creative production, asset management, cost
               allocation, vendor relationships, and campaign execution. None of
               it was being structured, analyzed, or used to make decisions. It
-              was sitting in spreadsheets — hundreds of them — maintained by
+              was sitting in spreadsheets, hundreds of them, maintained by
               individual contributors with no shared schema, no governance, and
               no single source of truth.
             </p>
@@ -117,15 +117,15 @@ function Situation() {
               I was brought in as a Data Scientist. What the situation actually
               required was{" "}
               <strong>
-                a full data organization — strategy, engineering, governance,
-                and intelligence — built from zero.
+                a full data organization, strategy, engineering, governance,
+                and intelligence, built from zero.
               </strong>{" "}
               So that's what I built.
             </p>
           </div>
           <div>
             <div className="chaos-box">
-              <div className="chaos-label">What I Found — Day One</div>
+              <div className="chaos-label">What I Found, Day One</div>
               <div className="chaos-text">
                 <strong>No data infrastructure.</strong> Hundreds of
                 disconnected spreadsheets across teams with no shared schema, no
@@ -137,14 +137,14 @@ function Situation() {
               <div className="chaos-text">
                 <strong>Decision-making without data.</strong> Asset costs,
                 production forecasts, and pricing decisions were being made on
-                instinct — at the scale of the world's largest retailer.
+                instinct, at the scale of the world's largest retailer.
               </div>
             </div>
             <div className="chaos-box">
               <div className="chaos-label">The Cost of No Visibility</div>
               <div className="chaos-text">
                 <strong>Operational bottlenecks and workflow deviations</strong>{" "}
-                were invisible — projects stalled and spend spiked with no way
+                were invisible, projects stalled and spend spiked with no way
                 to see why, across a single division of the world's largest
                 retailer.
               </div>
@@ -173,7 +173,7 @@ function WhatIBuilt() {
       desc: (
         <>
           Designed and implemented the division's entire data strategy from
-          first principles — how data would be collected, structured, governed,
+          first principles, how data would be collected, structured, governed,
           and used to drive decisions. No template to follow. Built for the
           specific operational reality of a creative production organization at
           Walmart's scale.
@@ -185,7 +185,7 @@ function WhatIBuilt() {
       title: "End-to-End Data Architecture",
       desc: (
         <>
-          Replaced the spreadsheet chaos with a structured data architecture —
+          Replaced the spreadsheet chaos with a structured data architecture,
           ingestion pipelines, data models, transformation layers, and a unified
           schema that all teams could work from.{" "}
           <strong>
@@ -201,7 +201,7 @@ function WhatIBuilt() {
         <>
           Built custom ML algorithms to forecast asset costs and model
           cost-per-unit across different production scenarios. These weren't
-          static models — they were <strong>decision intelligence tools</strong>{" "}
+          static models, they were <strong>decision intelligence tools</strong>{" "}
           that answered "what happens to our cost structure if we do X instead
           of Y?"
         </>
@@ -210,7 +210,7 @@ function WhatIBuilt() {
     {
       num: "04",
       title: "Pricing & Cost-Per-Unit Intelligence",
-      desc: "Related asset costs to pricing decisions and cost-per-unit metrics in a way that had never been done in this division. Leadership could finally see the full cost lifecycle of a creative asset — production, revisions, distribution, and downstream usage — in a single view.",
+      desc: "Related asset costs to pricing decisions and cost-per-unit metrics in a way that had never been done in this division. Leadership could finally see the full cost lifecycle of a creative asset, production, revisions, distribution, and downstream usage, in a single view.",
     },
     {
       num: "05",
@@ -231,21 +231,21 @@ function WhatIBuilt() {
     {
       num: "06",
       title: "Decision Intelligence Dashboards",
-      desc: "Built visualizations that weren't passive reports — they were active decision tools. Leaders could model scenarios, track actuals vs. forecasts in real time, and see cost and efficiency implications before committing to production decisions.",
+      desc: "Built visualizations that weren't passive reports, they were active decision tools. Leaders could model scenarios, track actuals vs. forecasts in real time, and see cost and efficiency implications before committing to production decisions.",
     },
   ];
   const algoBlocks = [
     {
       title: "Asset Cost Forecasting",
-      desc: "ML models that predicted the true cost of a creative asset across its full production lifecycle — not just the initial production cost but revisions, usage rights, and downstream distribution.",
+      desc: "ML models that predicted the true cost of a creative asset across its full production lifecycle, not just the initial production cost but revisions, usage rights, and downstream distribution.",
     },
     {
       title: "Cost-Per-Unit Modeling",
-      desc: "Related asset production costs to unit economics at scale — answering how cost structures shift as production volume changes, and where the efficiency inflection points are.",
+      desc: "Related asset production costs to unit economics at scale, answering how cost structures shift as production volume changes, and where the efficiency inflection points are.",
     },
     {
       title: "Scenario Simulation",
-      desc: '"What happens if we do this vs. that?" — predictive models that quantified the financial impact of production and resource decisions before they were made.',
+      desc: '"What happens if we do this vs. that?", predictive models that quantified the financial impact of production and resource decisions before they were made.',
     },
     {
       title: "Pricing Intelligence",
@@ -256,7 +256,7 @@ function WhatIBuilt() {
     {
       step: "Structure",
       title: "Cross-functional Data Council",
-      desc: "Created a governance body with leaders from every major team — giving them direct input into how data was defined, collected, and used.",
+      desc: "Created a governance body with leaders from every major team, giving them direct input into how data was defined, collected, and used.",
     },
     {
       step: "Purpose",
@@ -266,7 +266,7 @@ function WhatIBuilt() {
     {
       step: "Outcome",
       title: "Institutional Data Culture",
-      desc: "The Data Council meant the infrastructure outlasted my engagement — it was embedded in how the organization operated, not dependent on one person.",
+      desc: "The Data Council meant the infrastructure outlasted my engagement, it was embedded in how the organization operated, not dependent on one person.",
     },
   ];
 
@@ -284,7 +284,7 @@ function WhatIBuilt() {
         </h2>
         <p className="method-intro">
           I didn't come in and build a report. I built the infrastructure, the
-          governance model, the algorithms, and the intelligence layer — end to
+          governance model, the algorithms, and the intelligence layer, end to
           end. Here's what that actually looked like.
         </p>
 
@@ -304,7 +304,7 @@ function WhatIBuilt() {
           <div>
             <div className="algo-section">
               <div className="algo-label">
-                The Algorithm Layer — Decision Intelligence, Not Just Reporting
+                The Algorithm Layer, Decision Intelligence, Not Just Reporting
               </div>
               <div className="algo-grid">
                 {algoBlocks.map((b) => (
@@ -328,7 +328,7 @@ function WhatIBuilt() {
                   marginTop: "2rem",
                 }}
               >
-                Data Governance — The Data Council Model
+                Data Governance, The Data Council Model
               </div>
               <div className="council-flow">
                 {councilBlocks.map((b) => (
@@ -353,7 +353,7 @@ function KeyQuote() {
       <div className="kq-inner">
         <div className="kq-text">
           "The goal was never to build better spreadsheets. It was to make
-          spreadsheets irrelevant — by replacing intuition-driven decisions with
+          spreadsheets irrelevant, by replacing intuition-driven decisions with
           a system that could tell you, with quantified confidence, what the
           right decision was and what it would cost to be wrong."
         </div>
@@ -372,7 +372,7 @@ function Outcomes() {
     {
       num: "37%",
       label: "Project Completion ↑",
-      desc: "Improvement in project completion rates across three quarters — driven by statistical anomaly detection that surfaced operational bottlenecks, spend spikes, and workflow deviations in real time, in a single division of a Fortune 1 company",
+      desc: "Improvement in project completion rates across three quarters, driven by statistical anomaly detection that surfaced operational bottlenecks, spend spikes, and workflow deviations in real time, in a single division of a Fortune 1 company",
     },
     {
       num: "3",
@@ -382,7 +382,7 @@ function Outcomes() {
     {
       num: "0→1",
       label: "Data Organization Built",
-      desc: "Strategy, engineering, governance, analytics, and ML — a complete data organization where none existed. Not a project. An institution.",
+      desc: "Strategy, engineering, governance, analytics, and ML, a complete data organization where none existed. Not a project. An institution.",
     },
   ];
   const details = [
@@ -394,17 +394,17 @@ function Outcomes() {
     {
       label: "How the Algorithms Found It",
       title: "Predictive Cost Modeling",
-      desc: "The ML forecasting models didn't just track historical costs — they projected what current decisions would cost in future quarters. By modeling 'do this vs. don't do this,' leadership could see the financial consequence of decisions before making them.",
+      desc: "The ML forecasting models didn't just track historical costs, they projected what current decisions would cost in future quarters. By modeling 'do this vs. don't do this,' leadership could see the financial consequence of decisions before making them.",
     },
     {
       label: "What Changed Organizationally",
       title: "From Gut to Data-Driven",
-      desc: "The Data Council and governance model meant decisions that were previously made by instinct were now made with dashboards open, forecasts visible, and cost implications quantified. The culture shifted — not just the tools.",
+      desc: "The Data Council and governance model meant decisions that were previously made by instinct were now made with dashboards open, forecasts visible, and cost implications quantified. The culture shifted, not just the tools.",
     },
     {
       label: "What I Left Behind",
       title: "A Self-Sustaining Data Organization",
-      desc: "The infrastructure, governance model, and Data Council were designed to run without me. When I left, the division had a functioning data organization — not a dependency on one data scientist. That's what institutional architecture looks like.",
+      desc: "The infrastructure, governance model, and Data Council were designed to run without me. When I left, the division had a functioning data organization, not a dependency on one data scientist. That's what institutional architecture looks like.",
     },
   ];
   return (
@@ -462,13 +462,13 @@ function EVRelevance() {
       tag: '"ship every layer, not just the AI components"',
       title: "What Walmart Proves",
       proof:
-        "The entire data architecture at Walmart Creative Operations — ingestion, transformation, modeling, visualization — was designed and built by me. Not configured. Architected from first principles for a specific operational context.",
+        "The entire data architecture at Walmart Creative Operations, ingestion, transformation, modeling, visualization, was designed and built by me. Not configured. Architected from first principles for a specific operational context.",
     },
     {
       tag: '"hand off so the team stays self-sufficient"',
       title: "What Walmart Proves",
       proof:
-        "The Data Council governance model was specifically designed to outlast my engagement. I didn't build a system that needed me — I built an institution that ran on its own. That's the handoff discipline a forward-deployed role runs on.",
+        "The Data Council governance model was specifically designed to outlast my engagement. I didn't build a system that needed me, I built an institution that ran on its own. That's the handoff discipline a forward-deployed role runs on.",
     },
   ];
   return (
@@ -484,7 +484,7 @@ function EVRelevance() {
         </h2>
         <p className="method-intro">
           The Walmart engagement wasn't a data science project. It was an
-          embedded build — compressed into one division of a Fortune 1 company:
+          embedded build, compressed into one division of a Fortune 1 company:
           scope the real problem, ship every layer, harden it, and hand it off.
           The same motion a forward deployed engineer runs every day.
         </p>
@@ -514,9 +514,9 @@ function CTA() {
           <span>Builder speed.</span>
         </h3>
         <p>
-          Walmart proved I can operate at the largest scale. ReggieAI proved I
+          Walmart proved I can operate at the largest scale. Higher Ed Compliance Software proved I
           can ship AI in regulated environments. Revuity proves I move fast as a
-          founder. All three together — that's a forward deployed engineer.
+          founder. All three together, that's a forward deployed engineer.
         </p>
         <a
           href="https://calendly.com/jayburgessjr/long-meet"
@@ -526,8 +526,8 @@ function CTA() {
         >
           Schedule a Call →
         </a>
-        <Link to="/reggie-case-study" className="btn-ghost">
-          ReggieAI Case Study →
+        <Link to="/higher-ed-compliance-software" className="btn-ghost">
+          Higher Ed Compliance Software Case Study →
         </Link>
       </div>
     </section>
@@ -538,8 +538,7 @@ function CaseStudyFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -548,14 +547,13 @@ function CaseStudyFooter() {
 
 export default function WalmartCaseStudy() {
   usePageMeta({
-    title: "Walmart Creative Operations Case Study — Jay Burgess",
+    title: "Walmart Creative Operations Case Study, Jay Burgess",
     description:
       "How Jay Burgess built a data organization from scratch inside Walmart Creative Operations and drove a 37% improvement in project completion rates in three quarters.",
   });
 
   return (
     <>
-      <CaseStudyNav />
       <Hero />
       <Situation />
       <WhatIBuilt />

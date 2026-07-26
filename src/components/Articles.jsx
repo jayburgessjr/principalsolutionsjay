@@ -7,14 +7,14 @@ const FEATURED_ARTICLES = [
     category: 'AI Systems',
     readTime: '9 min read',
     title: 'Why AI Systems Fail at Scale: The Architecture Gap Between Demo and Production',
-    abstract: 'Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural — and fully diagnosable before scale commitment.',
+    abstract: 'Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural, and fully diagnosable before scale commitment.',
   },
   {
     slug: '/article/root-cause-diagnosis',
     category: 'Systems Diagnosis',
     readTime: '8 min read',
     title: 'The Principal Architect\'s Method: How to Walk Into Any System and Find the Root Cause',
-    abstract: 'Most systems problems are diagnosed at the symptom layer. A structured framework for finding root causes at the architectural level — where fixes actually hold.',
+    abstract: 'Most systems problems are diagnosed at the symptom layer. A structured framework for finding root causes at the architectural level, where fixes actually hold.',
   },
   {
     slug: '/article/the-handoff-problem',

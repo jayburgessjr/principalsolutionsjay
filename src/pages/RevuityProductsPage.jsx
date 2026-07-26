@@ -15,7 +15,7 @@ const FEATURED = [
     features: [
       {
         label: "Weekly Permit Velocity",
-        desc: "Track how fast permits are being pulled across your target markets — surface emerging demand before competitors act.",
+        desc: "Track how fast permits are being pulled across your target markets, surface emerging demand before competitors act.",
       },
       {
         label: "$/W Benchmark Tracker",
@@ -44,7 +44,7 @@ const FEATURED = [
       },
       {
         label: "Risk Mitigation Strategy",
-        desc: "Quantified risk scoring across genre, talent, budget tier, and release window — decision intelligence, not gut instinct.",
+        desc: "Quantified risk scoring across genre, talent, budget tier, and release window, decision intelligence, not gut instinct.",
       },
       {
         label: "Talent Impact Analytics",
@@ -61,11 +61,11 @@ const FEATURED = [
     vertical: "Business Intelligence",
     status: "Early Access",
     tagline: "Built for restaurant operators, not accountants.",
-    desc: "Analyzing your recipes, costs, and pricing to show you exactly which dishes make money — and which ones quietly drain it. Protect your margins with data you can actually act on.",
+    desc: "Analyzing your recipes, costs, and pricing to show you exactly which dishes make money, and which ones quietly drain it. Protect your margins with data you can actually act on.",
     features: [
       {
         label: "Food Cost Calculator",
-        desc: "Input your recipe ingredients and supplier costs. Get an accurate food cost percentage per dish — updated whenever costs change.",
+        desc: "Input your recipe ingredients and supplier costs. Get an accurate food cost percentage per dish, updated whenever costs change.",
       },
       {
         label: "Margin Intelligence",
@@ -73,7 +73,7 @@ const FEATURED = [
       },
       {
         label: "Price Optimization",
-        desc: "Data-driven pricing recommendations that protect margins without alienating customers — grounded in your actual cost structure.",
+        desc: "Data-driven pricing recommendations that protect margins without alienating customers, grounded in your actual cost structure.",
       },
     ],
     href: null,
@@ -94,7 +94,7 @@ const CATALOG = [
     name: "ProductionOS",
     price: "$49/mo",
     vertical: "Creative & Film Tools",
-    desc: "End-to-end OS for filmmakers — from pre-production to distribution.",
+    desc: "End-to-end OS for filmmakers, from pre-production to distribution.",
     status: "Live",
     href: null,
   },
@@ -307,7 +307,7 @@ function CatalogSection() {
           <em>All live or in early access.</em>
         </h2>
         <p className="method-intro">
-          The full Revuity catalog spans games, faith, film, and business — each
+          The full Revuity catalog spans games, faith, film, and business, each
           product independently operated, each solving a distinct problem in its
           vertical.
         </p>
@@ -332,7 +332,7 @@ function ProductsCTA() {
         </h3>
         <p>
           Revuity is how I demonstrate I can build and ship AI products at speed
-          — across verticals, without a team. That's the operator proof.
+         , across verticals, without a team. That's the operator proof.
         </p>
         <a
           href="https://calendly.com/jayburgessjr/long-meet"
@@ -354,8 +354,7 @@ function ProductsFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -364,14 +363,13 @@ function ProductsFooter() {
 
 export default function RevuityProductsPage() {
   usePageMeta({
-    title: "Revuity Products — Jay Burgess",
+    title: "Revuity Products, Jay Burgess",
     description:
       "Eight independent Revuity Systems products across data intelligence, film tools, games, faith, and business intelligence.",
   });
 
   return (
     <>
-      <ProductsNav />
       <ProductsHero />
       {FEATURED.map((p, i) => (
         <FeaturedProduct key={p.id} product={p} index={i} />

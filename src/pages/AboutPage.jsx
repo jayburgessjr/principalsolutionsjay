@@ -26,24 +26,21 @@ function Hero() {
       <div className="hero-bg-text">JAY</div>
       <div className="cs-inner">
         <div className="cs-eyebrow">
-          Executive Brief · Principal AI Engineer · Founder & Principal Forward
-          Deployed Engineer, Revuity Systems
+          Executive Brief · Principal Forward Deployed Engineer · Founder,
+          Revuity Systems
         </div>
         <h1 className="cs-title">
           Who Is
           <br />
           <span>Jay Burgess</span>
         </h1>
-        <p className="cs-subtitle">
-          The one-page read before the conversation.
-        </p>
         <p className="cs-desc">
-          Jay Burgess is a Principal AI Engineer and systems owner with 15+
-          years of experience diagnosing broken systems, developing the teams
-          that lead the fix, and leaving behind organizations that run without
-          him. He has delivered measurable, documented outcomes across Fortune
-          500 enterprise work, regulated AI deployments, and product builds —
-          and he does it by owning the outcome, not just the work.
+          Jay Burgess is a Principal Forward Deployed Engineer and systems owner
+          with 15+ years of experience diagnosing broken systems, developing the
+          teams that lead the fix, and leaving behind organizations that run
+          without him. He has delivered measurable, documented outcomes across
+          Fortune 500 enterprise work, regulated AI deployments, and product
+          builds, and he does it by owning the outcome, not just the work.
         </p>
         <p className="cs-desc">
           AI will change work. That is not in question. What is in question is
@@ -97,7 +94,7 @@ function TheOperator() {
             <div className="proves-cell-label">The difference</div>
             <p>
               Most architects hand off decks and disappear. Jay owns the outcome
-              — developing the team to lead the initiative, setting the
+              , developing the team to lead the initiative, setting the
               architecture they build to, and staying close enough to step in
               when the execution demands it.
             </p>
@@ -121,9 +118,9 @@ function TheOperator() {
             <div className="proves-cell-label">The standard</div>
             <p>
               Every initiative Jay owns ends with a team that can run it
-              independently. Building that capability — and the system
-              underneath it — is the deliverable. Single-point-of-failure,
-              including Jay, is a design failure.
+              independently. Building that capability, and the system underneath
+              it, is the deliverable. Single-point-of-failure, including Jay, is
+              a design failure.
             </p>
           </div>
         </div>
@@ -131,13 +128,13 @@ function TheOperator() {
           "A laser focus I would compare to a mad genius. He is a problem solver
           and a connector. If you get a chance to work with this guy, your life
           will get better."
-          <cite>— Mark Fu · CFO &amp; Angel Investor</cite>
+          <cite>Mark Fu · CFO &amp; Angel Investor</cite>
         </blockquote>
         <blockquote className="about-pullquote">
           "I am not big enough to bend the whole curve. I am exactly the right
           size to bend it inside every organization I touch, and that
           compounds."
-          <cite>— Jay Burgess</cite>
+          <cite>Jay Burgess</cite>
         </blockquote>
       </div>
     </section>
@@ -152,13 +149,13 @@ function TrackRecord() {
       co: "Revuity Systems",
       role: "Founder & Principal Forward Deployed Engineer · Jan 2022–Present",
       impact: "8 Products",
-      what: "Founded and built in parallel with the roles below. A lean AI-first software company — embedded with enterprise and PE stakeholders, translated operational workflows into production AI systems, and shipped products across 5 verticals including VoltIQ and MenuIQ. Owns outcomes with no team to hide behind.",
+      what: "Founded and built in parallel with the roles below. A lean AI-first software company, embedded with enterprise and PE stakeholders, translated operational workflows into production AI systems, and shipped products across 5 verticals including VoltIQ and MenuIQ. Owns outcomes with no team to hide behind.",
     },
     {
-      co: "HEAG",
-      role: "Principal AI Engineer · Nov 2024–Present",
+      co: "Regulated Title IV provider",
+      role: "Principal Forward Deployed Engineer · Nov 2024–Present",
       impact: "Production",
-      what: "Concurrent with Revuity Systems. Architected and deployed ReggieAI, a production multi-agent Title IV compliance platform (Claude, LangGraph, MCP), and OpsFlow, a custom operational execution platform replacing Jira. Governed human review, deterministic policy execution, and full audit logging — delivered ahead of schedule and run independently by the team.",
+      what: "Concurrent with Revuity Systems. Architected and deployed Higher Ed Compliance Software, a production multi-agent Title IV compliance platform (Claude, LangGraph, MCP), and OpsFlow, a custom operational execution platform replacing Jira. Governed human review, deterministic policy execution, and full audit logging, delivered ahead of schedule and run independently by the team.",
     },
     {
       co: "Walmart",
@@ -215,7 +212,7 @@ function WhatHeBrings() {
   const capabilities = [
     {
       label: "AI & Agentic Systems",
-      body: "RAG pipelines, multi-agent orchestration, evaluation frameworks, anti-hallucination architecture. Production-grade — not demos.",
+      body: "RAG pipelines, multi-agent orchestration, evaluation frameworks, anti-hallucination architecture. Production-grade, not demos.",
     },
     {
       label: "Data Engineering",
@@ -297,7 +294,7 @@ function WhatHesLookingFor() {
             <div className="proves-cell-label">Full-Time</div>
             <p>
               The right Principal, VP, or operator-level role at $350K+ total
-              compensation. Structured around ownership of outcomes — not hours
+              compensation. Structured around ownership of outcomes, not hours
               logged.
             </p>
           </div>
@@ -336,8 +333,8 @@ function CTA() {
         </h3>
         <p>
           The fastest way to know if there's a fit is a 30-minute conversation.
-          Come with the problem — Jay will tell you straight whether he can
-          solve it.
+          Come with the problem, Jay will tell you straight whether he can solve
+          it.
         </p>
         <a
           href="https://calendly.com/jayburgessjr/long-meet"
@@ -359,8 +356,8 @@ function Footer() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
+        Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -369,14 +366,13 @@ function Footer() {
 
 export default function AboutPage() {
   usePageMeta({
-    title: "Who Is Jay Burgess — Executive Brief",
+    title: "Who Is Jay Burgess, Executive Brief",
     description:
-      "Principal AI Engineer. 15+ years enterprise systems, 5+ years AI/agentic. 86% reduction in executive reporting turnaround (Adobe). The one-page executive brief on who Jay Burgess is, what he has built, and how to work with him.",
+      "Principal Forward Deployed Engineer. 15+ years enterprise systems, 5+ years AI/agentic. 86% reduction in executive reporting turnaround (Adobe). The one-page executive brief on who Jay Burgess is, what he has built, and how to work with him.",
   });
 
   return (
     <>
-      <AboutNav />
       <Hero />
       <TheOperator />
       <TrackRecord />

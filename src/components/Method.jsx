@@ -5,17 +5,17 @@ const steps = [
     num: "01",
     verb: "Scope",
     title: "Turn a symptom into a build plan.",
-    body: "I sit with the business partner who describes a symptom, not a system, and pull out what they actually need — decomposed into a real build plan, in the room. I hold the line when the request needs to change.",
+    body: "I sit with the business partner who describes a symptom, not a system, and pull out what they actually need, decomposed into a real build plan, in the room. I hold the line when the request needs to change.",
     proof:
-      "→ ReggieAI: diagnosed compliance failures as zero structured knowledge — not staff error",
+      "→ Higher Ed Compliance Software: diagnosed compliance failures as zero structured knowledge, not staff error",
   },
   {
     num: "02",
     verb: "Prototype",
     title: "Build it fast with Claude Code.",
-    body: "I build the whole stack — data layer, backend, UI, and the LLM pieces — using AI-assisted development. Working software in days and weeks, not quarters.",
+    body: "I build the whole stack, data layer, backend, UI, and the LLM pieces, using AI-assisted development. Working software in days and weeks, not quarters.",
     proof:
-      "→ ReggieAI: RAG pipeline, anti-hallucination prompting, MCP tool orchestration — staged ahead of schedule",
+      "→ Higher Ed Compliance Software: RAG pipeline, anti-hallucination prompting, MCP tool orchestration, staged ahead of schedule",
   },
   {
     num: "03",
@@ -23,15 +23,15 @@ const steps = [
     title: "Make it production-grade.",
     body: "Eval suites with pass thresholds, guardrails, structured logging, audit trails, rollback, row-level security verified with negative tests. The phase regulated and rights-sensitive shops probe hardest.",
     proof:
-      "→ ReggieAI: governed human review, deterministic policy execution, full audit logging in a Title IV environment",
+      "→ Higher Ed Compliance Software: governed human review, deterministic policy execution, full audit logging in a Title IV environment",
   },
   {
     num: "04",
     verb: "Hand off",
     title: "Ship it so the team owns it.",
-    body: "Every build ships with a handoff package — README, runbook, ADRs — plus a pairing session so the receiving team stays self-sufficient, including with AI-assisted development after I leave.",
+    body: "Every build ships with a handoff package, README, runbook, ADRs, plus a pairing session so the receiving team stays self-sufficient, including with AI-assisted development after I leave.",
     proof:
-      "→ HEAG: built OpsFlow, trained the team, runs independently — zero dependency on me",
+      "→ Client: built OpsFlow, trained the team, runs independently, zero dependency on me",
   },
   {
     num: "05",
@@ -39,7 +39,7 @@ const steps = [
     title: "Push the pattern back into the platform.",
     body: "After each build, the reusable patterns go into a shared library so the next engagement starts further along. Every system compounds into the next.",
     proof:
-      "→ Revuity: reusable reference architectures and the open-source Eligibility-Agent — patterns the next build inherits",
+      "→ Revuity: reusable reference architectures and the open-source Eligibility-Agent, patterns the next build inherits",
   },
 ];
 
@@ -68,7 +68,7 @@ export default function Method() {
         </div>
         <p className="method-intro">
           Most engineers scope with a ticket and ship the AI part. I run the
-          whole loop — and I don't move on until the team can run it without me
+          whole loop, and I don't move on until the team can run it without me
           in the room.
         </p>
 

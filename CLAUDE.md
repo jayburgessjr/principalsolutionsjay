@@ -1,15 +1,44 @@
-# CLAUDE.md — Agent Operating System
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 ## Jay Burgess · Principal Solutions Architect Portfolio
+
 ### `jay-portfolio` · Vite + React 18 · GitHub: jayburgessjr/principalsolutionsjay
+
+---
+
+## Commands
+
+```bash
+npm run dev        # start dev server (localhost:5173)
+npm run build      # production build (runs prerender locally, skipped on Netlify)
+npm run preview    # serve the dist/ output to test prerendered pages
+```
+
+No test runner or linter is configured. Build verification (`npm run build`) is the only automated check.
+
+**Prerender caveat:** `vite.config.js` uses `vite-plugin-prerender` with Puppeteer locally. It requires Chrome at `/Applications/Google Chrome.app/Contents/MacOS/Google Chrome`. On Netlify, `NETLIFY=true` skips prerendering entirely. If the local build hangs, it's Puppeteer waiting for Chrome.
+
+**Environment variables** (needed for ChatSidebar AI feature — `.env.local`):
+
+```
+VITE_SUPABASE_URL=...
+VITE_SUPABASE_ANON_KEY=...
+```
+
+Without these, the chat sidebar falls back to an error message; the rest of the site works fine.
 
 ---
 
 ## SECTION 1 — Mission & Constraints
 
 ### Primary Objective
+
 Maintain, evolve, and extend Jay's portfolio site — a React + Vite application targeting the Enduring Ventures Principal Solutions Architect role. Every change must preserve visual fidelity, brand consistency (dark theme, IBM Plex stack, Bebas Neue headlines, orange #e8621a accent), and production readiness.
 
 ### Permitted Without Human Approval
+
 - Editing existing components, styles, or copy
 - Adding new components that follow established patterns
 - Creating new case study pages by duplicating existing ones
@@ -19,6 +48,7 @@ Maintain, evolve, and extend Jay's portfolio site — a React + Vite application
 - Updating memory files in `.claude/projects/.../memory/`
 
 ### Requires Human Approval Before Proceeding
+
 - Changing the color palette, typography system, or design tokens in `:root`
 - Restructuring the routing architecture in `App.jsx`
 - Replacing global CSS with CSS modules or a CSS-in-JS system
@@ -31,6 +61,7 @@ Maintain, evolve, and extend Jay's portfolio site — a React + Vite application
 - Any structural change to `index.html` (font imports live here)
 
 ### Hard Stops — Never Do These
+
 - Do not introduce CSS Modules, Tailwind, or styled-components
 - Do not add a backend, database, or authentication layer
 - Do not commit `node_modules/` or `dist/` (`.gitignore` covers both)
@@ -43,26 +74,32 @@ Maintain, evolve, and extend Jay's portfolio site — a React + Vite application
 ## SECTION 2 — Tool Permissions
 
 ### Read
+
 - **Approved:** Any file in the project before editing it. Always read before writing.
 - **Limit:** Never read `node_modules/`. Use Glob to locate files first if path is uncertain.
 
 ### Edit
+
 - **Approved:** Modifying existing `.jsx`, `.css`, `.js`, `.json`, `.md` files.
 - **Limit:** One logical change per Edit call. If a change touches more than 3 files, confirm scope with user first.
 
 ### Write
+
 - **Approved:** Creating new component files, page files, CSS files, or memory files.
 - **Limit:** Do not create new files when editing an existing one would suffice. Never create `README.md` or docs files unless explicitly asked.
 
 ### Glob
+
 - **Approved:** Locating files by pattern before reading or editing. Use before any Edit where the path is not 100% certain.
 - **Limit:** Never glob `node_modules/`.
 
 ### Grep
+
 - **Approved:** Searching for class names, component names, or CSS tokens before making changes that could break other files.
 - **Limit:** Always scope to `src/` — never search `node_modules/` or `dist/`.
 
 ### Bash
+
 - **Approved uses:**
   - `npm run dev` — start dev server
   - `npm run build` — verify production build
@@ -75,14 +112,17 @@ Maintain, evolve, and extend Jay's portfolio site — a React + Vite application
 - **Never:** `git commit --no-verify`, modifying git config, running unknown shell scripts
 
 ### Agent (Subagents)
+
 - **Approved:** Explore agent for broad codebase searches when Glob/Grep are insufficient.
 - **Limit:** Do not spawn subagents for tasks that a single Read or Grep can answer. Avoid duplicating work already in context.
 
 ### WebFetch / WebSearch
+
 - **Approved:** Looking up Vite, React Router, or Supabase documentation when needed.
 - **Not approved:** Fetching external URLs from the site's own content (e.g. Calendly, Canva links) — treat these as opaque strings.
 
 ### Memory Tools (Write/Edit to memory files)
+
 - **Approved:** Updating `MEMORY.md` index and individual memory files after any session where new decisions, preferences, or project facts are established.
 - **Limit:** Never write ephemeral task state to memory — that belongs in tasks, not memory.
 
@@ -91,7 +131,9 @@ Maintain, evolve, and extend Jay's portfolio site — a React + Vite application
 ## SECTION 3 — Memory Architecture
 
 ### What to Persist in MEMORY.md
+
 Save to memory when any of the following occur:
+
 - A new design decision is made (layout, color, typography)
 - A new page or component pattern is established
 - The user corrects the agent's approach in a way that will recur
@@ -99,26 +141,31 @@ Save to memory when any of the following occur:
 - A new case study page is added (record its route and purpose)
 
 ### Current Memory Index
-Located at: `/Users/jayburgess/.claude/projects/-Users-jayburgess-CODING-jaay-principalsolutionsjay/memory/`
 
-| File | Type | Contents |
-|------|------|----------|
-| `MEMORY.md` | Index | Pointers to all memory files |
+Located at: `/Users/jayburgess/.claude/projects/-Users-jayburgess-cbs-jaay-principalsolutionsjay/memory/`
+
+| File                   | Type    | Contents                                         |
+| ---------------------- | ------- | ------------------------------------------------ |
+| `MEMORY.md`            | Index   | Pointers to all memory files                     |
 | `project_portfolio.md` | project | Stack, structure, component map, CSS conventions |
 
 ### What to Summarize (Not Persist)
+
 - Specific file contents — re-read on demand, don't store in memory
 - Build output details — just pass/fail matters
 - CSS property values — derive from source, don't memorize
 - Conversation-specific task steps — discard after session
 
 ### What to Discard
+
 - Intermediate tool call results once the task is complete
 - Error messages that were resolved within the same session
 - Git diff output after a successful commit
 
 ### Session-Start Protocol
+
 Before touching any code at the start of a new session:
+
 1. Read `MEMORY.md` index
 2. Read `project_portfolio.md` for stack and structure
 3. Read `src/App.jsx` to confirm current route map
@@ -130,17 +177,20 @@ Before touching any code at the start of a new session:
 ## SECTION 4 — Context Budget Rules
 
 ### Always in Context (System Prompt Level)
+
 - This CLAUDE.md file
-- Current route map (App.jsx — ~30 lines)
+- Current route map (App.jsx — ~60 lines)
 - Design token definitions (`:root` block from index.css)
 
 ### Load on Demand
+
 - Individual component files — read when that component is being edited
 - `casestudy.css` — load only when working on case study pages
 - `index.css` full file — load when making global style changes
 - Any page file (`Home.jsx`, `CaseStudy.jsx`, etc.) — load only when relevant
 
 ### Token Budget Rules
+
 - **Single file reads:** Always preferred over reading multiple files speculatively
 - **Tool result cap:** If a Bash or Grep result exceeds ~200 lines, extract only the relevant section — do not paste the full output into context
 - **CSS files:** `index.css` and `casestudy.css` are large — read with `offset` and `limit` when only a specific section is needed
@@ -148,16 +198,17 @@ Before touching any code at the start of a new session:
 - **Compression trigger:** If more than 4 full component files are in active context simultaneously, summarize the ones not currently being edited before loading more
 
 ### File Size Reference
-| File | Approximate Lines |
-|------|------------------|
-| `src/index.css` | ~1706 |
-| `src/casestudy.css` | ~1638 |
-| `src/pages/WalmartCaseStudy.jsx` | ~300 |
-| `src/pages/CaseStudy.jsx` | ~290 |
-| `src/pages/RevuityCaseStudy.jsx` | ~290 |
-| `src/pages/RevuityProductsPage.jsx` | ~260 |
-| `src/pages/EngagementPage.jsx` | ~240 |
-| `src/components/Proof.jsx` | ~110 |
+
+| File                                | Approximate Lines |
+| ----------------------------------- | ----------------- |
+| `src/index.css`                     | ~1706             |
+| `src/casestudy.css`                 | ~1638             |
+| `src/pages/WalmartCaseStudy.jsx`    | ~300              |
+| `src/pages/CaseStudy.jsx`           | ~290              |
+| `src/pages/RevuityCaseStudy.jsx`    | ~290              |
+| `src/pages/RevuityProductsPage.jsx` | ~260              |
+| `src/pages/EngagementPage.jsx`      | ~240              |
+| `src/components/Proof.jsx`          | ~110              |
 
 ---
 
@@ -168,11 +219,13 @@ After every major action (new component, style change, new page, routing change)
 ### Review Checklist
 
 **1. Output Match**
+
 - Did the rendered result match the user's stated intent?
 - If a build was run — did it pass cleanly (`✓ built in Xms`)?
 - If a visual change was made — does it follow the existing design system (colors, fonts, spacing)?
 
 **2. Guardrail Check**
+
 - Was any CSS Module, Tailwind class, or styled-component introduced? → If yes, revert immediately.
 - Was `node_modules/` or `dist/` touched? → Should never happen.
 - Was any external URL modified without explicit instruction? → Flag to user.
@@ -180,14 +233,17 @@ After every major action (new component, style change, new page, routing change)
 - Did the change affect more than 3 files? → Flag scope to user.
 
 **3. Regression Check**
+
 - Does `App.jsx` still have all routes intact?
 - Does `Home.jsx` still render all sections in the correct order?
 - Does `ScrollToTop` still wrap all routes?
 - Does `casestudy.css` import still appear in all case study pages?
+- Does `vite.config.js` routes array include the new route (if one was added)?
 
 **4. Memory Update Decision**
 Ask: did this session establish any new fact that future sessions need?
-- New route added → update `project_portfolio.md`
+
+- New route added → update `project_portfolio.md` AND `vite.config.js` routes array
 - New design decision made → update or create relevant memory file
 - User corrected agent behavior → create `feedback_[topic].md`
 - New external URL confirmed → update `project_portfolio.md`
@@ -199,29 +255,50 @@ If a guardrail was approached or a mistake was almost made, add an explicit rule
 
 ## Project Quick Reference
 
+### Architecture Overview
+
+`App.jsx` is the single entry point. It mounts two global singletons before `<Routes>`:
+
+- `<ScrollToTop />` — resets scroll position on every route change
+- `<ChatSidebar />` — AI chat assistant, always visible site-wide
+
+**ChatSidebar** calls a Supabase Edge Function at `${VITE_SUPABASE_URL}/functions/v1/chat`. It requires `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` in `.env.local`. Without them, the sidebar degrades gracefully to an error message.
+
+**Hooks** (`src/hooks/`):
+
+- `usePageMeta({ title, description, image? })` — sets `<title>`, OG tags, and canonical URL. Every page must call this.
+- `useReveal()` — returns a `ref`; attaches an IntersectionObserver that adds class `visible` when element scrolls into view (used for fade-in animations).
+- `useTheme()` — returns `{ theme, toggle }`; persists `dark`/`light` preference to `localStorage` and `data-theme` on `<html>`.
+
 ### Routes
-| Path | Component | Description |
-|------|-----------|-------------|
-| `/` | `Home.jsx` | Main portfolio page |
-| `/reggie-case-study` | `CaseStudy.jsx` | ReggieAI Title IV AI case study |
-| `/revuity-case-study` | `RevuityCaseStudy.jsx` | Revuity Systems 4-product studio |
-| `/walmart-case-study` | `WalmartCaseStudy.jsx` | Walmart Creative Operations data org |
-| `/revuity-products` | `RevuityProductsPage.jsx` | Full Revuity Systems product catalog |
-| `/engagement` | `EngagementPage.jsx` | Engagement models and compensation fit |
-| `/about` | `AboutPage.jsx` | About Jay page |
-| `/articles` | `ArticlesPage.jsx` | Articles index |
-| `/article/*` | `Article[Name].jsx` | 13 individual article pages |
+
+| Path                  | Component                 | Description                            |
+| --------------------- | ------------------------- | -------------------------------------- |
+| `/`                   | `Home.jsx`                | Main portfolio page                    |
+| `/higher-ed-compliance-software`  | `CaseStudy.jsx`           | Higher Ed Compliance Software case study        |
+| `/revuity-case-study` | `RevuityCaseStudy.jsx`    | Revuity Systems 4-product studio       |
+| `/walmart-case-study` | `WalmartCaseStudy.jsx`    | Walmart Creative Operations data org   |
+| `/revuity-products`   | `RevuityProductsPage.jsx` | Full Revuity Systems product catalog   |
+| `/engagement`         | `EngagementPage.jsx`      | Engagement models and compensation fit |
+| `/about`              | `AboutPage.jsx`           | About Jay page                         |
+| `/articles`           | `ArticlesPage.jsx`        | Articles index                         |
+| `/article/*`          | `Article[Name].jsx`       | 15 individual article pages            |
+
+**Important:** Every route must also be added to the `routes` array in `vite.config.js` for prerendering to work in local builds.
 
 ### Home Section Order
+
 Nav → Hero → Method → LeadershipLayer → Skills → Companies → Proof → CaseBand → Testimonials → WalmartBand → EngagementSection → ProductsBand → RevuityBand → AboutBand → Methodology → EngagementBand → Articles → MethodologyBand → CTA → Footer
 
 ### Key External URLs (Do Not Modify Without Instruction)
+
 - Calendly: `https://calendly.com` ← placeholder, user will update
 - Canva Slides: `https://www.canva.com/design/DAHEKlOQl-o/...`
 - GitHub: `https://github.com/jayburgessjr/principalsolutionsjay.git`
 - Netlify (production): `https://jay-burgess.me/`
 
 ### Design Tokens (Never Change Without Approval)
+
 ```
 --black: #080809       --orange: #e8621a
 --panel: #161618       --orange2: #f5823e
@@ -230,15 +307,27 @@ Nav → Hero → Method → LeadershipLayer → Skills → Companies → Proof �
 ```
 
 ### CSS Convention
+
 - All styles in `src/index.css` (home page) and `src/casestudy.css` (case study pages)
 - No CSS Modules. No scoped styles. Global classes only.
 - Data arrays live at the top of each component — not in separate data files.
 
 ### Adding a New Case Study (Standard Pattern)
+
 1. Duplicate the closest existing page in `src/pages/`
 2. Append new CSS to `casestudy.css` (never create a new CSS file)
 3. Add route to `App.jsx`
-4. Create a `[Name]Band.jsx` component in `src/components/`
-5. Import and place the band in `Home.jsx` at the appropriate position
+4. Add the route path to the `routes` array in `vite.config.js`
+5. Create a `[Name]Band.jsx` component in `src/components/`
+6. Import and place the band in `Home.jsx` at the appropriate position
+7. Run `npm run build` to verify
+8. Update `project_portfolio.md` memory with the new route
+
+### Adding a New Article (Standard Pattern)
+
+1. Duplicate an existing article page in `src/pages/`
+2. Add route to `App.jsx` under `/article/slug`
+3. Add the route path to `vite.config.js` routes array
+4. Add entry to `ArticlesPage.jsx` index
+5. Call `usePageMeta` with unique title/description at the top of the new page
 6. Run `npm run build` to verify
-7. Update `project_portfolio.md` memory with the new route

@@ -1,26 +1,24 @@
+import { Link } from "react-router-dom";
+
 export default function Hero() {
   return (
     <section className="hero">
       <div className="hero-inner">
         <div className="hero-left">
           <div className="hero-eyebrow">
-            Principal AI Engineer · Founder & Principal Forward Deployed
-            Engineer, Revuity Systems
+            Principal Forward Deployed Engineer · Los Angeles · Open to remote
           </div>
           <h1 className="hero-headline">
-            The Architect.
-            <br />
-            <span className="orange">The General.</span>
+            I turn ambiguous operational and regulatory problems into production
+            systems that <span className="orange">move real money.</span>
           </h1>
           <p className="hero-summary">
-            15+ years embedding with teams to ship production AI and data
-            systems end to end — scoping the real problem, building the whole
-            stack with AI-assisted development (Claude Code), hardening it, and
-            handing it off so the team owns it. Days and weeks, not quarters. I
-            set the direction, build the capability around it, and get in the
-            trenches when the work demands it. AI will change work. What matters
-            is whether it elevates the people inside an organization or erases
-            them. That is what I build for.
+            For fifteen years I have walked into messy operational and
+            regulatory problems and walked out with software that works.
+            Seventeen systems and counting, each one carried from the first
+            conversation all the way to the day the team runs it without me. One
+            of them, a multi-agent Title IV compliance platform, brought in $2.7
+            million of new revenue in its first three months.
           </p>
           <div className="hero-ctas">
             <a
@@ -29,52 +27,53 @@ export default function Hero() {
               target="_blank"
               rel="noreferrer"
             >
-              Schedule a call →
+              Book a call →
             </a>
-            <a href="#proof" className="cta-btn-ghost">
-              See the work
-            </a>
+            <Link to="/higher-ed-compliance-software" className="cta-btn-ghost">
+              Read the case study
+            </Link>
           </div>
           <div className="hero-availability">
             <span className="ha-dot" />
-            Available now · Fractional engagements &amp; full-time principal
-            roles at $350K+
+            Available now · Full-time principal roles &amp; fractional
+            engagements
           </div>
         </div>
 
         <div className="hero-photo-wrap">
           <div className="hero-photo-placeholder">
-            <img src="/jay_burgess_.png" alt="Jay Burgess" />
+            <img src="/jayburgessputplr.png" alt="Jay Burgess" />
           </div>
         </div>
       </div>
 
       <div className="hero-bottom">
         <div className="hero-cell">
-          <div className="hc-label">Experience</div>
+          <div className="hc-label">Systems shipped</div>
           <div className="hc-val">
-            15<span>+</span>
+            17<span>+</span>
           </div>
           <div className="hc-sub">
-            Years solving business problems with technology — end to end
+            Production AI &amp; data systems delivered end to end
           </div>
         </div>
         <div className="hero-cell">
-          <div className="hc-label">Verified Impact</div>
+          <div className="hc-label">New revenue</div>
           <div className="hc-val">
             $2.7<span>M</span>
           </div>
           <div className="hc-sub">
-            Documented business impact in enterprise revenue operations
+            New revenue from the compliance platform in its first three months,
+            on a $1.7M base
           </div>
         </div>
         <div className="hero-cell">
-          <div className="hc-label">Fortune 500</div>
+          <div className="hc-label">Enterprise scale</div>
           <div className="hc-val">
-            Walmart<span>.</span>
+            $6<span>B</span>
           </div>
           <div className="hc-sub">
-            Adobe · HEAG · Revuity Systems · Harvard · LMU
+            Global marketing spend governed at Adobe · Walmart alum
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@ function ArticleHero() {
           that makes AI pilots unreliable: the evaluation environment is
           optimized for the evaluator's experience, not for the conditions the
           system will face in production. AI vendor demos are among the most
-          carefully engineered presentations in enterprise software — they are
+          carefully engineered presentations in enterprise software, they are
           designed to answer the questions evaluators are predisposed to ask, in
           conditions that make the answers impressive. This paper presents a
           structured evaluation methodology for AI vendors that surfaces the
@@ -81,10 +81,10 @@ const EVAL_AREAS = [
     label: "Capability",
     title: "What It Actually Does vs. What the Demo Shows",
     questions: [
-      "Provide your own data — not the vendor's curated samples — and evaluate performance on that data.",
+      "Provide your own data, not the vendor's curated samples, and evaluate performance on that data.",
       "Test the failure mode: what does the system do when it encounters input outside its design envelope?",
       "Ask for the system's accuracy on your specific use case, not on industry benchmarks.",
-      "Evaluate the edge cases relevant to your domain — the inputs that are common in your context but rare in general.",
+      "Evaluate the edge cases relevant to your domain, the inputs that are common in your context but rare in general.",
     ],
   },
   {
@@ -92,7 +92,7 @@ const EVAL_AREAS = [
     title: "Performance When It Matters",
     questions: [
       "What is the uptime SLA, and what has actual uptime been over the past 12 months?",
-      "What is the latency at production volume — not at demo volume?",
+      "What is the latency at production volume, not at demo volume?",
       "What is the degradation behavior when upstream dependencies are slow or unavailable?",
       "How is the system monitored, and how are customers notified of incidents?",
     ],
@@ -103,7 +103,7 @@ const EVAL_AREAS = [
     questions: [
       "Where is your data stored, how is it isolated from other customers, and who has access?",
       "Is your data used to train or fine-tune models? If so, with what consent and notification?",
-      "What is the data portability commitment — how do you get your data out if you switch vendors?",
+      "What is the data portability commitment, how do you get your data out if you switch vendors?",
       "What data residency options exist for regulated industries or geographic requirements?",
     ],
   },
@@ -113,7 +113,7 @@ const EVAL_AREAS = [
     questions: [
       "What is the support tier for your account, and what response time guarantees exist for production incidents?",
       "Is there a dedicated technical contact, or is support queue-based?",
-      "Ask to speak with a current customer of similar scale to your expected deployment — not a reference the vendor selects.",
+      "Ask to speak with a current customer of similar scale to your expected deployment, not a reference the vendor selects.",
       "What is the escalation path when standard support cannot resolve an issue?",
     ],
   },
@@ -196,7 +196,7 @@ function ArticleBody() {
             selected for tractability. The failure modes are not demonstrated.
             The latency is measured in an environment optimized for the demo,
             not a production environment under realistic load. And the person
-            presenting the demo knows the system deeply — knows what to avoid,
+            presenting the demo knows the system deeply, knows what to avoid,
             what to emphasize, and how to redirect when the system behaves
             unexpectedly.
           </p>
@@ -205,13 +205,13 @@ function ArticleBody() {
             practice. The vendor is presenting their product in its best light,
             which is what product demonstrations are for. The problem arises
             when organizations use the demo as the primary evidence for a
-            production deployment decision — when the evaluation environment is
+            production deployment decision, when the evaluation environment is
             accepted as representative of production conditions, and the gap
             between the two is only discovered after commitment.
           </p>
           <p>
             Effective AI vendor evaluation is not about being adversarial. It is
-            about being systematic — about designing an evaluation process that
+            about being systematic, about designing an evaluation process that
             surfaces production-relevant evidence rather than demo-optimized
             evidence, and that asks the questions vendors are least prepared to
             answer in rehearsed presentations.
@@ -252,7 +252,7 @@ function ArticleBody() {
             operational reality of the product, and the organizational culture
             of the vendor. A vendor that can speak candidly about failures,
             limitations, and competitive tradeoffs is a vendor whose
-            relationship with you will be productive when problems arise — and
+            relationship with you will be productive when problems arise, and
             problems will arise. A vendor that cannot answer these questions
             without deflecting is a vendor whose post-sales relationship will be
             adversarial when things go wrong.
@@ -274,11 +274,11 @@ function ArticleBody() {
           <p>
             Most vendor scoring frameworks weight capability heavily and
             operational reliability, data governance, and support quality
-            lightly. This weighting reflects the evaluation process — capability
+            lightly. This weighting reflects the evaluation process, capability
             is what demos demonstrate, so capability is what scorecards measure.
             But the factors that determine long-term vendor value are
             reliability, data governance, support quality, and roadmap
-            credibility — the factors that are hardest to evaluate in a demo and
+            credibility, the factors that are hardest to evaluate in a demo and
             most consequential over the contract horizon.
           </p>
           <p>
@@ -287,7 +287,7 @@ function ArticleBody() {
             outperform a vendor with 100% of the capability you need and poor
             performance on the operational factors. Capability gaps can be
             worked around. Reliability problems, data governance failures, and
-            poor support quality cannot be worked around — they become
+            poor support quality cannot be worked around, they become
             organizational overhead that consumes more capacity than the
             capability advantage was worth.
           </p>
@@ -296,7 +296,7 @@ function ArticleBody() {
             topology of each factor, not the visibility of each factor in the
             demo. Capability is visible. Reliability is historical. Data
             governance is contractual. Support quality is reputational. Each
-            requires different evaluation methods — and the difference in
+            requires different evaluation methods, and the difference in
             evaluation effort between capability and the operational factors is
             exactly why capability-heavy decisions consistently produce
             operational disappointments.
@@ -360,8 +360,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -370,13 +369,12 @@ function ArticleFooter() {
 
 export default function ArticleVendorEval() {
   usePageMeta({
-    title: "How to Evaluate an AI Vendor Without Getting Fooled — Jay Burgess",
+    title: "How to Evaluate an AI Vendor Without Getting Fooled, Jay Burgess",
     description:
       "AI vendor demos are engineered for the evaluator. A structured evaluation methodology that surfaces production reality behind the demo.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

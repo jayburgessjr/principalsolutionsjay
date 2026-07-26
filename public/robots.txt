@@ -1,4 +1,4 @@
-# jay-burgess.me — crawling allowed for search and AI answer engines
+# jay-burgess.me, crawling allowed for search and AI answer engines
 
 User-agent: *
 Allow: /

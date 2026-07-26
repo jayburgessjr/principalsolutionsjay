@@ -23,19 +23,19 @@ function ArticleHero() {
         </div>
         <h1 className="article-title">
           The Data Readiness Test: Why Most Organizations Aren't Ready to Build
-          AI — and How to Know If You Are
+          AI, and How to Know If You Are
         </h1>
         <div className="article-abstract">
           The majority of enterprise AI projects that fail do not fail because
           the model was wrong. They fail because the data that feeds the model
-          was wrong — inaccessible, inconsistent, ungoverned, or insufficient to
+          was wrong, inaccessible, inconsistent, ungoverned, or insufficient to
           support the use case that was approved for investment. Data readiness
           is the most reliable predictor of AI project success and the most
           systematically underdiagnosed variable in AI investment decisions.
           This paper defines four dimensions of data readiness, provides a
           structured assessment framework, and argues that the most valuable AI
           investment a data-immature organization can make is not an AI project
-          — it is the infrastructure required to run one.
+         , it is the infrastructure required to run one.
         </div>
         <div className="article-meta-bar">
           <div className="article-meta-item">
@@ -86,21 +86,21 @@ const DIMENSIONS = [
     title: "Quality",
     question:
       "Is the data accurate, complete, and consistent enough to support decisions?",
-    desc: 'Data quality is the dimension organizations most frequently misassess — because quality is evaluated in the context of current use, not in the context of AI use. Data that is good enough for a human analyst to work with — because the analyst compensates for inconsistencies, knows which fields to ignore, and applies contextual judgment to interpret ambiguous values — is frequently not good enough for an AI system that cannot apply those compensating behaviors. The relevant quality standard is not "good enough for current use." It is "good enough to be the ground truth for an AI system operating at inference time without human review."',
+    desc: 'Data quality is the dimension organizations most frequently misassess, because quality is evaluated in the context of current use, not in the context of AI use. Data that is good enough for a human analyst to work with, because the analyst compensates for inconsistencies, knows which fields to ignore, and applies contextual judgment to interpret ambiguous values, is frequently not good enough for an AI system that cannot apply those compensating behaviors. The relevant quality standard is not "good enough for current use." It is "good enough to be the ground truth for an AI system operating at inference time without human review."',
   },
   {
     num: "03",
     title: "Governance",
     question:
       "Is there a documented owner who is accountable for this data's accuracy?",
-    desc: "Unowned data degrades. It degrades because no one is responsible for catching and correcting errors, because schema changes upstream propagate without notice, and because the organization has no mechanism for detecting quality degradation until a downstream system fails. AI systems trained or grounded on unowned data inherit its degradation trajectory — which means their reliability decreases over time at a rate proportional to how unmanaged their data sources are. Governance is not a compliance requirement. It is the mechanism that keeps the data the AI depends on from becoming silently incorrect.",
+    desc: "Unowned data degrades. It degrades because no one is responsible for catching and correcting errors, because schema changes upstream propagate without notice, and because the organization has no mechanism for detecting quality degradation until a downstream system fails. AI systems trained or grounded on unowned data inherit its degradation trajectory, which means their reliability decreases over time at a rate proportional to how unmanaged their data sources are. Governance is not a compliance requirement. It is the mechanism that keeps the data the AI depends on from becoming silently incorrect.",
   },
   {
     num: "04",
     title: "Coverage",
     question:
       "Does the data actually represent the problem the AI is being built to solve?",
-    desc: "Coverage failures are the most dangerous data readiness failures because they are the hardest to diagnose. A system can be fully accessible, high quality, and well-governed while being entirely unrepresentative of the use case it is being asked to support. This happens when data collection was designed around historical reporting requirements rather than the decision surfaces the AI will be operating on — which is almost always the case in organizations where AI investment is a recent strategic priority but data collection predates it by years. The question is not whether data exists. It is whether the data that exists represents the right things.",
+    desc: "Coverage failures are the most dangerous data readiness failures because they are the hardest to diagnose. A system can be fully accessible, high quality, and well-governed while being entirely unrepresentative of the use case it is being asked to support. This happens when data collection was designed around historical reporting requirements rather than the decision surfaces the AI will be operating on, which is almost always the case in organizations where AI investment is a recent strategic priority but data collection predates it by years. The question is not whether data exists. It is whether the data that exists represents the right things.",
   },
 ];
 
@@ -108,7 +108,7 @@ function DimensionsDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — Four Dimensions of Data Readiness
+        Fig. 1, Four Dimensions of Data Readiness
       </div>
       <div
         style={{
@@ -218,7 +218,7 @@ function SignalTable() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 2 — Readiness Signals and Their Implications
+        Fig. 2, Readiness Signals and Their Implications
       </div>
       <div
         style={{
@@ -311,7 +311,7 @@ function ArticleBody() {
             same proximate cause: the data wasn't good enough. Inconsistent
             labels. Missing fields. Inaccessible systems. Historical records
             that didn't reflect current process. The finding is correct as far
-            as it goes — but it misses the upstream cause, which is that no one
+            as it goes, but it misses the upstream cause, which is that no one
             assessed data readiness before the project was approved.
           </p>
           <p>
@@ -320,7 +320,7 @@ function ArticleBody() {
             is made at the use case layer: the AI will reduce processing time,
             improve decision accuracy, automate a currently manual workflow. The
             data infrastructure required to support that use case is evaluated,
-            if it is evaluated at all, as a technical dependency — a checkbox on
+            if it is evaluated at all, as a technical dependency, a checkbox on
             a project plan rather than a gating assessment that determines
             whether the investment is viable.
           </p>
@@ -346,7 +346,7 @@ function ArticleBody() {
             highly accessible, well-governed data that is too low quality to
             train on. It can have high-quality, well-covered data that is
             entirely inaccessible to the systems that need it at inference time.
-            Each dimension must be assessed independently — because failure in
+            Each dimension must be assessed independently, because failure in
             any one of them is sufficient to make a proposed AI use case
             non-viable without remediation, regardless of how strong the others
             are.
@@ -364,7 +364,7 @@ function ArticleBody() {
             if you are listening for the right signals. The following table maps
             common organizational signals to the readiness dimension they
             indicate. These signals are audible in the first conversation about
-            a proposed AI use case — they do not require deep technical
+            a proposed AI use case, they do not require deep technical
             investigation to surface. They require asking the right questions
             and resisting the pressure to treat concerning answers as
             surmountable implementation details.
@@ -373,13 +373,13 @@ function ArticleBody() {
         <SignalTable />
         <div className="article-prose" style={{ marginTop: "1.5rem" }}>
           <p>
-            Each signal in this table, if present, is a diagnostic finding — not
+            Each signal in this table, if present, is a diagnostic finding, not
             a risk flag to be managed. A risk flag is something that might
             become a problem. A diagnostic finding is evidence that the problem
             already exists. Organizations that treat data readiness signals as
             risks to be managed in the implementation phase consistently
             underestimate the remediation cost, because the remediation is
-            frequently not a project task — it is a precondition for the
+            frequently not a project task, it is a precondition for the
             project.
           </p>
         </div>
@@ -403,7 +403,7 @@ function ArticleBody() {
             responses, the data must be available in milliseconds. If it
             requires nightly batch processing, daily availability is sufficient.
             The latency requirement is determined by the use case, not by what
-            the data infrastructure can currently provide — and the gap between
+            the data infrastructure can currently provide, and the gap between
             the two is a scoping input, not a project risk.
           </p>
           <p>
@@ -434,7 +434,7 @@ function ArticleBody() {
               Coverage validation against the actual decision surface.
             </strong>{" "}
             A sample of the data has been reviewed against the specific
-            decisions or tasks the AI is being built to support — not against
+            decisions or tasks the AI is being built to support, not against
             historical use cases that the data was designed to inform. Coverage
             validation requires knowing, in concrete operational terms, what the
             AI will be asked to do and verifying that the data represents those
@@ -460,24 +460,24 @@ function ArticleBody() {
             the conclusion that a proposed AI use case is not viable without
             infrastructure investment that was not in the original project
             scope. This is not a failure of the assessment. It is the assessment
-            working correctly — surfacing a non-viability condition before
+            working correctly, surfacing a non-viability condition before
             investment is committed rather than after it is spent.
           </p>
           <p>
             Organizations resist this conclusion because it creates a gap
             between the AI strategy that was approved and the data
             infrastructure that can support it. That gap exists in most
-            organizations pursuing AI investment — it is not a disqualifying
+            organizations pursuing AI investment, it is not a disqualifying
             condition. It is a sequencing problem. The question is whether the
-            organization sequences correctly — data infrastructure first, AI use
-            case second — or incorrectly, in the order that produces the
+            organization sequences correctly, data infrastructure first, AI use
+            case second, or incorrectly, in the order that produces the
             expensive post-mortem.
           </p>
           <p>
             The organizations that sequence correctly build AI systems that work
             and compound in value over time. They do this not because they had
             better data to begin with, but because they diagnosed their data
-            readiness honestly before committing to the use case — and built the
+            readiness honestly before committing to the use case, and built the
             foundation before the house. The organizations that sequence
             incorrectly build expensive lessons about what they should have
             built first. Both paths arrive at data infrastructure investment.
@@ -485,9 +485,9 @@ function ArticleBody() {
           </p>
           <p>
             Run the test. Before the kickoff. Before the vendor selection.
-            Before the budget request. The four questions — can you access it,
+            Before the budget request. The four questions, can you access it,
             is it accurate, does someone own it, does it represent the right
-            thing — take less than a week to answer with reasonable confidence.
+            thing, take less than a week to answer with reasonable confidence.
             The project timeline they save is frequently measured in quarters.
           </p>
         </div>
@@ -538,7 +538,7 @@ function ArticleCTA() {
         <span>ready for AI?</span>
       </h3>
       <p>
-        I run data readiness assessments as part of every engagement — before
+        I run data readiness assessments as part of every engagement, before
         the build, not during it. If you're evaluating an AI use case and want
         to know whether your data can support it, let's talk.
       </p>
@@ -558,8 +558,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -568,13 +567,12 @@ function ArticleFooter() {
 
 export default function ArticleDataReadiness() {
   usePageMeta({
-    title: "The Data Readiness Test — Jay Burgess",
+    title: "The Data Readiness Test, Jay Burgess",
     description:
-      "Most AI projects don't fail because the model is wrong. They fail because the data is wrong. Four dimensions of data readiness — and how to assess them before you build.",
+      "Most AI projects don't fail because the model is wrong. They fail because the data is wrong. Four dimensions of data readiness, and how to assess them before you build.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

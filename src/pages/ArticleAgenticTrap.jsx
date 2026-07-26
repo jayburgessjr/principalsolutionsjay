@@ -26,7 +26,7 @@ function ArticleHero() {
           The Agentic Trap: Why Multi-Agent Systems Break Before They Ship
         </h1>
         <div className="article-abstract">
-          Multi-agent AI systems represent a genuine architectural advance — and
+          Multi-agent AI systems represent a genuine architectural advance, and
           one of the fastest routes to expensive, invisible production failure
           in enterprise AI. The gap between a functional agentic demo and a
           production-grade agentic system is wider than in any other AI
@@ -79,27 +79,27 @@ const FAILURE_PATTERNS = [
   {
     label: "Failure Pattern 01",
     title: "Orchestration Collapse Under Real Inputs",
-    body: "Agentic demos run on curated inputs where the intended tool call sequence is predictable and the agent's decision-making looks coherent. Under real-world inputs — ambiguous, malformed, or outside the anticipated distribution — orchestration breaks down. Agents call tools in the wrong order, re-attempt failed operations without diagnostic reasoning, or enter decision loops that exhaust context budgets without producing output. Orchestration logic that works in scripted demos is frequently not robust enough to handle the variance of real user behavior.",
+    body: "Agentic demos run on curated inputs where the intended tool call sequence is predictable and the agent's decision-making looks coherent. Under real-world inputs, ambiguous, malformed, or outside the anticipated distribution, orchestration breaks down. Agents call tools in the wrong order, re-attempt failed operations without diagnostic reasoning, or enter decision loops that exhaust context budgets without producing output. Orchestration logic that works in scripted demos is frequently not robust enough to handle the variance of real user behavior.",
   },
   {
     label: "Failure Pattern 02",
     title: "Tool Proliferation Without Prioritization",
-    body: "As agent capability requirements are discovered, teams add tools. This is rational at each individual decision, but the cumulative effect is an agent that has too many tools with overlapping functionality and no clear selection logic. At inference time, the agent's tool selection becomes unreliable — choosing between semantically similar tools in ways that are unpredictable and difficult to diagnose. Every tool added to a production agent must have an exclusive capability boundary and a documented selection signal. Most don't.",
+    body: "As agent capability requirements are discovered, teams add tools. This is rational at each individual decision, but the cumulative effect is an agent that has too many tools with overlapping functionality and no clear selection logic. At inference time, the agent's tool selection becomes unreliable, choosing between semantically similar tools in ways that are unpredictable and difficult to diagnose. Every tool added to a production agent must have an exclusive capability boundary and a documented selection signal. Most don't.",
   },
   {
     label: "Failure Pattern 03",
     title: "Context Budget Exhaustion",
-    body: "Multi-step agentic tasks accumulate context across tool calls, intermediate reasoning, and retrieved content. In demos, tasks are short enough that context accumulation is not a constraint. In production, agents running multi-step workflows against real-world data regularly approach or exceed context limits — producing truncated reasoning, tool call failures, and output degradation that is invisible at the application layer until a user encounters it. Context budget management is not optional in production agentic systems — it is a core architectural requirement.",
+    body: "Multi-step agentic tasks accumulate context across tool calls, intermediate reasoning, and retrieved content. In demos, tasks are short enough that context accumulation is not a constraint. In production, agents running multi-step workflows against real-world data regularly approach or exceed context limits, producing truncated reasoning, tool call failures, and output degradation that is invisible at the application layer until a user encounters it. Context budget management is not optional in production agentic systems, it is a core architectural requirement.",
   },
   {
     label: "Failure Pattern 04",
     title: "Silent Failure Propagation",
-    body: "When a step in an agentic pipeline fails, a well-designed system surfaces the failure explicitly and halts or escalates. Most production agentic systems are not well-designed in this dimension — they allow failures to propagate silently, with downstream agents operating on corrupted or missing inputs. The outputs of these systems appear structurally complete while being factually wrong. Silent failure propagation is the most dangerous agentic failure mode because it produces confident, well-formatted outputs that are incorrect — and systems without explicit failure handling are architecturally incapable of distinguishing success from silent failure.",
+    body: "When a step in an agentic pipeline fails, a well-designed system surfaces the failure explicitly and halts or escalates. Most production agentic systems are not well-designed in this dimension, they allow failures to propagate silently, with downstream agents operating on corrupted or missing inputs. The outputs of these systems appear structurally complete while being factually wrong. Silent failure propagation is the most dangerous agentic failure mode because it produces confident, well-formatted outputs that are incorrect, and systems without explicit failure handling are architecturally incapable of distinguishing success from silent failure.",
   },
   {
     label: "Failure Pattern 05",
     title: "Evaluation Infrastructure Absence",
-    body: "Single-model systems can be evaluated against a fixed set of inputs and expected outputs. Agentic systems cannot — their behavior is path-dependent, and the number of valid execution paths for a given task is combinatorially large. Teams that build agentic systems without purpose-built evaluation infrastructure do not know whether their system is working correctly — they know whether the last demo worked. Production agentic systems require evaluation frameworks that sample across the execution path space, not just the output space. This infrastructure is routinely treated as an afterthought and consistently costs more to retrofit than to build alongside the system.",
+    body: "Single-model systems can be evaluated against a fixed set of inputs and expected outputs. Agentic systems cannot, their behavior is path-dependent, and the number of valid execution paths for a given task is combinatorially large. Teams that build agentic systems without purpose-built evaluation infrastructure do not know whether their system is working correctly, they know whether the last demo worked. Production agentic systems require evaluation frameworks that sample across the execution path space, not just the output space. This infrastructure is routinely treated as an afterthought and consistently costs more to retrofit than to build alongside the system.",
   },
 ];
 
@@ -157,7 +157,7 @@ function SequenceDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — Standard Build Sequence vs. Production-Ready Sequence
+        Fig. 1, Standard Build Sequence vs. Production-Ready Sequence
       </div>
       <div
         style={{
@@ -262,8 +262,8 @@ function ArticleBody() {
         <div className="article-prose">
           <p>
             The agentic trap is not a capability problem. Modern agentic
-            frameworks — multi-agent orchestration systems, tool-use APIs,
-            planning-and-execution architectures — are genuinely capable. The
+            frameworks, multi-agent orchestration systems, tool-use APIs,
+            planning-and-execution architectures, are genuinely capable. The
             trap is architectural: the conditions under which agentic systems
             are built and evaluated bear almost no resemblance to the conditions
             under which they must operate in production, and the gap is
@@ -274,8 +274,8 @@ function ArticleBody() {
             A single-model AI system fails in predictable, bounded ways. A
             retrieval system either retrieves or it doesn't. A classification
             model either classifies or it doesn't. The failure surface is
-            defined and evaluable. An agentic system — one that plans, routes,
-            calls tools, interprets results, and takes multi-step actions —
+            defined and evaluable. An agentic system, one that plans, routes,
+            calls tools, interprets results, and takes multi-step actions,
             fails in compounding ways across every decision point in its
             execution path. A tool called at step three with a malformed input
             produces corrupted state that downstream agents in step seven
@@ -288,7 +288,7 @@ function ArticleBody() {
             worked correctly in the demos that justified the production
             investment. The organizations that fall into it are not making poor
             technology choices. They are making good technology choices with
-            insufficient architectural rigor — and discovering the rigor gap
+            insufficient architectural rigor, and discovering the rigor gap
             after the system is load-bearing.
           </p>
         </div>
@@ -304,7 +304,7 @@ function ArticleBody() {
             inputs the agent was built to handle. The tool call sequence looks
             logical because it was designed around those inputs. Real user
             inputs introduce ambiguity, underspecification, and edge cases that
-            the agent was not designed to navigate — and the orchestration logic
+            the agent was not designed to navigate, and the orchestration logic
             that looked robust in the demo reveals its brittleness immediately.
           </p>
           <p>
@@ -312,7 +312,7 @@ function ArticleBody() {
             five steps. Production tasks frequently require ten to twenty.
             Context accumulation, tool call chaining, and intermediate state
             management are all manageable at five steps. At twenty, they become
-            the primary engineering challenge — and they are entirely invisible
+            the primary engineering challenge, and they are entirely invisible
             in five-step demos. Organizations that evaluate agentic systems on
             five-step tasks and deploy them against twenty-step workflows are
             systematically underestimating their architectural requirements.
@@ -320,7 +320,7 @@ function ArticleBody() {
           <p>
             <strong>Invisible failure handling:</strong> demos do not fail, by
             design. The paths that lead to failure are not explored during
-            evaluation. In production, those paths are discovered by users — and
+            evaluation. In production, those paths are discovered by users, and
             in agentic systems, failures are not always visible. An agent that
             encounters a tool failure and continues processing rather than
             surfacing the error produces outputs that appear complete while
@@ -345,7 +345,7 @@ function ArticleBody() {
           <p>
             The following five failure patterns account for the majority of
             agentic production system failures. They are architectural rather
-            than model-level problems — which means they are diagnosable and
+            than model-level problems, which means they are diagnosable and
             addressable before deployment, given the right evaluation framework.
             Select any card to expand the full pattern description.
           </p>
@@ -359,7 +359,7 @@ function ArticleBody() {
         <div className="article-prose">
           <p>
             Most agentic systems are built in the wrong order. The standard
-            development sequence begins with the interface — the agent persona,
+            development sequence begins with the interface, the agent persona,
             the conversation design, the user-facing behavior. It then connects
             tools. Then assembles orchestration logic to coordinate them.
             Evaluation, if it occurs at all, happens at the end as a
@@ -374,7 +374,7 @@ function ArticleBody() {
         <div className="article-prose" style={{ marginTop: "1.5rem" }}>
           <p>
             The right order inverts the standard sequence. It begins with task
-            boundary definition — a precise specification of what the agent is
+            boundary definition, a precise specification of what the agent is
             responsible for, what inputs it will receive, and what outputs
             constitute success and failure. Tool interface design follows: for
             each tool the agent will use, what is the exclusive capability it
@@ -385,12 +385,12 @@ function ArticleBody() {
           </p>
           <p>
             Only after isolated agent validation is the orchestration layer
-            built — because the orchestration layer is only as reliable as the
+            built, because the orchestration layer is only as reliable as the
             agents it coordinates, and an orchestrator built on top of
             unvalidated agents inherits every latent failure in each of them.
             The evaluation framework is built alongside the orchestration layer,
             not after it. It is the mechanism through which orchestration
-            quality is measurable — and systems deployed without it are not
+            quality is measurable, and systems deployed without it are not
             evaluated systems. They are guessed systems.
           </p>
         </div>
@@ -402,7 +402,7 @@ function ArticleBody() {
         <div className="article-prose">
           <p>
             Four requirements distinguish production-ready agentic systems from
-            demo-ready ones. They are not optional enhancements — they are the
+            demo-ready ones. They are not optional enhancements, they are the
             baseline architectural requirements for a system that will operate
             reliably under real-world conditions.
           </p>
@@ -411,7 +411,7 @@ function ArticleBody() {
             Every tool call must have a documented failure mode and a specified
             agent behavior on failure. Retry with backoff? Escalate to a human
             review queue? Surface the failure to the user? The choice is less
-            important than the fact of making it explicitly — because agents
+            important than the fact of making it explicitly, because agents
             without explicit failure handling make the choice implicitly, and
             the implicit choice is almost always to continue processing on
             corrupted state.
@@ -423,8 +423,8 @@ function ArticleBody() {
             For every agentic workflow, the maximum context accumulation across
             all steps must be estimated before deployment. If that estimate
             approaches the model's context limit under realistic inputs, the
-            workflow must be restructured — through context compression,
-            conversation summarization, or task decomposition — before
+            workflow must be restructured, through context compression,
+            conversation summarization, or task decomposition, before
             production deployment. Context budget failure is not graceful. It is
             silent truncation of agent reasoning at exactly the moment when the
             task is complex enough to require it.
@@ -434,7 +434,7 @@ function ArticleBody() {
               Tool selection logic that is exclusive and documented.
             </strong>{" "}
             Every tool in a production agent's tool set must have an exclusive
-            capability — something it can do that no other tool in the set does.
+            capability, something it can do that no other tool in the set does.
             If two tools overlap in capability, the agent's selection between
             them is arbitrary. Document the selection signal for every tool, and
             test that the agent's actual selection behavior matches the
@@ -447,8 +447,8 @@ function ArticleBody() {
             Evaluating an agentic system by inspecting its outputs is
             insufficient. The same output can be produced by correct execution
             and by a multi-step failure path that happened to reach the right
-            answer by accident. Evaluation must sample execution paths — what
-            tools were called, in what order, with what inputs — not just
+            answer by accident. Evaluation must sample execution paths, what
+            tools were called, in what order, with what inputs, not just
             whether the final output was correct. Organizations that do not have
             the infrastructure to evaluate at the path level do not know whether
             their agentic system is working. They know whether it is producing
@@ -471,7 +471,7 @@ function ArticleBody() {
             demo-ready systems are deployed at production scale. The
             organizations that understand this invest in the architectural rigor
             upfront. The organizations that don't discover its value the hard
-            way — in production, under load, when the failures are no longer
+            way, in production, under load, when the failures are no longer
             theoretical.
           </p>
         </div>
@@ -539,8 +539,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -549,13 +548,12 @@ function ArticleFooter() {
 
 export default function ArticleAgenticTrap() {
   usePageMeta({
-    title: "The Agentic Trap — Jay Burgess",
+    title: "The Agentic Trap, Jay Burgess",
     description:
-      "Multi-agent AI systems fail in compounding ways that demos cannot surface. Five architectural failure patterns — and how to close them before production.",
+      "Multi-agent AI systems fail in compounding ways that demos cannot surface. Five architectural failure patterns, and how to close them before production.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

@@ -4,7 +4,7 @@ export default function RevuityBand() {
   return (
     <div className="case-band">
       <div className="case-band-text">
-        <h3>Revuity Systems Case Study — Full Breakdown</h3>
+        <h3>Revuity Systems Case Study, Full Breakdown</h3>
         <p>
           AI advisory, agentic engineering, and SaaS product development for PE
           firms. See how the company was built.

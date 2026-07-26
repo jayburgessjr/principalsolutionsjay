@@ -4,7 +4,7 @@ const cells = [
   {
     icon: '⚙️',
     head: 'Systems ownership',
-    body: 'I take full accountability for the initiative — architecture decisions, build priorities, quality standards, and outcomes. Not a recommender. An owner.',
+    body: 'I take full accountability for the initiative, architecture decisions, build priorities, quality standards, and outcomes. Not a recommender. An owner.',
   },
   {
     icon: '👥',
@@ -19,7 +19,7 @@ const cells = [
   {
     icon: '🔧',
     head: 'Operator when it counts',
-    body: 'When the work gets hard, I don\'t delegate from a distance. I get in the trenches. I\'ve built production AI systems myself — and I know exactly when to lead from the front.',
+    body: 'When the work gets hard, I don\'t delegate from a distance. I get in the trenches. I\'ve built production AI systems myself, and I know exactly when to lead from the front.',
   },
 ]
 

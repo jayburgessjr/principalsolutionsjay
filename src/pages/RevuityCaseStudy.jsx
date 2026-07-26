@@ -41,14 +41,14 @@ function Hero() {
           An LA-based AI-first software company offering AI advisory &amp;
           agentic engineering, solution architecture for PE firms, SaaS product
           development, portfolio operations intelligence, and AI agentic
-          engineering workshops — built and operated as Founder & Principal
+          engineering workshops, built and operated as Founder & Principal
           Forward Deployed Engineer.
         </p>
         <div className="cs-meta-bar">
           <div className="cs-meta-item">
             <div className="cmi-label">Entity</div>
             <div className="cmi-val">
-              Revuity Systems — AI-First Software Company
+              Revuity Systems, AI-First Software Company
             </div>
           </div>
           <div className="cs-meta-item">
@@ -95,7 +95,7 @@ function Philosophy() {
             <p className="pb-text">
               Revuity Systems is intentionally small. No bloated team, no
               investor overhead, no burn rate pressure. Every product is
-              designed to generate revenue with minimal operating cost — because
+              designed to generate revenue with minimal operating cost, because
               lean systems are durable systems.
             </p>
           </div>
@@ -167,8 +167,7 @@ function BuildModel() {
         <p className="build-intro">
           Revuity Systems isn't a collection of one-off projects. It's proof of
           a repeatable method for identifying a problem, validating it fast, and
-          shipping a production product — across completely different
-          industries.
+          shipping a production product, across completely different industries.
         </p>
         <div className="model-flow reveal" ref={flowRef}>
           {steps.map((s, i) => (
@@ -192,7 +191,7 @@ function BuildModel() {
             </strong>{" "}
             Revuity Systems is 4 live proof points that I can execute this loop
             across different industries, different users, and different
-            constraints — without a team or a runway to fall back on.
+            constraints, without a team or a runway to fall back on.
           </div>
         </div>
       </div>
@@ -260,7 +259,7 @@ function Products() {
       eyebrow: "Product 01 · B2B SaaS · Energy & Operations",
       name: "VoltIQ",
       tagline: "AI-powered operations intelligence for portfolio companies",
-      desc: "Portfolio companies generate enormous operational data — but most of it sits in disconnected systems with no intelligence layer on top. VoltIQ aggregates operational and performance signals across portfolio companies, surfacing anomalies, benchmarks, and optimization opportunities through an AI-driven analytics layer built for PE operators.",
+      desc: "Portfolio companies generate enormous operational data, but most of it sits in disconnected systems with no intelligence layer on top. VoltIQ aggregates operational and performance signals across portfolio companies, surfacing anomalies, benchmarks, and optimization opportunities through an AI-driven analytics layer built for PE operators.",
       stack: [
         "Lovable",
         "Supabase",
@@ -269,10 +268,10 @@ function Products() {
         "Subscription SaaS",
       ],
       decisions: [
-        "PE operator focus — built for the GP layer, not individual companies",
-        "AI-first architecture — every data point flows through an intelligence layer",
-        "Multi-entity data model from day one — horizontal portfolio expansion built in",
-        "Minimal surface area on launch — operations intelligence only, no bloat",
+        "PE operator focus, built for the GP layer, not individual companies",
+        "AI-first architecture, every data point flows through an intelligence layer",
+        "Multi-entity data model from day one, horizontal portfolio expansion built in",
+        "Minimal surface area on launch, operations intelligence only, no bloat",
       ],
       outcomeLabel: "Target",
       outcomeVal: "PE",
@@ -284,7 +283,7 @@ function Products() {
       eyebrow: "Product 02 · AI SaaS · Pricing Intelligence",
       name: "PricingCopilot",
       tagline: "AI pricing optimization for SMB and mid-market operators",
-      desc: "Most businesses set prices by gut, competitor observation, or inertia. PricingCopilot is an AI-powered pricing intelligence layer that analyzes cost structure, market signals, and competitive positioning to surface pricing opportunities and risk — giving operators the data-driven pricing advantage that was previously only available to enterprise teams with analytics departments.",
+      desc: "Most businesses set prices by gut, competitor observation, or inertia. PricingCopilot is an AI-powered pricing intelligence layer that analyzes cost structure, market signals, and competitive positioning to surface pricing opportunities and risk, giving operators the data-driven pricing advantage that was previously only available to enterprise teams with analytics departments.",
       stack: [
         "Lovable",
         "Supabase",
@@ -293,10 +292,10 @@ function Products() {
         "Subscription Model",
       ],
       decisions: [
-        "AI copilot model — augments operator judgment, doesn't replace it",
-        "SMB-first pricing — democratizes intelligence previously limited to enterprise",
-        "Subscription over per-seat — predictable revenue, low churn",
-        "Modular by vertical — one engine, configurable per industry",
+        "AI copilot model, augments operator judgment, doesn't replace it",
+        "SMB-first pricing, democratizes intelligence previously limited to enterprise",
+        "Subscription over per-seat, predictable revenue, low churn",
+        "Modular by vertical, one engine, configurable per industry",
       ],
       outcomeLabel: "Model",
       outcomeVal: "AI",
@@ -308,13 +307,13 @@ function Products() {
       eyebrow: "Product 03 · AI SaaS · Food & Hospitality",
       name: "MenuIQ",
       tagline: "AI menu engineering and pricing intelligence for restaurants",
-      desc: "Restaurant operators change menus and prices based on intuition. MenuIQ brings AI-driven menu engineering to food service — analyzing item performance, margin contribution, and pricing elasticity to recommend what to keep, cut, reprice, or promote. Built for independent operators and small chains who can't afford a consulting firm but need the same intelligence.",
+      desc: "Restaurant operators change menus and prices based on intuition. MenuIQ brings AI-driven menu engineering to food service, analyzing item performance, margin contribution, and pricing elasticity to recommend what to keep, cut, reprice, or promote. Built for independent operators and small chains who can't afford a consulting firm but need the same intelligence.",
       stack: ["Lovable", "Supabase", "AI Analytics", "Realtime Data", "SaaS"],
       decisions: [
-        "Operator-grade UX — built for the restaurant owner, not a data analyst",
+        "Operator-grade UX, built for the restaurant owner, not a data analyst",
         "Menu engineering framework baked into the data model",
-        "Real-time cost and margin visibility — not just static reports",
-        "Independent restaurant focus — chain complexity handled later",
+        "Real-time cost and margin visibility, not just static reports",
+        "Independent restaurant focus, chain complexity handled later",
       ],
       outcomeLabel: "Differentiator",
       outcomeVal: "AI",
@@ -326,8 +325,8 @@ function Products() {
       eyebrow: "Product 04 · Advisory SaaS · PE Firms",
       name: "ROAAS",
       tagline:
-        "Return on AI as a Service — AI ROI measurement for PE portfolio companies",
-      desc: "PE firms are deploying AI across portfolio companies but have no standardized way to measure what it's actually returning. ROAAS (Return on AI as a Service) is an AI economics platform that tracks deployment costs, output quality, and business impact across portfolio companies — giving GPs the ROI visibility they need to make intelligent AI investment decisions at scale.",
+        "Return on AI as a Service, AI ROI measurement for PE portfolio companies",
+      desc: "PE firms are deploying AI across portfolio companies but have no standardized way to measure what it's actually returning. ROAAS (Return on AI as a Service) is an AI economics platform that tracks deployment costs, output quality, and business impact across portfolio companies, giving GPs the ROI visibility they need to make intelligent AI investment decisions at scale.",
       stack: [
         "AI Economics Framework",
         "Supabase",
@@ -336,8 +335,8 @@ function Products() {
         "SaaS",
       ],
       decisions: [
-        "GP-layer reporting — aggregates across portfolio, not just per company",
-        "AI economics model built from first principles — not vanity metrics",
+        "GP-layer reporting, aggregates across portfolio, not just per company",
+        "AI economics model built from first principles, not vanity metrics",
         "Token cost modeling and quality benchmarking as core data primitives",
         "Built from my own evaluation framework methodology used in production AI",
       ],
@@ -396,13 +395,13 @@ function WhatThisProves() {
   const proves = [
     {
       num: "01",
-      title: "I Own Outcomes — Not Tasks",
+      title: "I Own Outcomes, Not Tasks",
       text: (
         <>
           There's no PM to escalate to. No engineering team to hand specs to. No
           designer to review my work.{" "}
           <strong>I make every call and live with every result.</strong> That's
-          the accountability level I operate at — and it's exactly what "high
+          the accountability level I operate at, and it's exactly what "high
           autonomy, high accountability" means in practice.
         </>
       ),
@@ -413,8 +412,8 @@ function WhatThisProves() {
       text: (
         <>
           WedData, CertPath, GameNight, and Box Office Beacon are not variations
-          on one product — they're four completely different markets, user
-          types, data models, and go-to-market approaches.{" "}
+          on one product, they're four completely different markets, user types,
+          data models, and go-to-market approaches.{" "}
           <strong>I don't need to be handed a context. I build one.</strong>
         </>
       ),
@@ -430,7 +429,7 @@ function WhatThisProves() {
           <strong>
             This is exactly how I'd approach a portfolio company diagnosis
           </strong>{" "}
-          — find the root cause, validate it, then build the fix.
+          , find the root cause, validate it, then build the fix.
         </>
       ),
     },
@@ -440,11 +439,11 @@ function WhatThisProves() {
       text: (
         <>
           Revuity Systems runs alongside a full-time Principal AI Solutions
-          Architect role at HEAG, where I hold 5 functional responsibilities
-          simultaneously.{" "}
+          Architect role at a regulated Title IV provider, where I hold 5
+          functional responsibilities simultaneously.{" "}
           <strong>
             Operating across multiple contexts with different priorities is not
-            a new challenge for me — it is my default operating mode.
+            a new challenge for me, it is my default operating mode.
           </strong>
         </>
       ),
@@ -460,9 +459,9 @@ function WhatThisProves() {
           <em>Here's What That Actually Means.</em>
         </h2>
         <p className="proves-intro">
-          Anyone can have ideas. Revuity Systems is proof that I execute them —
+          Anyone can have ideas. Revuity Systems is proof that I execute them,
           across different markets, different users, and different technical
-          challenges — without a team, a runway, or a safety net.
+          challenges, without a team, a runway, or a safety net.
         </p>
         <div className="proves-2col-grid reveal" ref={gridRef}>
           {proves.map((p) => (
@@ -477,7 +476,7 @@ function WhatThisProves() {
           {[
             ["4", "Products Shipped"],
             ["4", "Different Verticals"],
-            ["1", "Builder — Solo"],
+            ["1", "Builder, Solo"],
             ["∞", "Accountability"],
           ].map(([num, label]) => (
             <div className="stat-block" key={label}>
@@ -513,8 +512,8 @@ function CTA() {
         >
           Schedule a Call →
         </a>
-        <Link to="/reggie-case-study" className="cs-cta-btn-ghost">
-          Read the ReggieAI Case Study →
+        <Link to="/higher-ed-compliance-software" className="cs-cta-btn-ghost">
+          Read the Higher Ed Compliance Software Case Study →
         </Link>
       </div>
     </section>
@@ -525,8 +524,8 @@ function CaseStudyFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
+        Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -535,14 +534,13 @@ function CaseStudyFooter() {
 
 export default function RevuityCaseStudy() {
   usePageMeta({
-    title: "Revuity Systems Case Study — Jay Burgess",
+    title: "Revuity Systems Case Study, Jay Burgess",
     description:
       "Inside Revuity Systems: AI advisory, agentic engineering, and SaaS product development built and operated by Jay Burgess as Founder & Principal Forward Deployed Engineer.",
   });
 
   return (
     <>
-      <CaseStudyNav />
       <Hero />
       <Philosophy />
       <BuildModel />

@@ -27,7 +27,7 @@ function ArticleHero() {
         </h1>
         <div className="article-abstract">
           Workflow automation is among the highest-leverage investments an
-          organization can make in operational efficiency — and among the most
+          organization can make in operational efficiency, and among the most
           reliably disappointing when executed without architectural discipline.
           The failure pattern is consistent: an automation is built against the
           current state of the process it replaces, without accounting for the
@@ -36,7 +36,7 @@ function ArticleHero() {
           the clean case. It breaks in the cases that matter. This paper
           examines the structural causes of automation fragility, presents five
           design principles for durable automation, and argues that the goal of
-          automation is not to eliminate human involvement — but to restrict it
+          automation is not to eliminate human involvement, but to restrict it
           to the decisions that genuinely require it.
         </div>
         <div className="article-meta-bar">
@@ -80,27 +80,27 @@ const PRINCIPLES = [
   {
     num: "01",
     title: "Automate the Process, Not the Current Behavior",
-    desc: "The most common automation error is automating what the process currently does rather than what it should do. Current behavior incorporates workarounds, informal compensations, and accommodations to upstream failures that have accumulated over time. Automating current behavior makes those workarounds permanent. The correct approach is to define the intended process behavior before automation — and to use the automation exercise as the opportunity to redesign the process, not just accelerate it.",
+    desc: "The most common automation error is automating what the process currently does rather than what it should do. Current behavior incorporates workarounds, informal compensations, and accommodations to upstream failures that have accumulated over time. Automating current behavior makes those workarounds permanent. The correct approach is to define the intended process behavior before automation, and to use the automation exercise as the opportunity to redesign the process, not just accelerate it.",
   },
   {
     num: "02",
     title: "Design Explicitly for the Edge Case",
-    desc: "The clean case is easy to automate. The edge case — the input that doesn't match the expected format, the exception that the standard path doesn't handle, the upstream dependency that returns an unexpected state — is where automations fail. Edge cases are not rare; they are the normal behavior of real-world systems under real-world conditions. Robust automation does not treat edge cases as out-of-scope. It routes them to defined handling paths.",
+    desc: "The clean case is easy to automate. The edge case, the input that doesn't match the expected format, the exception that the standard path doesn't handle, the upstream dependency that returns an unexpected state, is where automations fail. Edge cases are not rare; they are the normal behavior of real-world systems under real-world conditions. Robust automation does not treat edge cases as out-of-scope. It routes them to defined handling paths.",
   },
   {
     num: "03",
     title: "Build Observability In, Not On",
-    desc: "An automation without observability is a black box that fails invisibly. The failure mode is not a crash or an error message — it is silent incorrect processing that produces wrong outputs downstream before anyone notices. Observability — logging, monitoring, alerting — must be designed into the automation at build time, not retrofitted after the first production incident. Measure what the automation does, not just whether it runs.",
+    desc: "An automation without observability is a black box that fails invisibly. The failure mode is not a crash or an error message, it is silent incorrect processing that produces wrong outputs downstream before anyone notices. Observability, logging, monitoring, alerting, must be designed into the automation at build time, not retrofitted after the first production incident. Measure what the automation does, not just whether it runs.",
   },
   {
     num: "04",
     title: "Define the Human Handoff Explicitly",
-    desc: "The goal of automation is not to eliminate human involvement — it is to reserve human judgment for decisions that genuinely require it. Every automation should have a defined handoff: the conditions under which the automation escalates to a human, the information it provides at escalation, and the path by which the human's decision re-enters the automated flow. Automations without defined handoffs fail catastrophically when they encounter conditions outside their design envelope.",
+    desc: "The goal of automation is not to eliminate human involvement, it is to reserve human judgment for decisions that genuinely require it. Every automation should have a defined handoff: the conditions under which the automation escalates to a human, the information it provides at escalation, and the path by which the human's decision re-enters the automated flow. Automations without defined handoffs fail catastrophically when they encounter conditions outside their design envelope.",
   },
   {
     num: "05",
     title: "Document the Assumptions, Not Just the Behavior",
-    desc: "Automation documentation typically describes what the automation does. What it almost never describes is what the automation assumes — about input format, about upstream system behavior, about the data model it depends on. When those assumptions are violated, the automation breaks in ways that are opaque to anyone who didn't write it. Document the assumptions explicitly, as constraints, so that changes to upstream systems can be evaluated against automation dependencies before deployment.",
+    desc: "Automation documentation typically describes what the automation does. What it almost never describes is what the automation assumes, about input format, about upstream system behavior, about the data model it depends on. When those assumptions are violated, the automation breaks in ways that are opaque to anyone who didn't write it. Document the assumptions explicitly, as constraints, so that changes to upstream systems can be evaluated against automation dependencies before deployment.",
   },
 ];
 
@@ -108,7 +108,7 @@ function PrinciplesDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — Five Principles of Durable Automation
+        Fig. 1, Five Principles of Durable Automation
       </div>
       <div
         style={{
@@ -196,17 +196,17 @@ function ArticleBody() {
             automation encoded is updated by the process owner without awareness
             that the automation exists. An edge case appears that the
             automation's path structure cannot route. Each of these events
-            produces a failure — sometimes a hard failure with an error message,
+            produces a failure, sometimes a hard failure with an error message,
             more often a silent failure that produces wrong output without any
             visible signal.
           </p>
           <p>
-            The organization's response is typically to patch the failure — to
+            The organization's response is typically to patch the failure, to
             add a conditional, to extend the exception handling, to build a
             workaround. The automation grows. Its behavior becomes harder to
             reason about. The patches accumulate. Eventually the automation is
             more expensive to maintain than the process it replaced would have
-            been — and the organization has no clear path back to the original
+            been, and the organization has no clear path back to the original
             process because dependencies have formed around the automation's
             output.
           </p>
@@ -219,7 +219,7 @@ function ArticleBody() {
         <div className="article-prose">
           <p>
             Durable automation is not automation that never fails. It is
-            automation that fails gracefully, observably, and recoverably — and
+            automation that fails gracefully, observably, and recoverably, and
             that is designed from the outset with the assumption that it will
             encounter conditions its builders did not anticipate. The five
             principles below are design commitments, not best-practice
@@ -235,7 +235,7 @@ function ArticleBody() {
         <div className="article-prose">
           <p>
             The most common source of automation fragility is not internal
-            design failure. It is interface failure — the automation's
+            design failure. It is interface failure, the automation's
             dependencies on upstream and downstream systems that change
             independently of the automation itself. An automation that was
             correctly designed against the interface it depends on becomes
@@ -251,13 +251,13 @@ function ArticleBody() {
             new interface conditions.
           </p>
           <p>
-            The mitigation is not to prevent interface changes — that is neither
+            The mitigation is not to prevent interface changes, that is neither
             possible nor desirable. It is to make the automation's interface
             dependencies explicit, documented, and monitored. When upstream
             interfaces are versioned and the automation's dependency on a
             specific version is documented, interface changes become a managed
             event rather than a surprise failure. This requires the organization
-            to treat automation as infrastructure — with the same interface
+            to treat automation as infrastructure, with the same interface
             contract discipline that external systems demand.
           </p>
         </div>
@@ -275,8 +275,8 @@ function ArticleBody() {
         <h2>Human-in-the-Loop as Design Feature</h2>
         <div className="article-prose">
           <p>
-            The aspiration of full automation — eliminating human involvement
-            entirely — is frequently the source of automation fragility. Systems
+            The aspiration of full automation, eliminating human involvement
+            entirely, is frequently the source of automation fragility. Systems
             designed around full automation are brittle precisely because they
             have no graceful degradation path. When the automation encounters a
             condition it cannot handle, it has no escalation path. It fails, or
@@ -287,7 +287,7 @@ function ArticleBody() {
             The alternative is to treat human-in-the-loop not as a failure of
             automation ambition but as a design feature. The automation handles
             the cases it handles well. When it encounters a case it cannot
-            handle reliably, it escalates to a human — with the context the
+            handle reliably, it escalates to a human, with the context the
             human needs to make the decision, and with a clear path for the
             human's decision to re-enter the automated flow.
           </p>
@@ -296,7 +296,7 @@ function ArticleBody() {
             aligned with the actual goal of automation: not to eliminate human
             judgment, but to reserve it for the decisions that genuinely require
             it. The organizations that automate most successfully are the ones
-            that are clearest about which decisions those are — and build their
+            that are clearest about which decisions those are, and build their
             automations accordingly.
           </p>
         </div>
@@ -348,7 +348,7 @@ function ArticleCTA() {
         <span>faster than you build them?</span>
       </h3>
       <p>
-        I design workflow automations that are built for real-world conditions —
+        I design workflow automations that are built for real-world conditions,
         with explicit edge case handling, observability, and human handoffs
         where they matter. Let's talk.
       </p>
@@ -368,8 +368,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -378,13 +377,12 @@ function ArticleFooter() {
 
 export default function ArticleWorkflowAutomation() {
   usePageMeta({
-    title: "Workflow Automation Done Right — Jay Burgess",
+    title: "Workflow Automation Done Right, Jay Burgess",
     description:
       "Most automations break because they were designed for the clean case. Five principles for building workflow automations that survive real-world conditions.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

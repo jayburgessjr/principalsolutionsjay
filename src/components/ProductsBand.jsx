@@ -35,7 +35,7 @@ const featured = [
     name: "MenuIQ",
     price: "$49/mo",
     tag: "Business Intelligence · Restaurant Operations",
-    desc: "Analyzing your recipes, costs, and pricing to show you exactly which dishes make money — and which ones quietly drain it.",
+    desc: "Analyzing your recipes, costs, and pricing to show you exactly which dishes make money, and which ones quietly drain it.",
     features: [
       "Food Cost Calculator",
       "Margin Intelligence",
@@ -72,7 +72,7 @@ export default function ProductsBand() {
           </h2>
           <p className="products-intro">
             Five verticals. Eight products. Each scoped to a specific market
-            intelligence or operational problem — and each architected to
+            intelligence or operational problem, and each architected to
             operate without ongoing maintenance.
           </p>
 

@@ -28,8 +28,8 @@ function ArticleHero() {
         </h1>
         <div className="article-abstract">
           AI pilot success rates are deceptively high. Most pilots achieve their
-          stated objectives. Most pilots never reach production. This paradox —
-          successful experiments that generate no operational value — is not
+          stated objectives. Most pilots never reach production. This paradox,
+          successful experiments that generate no operational value, is not
           explained by model quality, budget, or technical complexity. It is
           explained by a set of organizational gaps that are consistently
           present at the moment a pilot is approved and consistently absent from
@@ -79,27 +79,27 @@ const GAPS = [
   {
     label: "Gap 01",
     title: "No Definition of Production Success",
-    body: "The pilot has success criteria. Production has none. A pilot that achieves 85% accuracy in controlled testing has succeeded by its own criteria. But what accuracy threshold is required for the system to generate the operational value that justified the investment? If that question was not answered before the pilot began, the pilot result — however strong — cannot determine whether production deployment is warranted. The gap is not analytical. It is definitional.",
+    body: "The pilot has success criteria. Production has none. A pilot that achieves 85% accuracy in controlled testing has succeeded by its own criteria. But what accuracy threshold is required for the system to generate the operational value that justified the investment? If that question was not answered before the pilot began, the pilot result, however strong, cannot determine whether production deployment is warranted. The gap is not analytical. It is definitional.",
   },
   {
     label: "Gap 02",
     title: "Data Ownership Has No Operational Owner",
-    body: "Every production AI system depends on data that must be maintained, updated, and governed. In pilots, data is assembled for the experiment. In production, it must be owned — someone must be responsible for its quality, its currency, and its access. If that ownership is not assigned before the pilot ends, the pilot succeeds on data the organization cannot sustain in production. The system is technically viable. It is operationally orphaned.",
+    body: "Every production AI system depends on data that must be maintained, updated, and governed. In pilots, data is assembled for the experiment. In production, it must be owned, someone must be responsible for its quality, its currency, and its access. If that ownership is not assigned before the pilot ends, the pilot succeeds on data the organization cannot sustain in production. The system is technically viable. It is operationally orphaned.",
   },
   {
     label: "Gap 03",
     title: "No Integration Path to Operational Workflow",
-    body: "The pilot runs alongside the operational workflow. It does not run within it. Integration — connecting the AI system to the actual processes, tools, and handoffs that constitute daily work — is treated as an implementation detail to be solved after the pilot proves the concept. In practice, integration is frequently more complex than the AI system itself, and the absence of a validated integration path means the pilot succeeded in a context that production cannot replicate.",
+    body: "The pilot runs alongside the operational workflow. It does not run within it. Integration, connecting the AI system to the actual processes, tools, and handoffs that constitute daily work, is treated as an implementation detail to be solved after the pilot proves the concept. In practice, integration is frequently more complex than the AI system itself, and the absence of a validated integration path means the pilot succeeded in a context that production cannot replicate.",
   },
   {
     label: "Gap 04",
     title: "Change Management Is Deferred",
-    body: "AI systems that change how people work require that people change how they work. This is not a technology problem. It is a change management problem, and it begins at pilot design — not at deployment. Pilots that do not include the operational stakeholders who will use the system in production frequently produce systems that are technically complete and operationally resisted. The technology succeeded. The adoption failed. The result is the same: no production value.",
+    body: "AI systems that change how people work require that people change how they work. This is not a technology problem. It is a change management problem, and it begins at pilot design, not at deployment. Pilots that do not include the operational stakeholders who will use the system in production frequently produce systems that are technically complete and operationally resisted. The technology succeeded. The adoption failed. The result is the same: no production value.",
   },
   {
     label: "Gap 05",
     title: "No Failure Mode Plan",
-    body: "The pilot evaluates what the system does when it works. Production requires a plan for what happens when it does not. What is the fallback when the system produces a wrong answer? Who is notified when quality degrades below threshold? How is the system taken offline for maintenance without breaking the workflow it supports? In regulated environments, the absence of these answers is not a gap in preparedness — it is a blocker to deployment.",
+    body: "The pilot evaluates what the system does when it works. Production requires a plan for what happens when it does not. What is the fallback when the system produces a wrong answer? Who is notified when quality degrades below threshold? How is the system taken offline for maintenance without breaking the workflow it supports? In regulated environments, the absence of these answers is not a gap in preparedness, it is a blocker to deployment.",
   },
 ];
 
@@ -149,7 +149,7 @@ function ArticleBody() {
             This pattern repeats across organizations at a rate that has
             generated its own vocabulary: "pilot purgatory," "proof of concept
             cemetery," "the AI graveyard." The language reflects a real
-            phenomenon — a systematic failure to convert AI investment from
+            phenomenon, a systematic failure to convert AI investment from
             experimental value to operational value. And it is not explained by
             the technology.
           </p>
@@ -157,7 +157,7 @@ function ArticleBody() {
             The models that power pilots today are genuinely capable. The gap
             between pilot and production is not in the capability of the
             underlying AI. It is in the organizational architecture required to
-            take that capability and make it operational — the data ownership,
+            take that capability and make it operational, the data ownership,
             the workflow integration, the change management, the failure
             protocols. These are not technical requirements. They are
             organizational requirements, and they are consistently absent from
@@ -203,7 +203,7 @@ function ArticleBody() {
             positioned to demonstrate capability. They are evaluated by success
             criteria that technical teams can control. The result is a selection
             effect: the pilots that succeed are the ones best designed to
-            demonstrate technical capability — not operational viability.
+            demonstrate technical capability, not operational viability.
           </p>
           <p>
             This is not a failure of intent. It is a failure of scope. The
@@ -230,14 +230,14 @@ function ArticleBody() {
             The most effective intervention is not post-pilot remediation. It is
             pilot design that treats production viability as a first-class
             requirement alongside technical performance. This means defining
-            production success criteria before the pilot begins — not accuracy
+            production success criteria before the pilot begins, not accuracy
             targets, but operational targets. What volume must the system
             handle? What quality floor is required for the operational workflow
             to depend on it? What is the acceptable fallback when the system is
             wrong or unavailable?
           </p>
           <p>
-            It means assigning data ownership before the pilot is approved — not
+            It means assigning data ownership before the pilot is approved, not
             as an action item from the pilot review, but as a prerequisite for
             approval. If the organization cannot identify who will own the
             production data, the pilot will succeed on data that production
@@ -247,14 +247,14 @@ function ArticleBody() {
             It means including operational stakeholders in pilot design, not as
             evaluators of a completed system but as co-designers of the system
             that will eventually change how they work. The change management
-            problem does not appear at deployment — it is seeded at pilot
+            problem does not appear at deployment, it is seeded at pilot
             design, when the people whose work will change are either included
             or excluded from the process that determines what changes.
           </p>
           <p>
             Organizations that close these gaps before the pilot begins
             consistently produce pilots that reach production. Not because their
-            technology is better — it usually is not. Because their pilots are
+            technology is better, it usually is not. Because their pilots are
             designed to answer the right question.
           </p>
         </div>
@@ -322,8 +322,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -332,13 +331,12 @@ function ArticleFooter() {
 
 export default function ArticleAIPilots() {
   usePageMeta({
-    title: "Why AI Pilots Die Before Production — Jay Burgess",
+    title: "Why AI Pilots Die Before Production, Jay Burgess",
     description:
       "AI pilots succeed. Production deployments fail. Five organizational gaps that kill good projects and a framework for closing them before the pilot begins.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />

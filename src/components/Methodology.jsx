@@ -10,7 +10,7 @@ const tools = [
     featuresLabel: 'Framework',
     outcomeLabel: 'Scope',
     outcomeNum: '5',
-    outcomeDesc: 'Evaluation dimensions. Open framework — free to use.',
+    outcomeDesc: 'Evaluation dimensions. Open framework, free to use.',
     href: '/burgess-eval.html',
     cta: 'Open Framework →',
   },
@@ -18,7 +18,7 @@ const tools = [
     index: '02',
     label: 'BurgessTest Suite',
     tag: '15 Test Cases · Compliance AI · Stress Testing',
-    description: '15 structured test cases designed to stress-test compliance AI systems — from routine lookups to out-of-scope traps. Built on the Burgess Evaluation Framework.',
+    description: '15 structured test cases designed to stress-test compliance AI systems, from routine lookups to out-of-scope traps. Built on the Burgess Evaluation Framework.',
     features: ['Routine Compliance Lookups', 'Out-of-Scope Traps', 'Edge Case Scenarios'],
     featuresLabel: 'Test Coverage',
     outcomeLabel: 'Test Cases',
@@ -41,7 +41,7 @@ export default function Methodology() {
           <em>Open to use.</em>
         </h2>
         <p className="method-intro">
-          The evaluation frameworks I built to QA production AI in regulated environments — now available as interactive tools.
+          The evaluation frameworks I built to QA production AI in regulated environments, now available as interactive tools.
         </p>
 
         <div className="proof-grid reveal" ref={gridRef} style={{ marginTop: '3rem' }}>

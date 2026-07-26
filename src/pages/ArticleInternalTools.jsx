@@ -27,8 +27,8 @@ function ArticleHero() {
           Yourself Predicts Everything
         </h1>
         <div className="article-abstract">
-          Internal tooling — the systems, applications, and workflows an
-          organization builds for its own operational use — is among the most
+          Internal tooling, the systems, applications, and workflows an
+          organization builds for its own operational use, is among the most
           diagnostic signals an engineering culture emits. Unlike
           customer-facing products, internal tools are built without the
           accountability pressure of external users, exposing the team's actual
@@ -81,7 +81,7 @@ const MATURITY_LEVELS = [
     id: "tool",
     label: "Tool",
     title: "The Point Solution",
-    desc: "A solution to a specific, immediate need. Built by one person, for one use case, in the minimum time required. Not designed to be maintained, not expected to be. Appropriate for genuinely one-time tasks — and only those. The failure mode of the Tool stage is longevity: tools that were built to be temporary frequently become permanent through organizational inertia, acquiring dependencies before they acquire any of the architectural properties that would make those dependencies safe.",
+    desc: "A solution to a specific, immediate need. Built by one person, for one use case, in the minimum time required. Not designed to be maintained, not expected to be. Appropriate for genuinely one-time tasks, and only those. The failure mode of the Tool stage is longevity: tools that were built to be temporary frequently become permanent through organizational inertia, acquiring dependencies before they acquire any of the architectural properties that would make those dependencies safe.",
     indicators: [
       "Single author",
       "No error handling",
@@ -94,7 +94,7 @@ const MATURITY_LEVELS = [
     id: "utility",
     label: "Utility",
     title: "The Extended Tool",
-    desc: "A tool with extended life expectancy. Some assumptions have been made explicit, some edge cases handled. Used by more than its original author. Beginning to accumulate undocumented dependencies on environment, data format, and upstream system behavior. The Utility stage is where most internal tooling lives — and where it stops being improved. Utilities that should have become Platforms stay Utilities because the investment to formalize them is deferred until the cost of not doing so becomes undeniable.",
+    desc: "A tool with extended life expectancy. Some assumptions have been made explicit, some edge cases handled. Used by more than its original author. Beginning to accumulate undocumented dependencies on environment, data format, and upstream system behavior. The Utility stage is where most internal tooling lives, and where it stops being improved. Utilities that should have become Platforms stay Utilities because the investment to formalize them is deferred until the cost of not doing so becomes undeniable.",
     indicators: [
       "Multiple users",
       "Some edge case handling",
@@ -107,7 +107,7 @@ const MATURITY_LEVELS = [
     id: "platform",
     label: "Platform",
     title: "The Intentional Interface",
-    desc: "A system with deliberate interface design — other systems or team members connect to it with defined contracts. Has a maintainer. Generates its own feature requests. The first stage where architectural decisions become difficult to reverse without breaking dependents. Platform stage is where interface discipline becomes non-negotiable: the interface you define now is the interface everyone builds on top of. Most organizations reach this stage too late, formalizing interfaces after the dependencies have already formed around informal ones.",
+    desc: "A system with deliberate interface design, other systems or team members connect to it with defined contracts. Has a maintainer. Generates its own feature requests. The first stage where architectural decisions become difficult to reverse without breaking dependents. Platform stage is where interface discipline becomes non-negotiable: the interface you define now is the interface everyone builds on top of. Most organizations reach this stage too late, formalizing interfaces after the dependencies have already formed around informal ones.",
     indicators: [
       "Defined API contract",
       "Named maintainer",
@@ -120,7 +120,7 @@ const MATURITY_LEVELS = [
     id: "infrastructure",
     label: "Infrastructure",
     title: "The Load-Bearing System",
-    desc: "A system that the organization depends on operationally, that other systems build on top of, and that outlives the team that built it. Requires the same architectural rigor as any production customer system: monitoring, SLOs, documented failure modes, runbooks, API versioning, and explicit deprecation protocols. The Infrastructure stage is not a designation that is applied to a system — it is a state that systems arrive at through organizational dependence, regardless of whether the architecture is ready for it.",
+    desc: "A system that the organization depends on operationally, that other systems build on top of, and that outlives the team that built it. Requires the same architectural rigor as any production customer system: monitoring, SLOs, documented failure modes, runbooks, API versioning, and explicit deprecation protocols. The Infrastructure stage is not a designation that is applied to a system, it is a state that systems arrive at through organizational dependence, regardless of whether the architecture is ready for it.",
     indicators: [
       "SLO defined",
       "Full monitoring",
@@ -171,17 +171,17 @@ const COMMITMENTS = [
   {
     num: "01",
     title: "Interface Before Implementation",
-    desc: "Before writing any implementation code, define the interface — the API, the data contract, the expected inputs and outputs. Tools built from implementation backward have interfaces shaped by implementation accidents. Interface-first design produces systems that other components can depend on without inheriting implementation fragility.",
+    desc: "Before writing any implementation code, define the interface, the API, the data contract, the expected inputs and outputs. Tools built from implementation backward have interfaces shaped by implementation accidents. Interface-first design produces systems that other components can depend on without inheriting implementation fragility.",
   },
   {
     num: "02",
     title: "Failure as a First-Class Concern",
-    desc: "Tools handle failure through implicit assumption. Infrastructure handles failure explicitly — with graceful degradation, clear error states, alerting, and fallback behavior. The moment an internal system becomes load-bearing, failure handling must become explicit. This is not optional overhead. It is the definition of infrastructure.",
+    desc: "Tools handle failure through implicit assumption. Infrastructure handles failure explicitly, with graceful degradation, clear error states, alerting, and fallback behavior. The moment an internal system becomes load-bearing, failure handling must become explicit. This is not optional overhead. It is the definition of infrastructure.",
   },
   {
     num: "03",
     title: "Observability Before Scale",
-    desc: "The instinct is to add monitoring after something breaks. Infrastructure requires monitoring before scale — when instrumenting it is still cheap. Response time, error rates, dependency health, and usage patterns should be observable from the first production deployment, not retrofitted after an incident.",
+    desc: "The instinct is to add monitoring after something breaks. Infrastructure requires monitoring before scale, when instrumenting it is still cheap. Response time, error rates, dependency health, and usage patterns should be observable from the first production deployment, not retrofitted after an incident.",
   },
 ];
 
@@ -189,7 +189,7 @@ function CommitmentsDiagram() {
   return (
     <div className="article-diagram">
       <div className="article-diagram-title">
-        Fig. 1 — The Three Architectural Commitments for Infrastructure
+        Fig. 1, The Three Architectural Commitments for Infrastructure
         Transition
       </div>
       <div
@@ -263,7 +263,7 @@ function ArticleBody() {
     <div className="article-body">
       <div className="article-section reveal" ref={r1}>
         <div className="article-section-num">§ 1</div>
-        <h2>Introduction — The Diagnostic Signal</h2>
+        <h2>Introduction, The Diagnostic Signal</h2>
         <div className="article-prose">
           <p>
             When I walk into an organization and want to understand the quality
@@ -271,22 +271,22 @@ function ArticleBody() {
             anything else: the internal tooling and the documentation. Both are
             built without the accountability pressure of external users. Both
             therefore reveal what the team actually believes about quality,
-            maintainability, and investment horizon — not what the engineering
+            maintainability, and investment horizon, not what the engineering
             principles document claims.
           </p>
           <p>
             Internal tools built for speed and convenience, never refactored,
-            scaling through accretion of undocumented hacks — these tell me the
+            scaling through accretion of undocumented hacks, these tell me the
             team does not yet have the architectural maturity to build systems
             that compound. Internal tools built with API contracts, explicit
-            error handling, monitoring, and documentation — these tell me a team
+            error handling, monitoring, and documentation, these tell me a team
             that will build external products with the same discipline.
           </p>
           <p>
             This predictive relationship is not coincidental. The same
-            architectural judgment calls that determine internal tool quality —
+            architectural judgment calls that determine internal tool quality,
             abstraction discipline, state management, failure handling,
-            interface design — are precisely the calls that determine external
+            interface design, are precisely the calls that determine external
             product quality. There is no version of a team that builds fragile
             internal tools and ships robust external products. The same judgment
             governs both.
@@ -301,7 +301,7 @@ function ArticleBody() {
           <p>
             Internal systems exist on a maturity spectrum that runs from
             disposable point solutions to load-bearing organizational
-            infrastructure. Most organizations have systems at every stage — and
+            infrastructure. Most organizations have systems at every stage, and
             most have systems whose actual organizational role is at a higher
             maturity stage than their architecture. That gap is risk. Select
             each stage below to understand its characteristics and failure
@@ -311,8 +311,8 @@ function ArticleBody() {
         <MaturitySpectrum />
         <div className="article-prose" style={{ marginTop: "1.5rem" }}>
           <p>
-            The transitions between stages — Tool to Utility, Utility to
-            Platform, Platform to Infrastructure — are not automatic. They
+            The transitions between stages, Tool to Utility, Utility to
+            Platform, Platform to Infrastructure, are not automatic. They
             require explicit architectural investment that most teams defer
             because it feels like overhead relative to the immediate problem
             being solved. The cost of that deferral is not visible until a
@@ -337,8 +337,8 @@ function ArticleBody() {
             pay for.
           </p>
           <p>
-            When this transition happens — and for most organizations at scale,
-            it does — the architectural quality of the internal system
+            When this transition happens, and for most organizations at scale,
+            it does, the architectural quality of the internal system
             determines the quality of the external capability. Customers
             experience the consequences of architectural decisions that were
             made when nobody was watching. The fragility that was acceptable
@@ -350,7 +350,7 @@ function ArticleBody() {
           <p>
             "The internal tools you build are not practice. They are the
             foundation. What you build on top of a fragile foundation is itself
-            fragile — regardless of how carefully you build it."
+            fragile, regardless of how carefully you build it."
           </p>
         </div>
         <div className="article-prose">
@@ -370,8 +370,8 @@ function ArticleBody() {
         <h2>The Three Architectural Commitments</h2>
         <div className="article-prose">
           <p>
-            The transition from Utility to Platform — and from Platform to
-            Infrastructure — requires three explicit architectural commitments.
+            The transition from Utility to Platform, and from Platform to
+            Infrastructure, requires three explicit architectural commitments.
             These are not best practices that can be applied partially. They are
             the conditions under which a system becomes safe to depend on.
           </p>
@@ -382,7 +382,7 @@ function ArticleBody() {
             None of these commitments is technically complex. Interface
             definition, failure handling, and instrumentation are standard
             engineering practices. What makes them difficult in the context of
-            internal tools is organizational will — the willingness to invest
+            internal tools is organizational will, the willingness to invest
             engineering time in a system that internal users are already working
             around rather than waiting for.
           </p>
@@ -391,7 +391,7 @@ function ArticleBody() {
             in its architecture. This is precisely backwards. Architecture makes
             systems stable. Waiting for stability before investing in
             architecture produces systems that are never quite stable enough to
-            be worth investing in — and never quite fragile enough to force the
+            be worth investing in, and never quite fragile enough to force the
             investment.
           </p>
         </div>
@@ -412,7 +412,7 @@ function ArticleBody() {
             The practical heuristic for identifying infrastructure is{" "}
             <strong>operational dependence</strong>: the moment a human being
             cannot do their job without a system, that system is infrastructure
-            — regardless of how it was originally built. At that point, the
+           , regardless of how it was originally built. At that point, the
             architectural debt accumulated during earlier stages becomes
             organizational risk, whether or not the organization has chosen to
             recognize it as such.
@@ -422,8 +422,8 @@ function ArticleBody() {
             brittleness that eventually forces expensive rewriting under
             pressure. Teams that over-engineer every utility spend engineering
             capacity on infrastructure that nobody depends on. The skill is
-            knowing which tools are already functioning as infrastructure — or
-            will be — and making the appropriate architectural investment before
+            knowing which tools are already functioning as infrastructure, or
+            will be, and making the appropriate architectural investment before
             the gap between maturity and role becomes a production incident.
           </p>
           <p>
@@ -432,14 +432,14 @@ function ArticleBody() {
             every internal system: if this breaks at 2am, who is responsible,
             what do they do, and how do they know it broke? The systems for
             which that question has no clear answer are the systems that are
-            infrastructure without the architecture of infrastructure — and they
+            infrastructure without the architecture of infrastructure, and they
             are where organizational risk is quietly accumulating.
           </p>
         </div>
         <div className="article-pullquote">
           <p>
             "Internal tools are not overhead. They are the most honest signal an
-            engineering culture emits about its architectural values — and those
+            engineering culture emits about its architectural values, and those
             values predict everything the organization will ever build."
           </p>
         </div>
@@ -507,8 +507,7 @@ function ArticleFooter() {
   return (
     <footer>
       <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal AI Engineer · Founder &
-        Principal Forward Deployed Engineer, Revuity Systems
+        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
       </div>
       <div className="footer-id">jay@revuitysys.com</div>
     </footer>
@@ -517,13 +516,12 @@ function ArticleFooter() {
 
 export default function ArticleInternalTools() {
   usePageMeta({
-    title: "Internal Tools as Strategic Infrastructure — Jay Burgess",
+    title: "Internal Tools as Strategic Infrastructure, Jay Burgess",
     description:
-      "Internal tools are not overhead — they are a diagnostic signal. Why how you build for yourself predicts the quality of everything you will ever ship externally.",
+      "Internal tools are not overhead, they are a diagnostic signal. Why how you build for yourself predicts the quality of everything you will ever ship externally.",
   });
   return (
     <>
-      <ArticleNav />
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />
