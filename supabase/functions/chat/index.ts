@@ -1,10 +1,44 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 
-const CORS = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type",
-};
+// Only these origins may call the assistant from a browser.
+const ALLOWED_ORIGINS = new Set([
+  "https://jay-burgess.me",
+  "https://www.jay-burgess.me",
+  "http://localhost:5173",
+]);
+
+function corsHeaders(origin: string | null) {
+  const allow =
+    origin && ALLOWED_ORIGINS.has(origin) ? origin : "https://jay-burgess.me";
+  return {
+    "Access-Control-Allow-Origin": allow,
+    "Access-Control-Allow-Headers":
+      "authorization, x-client-info, apikey, content-type",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    Vary: "Origin",
+  };
+}
+
+// Lightweight per-IP rate limiter (per isolate). Raises the bar against abuse
+// and denial-of-wallet without a shared store.
+const WINDOW_MS = 60_000;
+const MAX_REQUESTS = 15;
+const hits = new Map<string, number[]>();
+
+function isRateLimited(ip: string, now: number): boolean {
+  const recent = (hits.get(ip) || []).filter((t) => now - t < WINDOW_MS);
+  if (recent.length >= MAX_REQUESTS) {
+    hits.set(ip, recent);
+    return true;
+  }
+  recent.push(now);
+  hits.set(ip, recent);
+  return false;
+}
+
+// Payload caps: reject empty, overlong, or oversized message sets.
+const MAX_MESSAGES = 24;
+const MAX_TOTAL_CHARS = 8000;
 
 const SYSTEM_PROMPT = `
 You are Gloria, an AI assistant on Jay Burgess's portfolio website. Answer questions about Jay accurately and confidently, drawing only from the information below. Do not invent projects, companies, credentials, or numbers that are not listed here. Never use em dashes in your answers.
@@ -96,12 +130,30 @@ He does not stop at recommendations. He ships working systems and leaves documen
 `.trim();
 
 serve(async (req) => {
+  const origin = req.headers.get("origin");
+  const CORS = corsHeaders(origin);
+
   if (req.method === "OPTIONS") {
     return new Response("ok", { headers: CORS });
   }
 
   if (req.method !== "POST") {
     return new Response("Method Not Allowed", { status: 405, headers: CORS });
+  }
+
+  // Per-IP rate limit.
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("cf-connecting-ip") ||
+    "unknown";
+  if (isRateLimited(ip, Date.now())) {
+    return new Response(
+      JSON.stringify({
+        content:
+          "You are sending messages too quickly. Please wait a moment and try again.",
+      }),
+      { status: 429, headers: { ...CORS, "Content-Type": "application/json" } },
+    );
   }
 
   let body: { messages?: unknown[] };
@@ -112,11 +164,24 @@ serve(async (req) => {
   }
 
   const { messages } = body;
-  if (!messages || !Array.isArray(messages)) {
-    return new Response("`messages` array required", {
+  if (
+    !messages ||
+    !Array.isArray(messages) ||
+    messages.length === 0 ||
+    messages.length > MAX_MESSAGES
+  ) {
+    return new Response("`messages` must be a non-empty array within limits", {
       status: 400,
       headers: CORS,
     });
+  }
+
+  const totalChars = messages.reduce((n, m) => {
+    const c = (m as { content?: unknown })?.content;
+    return n + (typeof c === "string" ? c.length : 0);
+  }, 0);
+  if (totalChars > MAX_TOTAL_CHARS) {
+    return new Response("Payload too large", { status: 413, headers: CORS });
   }
 
   const apiKey = Deno.env.get("OPENAI_API_KEY");
