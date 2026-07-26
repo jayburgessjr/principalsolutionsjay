@@ -10,6 +10,9 @@ import RevuityProductsPage from "./pages/RevuityProductsPage";
 import EngagementPage from "./pages/EngagementPage";
 import AboutPage from "./pages/AboutPage";
 import PrivacyPage from "./pages/PrivacyPage";
+import CaseStudiesPage from "./pages/CaseStudiesPage";
+import AdobeCaseStudy from "./pages/AdobeCaseStudy";
+import P3CaseStudy from "./pages/P3CaseStudy";
 import WorkPage from "./pages/WorkPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import ArticleAIScale from "./pages/ArticleAIScale";
@@ -43,7 +46,10 @@ export default function App() {
         <Route path="/revuity-products" element={<RevuityProductsPage />} />
         <Route path="/engagement" element={<EngagementPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/case-studies" element={<CaseStudiesPage />} />
         <Route path="/work" element={<WorkPage />} />
+        <Route path="/adobe-case-study" element={<AdobeCaseStudy />} />
+        <Route path="/p3-case-study" element={<P3CaseStudy />} />
         <Route path="/privacy" element={<PrivacyPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route

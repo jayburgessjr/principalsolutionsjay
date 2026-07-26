@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import "../casestudy.css";
@@ -584,6 +585,11 @@ function CTA() {
       >
         Book a call →
       </a>
+      <div style={{ marginTop: "2rem" }}>
+        <Link to="/case-studies" className="cs-cta-btn-ghost">
+          ← All case studies
+        </Link>
+      </div>
     </section>
   );
 }

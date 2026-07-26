@@ -7,6 +7,7 @@ const LINKEDIN_URL = "https://www.linkedin.com/in/jayburgessjr/";
 const CALENDLY_URL = "https://calendly.com/jayburgessjr/long-meet";
 
 const NAV_LINKS = [
+  { to: "/case-studies", label: "Case studies" },
   { to: "/work", label: "Work" },
   { to: "/engagement", label: "Engagement" },
   { to: "/articles", label: "Writing" },

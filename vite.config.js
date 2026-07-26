@@ -13,7 +13,10 @@ const PuppeteerRenderer = require("@prerenderer/renderer-puppeteer");
 const routes = [
   "/",
   "/about",
+  "/case-studies",
   "/work",
+  "/adobe-case-study",
+  "/p3-case-study",
   "/privacy",
   "/higher-ed-compliance-software",
   "/revuity-case-study",

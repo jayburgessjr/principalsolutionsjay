@@ -1,0 +1,17 @@
+<svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="400" fill="#17171a"/>
+  <g stroke="rgba(255,255,255,0.12)" stroke-width="1" fill="none">
+    <line x1="90" y1="120" x2="550" y2="120"/>
+    <line x1="90" y1="200" x2="550" y2="200"/>
+    <line x1="90" y1="280" x2="550" y2="280"/>
+  </g>
+  <polyline points="100,280 170,250 240,262 310,210 380,220" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="380,220 450,170 520,132" fill="none" stroke="#e8621a" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+  <g fill="rgba(255,255,255,0.55)">
+    <circle cx="100" cy="280" r="4"/><circle cx="170" cy="250" r="4"/>
+    <circle cx="240" cy="262" r="4"/><circle cx="310" cy="210" r="4"/>
+    <circle cx="380" cy="220" r="5"/>
+  </g>
+  <circle cx="520" cy="132" r="8" fill="none" stroke="#e8621a" stroke-width="2"/>
+  <circle cx="520" cy="132" r="3" fill="#e8621a"/>
+</svg>
