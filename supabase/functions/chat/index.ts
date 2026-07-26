@@ -146,14 +146,44 @@ serve(async (req) => {
     req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
     req.headers.get("cf-connecting-ip") ||
     "unknown";
-  if (isRateLimited(ip, Date.now())) {
-    return new Response(
+  const tooFast = () =>
+    new Response(
       JSON.stringify({
         content:
           "You are sending messages too quickly. Please wait a moment and try again.",
       }),
       { status: 429, headers: { ...CORS, "Content-Type": "application/json" } },
     );
+
+  // Fast in-memory pre-filter (per isolate).
+  if (isRateLimited(ip, Date.now())) {
+    return tooFast();
+  }
+
+  // Authoritative distributed limit across all isolates (fail open on error).
+  const supabaseUrl = Deno.env.get("SUPABASE_URL");
+  const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
+  if (supabaseUrl && serviceKey) {
+    try {
+      const rl = await fetch(`${supabaseUrl}/rest/v1/rpc/chat_rate_limit`, {
+        method: "POST",
+        headers: {
+          apikey: serviceKey,
+          Authorization: `Bearer ${serviceKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          p_ip: ip,
+          p_max: MAX_REQUESTS,
+          p_window_seconds: 60,
+        }),
+      });
+      if (rl.ok && (await rl.json()) === false) {
+        return tooFast();
+      }
+    } catch {
+      // Limiter DB unreachable: fail open so the chat keeps working.
+    }
   }
 
   let body: { messages?: unknown[] };
