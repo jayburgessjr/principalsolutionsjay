@@ -23,6 +23,7 @@ const routes = [
   "/walmart-case-study",
   "/revuity-products",
   "/engagement",
+  "/resume",
   "/articles",
   "/article/ai-systems-at-scale",
   "/article/data-debt",
@@ -45,6 +46,9 @@ const routes = [
 const isNetlify = process.env.NETLIFY === "true";
 
 export default defineConfig({
+  server: {
+    port: Number(process.env.PORT) || 5173,
+  },
   plugins: [
     react(),
     !isNetlify &&

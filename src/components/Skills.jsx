@@ -3,12 +3,9 @@ import { useReveal } from "../hooks/useReveal";
 const certifications = [
   "Certified Forward Deployed Engineer (CFDE)",
   "Certified Agentic Engineer (CAE)",
-  "Graduate Certificate in AI · Harvard",
   "IBM AI Engineering Professional Certificate",
   "Claude Partner Badge, Claude Code · Anthropic",
-  "Building with the Claude API · Anthropic",
   "Azure AI Fundamentals · Microsoft",
-  "Power BI AI/ML Integration",
   "MBA · Eastern University",
   "M.S. Data Science · Eastern University",
   "M.Ed. · Loyola Marymount",

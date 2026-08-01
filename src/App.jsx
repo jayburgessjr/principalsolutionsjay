@@ -12,6 +12,7 @@ const WalmartCaseStudy = lazy(() => import("./pages/WalmartCaseStudy"));
 const RevuityProductsPage = lazy(() => import("./pages/RevuityProductsPage"));
 const EngagementPage = lazy(() => import("./pages/EngagementPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
+const ResumePage = lazy(() => import("./pages/ResumePage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const CaseStudiesPage = lazy(() => import("./pages/CaseStudiesPage"));
 const AdobeCaseStudy = lazy(() => import("./pages/AdobeCaseStudy"));
@@ -122,6 +123,7 @@ export default function App() {
             path="/article/governing-forward-deployed-ai"
             element={<ArticleAIGovernance />}
           />
+          <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

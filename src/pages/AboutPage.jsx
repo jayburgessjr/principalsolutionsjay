@@ -62,7 +62,7 @@ function Hero() {
           <div className="cs-meta-item">
             <div className="cmi-label">Credentials</div>
             <div className="cmi-val">
-              Harvard AI · M.S. Data Science · MBA · IBM AI Eng.
+              CFDE · M.S. Data Science · MBA · IBM AI Eng.
             </div>
           </div>
           <div className="cs-meta-item">
@@ -70,6 +70,20 @@ function Hero() {
             <div className="cmi-val">Taking select engagements</div>
           </div>
         </div>
+        <Link
+          to="/resume"
+          style={{
+            display: "inline-block",
+            marginTop: "1.5rem",
+            fontFamily: "'IBM Plex Mono', monospace",
+            fontSize: "0.72rem",
+            letterSpacing: "0.08em",
+            textTransform: "uppercase",
+            color: "var(--orange)",
+          }}
+        >
+          Full resume →
+        </Link>
       </div>
     </section>
   );
