@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { to: "/case-studies", label: "Case studies" },
   { to: "/work", label: "Work" },
   { to: "/engagement", label: "Engagement" },
+  { to: "/resources", label: "Resources" },
   { to: "/articles", label: "Writing" },
   { to: "/about", label: "About" },
 ];

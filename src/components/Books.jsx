@@ -13,6 +13,14 @@ const BOOKS = [
     subtitle: "Field Notes on Product Development for Systems Thinkers",
     url: "https://www.amazon.com/dp/B0GZHN7B5C",
   },
+  {
+    // No cover art yet — falls back to a text placeholder. Add a cover image
+    // and a "cover" path here (matching the pattern above) when available.
+    cover: null,
+    title: "Stories from a Systems Thinker",
+    subtitle: "Twenty-Five Parables on Why the Obvious Fix Never Works",
+    url: "https://a.co/d/0boq5HCE",
+  },
 ];
 
 export default function Books() {
@@ -24,7 +32,7 @@ export default function Books() {
         <div className="books-header">
           <div className="section-label">Published Work</div>
           <h2 className="books-h2">
-            Two Books.
+            Three Books.
             <br />
             <em>Built From the Field.</em>
           </h2>
@@ -43,12 +51,16 @@ export default function Books() {
               rel="noreferrer"
             >
               <div className="book-cover-wrap">
-                <img
-                  src={b.cover}
-                  alt={b.title}
-                  className="book-cover"
-                  loading="lazy"
-                />
+                {b.cover ? (
+                  <img
+                    src={b.cover}
+                    alt={b.title}
+                    className="book-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="book-cover-placeholder">{b.title}</div>
+                )}
               </div>
               <div className="book-meta">
                 <div className="book-title">{b.title}</div>

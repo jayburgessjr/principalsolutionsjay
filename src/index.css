@@ -1976,6 +1976,14 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+@media print {
+  /* Scroll-triggered reveals never fire for content the viewport never
+     visits (e.g. Puppeteer PDF export), so force everything visible. */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
 
 /* ─── SELECTED WORK LINK ─── */
 .pr-link {
@@ -2318,6 +2326,22 @@ footer {
   display: block;
   border-radius: 2px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+.book-cover-placeholder {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  border: 1px solid var(--orange-border);
+  border-radius: 2px;
+  background: var(--orange-glow);
+  color: var(--orange);
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.75rem;
 }
 .book-meta {
   display: flex;

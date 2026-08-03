@@ -13,10 +13,12 @@ const RevuityProductsPage = lazy(() => import("./pages/RevuityProductsPage"));
 const EngagementPage = lazy(() => import("./pages/EngagementPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ResumePage = lazy(() => import("./pages/ResumePage"));
+const ResourcesPage = lazy(() => import("./pages/ResourcesPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const CaseStudiesPage = lazy(() => import("./pages/CaseStudiesPage"));
 const AdobeCaseStudy = lazy(() => import("./pages/AdobeCaseStudy"));
 const P3CaseStudy = lazy(() => import("./pages/P3CaseStudy"));
+const WealthOSCaseStudy = lazy(() => import("./pages/WealthOSCaseStudy"));
 const WorkPage = lazy(() => import("./pages/WorkPage"));
 const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
 const ArticleAIScale = lazy(() => import("./pages/ArticleAIScale"));
@@ -66,6 +68,7 @@ export default function App() {
           <Route path="/work" element={<WorkPage />} />
           <Route path="/adobe-case-study" element={<AdobeCaseStudy />} />
           <Route path="/p3-case-study" element={<P3CaseStudy />} />
+          <Route path="/wealthos-case-study" element={<WealthOSCaseStudy />} />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
           <Route
@@ -124,6 +127,7 @@ export default function App() {
             element={<ArticleAIGovernance />}
           />
           <Route path="/resume" element={<ResumePage />} />
+          <Route path="/resources" element={<ResourcesPage />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
