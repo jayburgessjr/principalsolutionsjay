@@ -2846,6 +2846,279 @@
   }
 }
 
+/* Snapshot page (one-page recruiter share) */
+.snapshot-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6.5rem 1.5rem 3rem;
+}
+
+.snap-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.snap-eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--orange);
+  margin-bottom: 0.4rem;
+}
+
+.snap-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.6rem;
+  line-height: 1;
+  margin: 0 0 0.3rem;
+}
+
+.snap-title {
+  color: var(--mid);
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.snap-contact {
+  text-align: right;
+  font-size: 0.82rem;
+  color: var(--mid);
+  line-height: 1.6;
+}
+
+.snap-contact a {
+  color: var(--white);
+}
+
+.snap-summary {
+  margin-top: 1.1rem;
+  color: var(--mid);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  max-width: 720px;
+}
+
+.snap-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.snap-metric-val {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.9rem;
+  color: var(--orange);
+  line-height: 1;
+}
+
+.snap-metric-label {
+  font-size: 0.78rem;
+  margin-top: 0.3rem;
+}
+
+.snap-metric-desc {
+  font-size: 0.72rem;
+  color: var(--dim);
+  margin-top: 0.15rem;
+}
+
+.snap-cases {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1.7rem;
+}
+
+.snap-case {
+  display: block;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--panel);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease;
+}
+
+.snap-case:hover {
+  border-color: var(--orange);
+}
+
+.snap-case-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--orange);
+  margin-bottom: 0.4rem;
+}
+
+.snap-case-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.snap-case-outcome {
+  font-size: 0.82rem;
+  color: var(--mid);
+}
+
+.snap-stack {
+  margin-top: 1.7rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.82rem;
+  color: var(--mid);
+}
+
+.snap-stack-label {
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.72rem;
+  margin-right: 0.5rem;
+}
+
+.snap-footer {
+  margin-top: 1.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+}
+
+.snap-footer a {
+  color: var(--white);
+}
+
+.snap-footer-sep {
+  margin: 0 0.6rem;
+  color: var(--dim);
+}
+
+.snap-footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+@media screen and (max-width: 720px) {
+  .snap-header-top {
+    flex-direction: column;
+  }
+  .snap-contact {
+    text-align: left;
+  }
+  .snap-metrics,
+  .snap-cases {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media print {
+  body:has(.snapshot-page) nav,
+  .chat-toggle {
+    display: none !important;
+  }
+  .snapshot-page .snap-footer {
+    background: none !important;
+    padding: 0 !important;
+  }
+  .snapshot-page .snap-footer .btn-primary {
+    background: none !important;
+    color: #b8460f !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+  body:has(.snapshot-page) {
+    background: #fff !important;
+  }
+  .snapshot-page {
+    background: #fff;
+    color: #111;
+    max-width: 100%;
+    padding: 0;
+  }
+  .snapshot-page .snap-name,
+  .snapshot-page .snap-case-title {
+    color: #111 !important;
+  }
+  .snapshot-page .snap-title,
+  .snapshot-page .snap-summary,
+  .snapshot-page .snap-metric-label,
+  .snapshot-page .snap-case-outcome,
+  .snapshot-page .snap-stack {
+    color: #333 !important;
+  }
+  .snapshot-page .snap-eyebrow,
+  .snapshot-page .snap-metric-val,
+  .snapshot-page .snap-case-tag,
+  .snapshot-page .snap-stack-label {
+    color: #b8460f !important;
+  }
+  .snapshot-page .snap-contact a,
+  .snapshot-page .snap-metric-desc {
+    color: #555 !important;
+  }
+  .snapshot-page .snap-case {
+    background: #f7f5f2 !important;
+    border-color: #ddd !important;
+  }
+  .snapshot-page .snap-name {
+    font-size: 24pt;
+  }
+  .snapshot-page .snap-title,
+  .snapshot-page .snap-summary {
+    font-size: 9.5pt;
+  }
+  .snapshot-page .snap-contact {
+    font-size: 8.5pt;
+  }
+  .snapshot-page .snap-metrics,
+  .snapshot-page .snap-cases {
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+  }
+  .snapshot-page .snap-metrics {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .snapshot-page .snap-cases {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .snapshot-page .snap-footer {
+    font-size: 8.5pt;
+    margin-top: 1.2rem;
+  }
+  .snapshot-page .snap-footer a {
+    color: #111 !important;
+  }
+  .snapshot-page .snap-metric-val {
+    font-size: 16pt;
+  }
+  .snapshot-page .snap-metric-label,
+  .snapshot-page .snap-case-title {
+    font-size: 8.5pt;
+  }
+  .snapshot-page .snap-metric-desc,
+  .snapshot-page .snap-case-outcome,
+  .snapshot-page .snap-case-tag,
+  .snapshot-page .snap-stack {
+    font-size: 7.5pt;
+  }
+  .snapshot-page .snap-stack {
+    margin-top: 0.9rem;
+    padding-top: 0.8rem;
+  }
+}
+
 .demo-frame {
   border-radius: 10px;
   overflow: hidden;

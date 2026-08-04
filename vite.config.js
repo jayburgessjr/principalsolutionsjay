@@ -25,6 +25,7 @@ const routes = [
   "/revuity-products",
   "/engagement",
   "/resume",
+  "/snapshot",
   "/resources",
   "/articles",
   "/article/ai-systems-at-scale",

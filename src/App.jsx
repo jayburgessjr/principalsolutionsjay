@@ -13,6 +13,7 @@ const RevuityProductsPage = lazy(() => import("./pages/RevuityProductsPage"));
 const EngagementPage = lazy(() => import("./pages/EngagementPage"));
 const AboutPage = lazy(() => import("./pages/AboutPage"));
 const ResumePage = lazy(() => import("./pages/ResumePage"));
+const SnapshotPage = lazy(() => import("./pages/SnapshotPage"));
 const ResourcesPage = lazy(() => import("./pages/ResourcesPage"));
 const PrivacyPage = lazy(() => import("./pages/PrivacyPage"));
 const CaseStudiesPage = lazy(() => import("./pages/CaseStudiesPage"));
@@ -127,6 +128,7 @@ export default function App() {
             element={<ArticleAIGovernance />}
           />
           <Route path="/resume" element={<ResumePage />} />
+          <Route path="/snapshot" element={<SnapshotPage />} />
           <Route path="/resources" element={<ResourcesPage />} />
         </Routes>
       </Suspense>

@@ -49,6 +49,15 @@ const CASES = [
     metricLabel: "platform, built and shipped",
     img: "/work-p3.svg",
   },
+  {
+    slug: "/wealthos-case-study",
+    cat: "Founder-built product · WealthOSnow",
+    title: "WealthOSnow, a personal financial OS",
+    desc: "A live, self-funded product unifying investing, household finance, and long-term wealth planning with AI signals and advisors, built solo end to end.",
+    metric: "50+",
+    metricLabel: "tools shipped, live product",
+    img: "/work-wealthos.svg",
+  },
 ];
 
 function CaseCard({ item }) {
@@ -80,7 +89,7 @@ export default function CaseStudiesPage() {
   usePageMeta({
     title: "Case studies, Jay Burgess, Forward Deployed Engineer",
     description:
-      "Five case studies from Jay Burgess, Principal Forward Deployed Engineer in Los Angeles: regulated AI, enterprise data at Walmart and Adobe, founder-built products at Revuity, and a predictive retention platform.",
+      "Six case studies from Jay Burgess, Principal Forward Deployed Engineer in Los Angeles: regulated AI, enterprise data at Walmart and Adobe, founder-built products at Revuity and WealthOSnow, and a predictive retention platform.",
   });
 
   return (
@@ -92,7 +101,7 @@ export default function CaseStudiesPage() {
             Selected <span>case studies</span>
           </h1>
           <p className="cs-desc">
-            Five deep dives, one job. I owned each of these from the first
+            Six deep dives, one job. I owned each of these from the first
             conversation to the day the team ran it without me. Regulated AI,
             enterprise scale, and founder speed.
           </p>
