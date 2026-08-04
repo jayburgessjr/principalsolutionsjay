@@ -20,6 +20,10 @@ const CaseStudiesPage = lazy(() => import("./pages/CaseStudiesPage"));
 const AdobeCaseStudy = lazy(() => import("./pages/AdobeCaseStudy"));
 const P3CaseStudy = lazy(() => import("./pages/P3CaseStudy"));
 const WealthOSCaseStudy = lazy(() => import("./pages/WealthOSCaseStudy"));
+const ConsultingIPCaseStudy = lazy(
+  () => import("./pages/ConsultingIPCaseStudy"),
+);
+const SBWorkflowCaseStudy = lazy(() => import("./pages/SBWorkflowCaseStudy"));
 const WorkPage = lazy(() => import("./pages/WorkPage"));
 const ArticlesPage = lazy(() => import("./pages/ArticlesPage"));
 const ArticleAIScale = lazy(() => import("./pages/ArticleAIScale"));
@@ -70,6 +74,14 @@ export default function App() {
           <Route path="/adobe-case-study" element={<AdobeCaseStudy />} />
           <Route path="/p3-case-study" element={<P3CaseStudy />} />
           <Route path="/wealthos-case-study" element={<WealthOSCaseStudy />} />
+          <Route
+            path="/consultingip-case-study"
+            element={<ConsultingIPCaseStudy />}
+          />
+          <Route
+            path="/sbworkflow-case-study"
+            element={<SBWorkflowCaseStudy />}
+          />
           <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="/articles" element={<ArticlesPage />} />
           <Route

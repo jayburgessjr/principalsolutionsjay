@@ -3,6 +3,7 @@ import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import resumePdf from "../assets/jay-burgess-resume.pdf";
 import "../casestudy.css";
+import Footer from "../components/Footer";
 
 const CALENDLY_URL = "https://calendly.com/jayburgessjr/long-meet";
 const LINKEDIN_URL = "https://www.linkedin.com/in/jayburgessjr/";
@@ -654,18 +655,6 @@ function CTA() {
   );
 }
 
-function ResumeFooter() {
-  return (
-    <footer>
-      <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
-        Founder, Revuity Systems
-      </div>
-      <div className="footer-id">Los Angeles, CA · Open to Remote</div>
-    </footer>
-  );
-}
-
 export default function ResumePage() {
   usePageMeta({
     title: "Resume, Jay Burgess — Principal Forward Deployed Engineer",
@@ -682,7 +671,7 @@ export default function ResumePage() {
       <Skills />
       <Credentials />
       <CTA />
-      <ResumeFooter />
+      <Footer />
     </div>
   );
 }

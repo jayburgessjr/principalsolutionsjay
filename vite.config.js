@@ -18,6 +18,8 @@ const routes = [
   "/adobe-case-study",
   "/p3-case-study",
   "/wealthos-case-study",
+  "/consultingip-case-study",
+  "/sbworkflow-case-study",
   "/privacy",
   "/higher-ed-compliance-software",
   "/revuity-case-study",

@@ -2544,6 +2544,7 @@
   body:has(.resume-page) nav,
   .resume-page .cs-cta,
   .resume-page .resume-actions,
+  .resume-page .site-footer,
   .chat-toggle {
     display: none !important;
   }
@@ -2797,6 +2798,7 @@
   body:has(.resources-page) nav,
   .resources-page .no-print,
   .resources-page .resume-actions,
+  .resources-page .site-footer,
   .chat-toggle {
     display: none !important;
   }
@@ -2930,7 +2932,7 @@
 
 .snap-cases {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1.7rem;
 }
@@ -2969,6 +2971,20 @@
   color: var(--mid);
 }
 
+.snap-infographic {
+  margin-top: 1.7rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.snap-infographic img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .snap-stack {
   margin-top: 1.7rem;
   padding-top: 1.2rem;
@@ -2983,6 +2999,34 @@
   letter-spacing: 0.05em;
   font-size: 0.72rem;
   margin-right: 0.5rem;
+}
+
+.snap-deck {
+  margin-top: 1.7rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.snap-deck-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.snap-deck-desc {
+  font-size: 0.82rem;
+  color: var(--mid);
+  line-height: 1.55;
+  margin-top: 0.4rem;
+  max-width: 640px;
+}
+
+.snap-deck-btn {
+  flex-shrink: 0;
 }
 
 .snap-footer {
@@ -3021,11 +3065,19 @@
   .snap-cases {
     grid-template-columns: repeat(2, 1fr);
   }
+  .snap-deck {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media print {
   body:has(.snapshot-page) nav,
   .chat-toggle {
+    display: none !important;
+  }
+  .snapshot-page .snap-infographic,
+  .snapshot-page .snap-deck {
     display: none !important;
   }
   .snapshot-page .snap-footer {
@@ -3091,7 +3143,7 @@
     grid-template-columns: repeat(4, 1fr) !important;
   }
   .snapshot-page .snap-cases {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(4, 1fr) !important;
   }
   .snapshot-page .snap-footer {
     font-size: 8.5pt;

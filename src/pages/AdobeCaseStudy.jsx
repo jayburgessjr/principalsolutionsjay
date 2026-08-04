@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import "../casestudy.css";
+import Footer from "../components/Footer";
 
 function Hero() {
   return (
@@ -174,18 +175,6 @@ function CTA() {
   );
 }
 
-function CaseStudyFooter() {
-  return (
-    <footer>
-      <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
-        Founder, Revuity Systems
-      </div>
-      <div className="footer-id">jay@revuitysys.com</div>
-    </footer>
-  );
-}
-
 export default function AdobeCaseStudy() {
   usePageMeta({
     title: "Adobe Marketing Analytics Case Study, Jay Burgess",
@@ -197,7 +186,7 @@ export default function AdobeCaseStudy() {
       <Hero />
       <Body />
       <CTA />
-      <CaseStudyFooter />
+      <Footer />
     </>
   );
 }

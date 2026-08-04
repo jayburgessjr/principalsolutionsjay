@@ -5,6 +5,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import Books from "../components/Books";
 import playbookPdf from "../assets/fde-playbook.pdf";
 import "../casestudy.css";
+import Footer from "../components/Footer";
 
 const CALENDLY_URL = "https://calendly.com/jayburgessjr/long-meet";
 
@@ -506,18 +507,6 @@ function CTA() {
   );
 }
 
-function ResourcesFooter() {
-  return (
-    <footer className="no-print">
-      <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
-        Founder, Revuity Systems
-      </div>
-      <div className="footer-id">Los Angeles, CA · Open to Remote</div>
-    </footer>
-  );
-}
-
 export default function ResourcesPage() {
   usePageMeta({
     title: "Resources, Jay Burgess — FDE Playbook, Calculators & Books",
@@ -532,7 +521,7 @@ export default function ResourcesPage() {
       <Calculators />
       <BooksSection />
       <CTA />
-      <ResourcesFooter />
+      <Footer />
     </div>
   );
 }

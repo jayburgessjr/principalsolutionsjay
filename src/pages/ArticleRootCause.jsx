@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import "../casestudy.css";
+import Footer from "../components/Footer";
 
 function ArticleNav() {
   return (
@@ -439,17 +440,6 @@ function ArticleCTA() {
   );
 }
 
-function ArticleFooter() {
-  return (
-    <footer>
-      <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
-      </div>
-      <div className="footer-id">jay@revuitysys.com</div>
-    </footer>
-  );
-}
-
 export default function ArticleRootCause() {
   usePageMeta({
     title:
@@ -462,7 +452,7 @@ export default function ArticleRootCause() {
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />
-      <ArticleFooter />
+      <Footer />
     </>
   );
 }

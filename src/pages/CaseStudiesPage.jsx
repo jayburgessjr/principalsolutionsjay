@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import "../casestudy.css";
+import Footer from "../components/Footer";
 
 const CASES = [
   {
@@ -58,6 +59,24 @@ const CASES = [
     metricLabel: "tools shipped, live product",
     img: "/work-wealthos.svg",
   },
+  {
+    slug: "/consultingip-case-study",
+    cat: "Founder-built demo · ConsultingIP",
+    title: "ConsultingIP, an ops dashboard for higher-ed",
+    desc: "A demo operations dashboard giving higher-education consulting practices real-time visibility into submission timeliness, consultant ratings, and institution risk.",
+    metric: "Live demo",
+    metricLabel: "role-based views, no login required",
+    img: "/work-consultingip.svg",
+  },
+  {
+    slug: "/sbworkflow-case-study",
+    cat: "Founder-built product · SBWrkFlow",
+    title: "SBWrkFlow, a command center for veteran advocacy",
+    desc: "A live product unifying case management, real-time news monitoring, stakeholder tracking, and an AI copilot for advocates working veteran housing and benefits cases.",
+    metric: "Live product",
+    metricLabel: "paid subscription, Stripe-powered",
+    img: "/work-sbworkflow.svg",
+  },
 ];
 
 function CaseCard({ item }) {
@@ -89,7 +108,7 @@ export default function CaseStudiesPage() {
   usePageMeta({
     title: "Case studies, Jay Burgess, Forward Deployed Engineer",
     description:
-      "Six case studies from Jay Burgess, Principal Forward Deployed Engineer in Los Angeles: regulated AI, enterprise data at Walmart and Adobe, founder-built products at Revuity and WealthOSnow, and a predictive retention platform.",
+      "Eight case studies from Jay Burgess, Principal Forward Deployed Engineer in Los Angeles: regulated AI, enterprise data at Walmart and Adobe, founder-built products at Revuity, WealthOSnow, ConsultingIP, and SBWrkFlow, and a predictive retention platform.",
   });
 
   return (
@@ -101,7 +120,7 @@ export default function CaseStudiesPage() {
             Selected <span>case studies</span>
           </h1>
           <p className="cs-desc">
-            Six deep dives, one job. I owned each of these from the first
+            Eight deep dives, one job. I owned each of these from the first
             conversation to the day the team ran it without me. Regulated AI,
             enterprise scale, and founder speed.
           </p>
@@ -147,13 +166,7 @@ export default function CaseStudiesPage() {
         </a>
       </section>
 
-      <footer>
-        <div className="footer-id">
-          <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
-          Founder, Revuity Systems
-        </div>
-        <div className="footer-id">jay@revuitysys.com</div>
-      </footer>
+      <Footer />
     </>
   );
 }

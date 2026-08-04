@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
 import "../casestudy.css";
+import Footer from "../components/Footer";
 
 function ArticleNav() {
   return (
@@ -386,17 +387,6 @@ function ArticleCTA() {
   );
 }
 
-function ArticleFooter() {
-  return (
-    <footer>
-      <div className="footer-id">
-        <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer · Founder, Revuity Systems
-      </div>
-      <div className="footer-id">jay@revuitysys.com</div>
-    </footer>
-  );
-}
-
 export default function ArticleDataDebt() {
   usePageMeta({
     title: "The Organizational Cost of Data Debt, Jay Burgess",
@@ -408,7 +398,7 @@ export default function ArticleDataDebt() {
       <ArticleHero />
       <ArticleBody />
       <ArticleCTA />
-      <ArticleFooter />
+      <Footer />
     </>
   );
 }

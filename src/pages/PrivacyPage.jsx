@@ -1,5 +1,6 @@
 import { usePageMeta } from "../hooks/usePageMeta";
 import "../casestudy.css";
+import Footer from "../components/Footer";
 
 export default function PrivacyPage() {
   usePageMeta({
@@ -78,13 +79,7 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      <footer>
-        <div className="footer-id">
-          <strong>Jay Burgess</strong> · Principal Forward Deployed Engineer ·
-          Founder, Revuity Systems
-        </div>
-        <div className="footer-id">jay@revuitysys.com</div>
-      </footer>
+      <Footer />
     </>
   );
 }

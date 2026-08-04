@@ -4,6 +4,9 @@ import { usePageMeta } from "../hooks/usePageMeta";
 import snapshotPdf from "../assets/jay-burgess-snapshot.pdf";
 import "../casestudy.css";
 
+const architecturePdf = "/jay-burgess-governed-ai-architecture.pdf";
+const evolutionInfographic = "/jay-burgess-fde-evolution-infographic.png";
+
 const CALENDLY_URL = "https://calendly.com/jayburgessjr/long-meet";
 const LINKEDIN_URL = "https://www.linkedin.com/in/jayburgessjr/";
 
@@ -48,6 +51,12 @@ const CASES = [
     title: "WealthOSnow, a personal financial OS",
     outcome: "50+ tools shipped solo, live product",
     link: "/wealthos-case-study",
+  },
+  {
+    tag: "Founder-built · Live demo",
+    title: "ConsultingIP, an ops dashboard for higher-ed",
+    outcome: "Role-based views, no login required",
+    link: "/consultingip-case-study",
   },
 ];
 
@@ -142,10 +151,46 @@ function SnapCases() {
   );
 }
 
+function SnapInfographic() {
+  return (
+    <section className="snap-infographic">
+      <img
+        src={evolutionInfographic}
+        alt="Timeline infographic: Jay Burgess, the evolution of a Principal Forward Deployed Engineer, from 2008 regulatory foundations through 2022-present agentic AI and FDE era"
+        loading="lazy"
+      />
+    </section>
+  );
+}
+
 function SnapStack() {
   return (
     <section className="snap-stack">
       <span className="snap-stack-label">Stack</span> {STACK}
+    </section>
+  );
+}
+
+function SnapArchitecture() {
+  return (
+    <section className="snap-deck">
+      <div className="snap-deck-copy">
+        <span className="snap-stack-label">Architecture portfolio</span>
+        <p className="snap-deck-desc">
+          An 11-page technical deep-dive on how I govern AI systems for
+          regulated environments: a 4-layer framework for constraining LLMs
+          (deterministic routing, structured outputs, audit trails,
+          human-in-the-loop review), plus architecture and stack breakdowns for
+          HEAG, Revuity, Adobe, and Walmart.
+        </p>
+      </div>
+      <a
+        href={architecturePdf}
+        download="Jay-Burgess-Governed-AI-Architecture.pdf"
+        className="btn-ghost no-print snap-deck-btn"
+      >
+        Download deck ↓
+      </a>
     </section>
   );
 }
@@ -192,7 +237,9 @@ export default function SnapshotPage() {
       <SnapHeader />
       <SnapMetrics />
       <SnapCases />
+      <SnapInfographic />
       <SnapStack />
+      <SnapArchitecture />
       <SnapFooter />
     </div>
   );
