@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -288,9 +289,9 @@ function ArticleBody() {
             The alternative is to treat human-in-the-loop not as a failure of
             automation ambition but as a design feature. The automation handles
             the cases it handles well. When it encounters a case it cannot
-            handle reliably, it escalates to a human, with the context the
-            human needs to make the decision, and with a clear path for the
-            human's decision to re-enter the automated flow.
+            handle reliably, it escalates to a human, with the context the human
+            needs to make the decision, and with a clear path for the human's
+            decision to re-enter the automated flow.
           </p>
           <p>
             This architecture is more robust, more maintainable, and more
@@ -370,6 +371,35 @@ export default function ArticleWorkflowAutomation() {
     title: "Workflow Automation Done Right, Jay Burgess",
     description:
       "Most automations break because they were designed for the clean case. Five principles for building workflow automations that survive real-world conditions.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Workflow Automation Done Right: Why Most Automations Break and How to Build Ones That Don't",
+    description:
+      "Most automations break because they were designed for the clean case. Five principles for building workflow automations that survive real-world conditions.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/workflow-automation",
+    articleSection: "Systems Design",
+    keywords: [
+      "Workflow Automation",
+      "Process Design",
+      "Systems Architecture",
+      "Robustness",
+      "Edge Case Handling",
+      "Operational Excellence",
+    ],
   });
   return (
     <>

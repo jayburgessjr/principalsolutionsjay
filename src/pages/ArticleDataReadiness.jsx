@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -36,7 +37,7 @@ function ArticleHero() {
           This paper defines four dimensions of data readiness, provides a
           structured assessment framework, and argues that the most valuable AI
           investment a data-immature organization can make is not an AI project
-         , it is the infrastructure required to run one.
+          , it is the infrastructure required to run one.
         </div>
         <div className="article-meta-bar">
           <div className="article-meta-item">
@@ -380,8 +381,7 @@ function ArticleBody() {
             already exists. Organizations that treat data readiness signals as
             risks to be managed in the implementation phase consistently
             underestimate the remediation cost, because the remediation is
-            frequently not a project task, it is a precondition for the
-            project.
+            frequently not a project task, it is a precondition for the project.
           </p>
         </div>
       </div>
@@ -486,10 +486,10 @@ function ArticleBody() {
           </p>
           <p>
             Run the test. Before the kickoff. Before the vendor selection.
-            Before the budget request. The four questions, can you access it,
-            is it accurate, does someone own it, does it represent the right
-            thing, take less than a week to answer with reasonable confidence.
-            The project timeline they save is frequently measured in quarters.
+            Before the budget request. The four questions, can you access it, is
+            it accurate, does someone own it, does it represent the right thing,
+            take less than a week to answer with reasonable confidence. The
+            project timeline they save is frequently measured in quarters.
           </p>
         </div>
       </div>
@@ -539,9 +539,9 @@ function ArticleCTA() {
         <span>ready for AI?</span>
       </h3>
       <p>
-        I run data readiness assessments as part of every engagement, before
-        the build, not during it. If you're evaluating an AI use case and want
-        to know whether your data can support it, let's talk.
+        I run data readiness assessments as part of every engagement, before the
+        build, not during it. If you're evaluating an AI use case and want to
+        know whether your data can support it, let's talk.
       </p>
       <a
         href="https://calendly.com/jayburgessjr/long-meet"
@@ -560,6 +560,35 @@ export default function ArticleDataReadiness() {
     title: "The Data Readiness Test, Jay Burgess",
     description:
       "Most AI projects don't fail because the model is wrong. They fail because the data is wrong. Four dimensions of data readiness, and how to assess them before you build.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Data Readiness Test: Why Most Organizations Aren't Ready to Build AI, and How to Know If You Are",
+    description:
+      "Most AI projects don't fail because the model is wrong. They fail because the data is wrong. Four dimensions of data readiness, and how to assess them before you build.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-05-07",
+    url: "https://jay-burgess.me/article/data-readiness",
+    articleSection: "Data Infrastructure",
+    keywords: [
+      "Data Readiness",
+      "Data Infrastructure",
+      "AI Strategy",
+      "Data Quality",
+      "Data Governance",
+      "Enterprise AI",
+    ],
   });
   return (
     <>

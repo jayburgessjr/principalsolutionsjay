@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -276,12 +277,12 @@ function ArticleBody() {
             retrieval system either retrieves or it doesn't. A classification
             model either classifies or it doesn't. The failure surface is
             defined and evaluable. An agentic system, one that plans, routes,
-            calls tools, interprets results, and takes multi-step actions,
-            fails in compounding ways across every decision point in its
-            execution path. A tool called at step three with a malformed input
-            produces corrupted state that downstream agents in step seven
-            operate on with full confidence. The output looks right. The process
-            was wrong at step three.
+            calls tools, interprets results, and takes multi-step actions, fails
+            in compounding ways across every decision point in its execution
+            path. A tool called at step three with a malformed input produces
+            corrupted state that downstream agents in step seven operate on with
+            full confidence. The output looks right. The process was wrong at
+            step three.
           </p>
           <p>
             This is what makes the agentic trap so expensive: it produces
@@ -425,10 +426,10 @@ function ArticleBody() {
             all steps must be estimated before deployment. If that estimate
             approaches the model's context limit under realistic inputs, the
             workflow must be restructured, through context compression,
-            conversation summarization, or task decomposition, before
-            production deployment. Context budget failure is not graceful. It is
-            silent truncation of agent reasoning at exactly the moment when the
-            task is complex enough to require it.
+            conversation summarization, or task decomposition, before production
+            deployment. Context budget failure is not graceful. It is silent
+            truncation of agent reasoning at exactly the moment when the task is
+            complex enough to require it.
           </p>
           <p>
             <strong>
@@ -449,9 +450,9 @@ function ArticleBody() {
             insufficient. The same output can be produced by correct execution
             and by a multi-step failure path that happened to reach the right
             answer by accident. Evaluation must sample execution paths, what
-            tools were called, in what order, with what inputs, not just
-            whether the final output was correct. Organizations that do not have
-            the infrastructure to evaluate at the path level do not know whether
+            tools were called, in what order, with what inputs, not just whether
+            the final output was correct. Organizations that do not have the
+            infrastructure to evaluate at the path level do not know whether
             their agentic system is working. They know whether it is producing
             outputs.
           </p>
@@ -541,6 +542,35 @@ export default function ArticleAgenticTrap() {
     title: "The Agentic Trap, Jay Burgess",
     description:
       "Multi-agent AI systems fail in compounding ways that demos cannot surface. Five architectural failure patterns, and how to close them before production.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Agentic Trap: Why Multi-Agent Systems Break Before They Ship",
+    description:
+      "Multi-agent AI systems fail in compounding ways that demos cannot surface. Five architectural failure patterns, and how to close them before production.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-05-07",
+    url: "https://jay-burgess.me/article/the-agentic-trap",
+    articleSection: "Agentic Systems",
+    keywords: [
+      "Agentic AI",
+      "Multi-Agent Systems",
+      "Orchestration",
+      "Production Architecture",
+      "Tool Use",
+      "AI Engineering",
+    ],
   });
   return (
     <>

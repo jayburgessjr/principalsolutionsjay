@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -208,8 +209,8 @@ function ArticleBody() {
             instructions that reliably elicit desired model behavior, to design
             few-shot examples that generalize to novel inputs, to structure
             chain-of-thought reasoning that improves output quality on complex
-            tasks, these are meaningful capabilities with real leverage on
-            model performance.
+            tasks, these are meaningful capabilities with real leverage on model
+            performance.
           </p>
           <p>
             They also have a ceiling. A perfectly crafted prompt cannot
@@ -239,10 +240,9 @@ function ArticleBody() {
             Effective AI system design operates across four layers, each of
             which determines a different dimension of system quality. Prompt
             engineering operates primarily at the first layer. The other three
-            layers, context, integration, and feedback, receive a small
-            fraction of the investment and attention that the prompt layer
-            receives, despite determining the majority of production system
-            quality.
+            layers, context, integration, and feedback, receive a small fraction
+            of the investment and attention that the prompt layer receives,
+            despite determining the majority of production system quality.
           </p>
         </div>
         <SystemDiagram />
@@ -306,10 +306,10 @@ function ArticleBody() {
         <h2>The Feedback Layer: Most Absent, Most Valuable</h2>
         <div className="article-prose">
           <p>
-            The Feedback Layer, the mechanism by which a system measures its
-            own performance and uses that measurement to improve, is present in
-            very few production AI systems and absent in nearly all early-stage
-            AI deployments. This absence is understandable: building a feedback
+            The Feedback Layer, the mechanism by which a system measures its own
+            performance and uses that measurement to improve, is present in very
+            few production AI systems and absent in nearly all early-stage AI
+            deployments. This absence is understandable: building a feedback
             layer requires significant upfront investment that does not visibly
             improve the initial deployment. The payoff is compounding quality
             improvement over time, which is a long-horizon return in an
@@ -320,10 +320,10 @@ function ArticleBody() {
             The initial deployment performs at a certain quality level. As the
             system encounters production-scale input diversity, it encounters
             failure cases that were never identified in evaluation. Without a
-            feedback mechanism, those failures are invisible, there is no
-            signal that failure occurred, no mechanism to capture the cases, and
-            no process to improve the system in response. The system continues
-            to operate at its initial quality level indefinitely.
+            feedback mechanism, those failures are invisible, there is no signal
+            that failure occurred, no mechanism to capture the cases, and no
+            process to improve the system in response. The system continues to
+            operate at its initial quality level indefinitely.
           </p>
           <p>
             Systems with well-designed feedback layers compound. Each production
@@ -431,6 +431,35 @@ export default function ArticlePromptEngineering() {
     title: "Beyond Prompt Engineering, Jay Burgess",
     description:
       "Prompt engineering is necessary but insufficient. Why system design, not prompt craft, is the skill that determines whether AI investment generates production value.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Beyond Prompt Engineering: Why System Design Is the Real AI Skill",
+    description:
+      "Prompt engineering is necessary but insufficient. Why system design, not prompt craft, is the skill that determines whether AI investment generates production value.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/beyond-prompt-engineering",
+    articleSection: "AI Systems",
+    keywords: [
+      "Prompt Engineering",
+      "AI System Design",
+      "LLM Architecture",
+      "AI Engineering",
+      "System Thinking",
+      "Production AI",
+    ],
   });
   return (
     <>

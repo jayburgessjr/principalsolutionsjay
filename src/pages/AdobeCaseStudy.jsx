@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -180,6 +181,33 @@ export default function AdobeCaseStudy() {
     title: "Adobe Marketing Analytics Case Study, Jay Burgess",
     description:
       "How Jay Burgess built governed data pipelines and shared models at Adobe to consolidate about $6B in global marketing spend and cut executive reporting turnaround by 86%.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "Adobe Marketing Analytics Case Study",
+    description:
+      "How Jay Burgess built governed data pipelines and shared models at Adobe to consolidate about $6B in global marketing spend and cut executive reporting turnaround by 86%.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-07-25",
+    url: "https://jay-burgess.me/adobe-case-study",
+    about: "Adobe",
+    keywords: [
+      "Adobe",
+      "Marketing Analytics",
+      "Data Pipelines",
+      "Executive Reporting",
+      "Enterprise Data",
+    ],
   });
   return (
     <>

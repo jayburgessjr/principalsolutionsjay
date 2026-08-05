@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -248,9 +249,9 @@ function ArticleBody() {
             It means including operational stakeholders in pilot design, not as
             evaluators of a completed system but as co-designers of the system
             that will eventually change how they work. The change management
-            problem does not appear at deployment, it is seeded at pilot
-            design, when the people whose work will change are either included
-            or excluded from the process that determines what changes.
+            problem does not appear at deployment, it is seeded at pilot design,
+            when the people whose work will change are either included or
+            excluded from the process that determines what changes.
           </p>
           <p>
             Organizations that close these gaps before the pilot begins
@@ -324,6 +325,35 @@ export default function ArticleAIPilots() {
     title: "Why AI Pilots Die Before Production, Jay Burgess",
     description:
       "AI pilots succeed. Production deployments fail. Five organizational gaps that kill good projects and a framework for closing them before the pilot begins.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Why AI Pilots Die Before Production: The Organizational Gaps That Kill Good Projects",
+    description:
+      "AI pilots succeed. Production deployments fail. Five organizational gaps that kill good projects and a framework for closing them before the pilot begins.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/ai-pilots-to-production",
+    articleSection: "AI Strategy",
+    keywords: [
+      "AI Pilots",
+      "Production AI",
+      "Organizational Change",
+      "AI Strategy",
+      "Enterprise AI",
+      "Change Management",
+    ],
   });
   return (
     <>

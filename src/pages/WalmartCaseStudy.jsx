@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -118,8 +119,8 @@ function Situation() {
               I was brought in as a Data Scientist. What the situation actually
               required was{" "}
               <strong>
-                a full data organization, strategy, engineering, governance,
-                and intelligence, built from zero.
+                a full data organization, strategy, engineering, governance, and
+                intelligence, built from zero.
               </strong>{" "}
               So that's what I built.
             </p>
@@ -145,8 +146,8 @@ function Situation() {
               <div className="chaos-label">The Cost of No Visibility</div>
               <div className="chaos-text">
                 <strong>Operational bottlenecks and workflow deviations</strong>{" "}
-                were invisible, projects stalled and spend spiked with no way
-                to see why, across a single division of the world's largest
+                were invisible, projects stalled and spend spiked with no way to
+                see why, across a single division of the world's largest
                 retailer.
               </div>
             </div>
@@ -515,9 +516,10 @@ function CTA() {
           <span>Builder speed.</span>
         </h3>
         <p>
-          Walmart proved I can operate at the largest scale. Higher Ed Compliance Software proved I
-          can ship AI in regulated environments. Revuity proves I move fast as a
-          founder. All three together, that's a forward deployed engineer.
+          Walmart proved I can operate at the largest scale. Higher Ed
+          Compliance Software proved I can ship AI in regulated environments.
+          Revuity proves I move fast as a founder. All three together, that's a
+          forward deployed engineer.
         </p>
         <a
           href="https://calendly.com/jayburgessjr/long-meet"
@@ -540,6 +542,32 @@ export default function WalmartCaseStudy() {
     title: "Walmart Creative Operations Case Study, Jay Burgess",
     description:
       "How Jay Burgess built a data organization from scratch inside Walmart Creative Operations and drove a 37% improvement in project completion rates in three quarters.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "Walmart Creative Operations Case Study",
+    description:
+      "How Jay Burgess built a data organization from scratch inside Walmart Creative Operations and drove a 37% improvement in project completion rates in three quarters.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-03-16",
+    url: "https://jay-burgess.me/walmart-case-study",
+    about: "Walmart Creative Operations",
+    keywords: [
+      "Walmart",
+      "Creative Operations",
+      "Data Organization",
+      "Analytics",
+    ],
   });
 
   return (

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -175,6 +176,33 @@ export default function P3CaseStudy() {
     title: "Predictive Retention Platform Case Study, Jay Burgess",
     description:
       "How Jay Burgess built an end-to-end revenue operations platform at P3 Cost Analysts with a machine-learning retention model embedded in daily operations for earlier account-risk visibility and better pricing decisions.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "Predictive Retention Platform Case Study",
+    description:
+      "How Jay Burgess built an end-to-end revenue operations platform at P3 Cost Analysts with a machine-learning retention model embedded in daily operations for earlier account-risk visibility and better pricing decisions.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-07-25",
+    url: "https://jay-burgess.me/p3-case-study",
+    about: "P3 Cost Analysts",
+    keywords: [
+      "P3 Cost Analysts",
+      "Revenue Operations",
+      "Machine Learning",
+      "Predictive Retention",
+      "Account Risk",
+    ],
   });
   return (
     <>

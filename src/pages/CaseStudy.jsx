@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -600,6 +601,34 @@ export default function CaseStudy() {
     title: "Higher Ed Compliance Software Case Study, Jay Burgess",
     description:
       "How Jay Burgess scoped a broken Title IV compliance process, built a multi-agent platform on Claude, LangGraph, and MCP, hardened it for a regulated environment, and handed it off. $2.7M in new revenue in three months.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "Higher Ed Compliance Software Case Study",
+    description:
+      "How Jay Burgess scoped a broken Title IV compliance process, built a multi-agent platform on Claude, LangGraph, and MCP, hardened it for a regulated environment, and handed it off. $2.7M in new revenue in three months.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-03-16",
+    url: "https://jay-burgess.me/higher-ed-compliance-software",
+    about: "Title IV Compliance Software",
+    keywords: [
+      "Title IV Compliance",
+      "Multi-Agent AI",
+      "Claude",
+      "LangGraph",
+      "Model Context Protocol",
+      "Regulated AI",
+    ],
   });
 
   return (

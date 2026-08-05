@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -278,10 +279,10 @@ function ArticleBody() {
           <p>
             Three structural conditions differentiate the demo environment from
             production. <strong>Data diversity:</strong> demo inputs are
-            selected; production inputs arrive as they arrive, noisy,
-            malformed, and frequently outside the distribution the system was
-            optimized for. <strong>Failure surface:</strong> demos exercise the
-            system's capabilities; production exercises its failure modes daily.{" "}
+            selected; production inputs arrive as they arrive, noisy, malformed,
+            and frequently outside the distribution the system was optimized
+            for. <strong>Failure surface:</strong> demos exercise the system's
+            capabilities; production exercises its failure modes daily.{" "}
             <strong>Operator context:</strong> demo operators know the system's
             limitations; production users discover them in real time, at cost to
             the organization.
@@ -291,9 +292,9 @@ function ArticleBody() {
             in controlled conditions can perform significantly below that
             threshold in production, and that gap is not a model quality
             problem. It is a distribution shift problem, a context problem, and
-            an architecture problem, all of which were present during
-            evaluation and not surfaced because the evaluation was not designed
-            to surface them.
+            an architecture problem, all of which were present during evaluation
+            and not surfaced because the evaluation was not designed to surface
+            them.
           </p>
         </div>
         <div className="article-pullquote">
@@ -363,8 +364,8 @@ function ArticleBody() {
           <p>
             <strong>Boundary testing</strong> maps the system's failure
             envelope. What happens when input is adversarial? Out of scope? At
-            context limits? The goal is not to eliminate failure modes, it is
-            to ensure every failure mode is known, understood, and handled with
+            context limits? The goal is not to eliminate failure modes, it is to
+            ensure every failure mode is known, understood, and handled with
             intentional architecture rather than discovered by users at cost to
             the organization.
           </p>
@@ -473,6 +474,35 @@ export default function ArticleAIScale() {
     title: "Why AI Systems Fail at Scale, Jay Burgess",
     description:
       "Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural. A framework for diagnosing and closing it before it costs you.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Why AI Systems Fail at Scale: The Architecture Gap Between Demo and Production",
+    description:
+      "Most AI proofs of concept succeed. Most production deployments struggle. The gap is architectural. A framework for diagnosing and closing it before it costs you.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/ai-systems-at-scale",
+    articleSection: "AI Systems",
+    keywords: [
+      "AI Systems",
+      "Production Architecture",
+      "RAG",
+      "Failure Modes",
+      "Enterprise AI",
+      "MLOps",
+    ],
   });
   return (
     <>

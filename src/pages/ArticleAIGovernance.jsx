@@ -1,5 +1,6 @@
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -841,6 +842,36 @@ export default function ArticleAIGovernance() {
       "Governing Forward Deployed AI in Regulated Enterprises, Jay Burgess",
     description:
       "An operating model that closes the gap between AI policy and AI delivery for regulated enterprises: seven layers, a nine-stage governed lifecycle, ten design principles, and the evidence that proves it works.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Governing Forward Deployed AI in Regulated Enterprises: A Delivery Framework",
+    description:
+      "An operating model that closes the gap between AI policy and AI delivery for regulated enterprises: seven layers, a nine-stage governed lifecycle, ten design principles, and the evidence that proves it works.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-07-25",
+    url: "https://jay-burgess.me/article/governing-forward-deployed-ai",
+    articleSection: "AI Governance",
+    keywords: [
+      "AI Governance",
+      "Forward Deployed AI",
+      "Regulated Enterprise",
+      "NIST AI RMF",
+      "Human Oversight",
+      "Model Risk",
+      "Continuous Assurance",
+    ],
   });
   return (
     <>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -202,10 +203,10 @@ function ArticleBody() {
           <p>
             When a process is failing, the organization feels the failure in a
             specific place. Errors accumulate. A team misses deadlines. A system
-            produces inconsistent output. The natural response, and the
-            response that most organizations default to, is to address the
-            place where the failure is felt. Hire more people. Add more review
-            steps. Tighten the process controls.
+            produces inconsistent output. The natural response, and the response
+            that most organizations default to, is to address the place where
+            the failure is felt. Hire more people. Add more review steps.
+            Tighten the process controls.
           </p>
           <p>
             This response is rational from the vantage point of the symptom. It
@@ -243,7 +244,7 @@ function ArticleBody() {
           <p>
             The framework is sequential by design. Skipping Phase 1, moving
             directly to interpretation before mapping the full symptom landscape
-           , produces diagnoses that fit the first failure examined and miss
+            , produces diagnoses that fit the first failure examined and miss
             systemic patterns. Skipping Phase 2, addressing the symptom without
             tracing the dependency chain, produces behavioral solutions to
             structural problems. The sequence enforces diagnostic discipline
@@ -280,9 +281,9 @@ function ArticleBody() {
             sound but the operation of that architecture is inconsistent with
             its design. They are genuine, but they are far less common as root
             causes than organizational instinct suggests. Most what appears as
-            behavior problems, inconsistent process execution, recurring
-            errors, resistance to change, is produced by architecture that
-            makes consistent execution structurally difficult.
+            behavior problems, inconsistent process execution, recurring errors,
+            resistance to change, is produced by architecture that makes
+            consistent execution structurally difficult.
           </p>
         </div>
         <div className="article-pullquote">
@@ -316,11 +317,11 @@ function ArticleBody() {
           </p>
           <p>
             <strong>The Broken Interface.</strong> Two systems that should be
-            connected are not, or are connected in a way that drops data,
-            delays propagation, or produces format mismatches. The presenting
-            symptom is typically downstream data loss or workflow disruption.
-            The root cause is interface failure. The behavioral response,
-            manual reconciliation, patches the output without addressing the
+            connected are not, or are connected in a way that drops data, delays
+            propagation, or produces format mismatches. The presenting symptom
+            is typically downstream data loss or workflow disruption. The root
+            cause is interface failure. The behavioral response, manual
+            reconciliation, patches the output without addressing the
             connection. Remediation is interface repair and monitoring.
           </p>
           <p>
@@ -446,6 +447,34 @@ export default function ArticleRootCause() {
       "The Principal Architect's Method: Root Cause Diagnosis, Jay Burgess",
     description:
       "Most systems problems are diagnosed at the symptom layer. A structured framework for finding root causes at the architectural level.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Principal Architect's Method: How to Walk Into Any System and Find the Root Cause",
+    description:
+      "Most systems problems are diagnosed at the symptom layer. A structured framework for finding root causes at the architectural level.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/root-cause-diagnosis",
+    articleSection: "Systems Diagnosis",
+    keywords: [
+      "Root Cause Analysis",
+      "Systems Thinking",
+      "Architecture Diagnosis",
+      "Problem Framing",
+      "Organizational Systems",
+    ],
   });
   return (
     <>

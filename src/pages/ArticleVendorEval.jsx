@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -362,6 +363,34 @@ export default function ArticleVendorEval() {
     title: "How to Evaluate an AI Vendor Without Getting Fooled, Jay Burgess",
     description:
       "AI vendor demos are engineered for the evaluator. A structured evaluation methodology that surfaces production reality behind the demo.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "How to Evaluate an AI Vendor Without Getting Fooled by the Demo",
+    description:
+      "AI vendor demos are engineered for the evaluator. A structured evaluation methodology that surfaces production reality behind the demo.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/ai-vendor-evaluation",
+    articleSection: "AI Strategy",
+    keywords: [
+      "Vendor Evaluation",
+      "AI Procurement",
+      "Enterprise AI",
+      "Vendor Selection",
+      "POC Evaluation",
+      "AI Strategy",
+    ],
   });
   return (
     <>

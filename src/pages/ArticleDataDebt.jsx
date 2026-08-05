@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -129,7 +130,7 @@ function ArticleBody() {
             Every organization accumulates information. Very few organizations
             manage it. The gap between those two facts is data debt: the growing
             body of organizational knowledge that exists somewhere in the system
-           , in email threads, in ad hoc spreadsheets, in the institutional
+            , in email threads, in ad hoc spreadsheets, in the institutional
             memory of employees who may or may not still be with the company,
             but cannot be reliably accessed, queried, or acted upon at the
             moment of a decision.
@@ -173,16 +174,16 @@ function ArticleBody() {
             processes, decisions, and institutional knowledge held informally in
             the heads of key personnel rather than captured in accessible form.{" "}
             <strong>Integration debt:</strong> data that exists in multiple
-            systems without reliable linkage, accurate in isolation, unusable
-            in combination. <strong>Access debt:</strong> data that exists and
-            is structured but is practically inaccessible due to permissions
+            systems without reliable linkage, accurate in isolation, unusable in
+            combination. <strong>Access debt:</strong> data that exists and is
+            structured but is practically inaccessible due to permissions
             architecture, tooling limitations, or the absence of expertise
             required to query it.
           </p>
           <p>
             All four share a common characteristic: the information is present.
             The organizational capability to use it is not. And unlike bad data
-           , which is visible in incorrect outputs, data debt is invisible
+            , which is visible in incorrect outputs, data debt is invisible
             until someone needs the information and cannot find it.
           </p>
         </div>
@@ -213,18 +214,18 @@ function ArticleBody() {
             <strong>Analysis Confidence Degradation.</strong> When analysts
             cannot trust that they have accessed all relevant information, when
             the answer to "what do we know about this?" is "it depends on
-            whether we've found it all", analysis confidence degrades.
-            Decisions get hedged. Recommendations get qualified with caveats
-            that reflect information uncertainty rather than genuine strategic
-            ambiguity. The organization systematically underacts relative to the
-            information it actually possesses.
+            whether we've found it all", analysis confidence degrades. Decisions
+            get hedged. Recommendations get qualified with caveats that reflect
+            information uncertainty rather than genuine strategic ambiguity. The
+            organization systematically underacts relative to the information it
+            actually possesses.
           </p>
           <p>
             <strong>Onboarding and Knowledge Transfer Cost.</strong> Data debt
             makes institutional knowledge fragile. When the information required
             to understand a process, product, or customer relationship lives in
-            undocumented form, it must be transferred person-to-person, which
-            is slow, lossy, and vulnerable to attrition. Every departure of a
+            undocumented form, it must be transferred person-to-person, which is
+            slow, lossy, and vulnerable to attrition. Every departure of a
             senior employee extracts more value from an organization carrying
             data debt than from one with structured information architecture.
           </p>
@@ -264,8 +265,7 @@ function ArticleBody() {
             when new tooling is acquired. New data continues to arrive in
             unstructured form. Documentation continues to live informally.
             Systems continue to operate without integration. The tooling layer
-            operates on top of the architecture problem, it does not resolve
-            it.
+            operates on top of the architecture problem, it does not resolve it.
           </p>
         </div>
         <div className="article-pullquote">
@@ -319,7 +319,7 @@ function ArticleBody() {
             infrastructure that enables reliable decision-making, knowledge
             retention, and AI capability. Organizations that stop at Phase 1 or
             Phase 2 have done the analysis without making the structural change
-           , which means the debt continues to accumulate while they report on
+            , which means the debt continues to accumulate while they report on
             it.
           </p>
         </div>
@@ -392,6 +392,35 @@ export default function ArticleDataDebt() {
     title: "The Organizational Cost of Data Debt, Jay Burgess",
     description:
       "Data debt is not a storage problem, it is a decision-making problem. How unstructured information erodes strategic decisions and a framework for remediation.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Organizational Cost of Data Debt: How Unstructured Information Erodes Strategic Decisions",
+    description:
+      "Data debt is not a storage problem, it is a decision-making problem. How unstructured information erodes strategic decisions and a framework for remediation.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/data-debt",
+    articleSection: "Data Infrastructure",
+    keywords: [
+      "Data Debt",
+      "Information Architecture",
+      "Data Governance",
+      "Strategic Decision-Making",
+      "Data Quality",
+      "AI Readiness",
+    ],
   });
   return (
     <>

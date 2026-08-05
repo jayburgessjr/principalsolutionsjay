@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -216,6 +217,33 @@ export default function WealthOSCaseStudy() {
     title: "WealthOSnow Case Study, Jay Burgess",
     description:
       "How Jay Burgess built WealthOSnow, a personal financial operating system unifying investing, household finance, and long-term wealth planning with AI signals and advisors.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "WealthOSnow Case Study",
+    description:
+      "How Jay Burgess built WealthOSnow, a personal financial operating system unifying investing, household finance, and long-term wealth planning with AI signals and advisors.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-08-03",
+    url: "https://jay-burgess.me/wealthos-case-study",
+    about: "WealthOSnow",
+    keywords: [
+      "WealthOSnow",
+      "Personal Finance",
+      "Wealth Planning",
+      "AI Signals",
+      "SaaS Product",
+    ],
   });
   return (
     <>

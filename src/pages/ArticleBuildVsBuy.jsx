@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -37,7 +38,7 @@ function ArticleHero() {
           accounts for the full cost topology of each option, identifies the
           five variables that determine which choice generates more value at
           scale, and argues that the most costly outcome is not the wrong choice
-         , it is a right choice made for the wrong reasons that cannot be
+          , it is a right choice made for the wrong reasons that cannot be
           revisited when circumstances change.
         </div>
         <div className="article-meta-bar">
@@ -287,9 +288,9 @@ function ArticleBody() {
           </p>
           <p>
             Buy analyses consistently undercount{" "}
-            <strong>vendor dependency risk</strong>, the cost of being unable
-            to change when the vendor's pricing, capability, or strategic
-            direction diverges from your needs. They undercount{" "}
+            <strong>vendor dependency risk</strong>, the cost of being unable to
+            change when the vendor's pricing, capability, or strategic direction
+            diverges from your needs. They undercount{" "}
             <strong>data portability constraints</strong>, which become apparent
             only when migration is necessary. And they undercount{" "}
             <strong>customization debt</strong>, the cost of building around
@@ -401,6 +402,35 @@ export default function ArticleBuildVsBuy() {
     title: "Build vs. Buy in AI Infrastructure, Jay Burgess",
     description:
       "The standard build vs. buy analysis is systematically biased. A decision framework that accounts for the full cost topology of each option.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Build vs. Buy in AI Infrastructure: A Decision Framework That Doesn't Lie to You",
+    description:
+      "The standard build vs. buy analysis is systematically biased. A decision framework that accounts for the full cost topology of each option.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/build-vs-buy",
+    articleSection: "AI Strategy",
+    keywords: [
+      "Build vs Buy",
+      "AI Infrastructure",
+      "Vendor Selection",
+      "Make vs Buy",
+      "AI Strategy",
+      "Total Cost of Ownership",
+    ],
   });
   return (
     <>

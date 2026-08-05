@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -319,7 +320,7 @@ function ArticleBody() {
           <p>
             The output of technical due diligence is not a pass/fail verdict. It
             is a risk-adjusted picture of what the commitment actually involves
-           , the capability that exists, the problems that are present, the
+            , the capability that exists, the problems that are present, the
             costs of addressing them, and the conditions under which the deal
             structure should change. This reframing matters because it changes
             what the evaluation is for: not to find reasons to say no, but to
@@ -328,8 +329,8 @@ function ArticleBody() {
           <p>
             Due diligence findings should produce three outputs: a prioritized
             list of architectural risks with estimated remediation cost; a set
-            of commitment conditions, the specific architectural improvements
-            or documentation requirements that should be completed before or as
+            of commitment conditions, the specific architectural improvements or
+            documentation requirements that should be completed before or as
             part of the deal; and a post-commitment technical roadmap that
             sequences the work required to make the system fit for its intended
             purpose.
@@ -403,6 +404,34 @@ export default function ArticleTechDueDiligence() {
     title: "Technical Due Diligence, Jay Burgess",
     description:
       "Technical due diligence is consistently performed too late, too narrowly, or too optimistically. A four-domain framework for evaluations that find what comfort hides.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Technical Due Diligence: What to Look For Before You Commit",
+    description:
+      "Technical due diligence is consistently performed too late, too narrowly, or too optimistically. A four-domain framework for evaluations that find what comfort hides.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/technical-due-diligence",
+    articleSection: "Technical Leadership",
+    keywords: [
+      "Technical Due Diligence",
+      "Architecture Review",
+      "Vendor Evaluation",
+      "M&A",
+      "Technology Assessment",
+      "Risk Analysis",
+    ],
   });
   return (
     <>

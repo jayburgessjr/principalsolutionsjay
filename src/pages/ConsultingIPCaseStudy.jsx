@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -223,6 +224,32 @@ export default function ConsultingIPCaseStudy() {
     title: "ConsultingIP Case Study, Jay Burgess",
     description:
       "How Jay Burgess built ConsultingIP, a demo operations dashboard giving higher-education consulting practices real-time visibility into submission timeliness, consultant ratings, and institution risk.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "ConsultingIP Case Study",
+    description:
+      "How Jay Burgess built ConsultingIP, a demo operations dashboard giving higher-education consulting practices real-time visibility into submission timeliness, consultant ratings, and institution risk.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-08-03",
+    url: "https://jay-burgess.me/consultingip-case-study",
+    about: "ConsultingIP",
+    keywords: [
+      "ConsultingIP",
+      "Higher Education Consulting",
+      "Operations Dashboard",
+      "SaaS Product",
+    ],
   });
   return (
     <>

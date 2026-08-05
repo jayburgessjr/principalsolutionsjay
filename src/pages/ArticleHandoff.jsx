@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -27,8 +28,8 @@ function ArticleHero() {
         </h1>
         <div className="article-abstract">
           The most common failure mode of consulting and contracting engagements
-         , and a significant source of failure in internal engineering projects
-         , is not technical failure. It is handoff failure: the moment at which
+          , and a significant source of failure in internal engineering projects
+          , is not technical failure. It is handoff failure: the moment at which
           the people who built a system pass operational responsibility to the
           people who will run it, and the running team discovers that what they
           received is not what they can maintain. This paper defines the handoff
@@ -36,8 +37,8 @@ function ArticleHero() {
           that distinguish systems built for handoff from systems built for
           their builders, and argues that the ability to deliver complete,
           operational, independently runnable systems is a distinct engineering
-          competency, one that most organizations neither require nor reward,
-          to their significant operational cost.
+          competency, one that most organizations neither require nor reward, to
+          their significant operational cost.
         </div>
         <div className="article-meta-bar">
           <div className="article-meta-item">
@@ -189,9 +190,9 @@ function ArticleBody() {
           <p>
             This is the handoff problem. It is not caused by malice. It is
             caused by a structural gap between the knowledge required to build a
-            system and the knowledge required to operate one, and the
-            consistent failure to treat knowledge transfer as a first-class
-            deliverable of the building process.
+            system and the knowledge required to operate one, and the consistent
+            failure to treat knowledge transfer as a first-class deliverable of
+            the building process.
           </p>
           <p>
             Builders accumulate operational knowledge about a system during the
@@ -402,6 +403,35 @@ export default function ArticleHandoff() {
     title: "The Handoff Problem, Jay Burgess",
     description:
       "A system that works is not a complete deliverable. Four properties that distinguish systems built for handoff from systems built for their builders.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Handoff Problem: Building Systems That Run Without Their Architect",
+    description:
+      "A system that works is not a complete deliverable. Four properties that distinguish systems built for handoff from systems built for their builders.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/the-handoff-problem",
+    articleSection: "Technical Leadership",
+    keywords: [
+      "System Handoff",
+      "Technical Documentation",
+      "Knowledge Transfer",
+      "Operational Readiness",
+      "Engineering Leadership",
+      "Consulting Delivery",
+    ],
   });
   return (
     <>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -219,11 +220,10 @@ function ArticleBody() {
             This failure is particularly dangerous because it is silent. The
             model does not report that its retrieved context was insufficient.
             It generates a confident, well-structured response. The failure is
-            only detectable through evaluation, and evaluation of RAG systems
-            is consistently less rigorous than evaluation of the models that
-            power them, because the assumption that retrieval constrains
-            generation leads organizations to under-invest in retrieval quality
-            monitoring.
+            only detectable through evaluation, and evaluation of RAG systems is
+            consistently less rigorous than evaluation of the models that power
+            them, because the assumption that retrieval constrains generation
+            leads organizations to under-invest in retrieval quality monitoring.
           </p>
           <p>
             The correct mental model for RAG failure is not "the model
@@ -330,9 +330,9 @@ function ArticleBody() {
           </p>
           <p>
             Improving retrieval precision requires investment in the retrieval
-            engine itself, query expansion, re-ranking, hybrid search
-            (combining semantic and keyword retrieval), and query-time metadata
-            filtering. These are not simple parameter adjustments. They require
+            engine itself, query expansion, re-ranking, hybrid search (combining
+            semantic and keyword retrieval), and query-time metadata filtering.
+            These are not simple parameter adjustments. They require
             architectural decisions with significant implications for latency,
             infrastructure cost, and maintenance complexity. But they are the
             investments that actually improve system quality at the layer where
@@ -443,6 +443,35 @@ export default function ArticleRAG() {
     title: "RAG Architecture in Practice, Jay Burgess",
     description:
       "Retrieval quality, not model quality, is the binding constraint in most enterprise RAG systems. A five-layer architecture for retrieval systems that don't lie.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "RAG Architecture in Practice: Building Retrieval Systems That Don't Lie",
+    description:
+      "Retrieval quality, not model quality, is the binding constraint in most enterprise RAG systems. A five-layer architecture for retrieval systems that don't lie.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/rag-architecture",
+    articleSection: "AI Architecture",
+    keywords: [
+      "RAG",
+      "Retrieval-Augmented Generation",
+      "Vector Search",
+      "Knowledge Base",
+      "AI Architecture",
+      "Hallucination Prevention",
+    ],
   });
   return (
     <>

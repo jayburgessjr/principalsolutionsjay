@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -526,6 +527,32 @@ export default function RevuityCaseStudy() {
     title: "Revuity Systems Case Study, Jay Burgess",
     description:
       "Inside Revuity Systems: AI advisory, agentic engineering, and SaaS product development built and operated by Jay Burgess as Founder & Principal Forward Deployed Engineer.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "Revuity Systems Case Study",
+    description:
+      "Inside Revuity Systems: AI advisory, agentic engineering, and SaaS product development built and operated by Jay Burgess as Founder & Principal Forward Deployed Engineer.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-03-16",
+    url: "https://jay-burgess.me/revuity-case-study",
+    about: "Revuity Systems",
+    keywords: [
+      "Revuity Systems",
+      "AI Advisory",
+      "Agentic Engineering",
+      "SaaS Product Development",
+    ],
   });
 
   return (

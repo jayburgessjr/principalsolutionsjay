@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -219,6 +220,33 @@ export default function SBWorkflowCaseStudy() {
     title: "SBWrkFlow Case Study, Jay Burgess",
     description:
       "How Jay Burgess built SBWrkFlow, a command center for veteran advocacy unifying case management, real-time news monitoring, stakeholder tracking, and an AI copilot.",
+  });
+  useStructuredData("case-study-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    headline: "SBWrkFlow Case Study",
+    description:
+      "How Jay Burgess built SBWrkFlow, a command center for veteran advocacy unifying case management, real-time news monitoring, stakeholder tracking, and an AI copilot.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    dateCreated: "2026-08-03",
+    url: "https://jay-burgess.me/sbworkflow-case-study",
+    about: "SBWrkFlow",
+    keywords: [
+      "SBWrkFlow",
+      "Veteran Advocacy",
+      "Case Management",
+      "AI Copilot",
+      "SaaS Product",
+    ],
   });
   return (
     <>

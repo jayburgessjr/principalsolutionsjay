@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -339,12 +340,12 @@ function ArticleBody() {
           </p>
           <p>
             When this transition happens, and for most organizations at scale,
-            it does, the architectural quality of the internal system
-            determines the quality of the external capability. Customers
-            experience the consequences of architectural decisions that were
-            made when nobody was watching. The fragility that was acceptable
-            when only internal users experienced it becomes a reliability
-            problem when external users do.
+            it does, the architectural quality of the internal system determines
+            the quality of the external capability. Customers experience the
+            consequences of architectural decisions that were made when nobody
+            was watching. The fragility that was acceptable when only internal
+            users experienced it becomes a reliability problem when external
+            users do.
           </p>
         </div>
         <div className="article-pullquote">
@@ -413,7 +414,7 @@ function ArticleBody() {
             The practical heuristic for identifying infrastructure is{" "}
             <strong>operational dependence</strong>: the moment a human being
             cannot do their job without a system, that system is infrastructure
-           , regardless of how it was originally built. At that point, the
+            , regardless of how it was originally built. At that point, the
             architectural debt accumulated during earlier stages becomes
             organizational risk, whether or not the organization has chosen to
             recognize it as such.
@@ -509,6 +510,35 @@ export default function ArticleInternalTools() {
     title: "Internal Tools as Strategic Infrastructure, Jay Burgess",
     description:
       "Internal tools are not overhead, they are a diagnostic signal. Why how you build for yourself predicts the quality of everything you will ever ship externally.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "Internal Tools as Strategic Infrastructure: Why How You Build for Yourself Predicts Everything",
+    description:
+      "Internal tools are not overhead, they are a diagnostic signal. Why how you build for yourself predicts the quality of everything you will ever ship externally.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/internal-tools",
+    articleSection: "Internal Infrastructure",
+    keywords: [
+      "Internal Tools",
+      "Infrastructure",
+      "Engineering Culture",
+      "Platform Engineering",
+      "Systems Architecture",
+      "Technical Leadership",
+    ],
   });
   return (
     <>

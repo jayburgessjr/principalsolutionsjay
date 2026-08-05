@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useReveal } from "../hooks/useReveal";
 import { usePageMeta } from "../hooks/usePageMeta";
+import { useStructuredData } from "../hooks/useStructuredData";
 import "../casestudy.css";
 import Footer from "../components/Footer";
 
@@ -219,11 +220,11 @@ function ArticleBody() {
         <PatternDiagram />
         <div className="article-prose" style={{ marginTop: "1.5rem" }}>
           <p>
-            The inverse Conway maneuver, deliberately designing the
-            organization to produce the desired architecture, is the most
-            powerful application of this understanding. Rather than designing
-            the architecture and then asking how to staff it, you design the
-            team topology first, with explicit awareness of the architectural
+            The inverse Conway maneuver, deliberately designing the organization
+            to produce the desired architecture, is the most powerful
+            application of this understanding. Rather than designing the
+            architecture and then asking how to staff it, you design the team
+            topology first, with explicit awareness of the architectural
             implications, and then design the architecture that a team topology
             can produce and maintain.
           </p>
@@ -404,6 +405,35 @@ export default function ArticleOrgAsArchitecture() {
     title: "The Org Chart Is the Architecture, Jay Burgess",
     description:
       "Conway's Law as a leadership tool: how team structure determines system quality and what technical leaders can do about it.",
+  });
+  useStructuredData("article-structured-data", {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Org Chart Is the Architecture: How Team Structure Determines System Quality",
+    description:
+      "Conway's Law as a leadership tool: how team structure determines system quality and what technical leaders can do about it.",
+    author: {
+      "@type": "Person",
+      "@id": "https://jay-burgess.me/#jay-burgess",
+      name: "Jay Burgess",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Revuity Systems",
+      url: "https://revuitysystems.com",
+    },
+    datePublished: "2026-04-28",
+    url: "https://jay-burgess.me/article/org-as-architecture",
+    articleSection: "Technical Leadership",
+    keywords: [
+      "Conway's Law",
+      "Team Topology",
+      "Organizational Design",
+      "Systems Architecture",
+      "Technical Leadership",
+      "Team Structure",
+    ],
   });
   return (
     <>
