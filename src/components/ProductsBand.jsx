@@ -72,8 +72,8 @@ export default function ProductsBand() {
           </h2>
           <p className="products-intro">
             Five verticals. Eight products. Each scoped to a specific market
-            intelligence or operational problem, and each architected to
-            operate without ongoing maintenance.
+            intelligence or operational problem, and each architected to operate
+            without ongoing maintenance.
           </p>
 
           <div
