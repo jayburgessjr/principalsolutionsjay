@@ -333,7 +333,7 @@ function ProductsCTA() {
         </h3>
         <p>
           Revuity is how I demonstrate I can build and ship AI products at speed
-         , across verticals, without a team. That's the operator proof.
+          , across verticals, without a team. That's the operator proof.
         </p>
         <a
           href="https://calendly.com/jayburgessjr/long-meet"
