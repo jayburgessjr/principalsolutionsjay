@@ -65,22 +65,28 @@ const STACK =
 
 const BOOKS = [
   {
+    cover: "/book-jays-art-of-systems-thinking.jpg",
     title: "Jay's Art of Systems Thinking",
     url: "https://www.amazon.com/dp/B0HDB4KWS1",
   },
   {
+    cover: "/book-forward-deployed-engineer.jpg",
     title: "The Forward Deployed Engineer",
     url: "https://www.amazon.com/dp/B0HDB54ZTG",
   },
   {
+    cover: "/book-agentic-engineering.jpg",
     title: "Agentic Engineering",
     url: "https://www.amazon.com/dp/B0GZHP2FHK",
   },
   {
+    cover: "/book-agentic-builder.jpg",
     title: "The Agentic Builder",
     url: "https://www.amazon.com/dp/B0GZHN7B5C",
   },
   {
+    // No cover art yet — matches src/components/Books.jsx's fallback.
+    cover: null,
     title: "Stories from a Systems Thinker",
     url: "https://www.amazon.com/dp/B0GX2YFH78",
   },
@@ -111,18 +117,21 @@ const LATEST_ARTICLES = [
 
 const BUILDS = [
   {
+    image: "/demo-wealthosnow.png",
     tag: "Founder-built · Live product",
     title: "WealthOSnow, a personal financial OS",
     outcome: "50+ tools shipped, live product",
     link: "/wealthos-case-study",
   },
   {
+    image: "/demo-consultingip.png",
     tag: "Founder-built · Live demo",
     title: "ConsultingIP, an ops dashboard for higher-ed",
     outcome: "Live demo, role-based views, no login required",
     link: "/consultingip-case-study",
   },
   {
+    image: "/demo-sbworkflow.png",
     tag: "Founder-built · Live product",
     title: "SBWrkFlow, a command center for veteran advocacy",
     outcome: "Live product, paid subscription, Stripe-powered",
@@ -231,7 +240,15 @@ function SnapBuilds() {
       <span className="snap-stack-label">Builds</span>
       <div className="snap-builds-grid">
         {BUILDS.map((b) => (
-          <Link to={b.link} className="snap-case" key={b.link}>
+          <Link to={b.link} className="snap-case snap-build" key={b.link}>
+            <div className="snap-build-thumb-wrap">
+              <img
+                src={b.image}
+                alt={`${b.title} screenshot`}
+                className="snap-build-thumb"
+                loading="lazy"
+              />
+            </div>
             <div className="snap-case-tag">{b.tag}</div>
             <div className="snap-case-title">{b.title}</div>
             <div className="snap-case-outcome">{b.outcome}</div>
@@ -255,7 +272,17 @@ function SnapBooks() {
             className="snap-book-link"
             key={b.url}
           >
-            {b.title}
+            {b.cover ? (
+              <img
+                src={b.cover}
+                alt={`${b.title} cover`}
+                className="snap-book-cover"
+                loading="lazy"
+              />
+            ) : (
+              <div className="snap-book-cover-placeholder" aria-hidden="true" />
+            )}
+            <span className="snap-book-title">{b.title}</span>
           </a>
         ))}
       </div>

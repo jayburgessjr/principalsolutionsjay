@@ -2999,6 +2999,23 @@
   margin-top: 0.9rem;
 }
 
+.snap-build-thumb-wrap {
+  aspect-ratio: 16 / 10;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0c0c0d;
+}
+
+.snap-build-thumb {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
 .snap-books {
   margin-top: 1.7rem;
   padding-top: 1.2rem;
@@ -3008,19 +3025,44 @@
 .snap-books-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem 1.4rem;
+  gap: 0.9rem 1.3rem;
   margin-top: 0.9rem;
 }
 
 .snap-book-link {
-  font-size: 0.82rem;
-  color: var(--white);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  max-width: 230px;
   text-decoration: none;
+}
+
+.snap-book-cover,
+.snap-book-cover-placeholder {
+  flex-shrink: 0;
+  width: 34px;
+  height: 50px;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.snap-book-cover {
+  object-fit: cover;
+}
+
+.snap-book-cover-placeholder {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.snap-book-title {
+  font-size: 0.82rem;
+  line-height: 1.3;
+  color: var(--white);
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   padding-bottom: 2px;
 }
 
-.snap-book-link:hover {
+.snap-book-link:hover .snap-book-title {
   color: var(--orange);
   border-color: var(--orange);
 }
