@@ -216,6 +216,15 @@ const SKILLS = [
 
 const PUBLICATIONS = [
   {
+    title: "Jay's Art of Systems Thinking",
+    url: "https://www.amazon.com/dp/B0HDB4KWS1",
+  },
+  {
+    title:
+      "The Forward Deployed Engineer: A Simple Guide to Building What Enterprises Actually Need",
+    url: "https://www.amazon.com/dp/B0HDB54ZTG",
+  },
+  {
     title:
       "Agentic Engineering: Building Autonomous AI Systems That Actually Work",
     url: "https://a.co/d/03fJm7Vs",

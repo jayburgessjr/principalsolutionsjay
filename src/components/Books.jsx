@@ -2,6 +2,18 @@ import { useReveal } from "../hooks/useReveal";
 
 const BOOKS = [
   {
+    cover: "/book-jays-art-of-systems-thinking.jpg",
+    title: "Jay's Art of Systems Thinking",
+    subtitle: "A Field Guide to Seeing the Structure Behind Recurring Problems",
+    url: "https://www.amazon.com/dp/B0HDB4KWS1",
+  },
+  {
+    cover: "/book-forward-deployed-engineer.jpg",
+    title: "The Forward Deployed Engineer",
+    subtitle: "A Simple Guide to Building What Enterprises Actually Need",
+    url: "https://www.amazon.com/dp/B0HDB54ZTG",
+  },
+  {
     cover: "/book-agentic-engineering.jpg",
     title: "Agentic Engineering",
     subtitle: "Building Autonomous AI Systems That Actually Work",
@@ -32,7 +44,7 @@ export default function Books() {
         <div className="books-header">
           <div className="section-label">Published Work</div>
           <h2 className="books-h2">
-            Three Books.
+            Five Books.
             <br />
             <em>Built From the Field.</em>
           </h2>

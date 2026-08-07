@@ -28,6 +28,61 @@ const FOOTER_COLUMNS = [
     ],
   },
   {
+    heading: "Books",
+    links: [
+      {
+        label: "Jay's Art of Systems Thinking",
+        to: "https://www.amazon.com/dp/B0HDB4KWS1",
+        external: true,
+      },
+      {
+        label: "The Forward Deployed Engineer",
+        to: "https://www.amazon.com/dp/B0HDB54ZTG",
+        external: true,
+      },
+      {
+        label: "Agentic Engineering",
+        to: "https://www.amazon.com/dp/B0GZHP2FHK",
+        external: true,
+      },
+      {
+        label: "The Agentic Builder",
+        to: "https://www.amazon.com/dp/B0GZHN7B5C",
+        external: true,
+      },
+      {
+        label: "Stories from a Systems Thinker",
+        to: "https://a.co/d/0boq5HCE",
+        external: true,
+      },
+    ],
+  },
+  {
+    heading: "Latest Articles",
+    links: [
+      {
+        label: "Governing Forward Deployed AI",
+        to: "/article/governing-forward-deployed-ai",
+      },
+      {
+        label: "Why AI Systems Fail at Scale",
+        to: "/article/ai-systems-at-scale",
+      },
+      {
+        label: "The Organizational Cost of Data Debt",
+        to: "/article/data-debt",
+      },
+      {
+        label: "Internal Tools as Strategic Infrastructure",
+        to: "/article/internal-tools",
+      },
+      {
+        label: "The Principal Architect's Method",
+        to: "/article/root-cause-diagnosis",
+      },
+    ],
+  },
+  {
     heading: "For Recruiters",
     links: [
       { label: "One-page snapshot", to: "/snapshot" },
@@ -43,6 +98,11 @@ const FOOTER_COLUMNS = [
       { label: "Full portfolio", to: "/work" },
       { label: "Revuity products", to: "/revuity-products" },
       { label: "Writing", to: "/articles" },
+      {
+        label: "revuitysys.com",
+        to: "https://revuitysys.com",
+        external: true,
+      },
     ],
   },
 ];
@@ -57,7 +117,13 @@ export default function Footer() {
             <ul className="footer-col-links">
               {col.links.map((link) => (
                 <li key={link.to}>
-                  <Link to={link.to}>{link.label}</Link>
+                  {link.external ? (
+                    <a href={link.to} target="_blank" rel="noreferrer">
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link to={link.to}>{link.label}</Link>
+                  )}
                 </li>
               ))}
             </ul>
