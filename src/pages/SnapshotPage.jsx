@@ -63,6 +63,73 @@ const CASES = [
 const STACK =
   "Claude · LangGraph · MCP · Python · TypeScript · React · FastAPI · AWS · Supabase · PostgreSQL";
 
+const BOOKS = [
+  {
+    title: "Jay's Art of Systems Thinking",
+    url: "https://www.amazon.com/dp/B0HDB4KWS1",
+  },
+  {
+    title: "The Forward Deployed Engineer",
+    url: "https://www.amazon.com/dp/B0HDB54ZTG",
+  },
+  {
+    title: "Agentic Engineering",
+    url: "https://www.amazon.com/dp/B0GZHP2FHK",
+  },
+  {
+    title: "The Agentic Builder",
+    url: "https://www.amazon.com/dp/B0GZHN7B5C",
+  },
+  {
+    title: "Stories from a Systems Thinker",
+    url: "https://a.co/d/0boq5HCE",
+  },
+];
+
+const LATEST_ARTICLES = [
+  {
+    title: "Governing Forward Deployed AI in Regulated Enterprises",
+    slug: "/article/governing-forward-deployed-ai",
+  },
+  {
+    title: "Why AI Systems Fail at Scale",
+    slug: "/article/ai-systems-at-scale",
+  },
+  {
+    title: "The Organizational Cost of Data Debt",
+    slug: "/article/data-debt",
+  },
+  {
+    title: "Internal Tools as Strategic Infrastructure",
+    slug: "/article/internal-tools",
+  },
+  {
+    title: "The Principal Architect's Method",
+    slug: "/article/root-cause-diagnosis",
+  },
+];
+
+const BUILDS = [
+  {
+    tag: "Founder-built · Live product",
+    title: "WealthOSnow, a personal financial OS",
+    outcome: "50+ tools shipped, live product",
+    link: "/wealthos-case-study",
+  },
+  {
+    tag: "Founder-built · Live demo",
+    title: "ConsultingIP, an ops dashboard for higher-ed",
+    outcome: "Live demo, role-based views, no login required",
+    link: "/consultingip-case-study",
+  },
+  {
+    tag: "Founder-built · Live product",
+    title: "SBWrkFlow, a command center for veteran advocacy",
+    outcome: "Live product, paid subscription, Stripe-powered",
+    link: "/sbworkflow-case-study",
+  },
+];
+
 function useContactInfo() {
   const [contact, setContact] = useState(null);
   useEffect(() => {
@@ -83,12 +150,19 @@ function SnapHeader() {
   return (
     <header className="snap-header">
       <div className="snap-header-top">
-        <div>
-          <div className="snap-eyebrow">One-page snapshot</div>
-          <h1 className="snap-name">Jay Burgess</h1>
-          <p className="snap-title">
-            Principal Forward Deployed Engineer · Founder, Revuity Systems
-          </p>
+        <div className="snap-header-id">
+          <img
+            src="/jayburgessputplr.png"
+            alt="Jay Burgess"
+            className="snap-photo"
+          />
+          <div>
+            <div className="snap-eyebrow">One-page snapshot</div>
+            <h1 className="snap-name">Jay Burgess</h1>
+            <p className="snap-title">
+              Principal Forward Deployed Engineer · Founder, Revuity Systems
+            </p>
+          </div>
         </div>
         <div className="snap-contact">
           <div>
@@ -147,6 +221,59 @@ function SnapCases() {
           <div className="snap-case-outcome">{c.outcome}</div>
         </Link>
       ))}
+    </section>
+  );
+}
+
+function SnapBuilds() {
+  return (
+    <section className="snap-builds">
+      <span className="snap-stack-label">Builds</span>
+      <div className="snap-builds-grid">
+        {BUILDS.map((b) => (
+          <Link to={b.link} className="snap-case" key={b.link}>
+            <div className="snap-case-tag">{b.tag}</div>
+            <div className="snap-case-title">{b.title}</div>
+            <div className="snap-case-outcome">{b.outcome}</div>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SnapBooks() {
+  return (
+    <section className="snap-books">
+      <span className="snap-stack-label">Books</span>
+      <div className="snap-books-list">
+        {BOOKS.map((b) => (
+          <a
+            href={b.url}
+            target="_blank"
+            rel="noreferrer"
+            className="snap-book-link"
+            key={b.url}
+          >
+            {b.title}
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function SnapArticles() {
+  return (
+    <section className="snap-articles">
+      <span className="snap-stack-label">Latest Articles</span>
+      <div className="snap-articles-list">
+        {LATEST_ARTICLES.map((a) => (
+          <Link to={a.slug} className="snap-article-link" key={a.slug}>
+            {a.title}
+          </Link>
+        ))}
+      </div>
     </section>
   );
 }
@@ -237,8 +364,11 @@ export default function SnapshotPage() {
       <SnapHeader />
       <SnapMetrics />
       <SnapCases />
+      <SnapBuilds />
       <SnapInfographic />
       <SnapStack />
+      <SnapBooks />
+      <SnapArticles />
       <SnapArchitecture />
       <SnapFooter />
     </div>
