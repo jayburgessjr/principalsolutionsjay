@@ -82,7 +82,7 @@ const BOOKS = [
   },
   {
     title: "Stories from a Systems Thinker",
-    url: "https://a.co/d/0boq5HCE",
+    url: "https://www.amazon.com/dp/B0GX2YFH78",
   },
 ];
 

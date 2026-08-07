@@ -52,7 +52,7 @@ const FOOTER_COLUMNS = [
       },
       {
         label: "Stories from a Systems Thinker",
-        to: "https://a.co/d/0boq5HCE",
+        to: "https://www.amazon.com/dp/B0GX2YFH78",
         external: true,
       },
     ],

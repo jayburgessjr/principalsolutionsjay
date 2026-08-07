@@ -272,23 +272,25 @@ If a guardrail was approached or a mistake was almost made, add an explicit rule
 
 ### Routes
 
-| Path                  | Component                 | Description                            |
-| --------------------- | ------------------------- | -------------------------------------- |
-| `/`                   | `Home.jsx`                | Main portfolio page                    |
-| `/higher-ed-compliance-software`  | `CaseStudy.jsx`           | Higher Ed Compliance Software case study        |
-| `/revuity-case-study` | `RevuityCaseStudy.jsx`    | Revuity Systems 4-product studio       |
-| `/walmart-case-study` | `WalmartCaseStudy.jsx`    | Walmart Creative Operations data org   |
-| `/revuity-products`   | `RevuityProductsPage.jsx` | Full Revuity Systems product catalog   |
-| `/engagement`         | `EngagementPage.jsx`      | Engagement models and compensation fit |
-| `/about`              | `AboutPage.jsx`           | About Jay page                         |
-| `/articles`           | `ArticlesPage.jsx`        | Articles index                         |
-| `/article/*`          | `Article[Name].jsx`       | 15 individual article pages            |
+| Path                             | Component                 | Description                              |
+| -------------------------------- | ------------------------- | ---------------------------------------- |
+| `/`                              | `Home.jsx`                | Main portfolio page                      |
+| `/higher-ed-compliance-software` | `CaseStudy.jsx`           | Higher Ed Compliance Software case study |
+| `/revuity-case-study`            | `RevuityCaseStudy.jsx`    | Revuity Systems 4-product studio         |
+| `/walmart-case-study`            | `WalmartCaseStudy.jsx`    | Walmart Creative Operations data org     |
+| `/revuity-products`              | `RevuityProductsPage.jsx` | Full Revuity Systems product catalog     |
+| `/engagement`                    | `EngagementPage.jsx`      | Engagement models and compensation fit   |
+| `/about`                         | `AboutPage.jsx`           | About Jay page                           |
+| `/articles`                      | `ArticlesPage.jsx`        | Articles index                           |
+| `/article/*`                     | `Article[Name].jsx`       | 15 individual article pages              |
 
 **Important:** Every route must also be added to the `routes` array in `vite.config.js` for prerendering to work in local builds.
 
 ### Home Section Order
 
-Nav → Hero → Method → LeadershipLayer → Skills → Companies → Proof → CaseBand → Testimonials → WalmartBand → EngagementSection → ProductsBand → RevuityBand → AboutBand → Methodology → EngagementBand → Articles → MethodologyBand → CTA → Footer
+Nav → Hero → Method → Proof → Companies → Testimonials → AboutBand → CTA → Footer
+
+(Narrowed to this 8-section list in the July 2026 "focus redesign" — see the `focus-redesign` memory. Older LeadershipLayer/Skills/CaseBand/WalmartBand/EngagementSection/ProductsBand/RevuityBand/Methodology/EngagementBand/Articles/MethodologyBand components may still exist in the codebase but are not rendered on Home.)
 
 ### Key External URLs (Do Not Modify Without Instruction)
 

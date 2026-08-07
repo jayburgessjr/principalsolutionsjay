@@ -236,7 +236,7 @@ const PUBLICATIONS = [
   {
     title:
       "Stories from a Systems Thinker: Twenty-Five Parables on Why the Obvious Fix Never Works",
-    url: "https://a.co/d/0boq5HCE",
+    url: "https://www.amazon.com/dp/B0GX2YFH78",
   },
 ];
 
