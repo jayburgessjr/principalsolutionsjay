@@ -162,14 +162,14 @@ function TrackRecord() {
   const items = [
     {
       co: "Revuity Systems",
-      role: "Founder & Principal Forward Deployed Engineer · Jan 2022–Present",
-      impact: "8 Products",
+      role: "Principal Forward Deployed Engineer · Jan 2022–Present",
+      impact: "$2.7M",
       what: "Founded and built in parallel with the roles below. A lean AI-first software company, embedded with enterprise and PE stakeholders, translated operational workflows into production AI systems, and shipped products across 5 verticals including VoltIQ and MenuIQ. Owns outcomes with no team to hide behind.",
     },
     {
       co: "Regulated Title IV provider",
       role: "Principal Forward Deployed Engineer · Nov 2024–Present",
-      impact: "Production",
+      impact: "+25%",
       what: "Concurrent with Revuity Systems. Architected and deployed Higher Ed Compliance Software, a production multi-agent Title IV compliance platform (Claude, LangGraph, MCP), and OpsFlow, a custom operational execution platform replacing Jira. Governed human review, deterministic policy execution, and full audit logging, delivered ahead of schedule and run independently by the team.",
     },
     {
@@ -187,8 +187,8 @@ function TrackRecord() {
     {
       co: "P3 Cost Analysts",
       role: "Senior Data Systems Architect · Dec 2019–Nov 2022",
-      impact: "$2.7M",
-      what: "Designed predictive customer retention analytics integrated into executive revenue operations, contributing approximately $2.7M in measurable business impact. Architected enterprise revenue platforms spanning forecasting, pricing analytics, and executive reporting.",
+      impact: "End to end",
+      what: "Designed predictive customer retention analytics integrated into executive revenue operations, improving account-risk visibility, pricing decisions, and portfolio forecasting. Architected enterprise revenue platforms spanning forecasting, pricing analytics, and executive reporting.",
     },
   ];
 

@@ -16,7 +16,7 @@ const METRICS = [
     prefix: "$",
     suffix: "M",
     label: "New client revenue, 3 months",
-    desc: "ReggieAI, against a $1.7M annual revenue base",
+    desc: "Revuity Systems, a core operational workflow rebuild",
   },
   {
     value: 65,
@@ -47,11 +47,11 @@ const METRICS = [
 const EXPERIENCE = [
   {
     company: "Revuity Systems",
-    role: "Founder and Principal Forward Deployed Engineer",
+    role: "Principal Forward Deployed Engineer",
     period: "2022 – Present",
     location: "Los Angeles, CA",
     bullets: [
-      "Founded an AI-first technical execution firm and delivered 17+ production systems, 15+ reusable products, and five service offerings across regulated and enterprise environments.",
+      "Operate Revuity Systems as an independent forward deployed engineering practice, delivering 17+ production systems, 15+ reusable products, and five service offerings across regulated and enterprise environments. Redesigned a core operational workflow into new production software, generating $2.7M in new revenue within three months of rollout.",
       "Led discovery through operational handoff with executives and operators, converting ambiguous workflows into solution architectures, prioritized backlogs, acceptance criteria, and production releases that enabled client teams to operate delivered systems independently.",
       "Architected multi-tenant SaaS platforms with Next.js, FastAPI, Supabase, PostgreSQL, pgvector, custom MCP servers, RBAC, row-level security, and audit logging, reducing onboarding time by 65%.",
       "Designed stateful multi-agent workflows with persisted checkpoints, asynchronous execution, deterministic routing, structured outputs, and human approval gates, reducing compliance review turnaround by 50%.",
@@ -65,7 +65,7 @@ const EXPERIENCE = [
     period: "2024 – Present",
     location: "Los Angeles, CA",
     bullets: [
-      "Architected and deployed ReggieAI with Claude, LangGraph, and MCP, generating $2.7M in new client revenue within three months against a $1.7M annual revenue base and increasing case-processing capacity by 25% without added headcount.",
+      "Architected and deployed a multi-agent compliance platform with Claude, LangGraph, and MCP, increasing case-processing capacity by 25% without added headcount.",
       "Engineered production LLM controls including tool contracts, structured outputs, evaluations, deterministic routing, audit trails, and human approval for regulated decision support.",
       "Shipped OpsFlow end to end with Claude Code, FastAPI, and Next.js to replace a misaligned Jira workflow and reduce operational reporting cycle time by 40%.",
       "Converted evolving Title IV policy into deployable software with executives, consultants, and frontline operators, creating a governed knowledge pipeline that preserved traceable review, approval, and accountability across regulated content updates.",
@@ -350,15 +350,17 @@ function Hero() {
           Principal Forward Deployed Engineer · AI Systems Engineer
         </p>
         <p className="cs-desc">
-          Principal Forward Deployed Engineer and technical founder with 15+
-          years translating complex operational, regulatory, and customer
-          problems into production software and data systems. Delivered 17+
-          production systems across regulated and Fortune 500 environments,
-          including ReggieAI, a multi-agent Title IV compliance platform that
-          generated $2.7M in new client revenue within three months against a
-          $1.7M annual revenue base. Owns the complete delivery lifecycle from
-          discovery and architecture through deployment, governance, adoption,
-          and operational handoff.
+          Principal Forward Deployed Engineer with 15+ years translating complex
+          operational, regulatory, and customer problems into production
+          software and data systems. Built this capability across frontline
+          systems analysis, policy automation, enterprise data platforms,
+          full-stack products, and agentic AI before Forward Deployed Engineer
+          became a standardized title. Delivered 17+ production systems across
+          regulated and Fortune 500 environments, including redesigning a core
+          operational workflow into new production software that generated $2.7M
+          in new revenue within three months of rollout. Owns the complete
+          delivery lifecycle from discovery and architecture through deployment,
+          governance, adoption, and operational handoff.
         </p>
         <div className="resume-actions">
           <a
@@ -668,7 +670,7 @@ export default function ResumePage() {
   usePageMeta({
     title: "Resume, Jay Burgess — Principal Forward Deployed Engineer",
     description:
-      "Jay Burgess's full resume: 15+ years, 17+ production systems delivered, including a $2.7M compliance platform (ReggieAI) and enterprise data organizations at Walmart and Adobe.",
+      "Jay Burgess's full resume: 15+ years, 17+ production systems delivered, including a $2.7M operational workflow rebuild and enterprise data organizations at Walmart and Adobe.",
   });
   useResumeStructuredData();
 

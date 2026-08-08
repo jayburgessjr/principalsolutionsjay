@@ -77,7 +77,7 @@ const PLAYBOOK_SECTIONS = [
         tag: "Regulated AI · Title IV · Live",
         desc: "A compliance team at a regulated Title IV student-aid provider was buried in rules and manual checks. A multi-agent platform on Claude, LangGraph, and MCP took it from first discovery call through launch and handoff. It runs today inside a federally regulated environment.",
         outcome:
-          "$2.7M in new revenue in the first three months on a $1.7M base, and 25% more case-processing capacity with no new hires.",
+          "25% more case-processing capacity in the first three months, with no new hires.",
         link: "/higher-ed-compliance-software",
       },
       {
@@ -112,7 +112,7 @@ const PLAYBOOK_SECTIONS = [
     num: "06",
     title: "Working with Jay",
     body: [
-      "Jay Burgess is a Principal Forward Deployed Engineer and the founder of Revuity Systems, with 15+ years turning ambiguous operational and regulatory problems into production systems, 17+ shipped, including a compliance platform that generated $2.7M in new revenue in its first three months.",
+      "Jay Burgess is a Principal Forward Deployed Engineer and the founder of Revuity Systems, with 15+ years turning ambiguous operational and regulatory problems into production systems, 17+ shipped, including an operational workflow rebuild that generated $2.7M in new revenue in its first three months.",
       "Engagements run as a diagnostic sprint, a fractional architecture retainer, or embedded build ownership, depending on how clear the problem already is. Full details, including published rate ranges, are on the engagement page.",
     ],
   },

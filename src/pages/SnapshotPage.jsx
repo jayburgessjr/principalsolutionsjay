@@ -14,7 +14,7 @@ const METRICS = [
   {
     value: "$2.7M",
     label: "New revenue, 3 months",
-    desc: "ReggieAI, vs. a $1.7M base",
+    desc: "Revuity Systems, operational workflow rebuild",
   },
   {
     value: "17+",
@@ -37,7 +37,7 @@ const CASES = [
   {
     tag: "Regulated AI · Title IV",
     title: "Higher Ed Compliance Software",
-    outcome: "$2.7M new revenue in 3 months, +25% case capacity",
+    outcome: "+25% case-processing capacity, no added headcount",
     link: "/higher-ed-compliance-software",
   },
   {
