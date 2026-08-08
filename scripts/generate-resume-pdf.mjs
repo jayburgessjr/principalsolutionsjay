@@ -1,13 +1,13 @@
-// One-off script: renders the print-scoped /snapshot page and exports it as
-// a static one-page PDF asset. Re-run after editing src/pages/SnapshotPage.jsx.
-// Usage: node scripts/generate-snapshot-pdf.mjs [devServerUrl]
+// One-off script: renders the print-scoped /resume page and exports it as a
+// static, multi-page PDF asset. Re-run after editing src/pages/ResumePage.jsx.
+// Usage: node scripts/generate-resume-pdf.mjs [devServerUrl]
 import puppeteer from "puppeteer";
 import path from "path";
 import { fileURLToPath } from "url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const url = process.argv[2] || "http://localhost:5173/snapshot";
-const outPath = path.join(__dirname, "../src/assets/jay-burgess-snapshot.pdf");
+const url = process.argv[2] || "http://localhost:5173/resume";
+const outPath = path.join(__dirname, "../src/assets/jay-burgess-resume.pdf");
 
 const browser = await puppeteer.launch({
   headless: true,

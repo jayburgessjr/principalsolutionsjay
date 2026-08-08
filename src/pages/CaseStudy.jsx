@@ -17,8 +17,8 @@ function Hero() {
           A compliance team was drowning in Title IV rules and manual checks. I
           scoped the real problem, built a multi-agent platform on Claude,
           LangGraph, and MCP, hardened it for a federally regulated environment,
-          and handed it off so the team runs it without me. It generated $2.7M
-          in new revenue in its first three months.
+          and handed it off so the team runs it without me. It increased
+          case-processing capacity by 25% without adding headcount.
         </p>
         <div className="cs-meta-bar">
           <div className="cs-meta-item">
@@ -39,7 +39,7 @@ function Hero() {
           </div>
           <div className="cs-meta-item">
             <div className="cmi-label">Result</div>
-            <div className="cmi-val">$2.7M new revenue in three months</div>
+            <div className="cmi-val">+25% case-processing capacity</div>
           </div>
         </div>
       </div>
@@ -391,8 +391,7 @@ function HandOff() {
               compliance intake at the client. It handles queries, captures
               data, routes follow-ups, and returns auditable, CFR-cited answers
               without manual intervention on routine cases. In its first three
-              months it drove $2.7M in new client revenue against a $1.7M base
-              and lifted case-processing capacity by 25% with no added
+              months it lifted case-processing capacity by 25% with no added
               headcount.
             </p>
             <p>
@@ -403,8 +402,10 @@ function HandOff() {
           </div>
           <div className="cs-sidebar">
             <div className="outcome-big">
-              <div className="ob-num">$2.7M</div>
-              <div className="ob-label">New revenue in three months</div>
+              <div className="ob-num">+25%</div>
+              <div className="ob-label">
+                Case-processing capacity, no added headcount
+              </div>
             </div>
             <div className="finding-box">
               <div className="fb-label">Handoff package</div>
@@ -426,17 +427,17 @@ function HandOff() {
         </div>
         <div className="outcomes-grid reveal" ref={gridRef}>
           <div className="outcome-cell">
-            <div className="oc-label">New revenue</div>
-            <div className="oc-val">$2.7M</div>
-            <div className="oc-desc">
-              In the first three months, against a $1.7M annual base
-            </div>
-          </div>
-          <div className="outcome-cell">
             <div className="oc-label">Capacity</div>
             <div className="oc-val">+25%</div>
             <div className="oc-desc">
               More case-processing capacity, with no added headcount
+            </div>
+          </div>
+          <div className="outcome-cell">
+            <div className="oc-label">Delivery</div>
+            <div className="oc-val">Ahead of schedule</div>
+            <div className="oc-desc">
+              Staging deployed before the agreed milestone
             </div>
           </div>
           <div className="outcome-cell">
@@ -600,14 +601,14 @@ export default function CaseStudy() {
   usePageMeta({
     title: "Higher Ed Compliance Software Case Study, Jay Burgess",
     description:
-      "How Jay Burgess scoped a broken Title IV compliance process, built a multi-agent platform on Claude, LangGraph, and MCP, hardened it for a regulated environment, and handed it off. $2.7M in new revenue in three months.",
+      "How Jay Burgess scoped a broken Title IV compliance process, built a multi-agent platform on Claude, LangGraph, and MCP, hardened it for a regulated environment, and handed it off. Lifted case-processing capacity by 25% with no added headcount.",
   });
   useStructuredData("case-study-structured-data", {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     headline: "Higher Ed Compliance Software Case Study",
     description:
-      "How Jay Burgess scoped a broken Title IV compliance process, built a multi-agent platform on Claude, LangGraph, and MCP, hardened it for a regulated environment, and handed it off. $2.7M in new revenue in three months.",
+      "How Jay Burgess scoped a broken Title IV compliance process, built a multi-agent platform on Claude, LangGraph, and MCP, hardened it for a regulated environment, and handed it off. Lifted case-processing capacity by 25% with no added headcount.",
     author: {
       "@type": "Person",
       "@id": "https://jay-burgess.me/#jay-burgess",

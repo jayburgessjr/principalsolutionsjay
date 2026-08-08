@@ -10,8 +10,8 @@ const CASES = [
     cat: "Regulated AI · Title IV",
     title: "Higher Ed Compliance Software",
     desc: "A multi-agent Title IV compliance platform on Claude, LangGraph, and MCP, owned end to end from discovery through deployment and handoff, for a regulated student-aid provider.",
-    metric: "$2.7M",
-    metricLabel: "new revenue in three months",
+    metric: "+25%",
+    metricLabel: "case-processing capacity, no added headcount",
     img: "/work-compliance.svg",
   },
   {

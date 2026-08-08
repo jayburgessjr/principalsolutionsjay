@@ -15,9 +15,9 @@ const proofRows = [
       "Live HubSpot API integration replacing the manual process",
     ],
     outcomeLabel: "Result",
-    outcomeNum: "$2.7M",
+    outcomeNum: "+25%",
     outcomeDesc:
-      "New revenue in the first three months on a $1.7M base, and 25% more case-processing capacity with no new hires.",
+      "More case-processing capacity in the first three months, with no new hires.",
     link: "/higher-ed-compliance-software",
   },
   {

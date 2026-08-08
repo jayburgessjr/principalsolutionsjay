@@ -17,7 +17,7 @@ export default function Hero() {
             regulatory problems and walked out with software that works.
             Seventeen systems and counting, each one carried from the first
             conversation all the way to the day the team runs it without me. One
-            of them, a multi-agent Title IV compliance platform, brought in $2.7
+            of them, a core operational workflow rebuild, brought in $2.7
             million of new revenue in its first three months.
           </p>
           <div className="hero-ctas">
@@ -63,8 +63,7 @@ export default function Hero() {
             $2.7<span>M</span>
           </div>
           <div className="hc-sub">
-            New revenue from the compliance platform in its first three months,
-            on a $1.7M base
+            New revenue from an operational workflow rebuild, Revuity Systems
           </div>
         </div>
         <div className="hero-cell">

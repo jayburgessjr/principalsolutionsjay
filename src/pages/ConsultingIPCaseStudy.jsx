@@ -154,9 +154,9 @@ function Body() {
               <div className="finding-box">
                 <div className="fb-label">Domain fit</div>
                 <div className="fb-text">
-                  Same higher-ed, Title IV-adjacent compliance space as my
-                  ReggieAI client work, built here as a fast, self-directed
-                  prototype.
+                  Same higher-ed, Title IV-adjacent compliance space as my Title
+                  IV compliance platform work, built here as a fast,
+                  self-directed prototype.
                 </div>
               </div>
             </div>

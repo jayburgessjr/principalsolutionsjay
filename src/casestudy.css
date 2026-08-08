@@ -2566,6 +2566,12 @@
   .resume-page h2 {
     color: #111 !important;
   }
+  .resume-page .cred-block {
+    /* .cred-block hardcodes a dark background outside of print — the
+       broader .cs-section whitening above doesn't cascade into it, so
+       without this the #333 text below renders dark-on-dark. */
+    background: #fff !important;
+  }
   .resume-page .oh-num,
   .resume-page .rr-title,
   .resume-page .skill-cat-label,

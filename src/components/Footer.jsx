@@ -42,7 +42,7 @@ const FOOTER_COLUMNS = [
       },
       {
         label: "Agentic Engineering",
-        to: "https://www.amazon.com/dp/B0GZHP2FHK",
+        to: "https://www.amazon.com/dp/B0GX314D44",
         external: true,
       },
       {

@@ -8,9 +8,8 @@ export default function AboutBand() {
         <h2 className="about-band-heading">Who Is Jay Burgess</h2>
         <p className="about-band-sub">Executive Brief</p>
         <p className="about-band-body">
-          Principal Forward Deployed Engineer. 15+ years. A multi-agent Title IV
-          compliance platform that generated $2.7M in new revenue in three
-          months.
+          Principal Forward Deployed Engineer. 15+ years. A core operational
+          workflow rebuild that generated $2.7M in new revenue in three months.
           <br />
           The one-page read for anyone who wants to know the person behind the
           work, where he came from, how he thinks, and why it matters.
